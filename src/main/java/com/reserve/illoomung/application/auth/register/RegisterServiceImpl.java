@@ -1,8 +1,10 @@
 package com.reserve.illoomung.application.auth.register;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.entity.enums.Role;
@@ -26,6 +28,7 @@ public class RegisterServiceImpl implements RegisterService {
     private final AccountRepository accountRepository;
     private final SecurityUtil securityUtil;
     private final RegisterValidator registerValidator;
+    private final WebClient kakaoWebClient;
 
     private String emailEncrypt = null;
     private String emailHash = null;
@@ -67,9 +70,33 @@ public class RegisterServiceImpl implements RegisterService {
     public Account register(RegisterRequest request, Role role) {
         initData(); // 초기화
         log.info("[회원가입] 시도");
-        switch (request.getSocialProvider()) {
+        log.info(request.getSocialProvider().toUpperCase());
+        switch (request.getSocialProvider().toUpperCase()) {
             case "KAKAO" -> { // 카카오 소셜 회원가입
                 log.info("[회원가입] KAKAO 회원가입: {}", request.getSocialProvider());
+                log.info("[회원가입] KAKAO 토큰: {}", request.getSocialToken());
+
+                String tokenInfo = kakaoWebClient.get()
+                    .uri("/v1/user/access_token_info")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + request.getSocialToken())
+                    .header("Content-Type", "application/x-www-form-urlencoded;charset=utf-8")
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .block();
+                    
+                log.info("[회원가입] KAKAO 토큰 정보: {}", tokenInfo);
+
+                if (tokenInfo != null && !tokenInfo.isEmpty()) {
+                    String jsonResponse = kakaoWebClient.get()
+                        .uri("/v2/user/me")
+                        .header("Authorization", "Bearer " + request.getSocialToken())
+                        .header("Content-Type", "application/x-www-form-urlencoded;charset=utf-8")
+                        .retrieve()
+                        .bodyToMono(String.class)
+                        .block();
+    
+                    log.info("[회원가입] KAKAO 응답: {}", jsonResponse);
+                }
 
                 // 소셜 제공사에서 발급한 엑세스 토큰을 클라이언트로부터 전달받은 후 
                 // 소셜 제공사에 정보 요청을 통해 소셜 아이디를 획득
@@ -81,11 +108,11 @@ public class RegisterServiceImpl implements RegisterService {
             }
             case "NAVER" -> { // 네이버 소셜 회원가입
                 log.info("[회원가입] NAVER 회원가입: {}", request.getSocialProvider());
-                
+                return null; // TODO: 소셜 회원가입 로직 구현 필요
             }
             case "GOOGLE" -> { // 구글 소셜 회원가입
                 log.info("[회원가입] GOOGLE 회원가입: {}", request.getSocialProvider());
-                
+                return null; // TODO: 소셜 회원가입 로직 구현 필요
             }
             default -> {
                 // 로컬 회원가입
