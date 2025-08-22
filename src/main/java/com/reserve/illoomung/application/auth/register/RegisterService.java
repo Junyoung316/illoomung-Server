@@ -1,10 +1,11 @@
 package com.reserve.illoomung.application.auth.register;
 
-import com.reserve.illoomung.core.domain.entity.Account;
-import com.reserve.illoomung.core.domain.entity.enums.Role;
-import com.reserve.illoomung.dto.request.auth.register.RegisterRequest;
+import com.reserve.illoomung.dto.request.auth.register.LocalRegisterRequest;
+import com.reserve.illoomung.dto.request.auth.register.SocialRegisterRequest;
+
 
 public interface RegisterService {
-    Account register(RegisterRequest request, Role role);
+    void localRegister(LocalRegisterRequest request);
+    void socialRegister(SocialRegisterRequest request, String socialToken);
     
 }

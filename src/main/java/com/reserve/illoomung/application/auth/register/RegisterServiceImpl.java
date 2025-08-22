@@ -1,11 +1,10 @@
 package com.reserve.illoomung.application.auth.register;
 
-import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.reactive.function.client.WebClient;
 
+import com.reserve.illoomung.application.verification.oauth.kakao.KakaoService;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.entity.enums.Role;
 import com.reserve.illoomung.core.domain.entity.enums.SocialProvider;
@@ -14,7 +13,8 @@ import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.service.RegisterValidator;
-import com.reserve.illoomung.dto.request.auth.register.RegisterRequest;
+import com.reserve.illoomung.dto.request.auth.register.LocalRegisterRequest;
+import com.reserve.illoomung.dto.request.auth.register.SocialRegisterRequest;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,116 +28,91 @@ public class RegisterServiceImpl implements RegisterService {
     private final AccountRepository accountRepository;
     private final SecurityUtil securityUtil;
     private final RegisterValidator registerValidator;
-    private final WebClient kakaoWebClient;
+    private final KakaoService kakaoService;;
 
-    private String emailEncrypt = null;
-    private String emailHash = null;
-    private String passwordHash = null;
-    private SocialProvider socialProvider = SocialProvider.NONE;
-    private String socialId = null;
-    private String socialIdHash = null;
-
-    public void initData() {
-        this.emailEncrypt = null;
-        this.emailHash = null;
-        this.passwordHash = null;
-        this.socialProvider = SocialProvider.NONE;
-        this.socialId = null;
-        this.socialIdHash = null;
-        log.info("[회원가입] 초기화 완료");
+    private record RegisterData(
+        String emailEncrypt,
+        String emailHash,
+        String passwordHash,
+        SocialProvider socialProvider,
+        String socialId,
+        String socialIdHash
+    ) {
     }
+
     
-    public void setSocial(String socialProvider, String socialId) {
-        CryptoResult socialIdCryptoResult = securityUtil.cryptoResult(socialId);
-
-        this.socialProvider = SocialProvider.valueOf(socialProvider);
-        this.socialId = socialIdCryptoResult.encryptedData();
-        this.socialIdHash = socialIdCryptoResult.hashedData();
-        log.info("[회원가입] 소셜 정보 설정: socialProvider={}, socialId={}", this.socialProvider, this.socialId);
+    private void createAccount(RegisterData data) {
+        // 1. 계정 생성
+        Account account = Account.builder()
+                .email(data.emailEncrypt)
+                .emailHash(data.emailHash)
+                .passwordHash(data.passwordHash)
+                .role(Role.USER) // 기본 역할은 USER로 설정
+                .socialProvider(data.socialProvider)
+                .socialId(data.socialId)
+                .socialIdHash(data.socialIdHash)
+                .status(Status.ACTIVE)
+                .build();
+        log.info("[회원가입] Account 저장 시도");
+        Account savedAccount = accountRepository.save(account);
+        log.info("[회원가입] 성공: accountId={}", savedAccount.getAccountId());
     }
 
-    public void setLocal(String email, String password) {
-        CryptoResult emailCryptoResult = securityUtil.cryptoResult(email);
-
-        this.emailEncrypt = emailCryptoResult.encryptedData();
-        this.emailHash = emailCryptoResult.hashedData();
-        this.passwordHash = passwordEncoder.encode(password);
-        log.info("[회원가입] 로컬 정보 설정: email={}, emailHash={}", this.emailEncrypt, this.emailHash);
-    }
-    
     @Override
     @Transactional
-    public Account register(RegisterRequest request, Role role) {
-        initData(); // 초기화
-        log.info("[회원가입] 시도");
-        log.info(request.getSocialProvider().toUpperCase());
-        switch (request.getSocialProvider().toUpperCase()) {
-            case "KAKAO" -> { // 카카오 소셜 회원가입
-                log.info("[회원가입] KAKAO 회원가입: {}", request.getSocialProvider());
-                log.info("[회원가입] KAKAO 토큰: {}", request.getSocialToken());
+    public void localRegister(LocalRegisterRequest request) { // 권한은 Role.USER로 고정
+        RegisterData localData;
+        log.info("[회원가입] 로컬 회원가입 시도: {}", request.getEmail());
+        CryptoResult email = securityUtil.cryptoResult(request.getEmail());
+        registerValidator.validateEmailDuplicate(email.hashedData());
+        localData = new RegisterData(
+            email.encryptedData(),
+            email.hashedData(),
+            passwordEncoder.encode(request.getPassword()),
+            SocialProvider.NONE,
+            null,
+            null
+        );
+        createAccount(localData);
+        log.info("[회원가입] 로컬 회원가입 성공: {}", request.getEmail());
+    }
 
-                String tokenInfo = kakaoWebClient.get()
-                    .uri("/v1/user/access_token_info")
-                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + request.getSocialToken())
-                    .header("Content-Type", "application/x-www-form-urlencoded;charset=utf-8")
-                    .retrieve()
-                    .bodyToMono(String.class)
-                    .block();
-                    
-                log.info("[회원가입] KAKAO 토큰 정보: {}", tokenInfo);
+    private void kakaoRegister(String socialToken) {
+        log.info("[회원가입] KAKAO 회원가입: {}", "KAKAO");
+        String kakaoUserInfo = kakaoService.getKakaoUserInfo(socialToken);
+        // TODO: 토큰 정보 검증 로직 추가 필요
+        throw new UnsupportedOperationException("소셜 회원가입은 현재 지원되지 않습니다.");
+        // 카카오 회원가입 로직을 구현합니다.
+        // 소셜 토큰을 사용하여 카카오 API로부터 사용자 정보를 가져오고, 이를 기반으로 계정을 생성합니다.
+        // 이 부분은 위의 socialRegister 메소드에서 처리됩니다.
+    }
 
-                if (tokenInfo != null && !tokenInfo.isEmpty()) {
-                    String jsonResponse = kakaoWebClient.get()
-                        .uri("/v2/user/me")
-                        .header("Authorization", "Bearer " + request.getSocialToken())
-                        .header("Content-Type", "application/x-www-form-urlencoded;charset=utf-8")
-                        .retrieve()
-                        .bodyToMono(String.class)
-                        .block();
-    
-                    log.info("[회원가입] KAKAO 응답: {}", jsonResponse);
-                }
-
-                // 소셜 제공사에서 발급한 엑세스 토큰을 클라이언트로부터 전달받은 후 
-                // 소셜 제공사에 정보 요청을 통해 소셜 아이디를 획득
-                // 소셜 아이디는 암호화 후 해시값을 저장
-
-                // setSocial(request.getSocialProvider(), request.getSocialId());
-                // registerValidator.validateSocialDuplicate(this.socialProvider, this.socialIdHash);
-                return null; // TODO: 소셜 회원가입 로직 구현 필요
+    @Override
+    @Transactional
+    public void socialRegister(SocialRegisterRequest request, String socialToken) {
+        RegisterData socialData;
+        log.info("[회원가입] 소셜 회원가입 시도: {}", request.getSocialProvider());
+        log.info("[회원가입] 소셜 토큰: {}", socialToken);
+        switch (request.getSocialProvider()) {
+            case KAKAO -> {
+                kakaoRegister(socialToken);
             }
-            case "NAVER" -> { // 네이버 소셜 회원가입
+            case NAVER -> {
                 log.info("[회원가입] NAVER 회원가입: {}", request.getSocialProvider());
-                return null; // TODO: 소셜 회원가입 로직 구현 필요
+                // TODO: 네이버 소셜 회원가입 로직 구현 필요
+                throw new UnsupportedOperationException("소셜 회원가입은 현재 지원되지 않습니다.");
             }
-            case "GOOGLE" -> { // 구글 소셜 회원가입
+            case GOOGLE -> {
                 log.info("[회원가입] GOOGLE 회원가입: {}", request.getSocialProvider());
-                return null; // TODO: 소셜 회원가입 로직 구현 필요
+                // TODO: 구글 소셜 회원가입 로직 구현 필요
+                throw new UnsupportedOperationException("소셜 회원가입은 현재 지원되지 않습니다.");
             }
             default -> {
-                // 로컬 회원가입
-                log.info("[회원가입] 일반 회원가입: {}", request.getSocialProvider());
-                socialProvider = SocialProvider.NONE;
-                setLocal(request.getEmail(), request.getPassword());
-                registerValidator.validateEmailDuplicate(this.emailHash);
+                log.error("[회원가입] 지원하지 않는 소셜 제공사: {}", request.getSocialProvider());
+                throw new UnsupportedOperationException("지원하지 않는 소셜 제공사입니다: " + request.getSocialProvider());
             }
         }
 
-        // 1. 계정 생성
-        Account account = Account.builder()
-                .email(emailEncrypt)
-                .emailHash(emailHash)
-                .passwordHash(passwordHash)
-                .role(role)
-                .socialProvider(socialProvider)
-                .socialId(socialId)
-                .socialIdHash(socialIdHash)
-                .status(Status.ACTIVE)
-                .build();
-        log.info("[회원가입] Account 저장 시도: email={}, role={}", request.getEmail(), role);
-        Account savedAccount = accountRepository.save(account);
-        log.info("[회원가입] 성공: accountId={}, email={}", savedAccount.getAccountId(), request.getEmail());
-
-        return savedAccount;
     }
+
 }
