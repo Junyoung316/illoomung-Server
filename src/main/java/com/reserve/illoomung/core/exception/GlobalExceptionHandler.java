@@ -23,6 +23,17 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
     }
 
+    @ExceptionHandler(NoAuthorizationHeaderException.class)
+    public ResponseEntity<MainResponse<Void>> handleNoAuthorizationHeaderException(NoAuthorizationHeaderException ex) {
+        log.error("헤더 오류 발생: {}", ex.getMessage(), ex.getCause());
+        MainResponse<Void> errorResponse = MainResponse.error(
+            HttpStatus.UNAUTHORIZED.value(),
+            "헤더 오류: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
+    }
+    // NoAuthorizationHeaderException
+
     @ExceptionHandler(InvalidKakaoTokenException.class)
     public ResponseEntity<MainResponse<Void>> handleInvalidKakaoTokenException(InvalidKakaoTokenException ex) {
         log.error("잘못된 카카오 토큰: ", ex.getMessage(), ex.getClass());

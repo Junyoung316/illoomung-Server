@@ -3,7 +3,7 @@
 {
     "id":123456789,
     "connected_at": "2022-04-11T01:45:28Z",
-    "kakao_account": { 
+    "kakao_account": {
         // 프로필 또는 닉네임 동의항목 필요
         "profile_nickname_needs_agreement	": false,
         // 프로필 또는 프로필 사진 동의항목 필요
@@ -18,11 +18,11 @@
             "is_default_nickname": false
         },
         // 이름 동의항목 필요
-        "name_needs_agreement":false, 
+        "name_needs_agreement":false,
         "name":"홍길동",
         // 카카오계정(이메일) 동의항목 필요
-        "email_needs_agreement":false, 
-        "is_email_valid": true,   
+        "email_needs_agreement":false,
+        "is_email_valid": true,
         "is_email_verified": true,
         "email": "sample@sample.com",
         // 연령대 동의항목 필요
@@ -41,7 +41,7 @@
         "gender":"female",
         // 카카오계정(전화번호) 동의항목 필요
         "phone_number_needs_agreement": false,
-        "phone_number": "+82 010-1234-5678",   
+        "phone_number": "+82 010-1234-5678",
         // CI(연계정보) 동의항목 필요
         "ci_needs_agreement": false,
         "ci": "${CI}",

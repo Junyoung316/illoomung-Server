@@ -7,6 +7,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import com.reserve.illoomung.core.exception.InvalidKakaoTokenException;
 import com.reserve.illoomung.core.exception.KakaoApiClientException;
 import com.reserve.illoomung.core.exception.KakaoApiServerException;
+import com.reserve.illoomung.dto.response.verification.oauth.kakao.KakaoUserInfoResponse;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +22,7 @@ public class KakaoServiceImpl implements KakaoService {
     private final WebClient kakaoWebClient;
 
     @Override
-    public String getKakaoUserInfo(String accessToken) {
+    public KakaoUserInfoResponse getKakaoUserInfo(String accessToken) {
         String tokenInfo = kakaoWebClient.get() // 토큰 정보 요청(토큰 정보 검증, 실패 시 401 예외 발생)
             .uri("/v1/user/access_token_info")
             .header(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken)
@@ -52,16 +53,16 @@ public class KakaoServiceImpl implements KakaoService {
         
         log.info("[회원가입] KAKAO 토큰 정보: {}", tokenInfo);
         if (tokenInfo != null && !tokenInfo.isEmpty()) {
-            String jsonResponse = kakaoWebClient.get() // 소셜 정보 요청
+            Mono<KakaoUserInfoResponse> jsonResponse = kakaoWebClient.get() // 소셜 정보 요청
                 .uri("/v2/user/me")
                 .header("Authorization", "Bearer " + accessToken)
                 .header("Content-Type", "application/x-www-form-urlencoded;charset=utf-8")
                 .retrieve()
-                .bodyToMono(String.class)
-                .block();
+                .bodyToMono(KakaoUserInfoResponse.class);
 
-            log.info("[회원가입] KAKAO 응답: {}", jsonResponse); // TODO: ID 및 이메일 (추후 필요 정보 추가)
-            return jsonResponse;
+            KakaoUserInfoResponse jsonResponseBody = jsonResponse.block();
+            
+            return jsonResponseBody;
         }
         return null; // 토큰 정보가 유효하지 않거나 비어있는 경우
     }
