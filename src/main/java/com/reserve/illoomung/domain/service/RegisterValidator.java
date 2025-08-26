@@ -35,12 +35,13 @@ public class RegisterValidator {
      * 
      * @throws DuplicateException 이메일이 중복된 경우
      */
-    public void validateSocialDuplicate(SocialProvider socialProvider, String socialIdHash) {
+    public boolean isSocialDuplicate(SocialProvider socialProvider, String socialIdHash) {
         boolean exists = accountRepository.existsBySocialProviderAndSocialId(socialProvider, socialIdHash);
             
-        if (exists) {
-            throw new DuplicateException("이미 존재하는 소셜 아이디입니다: " + socialIdHash);
-        }
+//        if (exists) {
+//            throw new DuplicateException("이미 존재하는 소셜 아이디입니다: " + socialIdHash);
+//        }
+        return exists; // 중복이면 true, 신규면 false
     }
 
     // /**

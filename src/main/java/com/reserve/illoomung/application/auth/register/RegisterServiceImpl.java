@@ -54,7 +54,7 @@ public class RegisterServiceImpl implements RegisterService {
                 .socialIdHash(data.socialIdHash)
                 .status(Status.ACTIVE)
                 .build();
-        log.info("[회원가입] Account 저장 시도");
+        log.debug("[회원가입] Account 저장 시도");
         Account savedAccount = accountRepository.save(account);
         log.info("[회원가입] 성공: accountId={}", savedAccount.getAccountId());
     }
@@ -80,55 +80,54 @@ public class RegisterServiceImpl implements RegisterService {
 
     private RegisterData kakaoRegister(String socialToken) {
         RegisterData kakaoData;
-        log.info("[회원가입] KAKAO 회원가입: {}", "KAKAO");
+        log.debug("[회원가입] KAKAO 회원가입 시작");
         KakaoUserInfoResponse kakaoUserInfo = kakaoService.getKakaoUserInfo(socialToken); // 소셜 토큰으로 사용자 정보 조회 및 데이터 파싱
-        kakaoUserInfo.getId();
-        log.info("[회원가입] KAKAO ID: {}", kakaoUserInfo.getId());
+        log.info("[회원가입] 소셜 회원가입 시도 KAKAO ID: {}", kakaoUserInfo.getId());
+        CryptoResult socialId = securityUtil.cryptoResult(String.valueOf(kakaoUserInfo.getId()));
 
-        if (
-            !(
-                kakaoUserInfo.getKakaoAccount().isHasEmail() &&
-                !kakaoUserInfo.getKakaoAccount().isAgeRangeNeedsAgreement() &&
-                kakaoUserInfo.getKakaoAccount().isEmailValid() &&
-                kakaoUserInfo.getKakaoAccount().isEmailVerified()
-        )) { // 이메일이 없거나, 이메일 제공 동의가 안됐거나, 이메일이 유효하지 않거나, 이메일 인증이 안된 경우
-            log.error("[회원가입] KAKAO 필수 정보 동의 필요 또는 이메일 없음");
-            CryptoResult socialId = securityUtil.cryptoResult(String.valueOf(kakaoUserInfo.getId()));
-            registerValidator.validateSocialDuplicate(SocialProvider.KAKAO, socialId.hashedData()); // 소셜 제공사 + 소셜 ID 중복 검증
-            kakaoData = new RegisterData(
-                null,
-                null,
-                null,
-                SocialProvider.KAKAO,
-                socialId.encryptedData(),
-                socialId.hashedData()
-            );
-
-            return kakaoData;
-            // TODO: 이메일 없이 회원가입 처리
+        if (registerValidator.isSocialDuplicate(SocialProvider.KAKAO, socialId.hashedData())) { // 소셜 제공사 + 소셜 ID 중복 검증
+            // TODO: 중복 로직 (로그인)
+            return null;
         } else {
-            CryptoResult email = securityUtil.cryptoResult(kakaoUserInfo.getKakaoAccount().getEmail());
-            CryptoResult socialId = securityUtil.cryptoResult(String.valueOf(kakaoUserInfo.getId()));
-            registerValidator.validateEmailDuplicate(email.hashedData()); // 이메일 중복 검증
-            registerValidator.validateSocialDuplicate(SocialProvider.KAKAO, socialId.hashedData()); // 소셜 제공사 + 소셜 ID 중복 검증
-            kakaoData = new RegisterData(
-                email.encryptedData(),
-                email.hashedData(),
-                null,
-                SocialProvider.KAKAO,
-                socialId.encryptedData(),
-                socialId.hashedData()
-            );
+            // TODO: 신규 로직 (회원가입)
+            if (
+                    !(
+                            kakaoUserInfo.getKakaoAccount().isHasEmail() &&
+                                    !kakaoUserInfo.getKakaoAccount().isAgeRangeNeedsAgreement() &&
+                                    kakaoUserInfo.getKakaoAccount().isEmailValid() &&
+                                    kakaoUserInfo.getKakaoAccount().isEmailVerified()
+                    )) { // 이메일이 없거나, 이메일 제공 동의가 안됐거나, 이메일이 유효하지 않거나, 이메일 인증이 안된 경우
+                log.error("[회원가입] KAKAO 필수 정보 동의 필요 또는 이메일 없음");
 
-            return kakaoData;
-            // TODO: 소셜 id와 이메일로 회원가입 처리
+                kakaoData = new RegisterData(
+                        null,
+                        null,
+                        null,
+                        SocialProvider.KAKAO,
+                        socialId.encryptedData(),
+                        socialId.hashedData()
+                );
+
+                return kakaoData;
+                // TODO: 이메일 없이 회원가입 처리
+            } else {
+                CryptoResult email = securityUtil.cryptoResult(kakaoUserInfo.getKakaoAccount().getEmail());
+                // TODO: 이메일 중복 시 이메일 + 소셜 연동 처리 필요
+                registerValidator.validateEmailDuplicate(email.hashedData()); // 이메일 중복 검증
+                kakaoData = new RegisterData(
+                        email.encryptedData(),
+                        email.hashedData(),
+                        null,
+                        SocialProvider.KAKAO,
+                        socialId.encryptedData(),
+                        socialId.hashedData()
+                );
+
+                return kakaoData;
+                // TODO: 소셜 id와 이메일로 회원가입 처리
+            }
         }
-
-        // throw new UnsupportedOperationException("소셜 회원가입은 현재 지원되지 않습니다.");
-        // 카카오 회원가입 로직을 구현합니다.
-        // 소셜 토큰을 사용하여 카카오 API로부터 사용자 정보를 가져오고, 이를 기반으로 계정을 생성합니다.
-        // 이메일, 소셜 ID 중복 검증 등을 수행합니다.
-        // 이메일이 없는 경우, 소셜 ID로만 회원가입을 처리합니다. KakaoUserInfoDTO.md 참고
+        // TODO: 사용자 소셜 id 중복 확인 후 중복 -> 로그인, 신규 -> 회원가입
     }
 
     private RegisterData naverRegister(String socialToken) {

@@ -50,7 +50,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-quartz' // 스케줄링, 배치
 	implementation 'org.springframework.boot:spring-boot-starter-websocket' // 실시간 양방향 통신
 	implementation 'org.springframework.boot:spring-boot-starter-batch' // 대용량 처리, 배치
-	implementation 'org.springframework.boot:spring-boot-starter-amqp' // RabbitMQ 등 메시지 브로커
+//	implementation 'org.springframework.boot:spring-boot-starter-amqp' // RabbitMQ 등 메시지 브로커
 	runtimeOnly 'com.mysql:mysql-connector-j' // MySQL JDBC 드라이버
 
 	compileOnly 'org.projectlombok:lombok' // Lombok(코드 자동생성)

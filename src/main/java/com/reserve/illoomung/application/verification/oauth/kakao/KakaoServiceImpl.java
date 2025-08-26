@@ -52,6 +52,7 @@ public class KakaoServiceImpl implements KakaoService {
             .block();
         
         log.info("[회원가입] KAKAO 토큰 정보: {}", tokenInfo);
+
         if (tokenInfo != null && !tokenInfo.isEmpty()) {
             Mono<KakaoUserInfoResponse> jsonResponse = kakaoWebClient.get() // 소셜 정보 요청
                 .uri("/v2/user/me")
@@ -61,7 +62,10 @@ public class KakaoServiceImpl implements KakaoService {
                 .bodyToMono(KakaoUserInfoResponse.class);
 
             KakaoUserInfoResponse jsonResponseBody = jsonResponse.block();
-            
+
+            String jsonResponseInfo = String.valueOf(jsonResponseBody);
+            log.debug(jsonResponseInfo);
+
             return jsonResponseBody;
         }
         return null; // 토큰 정보가 유효하지 않거나 비어있는 경우
