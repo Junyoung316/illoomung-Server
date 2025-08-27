@@ -36,23 +36,7 @@ public class RegisterValidator {
      * @throws DuplicateException 이메일이 중복된 경우
      */
     public boolean isSocialDuplicate(SocialProvider socialProvider, String socialIdHash) {
-        boolean exists = accountRepository.existsBySocialProviderAndSocialId(socialProvider, socialIdHash);
-            
-//        if (exists) {
-//            throw new DuplicateException("이미 존재하는 소셜 아이디입니다: " + socialIdHash);
-//        }
-        return exists; // 중복이면 true, 신규면 false
+        // 중복이면 true, 신규면 false
+        return accountRepository.existsBySocialProviderAndSocialId(socialProvider, socialIdHash);
     }
-
-    // /**
-    //  * 전화번호 중복 검사를 수행합니다.
-    //  * 
-    //  * @param phone 검사할 전화번호
-    //  * @throws DuplicatePhoneException 전화번호가 중복된 경우
-    //  */
-    // public void validatePhoneDuplicate(String phone) {
-    //     if (userProfileRepository.findAll().stream().anyMatch(p -> phone.equals(p.getPhone()))) {
-    //         throw new DuplicatePhoneException("이미 존재하는 전화번호입니다: " + phone);
-    //     }
-    // }
 }

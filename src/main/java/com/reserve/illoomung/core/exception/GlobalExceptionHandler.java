@@ -36,7 +36,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(InvalidKakaoTokenException.class)
     public ResponseEntity<MainResponse<Void>> handleInvalidKakaoTokenException(InvalidKakaoTokenException ex) {
-        log.error("잘못된 카카오 토큰: ", ex.getMessage(), ex.getClass());
+        log.error("잘못된 카카오 토큰: {}, {}", ex.getMessage(), ex.getClass());
         MainResponse<Void> errorResponse = MainResponse.error(
             HttpStatus.UNAUTHORIZED.value(),
             "잘못된 카카오 토큰: " + ex.getMessage()
@@ -46,7 +46,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(KakaoApiClientException.class)
     public ResponseEntity<MainResponse<Void>> handleKakaoApiClientException(KakaoApiClientException ex) {
-        log.error("카카오 API 클라이언트 오류: ", ex.getMessage(), ex.getClass());
+        log.error("카카오 API 클라이언트 오류: {}, {}", ex.getMessage(), ex.getClass());
         MainResponse<Void> errorResponse = MainResponse.error(
             HttpStatus.BAD_REQUEST.value(),
             "카카오 API 클라이언트 오류: " + ex.getMessage()
@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(KakaoApiServerException.class)
     public ResponseEntity<MainResponse<Void>> handleKakaoApiServerException(KakaoApiServerException ex) {
-        log.error("카카오 API 서버 오류: ", ex.getMessage(), ex.getClass());
+        log.error("카카오 API 서버 오류: {}, {}", ex.getMessage(), ex.getClass());
         MainResponse<Void> errorResponse = MainResponse.error(
             HttpStatus.INTERNAL_SERVER_ERROR.value(),
             "카카오 API 서버 오류: " + ex.getMessage()
@@ -66,7 +66,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(DuplicateException.class)
     public ResponseEntity<MainResponse<Void>> handleDuplicateEmailException(DuplicateException ex) {
-        log.error("중복 예외: ", ex.getMessage(), ex.getClass());
+        log.error("중복 예외: {}, {}", ex.getMessage(), ex.getClass());
         MainResponse<Void> errorResponse = MainResponse.error(
             HttpStatus.CONFLICT.value(),
             "중복: " + ex.getMessage()

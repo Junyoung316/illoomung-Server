@@ -1,6 +1,7 @@
 package com.reserve.illoomung.application.verification.oauth.kakao;
 
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -41,7 +42,7 @@ public class KakaoServiceImpl implements KakaoService {
                     ))
             )
             // 3. 5xx 에러들을 처리합니다.
-            .onStatus(httpStatus -> httpStatus.is5xxServerError(),
+            .onStatus(HttpStatusCode::is5xxServerError,
                 clientResponse -> clientResponse.bodyToMono(String.class)
                     .flatMap(errorBody -> Mono.error(
                         new KakaoApiServerException(

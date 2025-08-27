@@ -31,7 +31,7 @@ public class Account {
     @Column(name = "email_hash", length = 64, unique = true)
     private String emailHash;
 
-    @Column(name = "password_hash", length = 255)
+    @Column(name = "password_hash")
     private String passwordHash;  // 소셜 로그인 시 null 가능
 
     @Enumerated(EnumType.STRING)

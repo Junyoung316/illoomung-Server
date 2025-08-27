@@ -1,5 +1,6 @@
 package com.reserve.illoomung.presentation.auth.register;
 
+import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.reserve.illoomung.application.auth.register.RegisterService;
-import com.reserve.illoomung.dto.request.auth.register.LocalRegisterRequest;
-import com.reserve.illoomung.dto.request.auth.register.SocialRegisterRequest;
+import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
 import com.reserve.illoomung.core.dto.MainResponse;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -30,7 +30,7 @@ public class RegisterController {
         // security = @SecurityRequirement(name = "BearerAuth")
     )
     @PostMapping("/local")
-    public ResponseEntity<MainResponse<String>> userRegister(@Valid @RequestBody LocalRegisterRequest request) {
+    public ResponseEntity<MainResponse<String>> userRegister(@Valid @RequestBody LocalRegisterLoginRequest request) {
         registerService.localRegister(
             request
         );
@@ -45,7 +45,7 @@ public class RegisterController {
     @PostMapping("/social")
     public ResponseEntity<MainResponse<String>> socialRegister(
         @RequestHeader("Authorization") String authorizationHeader,
-        @Valid @RequestBody SocialRegisterRequest request
+        @Valid @RequestBody SocialRegisterLoginRequest request
         ) {
             registerService.socialRegister(
                 request,

@@ -8,8 +8,7 @@ import java.time.format.DateTimeFormatter;
 public class Time {
 
     public static LocalDateTime krTime() {
-        LocalDateTime time = LocalDateTime.now(ZoneId.of("Asia/Seoul"));
-        return time;
+        return LocalDateTime.now(ZoneId.of("Asia/Seoul"));
     }
 
     // 1. LocalDate를 문자열로 변환

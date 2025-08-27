@@ -1,5 +1,6 @@
 package com.reserve.illoomung.application.auth.register;
 
+import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,8 +16,7 @@ import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.exception.NoAuthorizationHeaderException;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.service.RegisterValidator;
-import com.reserve.illoomung.dto.request.auth.register.LocalRegisterRequest;
-import com.reserve.illoomung.dto.request.auth.register.SocialRegisterRequest;
+import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
 import com.reserve.illoomung.dto.response.verification.oauth.kakao.KakaoUserInfoResponse;
 
 import lombok.RequiredArgsConstructor;
@@ -31,7 +31,7 @@ public class RegisterServiceImpl implements RegisterService {
     private final AccountRepository accountRepository;
     private final SecurityUtil securityUtil;
     private final RegisterValidator registerValidator;
-    private final KakaoService kakaoService;;
+    private final KakaoService kakaoService;
 
     private record RegisterData(
         String emailEncrypt,
@@ -61,7 +61,7 @@ public class RegisterServiceImpl implements RegisterService {
 
     @Override
     @Transactional
-    public void localRegister(LocalRegisterRequest request) { // 권한은 Role.USER로 고정
+    public void localRegister(LocalRegisterLoginRequest request) { // 권한은 Role.USER로 고정
         RegisterData localData;
         log.info("[회원가입] 로컬 회원가입 시도: {}", request.getEmail());
         CryptoResult email = securityUtil.cryptoResult(request.getEmail());
@@ -108,7 +108,6 @@ public class RegisterServiceImpl implements RegisterService {
                         socialId.hashedData()
                 );
 
-                return kakaoData;
                 // TODO: 이메일 없이 회원가입 처리
             } else {
                 CryptoResult email = securityUtil.cryptoResult(kakaoUserInfo.getKakaoAccount().getEmail());
@@ -123,11 +122,10 @@ public class RegisterServiceImpl implements RegisterService {
                         socialId.hashedData()
                 );
 
-                return kakaoData;
                 // TODO: 소셜 id와 이메일로 회원가입 처리
             }
+            return kakaoData;
         }
-        // TODO: 사용자 소셜 id 중복 확인 후 중복 -> 로그인, 신규 -> 회원가입
     }
 
     private RegisterData naverRegister(String socialToken) {
@@ -144,7 +142,7 @@ public class RegisterServiceImpl implements RegisterService {
 
     @Override
     @Transactional
-    public void socialRegister(SocialRegisterRequest request, String socialToken) {
+    public void socialRegister(SocialRegisterLoginRequest request, String socialToken) {
         RegisterData socialData;
         log.info("[회원가입] 소셜 회원가입 시도: {}", request.getSocialProvider());
         log.info("[회원가입] 소셜 토큰: {}", socialToken);

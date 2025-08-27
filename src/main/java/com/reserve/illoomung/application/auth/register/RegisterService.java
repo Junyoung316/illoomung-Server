@@ -1,11 +1,11 @@
 package com.reserve.illoomung.application.auth.register;
 
-import com.reserve.illoomung.dto.request.auth.register.LocalRegisterRequest;
-import com.reserve.illoomung.dto.request.auth.register.SocialRegisterRequest;
+import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
+import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
 
 
 public interface RegisterService {
-    void localRegister(LocalRegisterRequest request);
-    void socialRegister(SocialRegisterRequest request, String socialToken);
+    void localRegister(LocalRegisterLoginRequest request);
+    void socialRegister(SocialRegisterLoginRequest request, String socialToken);
     
 }

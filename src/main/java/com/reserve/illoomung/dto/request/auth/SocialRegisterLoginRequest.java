@@ -1,4 +1,4 @@
-package com.reserve.illoomung.dto.request.auth.register;
+package com.reserve.illoomung.dto.request.auth;
 
 import com.reserve.illoomung.core.domain.entity.enums.SocialProvider;
 
@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class SocialRegisterRequest {
+public class SocialRegisterLoginRequest {
     
     @NotNull(message = "소셜 제공자는 필수 입력 항목입니다.")
     @Schema(description = "소셜 제공사", example = "KAKAO, NAVER, GOOGLE")

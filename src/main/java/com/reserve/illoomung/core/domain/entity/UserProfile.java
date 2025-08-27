@@ -63,14 +63,11 @@ public class UserProfile implements Serializable {
     private GenderStat genderStat = GenderStat.UNKNOWN;
 
     @Lob
-    @Column(name = "birthday")
-    private String birth;  // 암호화된 생일
+    @Column(name = "age_group")
+    private String ageGroup;  // 암호화된 생일
 
-    @Column(name = "birth_month")
-    private Integer birthMonth;
-
-    @Column(name = "birth_day")
-    private Integer birthDay;
+    @Column(name = "birth_md")
+    private Integer birthMD;
 
     @Lob
     @Column(name = "address_full", nullable = false)

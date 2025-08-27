@@ -1,4 +1,4 @@
 package com.reserve.illoomung.application.verification.oauth.google;
 
-public class GoogleServiceImple {
+public class GoogleServiceImpl implements GoogleService {
 }
