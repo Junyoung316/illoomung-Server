@@ -1,8 +1,9 @@
 package com.reserve.illoomung.presentation.auth.login;
 
+import com.reserve.illoomung.application.auth.login.LoginService;
+import com.reserve.illoomung.core.dto.LoginResponse;
 import com.reserve.illoomung.core.dto.MainResponse;
 import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
-import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,13 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class LoginController {
 
-    @Operation(
-            summary = "사용자 로컬 로그인",
-            description = "사용자 로컬 로긍ㄴ 컨트롤러"
-            // security = @SecurityRequirement(name = "BearerAuth")
-    )
+    private final LoginService loginService;
+
     @PostMapping("/local")
-    public ResponseEntity<MainResponse<String>> loginController(@Valid @RequestBody LocalRegisterLoginRequest request) {
-        return ResponseEntity.ok(MainResponse.success());
+    public ResponseEntity<MainResponse<LoginResponse>> loginController(@Valid @RequestBody LocalRegisterLoginRequest request) {
+        LoginResponse token = loginService.localLogin(request);
+        return ResponseEntity.ok(MainResponse.success(token));
     }
 }

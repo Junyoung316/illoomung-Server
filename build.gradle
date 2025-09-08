@@ -40,10 +40,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis' // Redis
 	implementation 'org.springframework.boot:spring-boot-starter-mail' // 이메일 발송
 	implementation 'org.springframework.boot:spring-boot-configuration-processor' // 설정 정보 자동완성
-	// implementation 'io.jsonwebtoken:jjwt-api:0.12.6' // JWT API
-	// runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6' // JWT 구현체
-	// runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6' // JWT Jackson 지원
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.0' // Swagger(OpenAPI)
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6' // JWT API
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6' // JWT 구현체
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6' // JWT Jackson 지원
     implementation("io.swagger.core.v3:swagger-annotations:2.2.36")
 	implementation 'org.springframework.retry:spring-retry:2.0.12' // 메서드 재시도
 	implementation 'org.springframework.boot:spring-boot-starter-actuator' // 모니터링, 헬스체크

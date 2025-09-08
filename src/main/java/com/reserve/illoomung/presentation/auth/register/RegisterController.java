@@ -1,12 +1,10 @@
 package com.reserve.illoomung.presentation.auth.register;
 
+import com.reserve.illoomung.core.dto.LoginResponse;
 import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.reserve.illoomung.application.auth.register.RegisterService;
 import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
@@ -17,6 +15,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Map;
+import java.util.Optional;
+
+@Slf4j
 @RestController
 @RequestMapping("/register")
 @RequiredArgsConstructor
@@ -37,21 +39,38 @@ public class RegisterController {
         return ResponseEntity.ok(MainResponse.success());
     }
 
-    @Operation(
-        summary = "사용자 소셜 회원가입",
-        description = "사용자 소셜 회원가입 컨트롤러",
-        security = @SecurityRequirement(name = "BearerAuth")
-    )
-    @PostMapping("/social")
-    public ResponseEntity<MainResponse<String>> socialRegister(
-        @RequestHeader("Authorization") String authorizationHeader,
-        @Valid @RequestBody SocialRegisterLoginRequest request
-        ) {
-            registerService.socialRegister(
-                request,
-                authorizationHeader.replace("Bearer ", "")
-            );
-        return ResponseEntity.ok(MainResponse.success());
-    }
+//    @Operation(
+//        summary = "사용자 소셜 회원가입",
+//        description = "사용자 소셜 회원가입 컨트롤러",
+//        security = @SecurityRequirement(name = "BearerAuth")
+//    )
+//    @PostMapping("/social")
+//    public ResponseEntity<MainResponse<?>> socialRegister(
+//        @RequestHeader("Authorization") String authorizationHeader,
+//        @Valid @RequestBody SocialRegisterLoginRequest request
+//        ) {
+//        Optional<LoginResponse> loginResponseOpt =  registerService.socialRegister(
+//                request,
+//                authorizationHeader.replace("Bearer ", "")
+//            );
+//        // 로그인 토큰 반환
+//        // 신규 가입 성공 메시지 반환
+//        return loginResponseOpt.<ResponseEntity<MainResponse<?>>>map(loginResponse -> ResponseEntity.ok(MainResponse.success(loginResponse))).orElseGet(() -> ResponseEntity.ok(MainResponse.success()));
+//    }
+
+//    @CrossOrigin(origins = "http://127.0.0.1:3002") // CORS 설정
+//    @PostMapping("/kakao")
+//    public ResponseEntity<MainResponse<String>> kakaoRegisterLoginController(@RequestBody Map<String, Object> body) {
+//        log.info("Request Body: {}", body);
+//        String code = (String) body.get("code");
+//        registerService.kakaoRegister(code);
+//        return ResponseEntity.ok(MainResponse.success());
+//    }
+//
+//    @PostMapping("/callback")
+//    public ResponseEntity<MainResponse<String>> kakaoController(@RequestBody Map<String, Object> body) {
+//        log.info("Request Body: {}", body);
+//        return ResponseEntity.ok(MainResponse.success());
+//    }
 }
 // "Authorization": "Bearer dsljhfiouasdhjkfhsdoih"

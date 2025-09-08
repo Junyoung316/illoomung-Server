@@ -32,7 +32,39 @@ public class GlobalExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
     }
-    // NoAuthorizationHeaderException
+
+    @ExceptionHandler(LoginFailException.class)
+    public ResponseEntity<MainResponse<Void>> handleLoginFail(LoginFailException ex) {
+        // 필요시 로그 기록
+        log.error("[로그인] 에러: {}", ex.getMessage() +
+                (ex.getCause() != null ? " (" + ex.getCause().getMessage() + ")" : ""));
+
+        MainResponse<Void> errorResponse = MainResponse.error(
+                HttpStatus.UNAUTHORIZED.value(),
+                "[로그인] 에러: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
+    }
+
+    @ExceptionHandler(CustomJwtException.class)
+    public ResponseEntity<MainResponse<Void>> handleJwtException(CustomJwtException ex) {
+        log.error("JWT 예외 발생: {}", ex.getMessage(), ex.getCause());
+        MainResponse<Void> errorResponse = MainResponse.error(
+                HttpStatus.UNAUTHORIZED.value(),
+                "JWT 오류: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
+    }
+
+    @ExceptionHandler(InvalidTokenTypeException.class)
+    public ResponseEntity<MainResponse<Void>> handleInvalidTokenType(InvalidTokenTypeException ex) {
+        log.error("잘못된 Refresh Token: {}", ex.getMessage(), ex.getCause());
+        MainResponse<Void> errorResponse = MainResponse.error(
+                HttpStatus.UNAUTHORIZED.value(),
+                "JWT 오류: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
+    }
 
     @ExceptionHandler(InvalidKakaoTokenException.class)
     public ResponseEntity<MainResponse<Void>> handleInvalidKakaoTokenException(InvalidKakaoTokenException ex) {

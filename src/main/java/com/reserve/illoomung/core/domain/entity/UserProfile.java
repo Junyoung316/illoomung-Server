@@ -9,7 +9,7 @@ import com.reserve.illoomung.core.domain.entity.enums.GenderStat;
 @Entity
 @Table(name = "user_profile",
        indexes = {
-           @Index(name = "idx_birthday_event", columnList = "birth_month, birth_day"),
+           @Index(name = "idx_birthday_event", columnList = "birth_md"),
            @Index(name = "idx_address", columnList = "address_sido, address_sigungu"),
            @Index(name = "idx_sigungu", columnList = "address_sigungu")
        }
@@ -26,6 +26,7 @@ public class UserProfile implements Serializable {
     @Column(name = "user_id", nullable = false, updatable = false)
     private Long userId;
 
+    @MapsId
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "fk_user_account"))
@@ -67,7 +68,7 @@ public class UserProfile implements Serializable {
     private String ageGroup;  // 암호화된 생일
 
     @Column(name = "birth_md")
-    private Integer birthMD;
+    private String birthMD;
 
     @Lob
     @Column(name = "address_full", nullable = false)
