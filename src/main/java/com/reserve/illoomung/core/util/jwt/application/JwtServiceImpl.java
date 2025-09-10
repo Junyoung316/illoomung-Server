@@ -2,6 +2,8 @@ package com.reserve.illoomung.core.util.jwt.application;
 
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Date;
 import java.util.Map;
 import java.util.Optional;
@@ -16,6 +18,7 @@ import com.reserve.illoomung.core.domain.repository.TokenBlacklistRepository;
 import com.reserve.illoomung.core.dto.LoginResponse;
 import com.reserve.illoomung.core.dto.TokenIatExp;
 import com.reserve.illoomung.core.exception.CustomJwtException;
+import com.reserve.illoomung.core.util.DateTimeUtils;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.RequiredArgsConstructor;
@@ -79,7 +82,7 @@ public class JwtServiceImpl implements JwtService {
         // 토큰 정보 테이블에 refresh token 등록
         // 로그아웃 등 이벤트 발생 시 토큰 정보 테이블에 해당 토큰의 폐지 여부를 True로 변경 후 블랙리스트 등록
 
-        boolean success = revokeTokensByAccountId(Long.valueOf(accountId));
+        boolean success = revokeTokensByAccountId(Long.valueOf(accountId)); // 토큰 정보 테이블에 사용자의 기존 Refresh Token 폐기
 
         if (!success) {
             // TODO: 토큰 폐기 실패 시 커스텀 예외 던지기
@@ -91,17 +94,17 @@ public class JwtServiceImpl implements JwtService {
                 accountId, Map.of("role", account.getRole())
         );
         TokenIatExp refreshTokenInfo = generatorRefreshToken(accountId);
+        Long expiresAt = DateTimeUtils.instantToEpochSeconds(refreshTokenInfo.expiresAt());
         log.info("[재발급] JWT 토큰 발급 완료: accountId={}, role={}", accountId, account.getRole());
+        log.info("[JWT 토큰] 생성={}, 만료={}L", refreshTokenInfo.issuedAt(), expiresAt);
 
         RefreshTokens tokenInfo = RefreshTokens.builder()
                 .account(account)
                 .token(refreshTokenInfo.token())
-                .expiresAt(refreshTokenInfo.expiresAt())
+                .expiresAt(expiresAt)
                 .createdAt(refreshTokenInfo.issuedAt())
                 .revoked(true)
                 .build();
-
-        // TODO: 리프레시 토큰 Redis 저장
 
         refreshTokensRepository.save(tokenInfo);
         // 사용자 기본키, 사용자 토큰 값, 만료, 생성, 폐기 여부
@@ -110,10 +113,10 @@ public class JwtServiceImpl implements JwtService {
 
     @Override
     public String generatorAccessToken(String accountId, Map<String, Object> claims) { // Access Token 생성
-        Instant now = Instant.now();
+        Instant now = DateTimeUtils.now();
         Instant expiration = now.plusMillis(accessTokenExpireMs);
-        Date issuedAt = Date.from(now);
-        Date expiresAt = Date.from(expiration);
+        Date issuedAt = DateTimeUtils.instantToDate(now);
+        Date expiresAt = DateTimeUtils.instantToDate(expiration);
 
         String token = Jwts.builder()
                 .subject(accountId)
@@ -124,16 +127,16 @@ public class JwtServiceImpl implements JwtService {
                 .signWith(key)
                 .compact();
         long accessTokenExpireMinutes = accessTokenExpireMs / 1000 / 60;
-        log.info("[JWT] 토큰 생성: accountId={}, role={}, 만료={}ms ({}분)", accountId, claims.get("role"), accessTokenExpireMs, accessTokenExpireMinutes);
+        log.info("[JWT] 토큰 생성: accountId={}, 생성={}, role={}, 만료={}, {}ms ({}분)", accountId, issuedAt, claims.get("role"), expiresAt, accessTokenExpireMs, accessTokenExpireMinutes);
         return token;
     }
 
     @Override
     public TokenIatExp generatorRefreshToken(String accountId) {// Refesh Token 생성
-        Instant now = Instant.now();
+        Instant now = DateTimeUtils.now();
         Instant expiration = now.plusMillis(refreshTokenExpireMs);
-        Date issuedAt = Date.from(now);
-        Date expiresAt = Date.from(expiration);
+        Date issuedAt = DateTimeUtils.instantToDate(now);
+        Date expiresAt = DateTimeUtils.instantToDate(expiration);
 
         String token = Jwts.builder()
                 .subject(accountId)
@@ -144,9 +147,8 @@ public class JwtServiceImpl implements JwtService {
                 .compact();
         long refreshTokenExpireMinutes = refreshTokenExpireMs / 1000 / 60;
         long refreshTokenExpireDay = refreshTokenExpireMinutes / 60 / 24;
-        log.info("[JWT] 토큰 생성: accountId={}, tokenType=refresh, 만료={}ms ({}분,  {}일)", accountId, refreshTokenExpireMs, refreshTokenExpireMinutes, refreshTokenExpireDay);
-        // expireMinutes);
-        return new TokenIatExp(token, issuedAt, expiresAt);
+        log.info("[JWT] 토큰 생성: accountId={}, tokenType=refresh, 생성={}, 만료={}, {}ms ({}분,  {}일)", accountId, issuedAt, expiresAt, refreshTokenExpireMs, refreshTokenExpireMinutes, refreshTokenExpireDay);
+        return new TokenIatExp(token, now, expiration);
     }
 
     @Override

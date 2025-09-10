@@ -2,7 +2,8 @@ package com.reserve.illoomung.core.domain.entity;
 
 import lombok.*;
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
 
 @Entity
 @Table(name = "token_blacklist", indexes = {
@@ -23,10 +24,10 @@ public class TokenBlacklist {
     private String token;
 
     @Column(name = "expires_at", nullable = false)
-    private LocalDateTime expiresAt;
+    private Long expiresAt;
 
     @Column(name = "blacklisted_at", nullable = false,
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private LocalDateTime blacklistedAt;
+    private Instant blacklistedAt;
 
 }

@@ -1,6 +1,6 @@
 package com.reserve.illoomung.core.dto;
 
-import java.util.Date;
+import java.time.Instant;
 
-public record TokenIatExp(String token, Date issuedAt, Date expiresAt) {
+public record TokenIatExp(String token, Instant issuedAt, Instant expiresAt) {
 }

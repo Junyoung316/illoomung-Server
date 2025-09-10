@@ -12,7 +12,7 @@ spring:
   application:
     name: illoomung
   jackson:
-    time-zone: Asia/Seoul
+    time-zone: UTC
   devtools:
     livereload:
       enabled: true
@@ -33,6 +33,8 @@ spring:
     properties:
       hibernate:
         format_sql: true    # SQL 포맷팅 여부
+        jdbc:
+          time_zone: UTC    # 타입존 UTC로 명시
   thymeleaf:
     suffix: .html
     mode: HTML
