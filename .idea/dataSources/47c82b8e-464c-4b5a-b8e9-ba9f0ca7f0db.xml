@@ -1006,7 +1006,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-09-03.02:12:37</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-09-17.02:28:28</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="information_schema">
@@ -1048,647 +1048,915 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="300" parent="289" name="login_attempts">
+    <table id="300" parent="289" name="amenities">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="301" parent="289" name="pet_vaccinations">
+    <table id="301" parent="289" name="offering_categories">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="302" parent="289" name="refresh_tokens">
+    <table id="302" parent="289" name="offering_category_mappings">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="303" parent="289" name="token_blacklist">
+    <table id="303" parent="289" name="refresh_tokens">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="304" parent="289" name="user_pets">
+    <table id="304" parent="289" name="store_amenity_mappings">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="305" parent="289" name="user_profile">
+    <table id="305" parent="289" name="store_categories">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <column id="306" parent="299" name="account_id">
-      <AutoIncrement>8</AutoIncrement>
-      <Comment>사용자 고유 식별 번호</Comment>
+    <table id="306" parent="289" name="store_category_mappings">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="307" parent="289" name="store_images">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="308" parent="289" name="store_offerings">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="309" parent="289" name="store_operating_hours">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="310" parent="289" name="stores">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="311" parent="289" name="token_blacklist">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="312" parent="289" name="user_profile">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="313" parent="299" name="account_id">
+      <AutoIncrement>2</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
+      <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="307" parent="299" name="email">
-      <Comment>이메일 암호문</Comment>
+    <column id="314" parent="299" name="created_at">
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>text|0s</StoredType>
+      <StoredType>datetime(6)|0s</StoredType>
     </column>
-    <column id="308" parent="299" name="email_hash">
-      <Comment>이메일 해시</Comment>
+    <column id="315" parent="299" name="dormant_at">
       <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="316" parent="299" name="last_login_at">
+      <Position>4</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="317" parent="299" name="updated_at">
+      <Position>5</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="318" parent="299" name="withdrawn_at">
+      <Position>6</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="319" parent="299" name="email_hash">
+      <Position>7</Position>
       <StoredType>varchar(64)|0s</StoredType>
     </column>
-    <column id="309" parent="299" name="password_hash">
-      <Comment>소셜 로그인 시 NULL 가능</Comment>
-      <Position>4</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <column id="310" parent="299" name="role">
-      <Comment>권한</Comment>
-      <DefaultExpression>&apos;USER&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>enum(&apos;USER&apos;, &apos;ADMIN&apos;, &apos;OWNER&apos;)|0e</StoredType>
-    </column>
-    <column id="311" parent="299" name="social_provider">
-      <Comment>소셜 로그인 제공사</Comment>
-      <DefaultExpression>&apos;NONE&apos;</DefaultExpression>
-      <Position>6</Position>
-      <StoredType>enum(&apos;GOOGLE&apos;, &apos;KAKAO&apos;, &apos;NAVER&apos;, &apos;NONE&apos;)|0e</StoredType>
-    </column>
-    <column id="312" parent="299" name="social_id">
-      <Comment>소셜 로그인 제공사의 사용자 고유 식별 번호 암호문</Comment>
-      <Position>7</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="313" parent="299" name="social_id_hash">
-      <Comment>소셜 로그인 제공사의 사용자 고유 식별 번호 해시</Comment>
+    <column id="320" parent="299" name="social_id_hash">
       <Position>8</Position>
       <StoredType>varchar(64)|0s</StoredType>
     </column>
-    <column id="314" parent="299" name="last_login_at">
-      <Comment>마지막 로그인 시각</Comment>
+    <column id="321" parent="299" name="password_hash">
       <Position>9</Position>
-      <StoredType>datetime|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="315" parent="299" name="status">
-      <Comment>활성 상태(활성화, 비활성화, 휴면, 탈퇴)</Comment>
-      <DefaultExpression>&apos;ACTIVE&apos;</DefaultExpression>
+    <column id="322" parent="299" name="email">
       <Position>10</Position>
-      <StoredType>enum(&apos;ACTIVE&apos;, &apos;INACTIVE&apos;, &apos;DORMANT&apos;, &apos;WITHDRAWN&apos;)|0e</StoredType>
+      <StoredType>tinytext|0s</StoredType>
     </column>
-    <column id="316" parent="299" name="dormant_at">
-      <Comment>휴면 변경 시각</Comment>
+    <column id="323" parent="299" name="role">
+      <NotNull>1</NotNull>
       <Position>11</Position>
-      <StoredType>datetime|0s</StoredType>
+      <StoredType>enum(&apos;ADMIN&apos;, &apos;OWNER&apos;, &apos;USER&apos;)|0e</StoredType>
     </column>
-    <column id="317" parent="299" name="withdrawn_at">
-      <Comment>탈퇴 변경 시각</Comment>
+    <column id="324" parent="299" name="social_id">
       <Position>12</Position>
-      <StoredType>datetime|0s</StoredType>
+      <StoredType>tinytext|0s</StoredType>
     </column>
-    <column id="318" parent="299" name="created_at">
-      <Comment>계정 생성 시각</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    <column id="325" parent="299" name="social_provider">
+      <NotNull>1</NotNull>
       <Position>13</Position>
-      <StoredType>timestamp|0s</StoredType>
+      <StoredType>enum(&apos;GOOGLE&apos;, &apos;KAKAO&apos;, &apos;NAVER&apos;, &apos;NONE&apos;)|0e</StoredType>
     </column>
-    <column id="319" parent="299" name="updated_at">
-      <Comment>계정 수정 시각(자동 갱신)</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    <column id="326" parent="299" name="status">
+      <NotNull>1</NotNull>
       <Position>14</Position>
-      <StoredType>timestamp|0s</StoredType>
+      <StoredType>enum(&apos;ACTIVE&apos;, &apos;DORMANT&apos;, &apos;INACTIVE&apos;, &apos;WITHDRAWN&apos;)|0e</StoredType>
     </column>
-    <index id="320" parent="299" name="PRIMARY">
+    <index id="327" parent="299" name="PRIMARY">
       <ColNames>account_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="321" parent="299" name="email_hash">
+    <index id="328" parent="299" name="UK7lx74v52goc4peaj4wrrxs7uu">
       <ColNames>email_hash</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="322" parent="299" name="uk_provider_social_id">
+    <index id="329" parent="299" name="uk_provider_social_id">
       <ColNames>social_provider
 social_id_hash</ColNames>
-      <Comment>소셜 로그인 정보에 대한 복합 UNIQUE 인덱스</Comment>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="323" parent="299" name="PRIMARY">
+    <key id="330" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="324" parent="299" name="email_hash">
-      <UnderlyingIndexName>email_hash</UnderlyingIndexName>
+    <key id="331" parent="299" name="UK7lx74v52goc4peaj4wrrxs7uu">
+      <UnderlyingIndexName>UK7lx74v52goc4peaj4wrrxs7uu</UnderlyingIndexName>
     </key>
-    <key id="325" parent="299" name="uk_provider_social_id">
+    <key id="332" parent="299" name="uk_provider_social_id">
       <UnderlyingIndexName>uk_provider_social_id</UnderlyingIndexName>
     </key>
-    <column id="326" parent="300" name="id">
+    <column id="333" parent="300" name="amenity_id">
       <AutoIncrement>1</AutoIncrement>
-      <Comment>테이블 고유 식별 번호</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
+      <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="327" parent="300" name="account_id">
-      <Comment>사용자 고유 식별 번호 (account 테이블) 존재하지 않는 사용자의 경우 NULL</Comment>
-      <Position>2</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="328" parent="300" name="attempted_at">
-      <Comment>로그인 시도 시각</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>3</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="329" parent="300" name="ip_address">
-      <Comment>요청 ip 주소 암호문</Comment>
-      <Position>4</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="330" parent="300" name="user_agent">
-      <Comment>요청 브라우저 정보 암호문</Comment>
-      <Position>5</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="331" parent="300" name="success">
-      <Comment>성공 여부 (TRUE: 성공, FALSE: 실패)</Comment>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
-    </column>
-    <column id="332" parent="300" name="fail_reason">
-      <Comment>실패 사유 (예: WRONG_PASSWORD, NO_ACCOUNT)</Comment>
-      <Position>7</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <foreign-key id="333" parent="300" name="fk_login_account">
-      <ColNames>account_id</ColNames>
-      <OnDelete>set-null</OnDelete>
-      <RefColNames>account_id</RefColNames>
-      <RefTableName>account</RefTableName>
-    </foreign-key>
-    <index id="334" parent="300" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="335" parent="300" name="idx_account_id">
-      <ColNames>account_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="336" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="337" parent="301" name="vaccination_id">
-      <AutoIncrement>1</AutoIncrement>
-      <Comment>예방접종 기록 고유 식별 번호</Comment>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="338" parent="301" name="pet_id">
-      <Comment>반려동물 ID (user_pets 테이블 FK)</Comment>
+    <column id="334" parent="300" name="amenity_name">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="339" parent="301" name="vaccine_name">
-      <Comment>백신/접종 이름 (예: DHPPI, 코로나, 켄넬코프, 광견병)</Comment>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="340" parent="301" name="vaccination_date">
-      <Comment>접종 일자</Comment>
-      <NotNull>1</NotNull>
+    <column id="335" parent="300" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>3</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="336" parent="300" name="description">
       <Position>4</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="341" parent="301" name="next_due_date">
-      <Comment>다음 접종 예정일 (알림 기능에 활용)</Comment>
-      <Position>5</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="342" parent="301" name="hospital_name">
-      <Comment>접종을 진행한 병원 이름</Comment>
-      <Position>6</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="343" parent="301" name="notes">
-      <Comment>기타 특이사항</Comment>
+    <column id="337" parent="300" name="icon_url">
+      <Position>5</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="338" parent="300" name="sort_order">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="339" parent="300" name="status">
+      <NotNull>1</NotNull>
       <Position>7</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="344" parent="301" name="created_at">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>8</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="345" parent="301" name="updated_at">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>9</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <foreign-key id="346" parent="301" name="fk_vaccination_pet">
-      <ColNames>pet_id</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>pet_id</RefColNames>
-      <RefTableName>user_pets</RefTableName>
-    </foreign-key>
-    <index id="347" parent="301" name="PRIMARY">
-      <ColNames>vaccination_id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="348" parent="301" name="idx_pet_id">
-      <ColNames>pet_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="349" parent="301" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="350" parent="302" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="351" parent="302" name="account_id">
-      <Comment>사용자 기본 정보 기본키</Comment>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="352" parent="302" name="token">
-      <Comment>사용자의 Refresh Token</Comment>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(500)|0s</StoredType>
-    </column>
-    <column id="353" parent="302" name="expires_at">
-      <Comment>토큰 만료 시각</Comment>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="354" parent="302" name="created_at">
-      <Comment>토큰 발급 시각</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>5</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="355" parent="302" name="revoked">
-      <Comment>토큰 폐기 여부(폐기: True, 사용: False)</Comment>
-      <DefaultExpression>0</DefaultExpression>
-      <Position>6</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
-    </column>
-    <foreign-key id="356" parent="302" name="fk_refresh_tokens_account">
-      <ColNames>account_id</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>account_id</RefColNames>
-      <RefTableName>account</RefTableName>
-    </foreign-key>
-    <index id="357" parent="302" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="358" parent="302" name="token">
-      <ColNames>token</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="359" parent="302" name="idx_account_id">
-      <ColNames>account_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="360" parent="302" name="idx_expires_at">
-      <ColNames>expires_at</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="361" parent="302" name="idx_revoked">
-      <ColNames>revoked</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="362" parent="302" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="363" parent="302" name="token">
-      <UnderlyingIndexName>token</UnderlyingIndexName>
-    </key>
-    <column id="364" parent="303" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="365" parent="303" name="token">
-      <Comment>사용자의 Access Token or Refresh Token</Comment>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(500)|0s</StoredType>
-    </column>
-    <column id="366" parent="303" name="expires_at">
-      <Comment>토큰 만료 시각</Comment>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="367" parent="303" name="blacklisted_at">
-      <Comment>블랙리스트 등록 시간</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>4</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <index id="368" parent="303" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="369" parent="303" name="token">
-      <ColNames>token</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="370" parent="303" name="idx_expires_at">
-      <ColNames>expires_at</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="371" parent="303" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="372" parent="303" name="token">
-      <UnderlyingIndexName>token</UnderlyingIndexName>
-    </key>
-    <column id="373" parent="304" name="pet_id">
-      <AutoIncrement>1</AutoIncrement>
-      <Comment>테이블 고유 식별 번호</Comment>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="374" parent="304" name="account_id">
-      <Comment>사용자 고유 식별 번호 (account 테이블)</Comment>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
-    </column>
-    <column id="375" parent="304" name="pet_name">
-      <Comment>반려동물 이름</Comment>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="376" parent="304" name="anniversary_type">
-      <Comment>기념일 유형 (생일, 입양일)</Comment>
-      <Position>4</Position>
-      <StoredType>enum(&apos;BIRTHDAY&apos;, &apos;ADOPTION_DAY&apos;)|0e</StoredType>
-    </column>
-    <column id="377" parent="304" name="anniversary_date">
-      <Comment>기념일 날짜 (YYYY-MM-DD), 정확한 날짜를 모를 경우 해당 연도 1월 1일 선택</Comment>
-      <Position>5</Position>
-      <StoredType>date|0s</StoredType>
-    </column>
-    <column id="378" parent="304" name="breed">
-      <Comment>품종</Comment>
-      <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="379" parent="304" name="weight_kg">
-      <Comment>체중(kg, 소수점 2자)</Comment>
-      <Position>7</Position>
-      <StoredType>decimal(5,2 digit)|0s</StoredType>
-    </column>
-    <column id="380" parent="304" name="size_category">
-      <Comment>크기 분류(소형, 중형, 대형)</Comment>
-      <Position>8</Position>
-      <StoredType>enum(&apos;SMALL&apos;, &apos;MEDIUM&apos;, &apos;LARGE&apos;)|0e</StoredType>
-    </column>
-    <column id="381" parent="304" name="gender">
-      <Comment>성별(남자, 여자, 미상)</Comment>
-      <DefaultExpression>&apos;UNKNOWN&apos;</DefaultExpression>
-      <Position>9</Position>
-      <StoredType>enum(&apos;MALE_INTACT&apos;, &apos;MALE_NEUTERED&apos;, &apos;FEMALE_INTACT&apos;, &apos;FEMALE_SPAYED&apos;, &apos;UNKNOWN&apos;)|0e</StoredType>
-    </column>
-    <column id="382" parent="304" name="medical_notes">
-      <Comment>의료 기록 및 특이사항</Comment>
-      <Position>10</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="383" parent="304" name="personality">
-      <Comment>성격 및 특성</Comment>
-      <Position>11</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="384" parent="304" name="profile_image_url">
-      <Comment>프로필 이미지 URL</Comment>
-      <Position>12</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="385" parent="304" name="status">
-      <Comment>활성 상태(활성화, 비활성화)</Comment>
-      <DefaultExpression>&apos;ACTIVE&apos;</DefaultExpression>
-      <Position>13</Position>
       <StoredType>enum(&apos;ACTIVE&apos;, &apos;INACTIVE&apos;)|0e</StoredType>
     </column>
-    <column id="386" parent="304" name="created_at">
-      <Comment>생성 시각</Comment>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <Position>14</Position>
-      <StoredType>timestamp|0s</StoredType>
-    </column>
-    <column id="387" parent="304" name="updated_at">
-      <Comment>수정 시각(자동 갱신)</Comment>
+    <column id="340" parent="300" name="updated_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>15</Position>
+      <Position>8</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="388" parent="304" name="fk_user_pets_account">
-      <ColNames>account_id</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>account_id</RefColNames>
-      <RefTableName>account</RefTableName>
-    </foreign-key>
-    <index id="389" parent="304" name="PRIMARY">
-      <ColNames>pet_id</ColNames>
+    <index id="341" parent="300" name="PRIMARY">
+      <ColNames>amenity_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="390" parent="304" name="uk_account_pet_name">
-      <ColNames>account_id
-pet_name</ColNames>
+    <index id="342" parent="300" name="UKbe8trq6t1oqf3pggbj934s9kj">
+      <ColNames>amenity_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="391" parent="304" name="idx_anniversary">
-      <ColNames>anniversary_date</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="392" parent="304" name="PRIMARY">
+    <key id="343" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="393" parent="304" name="uk_account_pet_name">
-      <UnderlyingIndexName>uk_account_pet_name</UnderlyingIndexName>
+    <key id="344" parent="300" name="UKbe8trq6t1oqf3pggbj934s9kj">
+      <UnderlyingIndexName>UKbe8trq6t1oqf3pggbj934s9kj</UnderlyingIndexName>
     </key>
-    <column id="394" parent="305" name="user_id">
+    <column id="345" parent="301" name="category_id">
       <AutoIncrement>1</AutoIncrement>
-      <Comment>테이블 고유 식별 번호</Comment>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
+      <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="395" parent="305" name="account_id">
-      <Comment>사용자 고유 식별 번호 (account 테이블)</Comment>
+    <column id="346" parent="301" name="category_name">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>bigint unsigned|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="396" parent="305" name="phone">
-      <Comment>전화번호 암호문</Comment>
+    <column id="347" parent="301" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>3</Position>
-      <StoredType>text|0s</StoredType>
+      <StoredType>timestamp|0s</StoredType>
     </column>
-    <column id="397" parent="305" name="phone_hash">
-      <Comment>전화번호 해시</Comment>
+    <column id="348" parent="301" name="sort_order">
+      <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>varchar(64)|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="398" parent="305" name="phone_verified">
-      <Comment>전화번호 인증 여부</Comment>
-      <DefaultExpression>0</DefaultExpression>
+    <column id="349" parent="301" name="status">
+      <NotNull>1</NotNull>
       <Position>5</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
+      <StoredType>enum(&apos;ACTIVE&apos;, &apos;INACTIVE&apos;)|0e</StoredType>
     </column>
-    <column id="399" parent="305" name="name">
-      <Comment>이름 암호문</Comment>
+    <column id="350" parent="301" name="updated_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>6</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <index id="351" parent="301" name="PRIMARY">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="352" parent="301" name="UKapur5xlpatkphrtfaomvkvjjn">
+      <ColNames>category_name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="353" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="354" parent="301" name="UKapur5xlpatkphrtfaomvkvjjn">
+      <UnderlyingIndexName>UKapur5xlpatkphrtfaomvkvjjn</UnderlyingIndexName>
+    </key>
+    <column id="355" parent="302" name="category_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="356" parent="302" name="offering_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="357" parent="302" name="fk_offering_category_category">
+      <ColNames>category_id</ColNames>
+      <RefColNames>category_id</RefColNames>
+      <RefTableName>offering_categories</RefTableName>
+    </foreign-key>
+    <foreign-key id="358" parent="302" name="fk_offering_category_offering">
+      <ColNames>offering_id</ColNames>
+      <RefColNames>offering_id</RefColNames>
+      <RefTableName>store_offerings</RefTableName>
+    </foreign-key>
+    <index id="359" parent="302" name="PRIMARY">
+      <ColNames>category_id
+offering_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="360" parent="302" name="fk_offering_category_offering">
+      <ColNames>offering_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="302" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="362" parent="303" name="revoked">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="363" parent="303" name="account_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="364" parent="303" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="365" parent="303" name="expires_at">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="366" parent="303" name="id">
+      <AutoIncrement>23</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="367" parent="303" name="token">
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StoredType>text|0s</StoredType>
+      <StoredType>varchar(500)|0s</StoredType>
     </column>
-    <column id="400" parent="305" name="nickname">
-      <Comment>닉네임 암호문</Comment>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="401" parent="305" name="nickname_hash">
-      <Comment>닉네임 해시</Comment>
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>varchar(64)|0s</StoredType>
-    </column>
-    <column id="402" parent="305" name="gender">
-      <Comment>성별 암호문</Comment>
-      <Position>9</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="403" parent="305" name="gender_stat">
-      <Comment>성별 그룹(남자, 여자, 미상)</Comment>
-      <DefaultExpression>&apos;UNKNOWN&apos;</DefaultExpression>
-      <Position>10</Position>
-      <StoredType>enum(&apos;MALE&apos;, &apos;FEMALE&apos;, &apos;UNKNOWN&apos;)|0e</StoredType>
-    </column>
-    <column id="404" parent="305" name="age_group">
-      <Comment>생일 암호문</Comment>
-      <Position>11</Position>
-      <StoredType>varchar(20)|0s</StoredType>
-    </column>
-    <column id="405" parent="305" name="birth_md">
-      <Comment>생일-월 (이벤트 검색용)</Comment>
-      <Position>12</Position>
-      <StoredType>varchar(10)|0s</StoredType>
-    </column>
-    <column id="406" parent="305" name="address_full">
-      <Comment>전체 주소 암호문</Comment>
-      <NotNull>1</NotNull>
-      <Position>13</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <column id="407" parent="305" name="address_sido">
-      <Comment>시/도</Comment>
-      <NotNull>1</NotNull>
-      <Position>14</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="408" parent="305" name="address_sigungu">
-      <Comment>시/군/구</Comment>
-      <NotNull>1</NotNull>
-      <Position>15</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="409" parent="305" name="profile_image_url">
-      <Comment>프로필 이미지 URL</Comment>
-      <Position>16</Position>
-      <StoredType>text|0s</StoredType>
-    </column>
-    <foreign-key id="410" parent="305" name="fk_user_account">
+    <foreign-key id="368" parent="303" name="fk_refresh_tokens_account">
       <ColNames>account_id</ColNames>
-      <OnDelete>cascade</OnDelete>
       <RefColNames>account_id</RefColNames>
       <RefTableName>account</RefTableName>
     </foreign-key>
-    <index id="411" parent="305" name="PRIMARY">
-      <ColNames>user_id</ColNames>
+    <index id="369" parent="303" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="412" parent="305" name="account_id">
+    <index id="370" parent="303" name="UKghpmfn23vmxfu3spu3lfg4r2d">
+      <ColNames>token</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="371" parent="303" name="fk_refresh_tokens_account">
       <ColNames>account_id</ColNames>
       <Type>btree</Type>
-      <Unique>1</Unique>
     </index>
-    <index id="413" parent="305" name="phone_hash">
-      <ColNames>phone_hash</ColNames>
+    <key id="372" parent="303" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="373" parent="303" name="UKghpmfn23vmxfu3spu3lfg4r2d">
+      <UnderlyingIndexName>UKghpmfn23vmxfu3spu3lfg4r2d</UnderlyingIndexName>
+    </key>
+    <column id="374" parent="304" name="amenity_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="375" parent="304" name="store_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="376" parent="304" name="fk_store_amenity_amenity">
+      <ColNames>amenity_id</ColNames>
+      <RefColNames>amenity_id</RefColNames>
+      <RefTableName>amenities</RefTableName>
+    </foreign-key>
+    <foreign-key id="377" parent="304" name="fk_store_amenity_store">
+      <ColNames>store_id</ColNames>
+      <RefColNames>store_id</RefColNames>
+      <RefTableName>stores</RefTableName>
+    </foreign-key>
+    <index id="378" parent="304" name="PRIMARY">
+      <ColNames>amenity_id
+store_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="414" parent="305" name="nickname_hash">
-      <ColNames>nickname_hash</ColNames>
+    <index id="379" parent="304" name="fk_store_amenity_store">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="380" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="381" parent="305" name="category_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="382" parent="305" name="category_name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="383" parent="305" name="icon_url">
+      <Position>3</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="384" parent="305" name="sort_order">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="385" parent="305" name="parent_category_id">
+      <Position>5</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="386" parent="305" name="FKjjs6i5cq3vnc3fbctxt16k1sd">
+      <ColNames>parent_category_id</ColNames>
+      <RefColNames>category_id</RefColNames>
+      <RefTableName>store_categories</RefTableName>
+    </foreign-key>
+    <index id="387" parent="305" name="PRIMARY">
+      <ColNames>category_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="415" parent="305" name="idx_birthday_event">
-      <ColNames>birth_md</ColNames>
+    <index id="388" parent="305" name="UK3n9dykekwvio0o1olxar44df9">
+      <ColNames>category_name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="389" parent="305" name="FKjjs6i5cq3vnc3fbctxt16k1sd">
+      <ColNames>parent_category_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="416" parent="305" name="idx_address">
+    <key id="390" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="391" parent="305" name="UK3n9dykekwvio0o1olxar44df9">
+      <UnderlyingIndexName>UK3n9dykekwvio0o1olxar44df9</UnderlyingIndexName>
+    </key>
+    <column id="392" parent="306" name="category_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="393" parent="306" name="store_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="394" parent="306" name="FK5madk3uj9fjxano603dg71y4k">
+      <ColNames>category_id</ColNames>
+      <RefColNames>category_id</RefColNames>
+      <RefTableName>store_categories</RefTableName>
+    </foreign-key>
+    <foreign-key id="395" parent="306" name="FKca3temhinotx13pxsmjqjngdt">
+      <ColNames>store_id</ColNames>
+      <RefColNames>store_id</RefColNames>
+      <RefTableName>stores</RefTableName>
+    </foreign-key>
+    <index id="396" parent="306" name="PRIMARY">
+      <ColNames>category_id
+store_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="397" parent="306" name="FKca3temhinotx13pxsmjqjngdt">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="398" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="399" parent="307" name="image_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="400" parent="307" name="alt_text">
+      <Position>2</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="401" parent="307" name="image_type">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>enum(&apos;EXTERIOR&apos;, &apos;INTERIOR&apos;, &apos;MAIN&apos;, &apos;MENU&apos;, &apos;OTHER&apos;)|0e</StoredType>
+    </column>
+    <column id="402" parent="307" name="image_url">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="403" parent="307" name="sort_order">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="404" parent="307" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="405" parent="307" name="store_id">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="406" parent="307" name="fk_image_store">
+      <ColNames>store_id</ColNames>
+      <RefColNames>store_id</RefColNames>
+      <RefTableName>stores</RefTableName>
+    </foreign-key>
+    <index id="407" parent="307" name="PRIMARY">
+      <ColNames>image_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="408" parent="307" name="idx_store_type">
+      <ColNames>store_id
+image_type</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="409" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="410" parent="308" name="offering_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="411" parent="308" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>2</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="412" parent="308" name="currency">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(10)|0s</StoredType>
+    </column>
+    <column id="413" parent="308" name="description">
+      <Position>4</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="414" parent="308" name="image_url">
+      <Position>5</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="415" parent="308" name="offering_name">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="416" parent="308" name="price">
+      <Position>7</Position>
+      <StoredType>decimal(10,2 digit)|0s</StoredType>
+    </column>
+    <column id="417" parent="308" name="status">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>enum(&apos;ACTIVE&apos;, &apos;INACTIVE&apos;)|0e</StoredType>
+    </column>
+    <column id="418" parent="308" name="updated_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>9</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="419" parent="308" name="store_id">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="420" parent="308" name="fk_offering_store">
+      <ColNames>store_id</ColNames>
+      <RefColNames>store_id</RefColNames>
+      <RefTableName>stores</RefTableName>
+    </foreign-key>
+    <index id="421" parent="308" name="PRIMARY">
+      <ColNames>offering_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="422" parent="308" name="idx_store_id">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="423" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="424" parent="309" name="hours_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="425" parent="309" name="break_end_time">
+      <Position>2</Position>
+      <StoredType>time(6)|0s</StoredType>
+    </column>
+    <column id="426" parent="309" name="break_start_time">
+      <Position>3</Position>
+      <StoredType>time(6)|0s</StoredType>
+    </column>
+    <column id="427" parent="309" name="close_time">
+      <Position>4</Position>
+      <StoredType>time(6)|0s</StoredType>
+    </column>
+    <column id="428" parent="309" name="day_of_week">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="429" parent="309" name="is_open">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="430" parent="309" name="open_time">
+      <Position>7</Position>
+      <StoredType>time(6)|0s</StoredType>
+    </column>
+    <column id="431" parent="309" name="store_id">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <foreign-key id="432" parent="309" name="fk_operating_hours_store">
+      <ColNames>store_id</ColNames>
+      <RefColNames>store_id</RefColNames>
+      <RefTableName>stores</RefTableName>
+    </foreign-key>
+    <index id="433" parent="309" name="PRIMARY">
+      <ColNames>hours_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="434" parent="309" name="UKo379l1bdhnug5j703vb559j6n">
+      <ColNames>store_id
+day_of_week</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="435" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="436" parent="309" name="UKo379l1bdhnug5j703vb559j6n">
+      <UnderlyingIndexName>UKo379l1bdhnug5j703vb559j6n</UnderlyingIndexName>
+    </key>
+    <column id="437" parent="310" name="store_id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="438" parent="310" name="address_full">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="439" parent="310" name="address_sido">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="440" parent="310" name="address_sigungu">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="441" parent="310" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>5</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="442" parent="310" name="description">
+      <Position>6</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="443" parent="310" name="instagram_url">
+      <Position>7</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="444" parent="310" name="phone">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="445" parent="310" name="status">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>enum(&apos;ACTIVE&apos;, &apos;INACTIVE&apos;, &apos;PENDING_APPROVAL&apos;, &apos;SUSPENDED&apos;)|0e</StoredType>
+    </column>
+    <column id="446" parent="310" name="store_name">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="447" parent="310" name="updated_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>11</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="448" parent="310" name="website_url">
+      <Position>12</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <index id="449" parent="310" name="PRIMARY">
+      <ColNames>store_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="450" parent="310" name="idx_address">
       <ColNames>address_sido
 address_sigungu</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="417" parent="305" name="idx_sigungu">
+    <index id="451" parent="310" name="idx_sigungu">
       <ColNames>address_sigungu</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="418" parent="305" name="PRIMARY">
+    <index id="452" parent="310" name="idx_status">
+      <ColNames>status</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="453" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="419" parent="305" name="account_id">
-      <UnderlyingIndexName>account_id</UnderlyingIndexName>
+    <column id="454" parent="311" name="blacklisted_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="455" parent="311" name="expires_at">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="456" parent="311" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="457" parent="311" name="token">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <index id="458" parent="311" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="459" parent="311" name="UKbff28eugoihk2swcdiybdej20">
+      <ColNames>token</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="460" parent="311" name="idx_expires_at">
+      <ColNames>expires_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="461" parent="311" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="420" parent="305" name="phone_hash">
-      <UnderlyingIndexName>phone_hash</UnderlyingIndexName>
+    <key id="462" parent="311" name="UKbff28eugoihk2swcdiybdej20">
+      <UnderlyingIndexName>UKbff28eugoihk2swcdiybdej20</UnderlyingIndexName>
     </key>
-    <key id="421" parent="305" name="nickname_hash">
-      <UnderlyingIndexName>nickname_hash</UnderlyingIndexName>
+    <column id="463" parent="312" name="phone_verified">
+      <Position>1</Position>
+      <StoredType>bit(1)|0s</StoredType>
+    </column>
+    <column id="464" parent="312" name="account_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="465" parent="312" name="address_sido">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="466" parent="312" name="address_sigungu">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="467" parent="312" name="nickname_hash">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(64)|0s</StoredType>
+    </column>
+    <column id="468" parent="312" name="phone_hash">
+      <Position>6</Position>
+      <StoredType>varchar(64)|0s</StoredType>
+    </column>
+    <column id="469" parent="312" name="birth_md">
+      <Position>7</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="470" parent="312" name="address_full">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="471" parent="312" name="age_group">
+      <Position>9</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="472" parent="312" name="gender">
+      <Position>10</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="473" parent="312" name="gender_stat">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>enum(&apos;FEMALE&apos;, &apos;MALE&apos;, &apos;UNKNOWN&apos;)|0e</StoredType>
+    </column>
+    <column id="474" parent="312" name="name">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="475" parent="312" name="nickname">
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="476" parent="312" name="phone">
+      <Position>14</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="477" parent="312" name="profile_image_url">
+      <Position>15</Position>
+      <StoredType>tinytext|0s</StoredType>
+    </column>
+    <column id="478" parent="312" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>16</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="479" parent="312" name="updated_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>17</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <foreign-key id="480" parent="312" name="fk_user_account">
+      <ColNames>account_id</ColNames>
+      <RefColNames>account_id</RefColNames>
+      <RefTableName>account</RefTableName>
+    </foreign-key>
+    <index id="481" parent="312" name="PRIMARY">
+      <ColNames>account_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="482" parent="312" name="UKnc380qwqg77iwl5gju9fmx7e">
+      <ColNames>nickname_hash</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="483" parent="312" name="UK83ab2htiin37npvw6aq4hymjq">
+      <ColNames>phone_hash</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="484" parent="312" name="idx_address">
+      <ColNames>address_sido
+address_sigungu</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="485" parent="312" name="idx_sigungu">
+      <ColNames>address_sigungu</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="486" parent="312" name="idx_birthday_event">
+      <ColNames>birth_md</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="487" parent="312" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="488" parent="312" name="UKnc380qwqg77iwl5gju9fmx7e">
+      <UnderlyingIndexName>UKnc380qwqg77iwl5gju9fmx7e</UnderlyingIndexName>
+    </key>
+    <key id="489" parent="312" name="UK83ab2htiin37npvw6aq4hymjq">
+      <UnderlyingIndexName>UK83ab2htiin37npvw6aq4hymjq</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

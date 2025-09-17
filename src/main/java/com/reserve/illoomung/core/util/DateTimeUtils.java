@@ -1,6 +1,8 @@
 package com.reserve.illoomung.core.util;
 
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -12,6 +14,9 @@ public final class DateTimeUtils {
         return Instant.now();
     }
 
+    public static ZonedDateTime krZonedDateTime(Instant instant) {
+        return instant.atZone(ZoneId.of("Asia/Seoul"));
+    }
 
     // String <-> Instant 변환
     public static String instantToString(Instant instant) {

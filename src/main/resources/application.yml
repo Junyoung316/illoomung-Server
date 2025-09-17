@@ -12,7 +12,7 @@ spring:
   application:
     name: illoomung
   jackson:
-    time-zone: UTC
+    time-zone: Asia/Seoul
   devtools:
     livereload:
       enabled: true
@@ -20,7 +20,7 @@ spring:
       enabled: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/illoomung?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/illoomung?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: "!Qwer1234"
   jpa:
@@ -34,7 +34,7 @@ spring:
       hibernate:
         format_sql: true    # SQL 포맷팅 여부
         jdbc:
-          time_zone: UTC    # 타입존 UTC로 명시
+          time_zone: Asia/Seoul    # 타입존 Asia/Seoul로 명시
   thymeleaf:
     suffix: .html
     mode: HTML

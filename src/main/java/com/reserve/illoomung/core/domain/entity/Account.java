@@ -9,6 +9,8 @@ import java.time.Instant;
 import com.reserve.illoomung.core.domain.entity.enums.Role;
 import com.reserve.illoomung.core.domain.entity.enums.SocialProvider;
 import com.reserve.illoomung.core.domain.entity.enums.Status;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "account",
@@ -66,22 +68,15 @@ public class Account {
     @Column(name = "withdrawn_at")
     private Instant withdrawnAt; // 탈퇴 사각
 
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private Instant createdAt; // 생성 시각
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false, insertable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Instant createdAt;
 
-    @Column(name = "updated_at")
-    private Instant updatedAt; // 수정 시각
-
-    @PrePersist
-    protected void onCreate() {
-        createdAt = DateTimeUtils.now();
-        updatedAt = createdAt;
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = DateTimeUtils.now();
-    }
+    @UpdateTimestamp
+    @Column(name = "updated_at", insertable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    private Instant updatedAt;
 
     public void lastLoginAtUpdate() {
         this.lastLoginAt = DateTimeUtils.now();

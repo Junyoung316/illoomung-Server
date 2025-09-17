@@ -3,8 +3,11 @@ package com.reserve.illoomung.core.domain.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;
+import java.time.Instant;
 
 import com.reserve.illoomung.core.domain.entity.enums.GenderStat;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "user_profile",
@@ -83,4 +86,14 @@ public class UserProfile implements Serializable {
     @Lob
     @Column(name = "profile_image_url")
     private String profileImageUrl;
+
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false, insertable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Instant createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at", insertable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    private Instant updatedAt;
 }

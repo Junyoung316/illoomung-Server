@@ -2,6 +2,7 @@ package com.reserve.illoomung.core.domain.entity;
 
 import lombok.*;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
 
@@ -31,7 +32,8 @@ public class RefreshTokens {
     @Column(name = "expires_at", nullable = false)
     private Long expiresAt;
 
-    @Column(name = "created_at", nullable = false,
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false, insertable = false,
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Instant createdAt;
 
