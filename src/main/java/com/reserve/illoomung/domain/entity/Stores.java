@@ -45,7 +45,7 @@ public class Stores { // 업체 정보
     @Column(name = "store_name", length = 100, nullable = false)
     private String storeName; // 가게 이름
 
-    @Column(name = "phone", columnDefinition = "TEXT", nullable = false)
+    @Column(name = "phone", columnDefinition = "TEXT")
     private String phone; // 가게 전화번호
 
     @Column(name = "address_full", columnDefinition = "TEXT", nullable = false)

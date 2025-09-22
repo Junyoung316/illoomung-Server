@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-18T02:38:41.603Z" hostname="junyoungui-MacBookPro.local" time="0.241">
+  <properties/>
+  <testcase name="addCategory()" classname="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" time="0.241"/>
+  <system-out><![CDATA[11:38:39.022 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest]: StoreCategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:38:39.065 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.reserve.illoomung.IlloomungApplication for test class com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.5)
+
+2025-09-18T11:38:39.213+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Starting StoreCategoryRepositoryTest using Java 21.0.8 with PID 16623 (started by junyoung in /Users/junyoung/Documents/spring/illoomung)
+2025-09-18T11:38:39.213+09:00 DEBUG 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-18T11:38:39.214+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T11:38:39.597+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18T11:38:39.598+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18T11:38:39.662+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2025-09-18T11:38:39.668+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18T11:38:39.668+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.RefreshTokensRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.TokenBlacklistRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.UserProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreCategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoresRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-09-18T11:38:39.827+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-18T11:38:39.888+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d271a54
+2025-09-18T11:38:39.889+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-18T11:38:39.920+09:00  INFO 16623 --- [illoomung] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18T11:38:39.934+09:00  INFO 16623 --- [illoomung] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-18T11:38:39.944+09:00  INFO 16623 --- [illoomung] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-18T11:38:40.029+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18T11:38:40.067+09:00  INFO 16623 --- [illoomung] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18T11:38:40.448+09:00  INFO 16623 --- [illoomung] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table amenities 
+       modify column status enum ('ACTIVE','INACTIVE') not null
+Hibernate: 
+    alter table offering_categories 
+       modify column status enum ('ACTIVE','INACTIVE') not null
+Hibernate: 
+    alter table store_images 
+       modify column image_type enum ('EXTERIOR','INTERIOR','MAIN','MENU','OTHER') not null
+Hibernate: 
+    alter table store_offerings 
+       modify column status enum ('ACTIVE','INACTIVE') not null
+Hibernate: 
+    alter table stores 
+       modify column status enum ('ACTIVE','INACTIVE','PENDING_APPROVAL','SUSPENDED') not null
+2025-09-18T11:38:40.550+09:00  INFO 16623 --- [illoomung] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18T11:38:40.665+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-18T11:38:40.924+09:00 ERROR 16623 --- [illoomung] [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-09-18T11:38:41.161+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-09-18T11:38:41.332+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Quartz Scheduler v2.5.0 created.
+2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.5.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.5.0
+2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@418b946b
+2025-09-18T11:38:41.511+09:00  WARN 16623 --- [illoomung] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-09-18T11:38:41.531+09:00  INFO 16623 --- [illoomung] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-18T11:38:41.558+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-09-18T11:38:41.559+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-09-18T11:38:41.570+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Started StoreCategoryRepositoryTest in 2.458 seconds (process running for 2.834)
+2025-09-18T11:38:41.598+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/junyoung/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

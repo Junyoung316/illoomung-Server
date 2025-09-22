@@ -16,5 +16,13 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="0@localhost" uuid="5187a511-f0bf-4652-9cda-93397be47637">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDIS" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="0@localhost" uuid="b25a6652-4c9d-4809-a6ba-c19c66bc13da">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDIS" />
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

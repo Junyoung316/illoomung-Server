@@ -1,6 +1,7 @@
 package com.reserve.illoomung.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +9,11 @@ import java.util.List;
 @Entity
 @Table(name = "store_categories",
         uniqueConstraints = @UniqueConstraint(columnNames = "category_name"))
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class StoreCategory { // 업체 카테고리
 
     @Id
@@ -23,13 +29,15 @@ public class StoreCategory { // 업체 카테고리
     private StoreCategory parentCategory;
 
     @OneToMany(mappedBy = "parentCategory", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<StoreCategory> subCategories = new ArrayList<>();
 
     @Column(name = "icon_url", length = 200)
     private String iconUrl;
 
     @Column(name = "sort_order", nullable = false)
-    private Integer sortOrder = 0;
+    @Builder.Default
+    private Integer sortOrder = 0; //
 
     // 생성자, getter, setter 생략
 }

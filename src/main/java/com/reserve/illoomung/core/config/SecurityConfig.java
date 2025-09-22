@@ -58,7 +58,8 @@ public class SecurityConfig {
                     "/public", 
                     "/login/**",
                     "/register/**",
-                    "/auth/refresh"
+                    "/auth/refresh",
+                    "/business/**"
                 ).permitAll()
                 .requestMatchers("/owner/**").hasAnyRole("OWNER", "ADMIN")
                 .requestMatchers("/admin/**").hasRole("ADMIN")
