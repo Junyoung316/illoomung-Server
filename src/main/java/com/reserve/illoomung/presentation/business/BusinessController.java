@@ -1,5 +1,6 @@
 package com.reserve.illoomung.presentation.business;
 
+import com.reserve.illoomung.application.business.BusinessService;
 import com.reserve.illoomung.core.dto.MainResponse;
 import com.reserve.illoomung.dto.business.StoreCreateRequest;
 import lombok.RequiredArgsConstructor;
@@ -16,9 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class BusinessController {
 
+    private final BusinessService businessService;
+
     @PostMapping("/create")
     public ResponseEntity<MainResponse<String>> createStore(@RequestBody StoreCreateRequest storeCreateRequest) {
         log.info("Creating store {}", storeCreateRequest);
+        businessService.createStore(storeCreateRequest);
         return ResponseEntity.ok(MainResponse.success());
     }
 }

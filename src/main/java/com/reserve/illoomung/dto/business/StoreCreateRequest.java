@@ -10,8 +10,10 @@ public class StoreCreateRequest {
     private String storeName;
     private String description;
     private String phoneNumber;
-    private String roadAddress;
-    private String jibeonAddress;
+    private String roadAddress; // 도로명 주소
+    private String jibeonAddress; // 지번 주소
+    private String addressDetails; // 상세 주소
+    private String bcode; // 지역 코드
     private Map<String, String> openingHours;
     private String homepageUrl;
     private String instagramUrl;

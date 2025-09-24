@@ -48,10 +48,13 @@ spring:
       refresh-token-expire-seconds: 604800
 
 kakao:
-  client_id: 7c730a5d5926a51e975002be3f953b8d
-#  client_id: { REST API KEY }
-  redirectUri: http://localhost:8080/register/callback
-  clientSecret: l8iKumXIsWMv5x6pXXs6EMSVFS7fN2wY
+#  client_id: 7c730a5d5926a51e975002be3f953b8d
+##  client_id: { REST API KEY }
+#  redirectUri: http://localhost:8080/register/callback
+#  clientSecret: l8iKumXIsWMv5x6pXXs6EMSVFS7fN2wY
+  api:
+    key:
+      rest: 7c730a5d5926a51e975002be3f953b8d
 
 
 com:

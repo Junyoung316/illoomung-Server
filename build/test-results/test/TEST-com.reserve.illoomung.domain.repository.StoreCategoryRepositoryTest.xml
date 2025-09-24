@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-18T02:38:41.603Z" hostname="junyoungui-MacBookPro.local" time="0.241">
+<testsuite name="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-24T00:38:19.683Z" hostname="junyoungui-MacBookPro.local" time="0.314">
   <properties/>
-  <testcase name="addCategory()" classname="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" time="0.241"/>
-  <system-out><![CDATA[11:38:39.022 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest]: StoreCategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:38:39.065 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.reserve.illoomung.IlloomungApplication for test class com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest
+  <testcase name="addCategory()" classname="com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest" time="0.314"/>
+  <system-out><![CDATA[09:38:16.353 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest]: StoreCategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:38:16.405 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.reserve.illoomung.IlloomungApplication for test class com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,29 +14,37 @@
 
  :: Spring Boot ::                (v3.5.5)
 
-2025-09-18T11:38:39.213+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Starting StoreCategoryRepositoryTest using Java 21.0.8 with PID 16623 (started by junyoung in /Users/junyoung/Documents/spring/illoomung)
-2025-09-18T11:38:39.213+09:00 DEBUG 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Running with Spring Boot v3.5.5, Spring v6.2.10
-2025-09-18T11:38:39.214+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
-2025-09-18T11:38:39.597+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-09-18T11:38:39.598+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-18T11:38:39.662+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
-2025-09-18T11:38:39.668+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-09-18T11:38:39.668+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.RefreshTokensRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.TokenBlacklistRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.UserProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreCategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoresRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2025-09-18T11:38:39.675+09:00  INFO 16623 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2025-09-18T11:38:39.827+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-09-18T11:38:39.888+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d271a54
-2025-09-18T11:38:39.889+09:00  INFO 16623 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-09-18T11:38:39.920+09:00  INFO 16623 --- [illoomung] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-18T11:38:39.934+09:00  INFO 16623 --- [illoomung] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-09-18T11:38:39.944+09:00  INFO 16623 --- [illoomung] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-18T11:38:40.029+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-18T11:38:40.067+09:00  INFO 16623 --- [illoomung] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-09-24T09:38:16.578+09:00  INFO 40692 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Starting StoreCategoryRepositoryTest using Java 21.0.8 with PID 40692 (started by junyoung in /Users/junyoung/Documents/spring/illoomung)
+2025-09-24T09:38:16.579+09:00 DEBUG 40692 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-24T09:38:16.579+09:00  INFO 40692 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2025-09-24T09:38:17.027+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-24T09:38:17.028+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24T09:38:17.102+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 14 JPA repository interfaces.
+2025-09-24T09:38:17.110+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-24T09:38:17.110+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-24T09:38:17.119+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.119+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.RefreshTokensRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.119+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.TokenBlacklistRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.119+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.core.domain.repository.UserProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.119+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.AmenityRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.OfferingCategoryMappingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.OfferingCategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreAmenityMappingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreCategoryMappingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreCategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreImageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreOfferingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.120+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoreOperatingHoursRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.121+09:00  INFO 40692 --- [illoomung] [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.reserve.illoomung.domain.repository.StoresRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-24T09:38:17.121+09:00  INFO 40692 --- [illoomung] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-09-24T09:38:17.286+09:00  INFO 40692 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-24T09:38:17.350+09:00  INFO 40692 --- [illoomung] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ab86b2a
+2025-09-24T09:38:17.351+09:00  INFO 40692 --- [illoomung] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-24T09:38:17.382+09:00  INFO 40692 --- [illoomung] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24T09:38:17.407+09:00  INFO 40692 --- [illoomung] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-24T09:38:17.420+09:00  INFO 40692 --- [illoomung] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-24T09:38:17.518+09:00  INFO 40692 --- [illoomung] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24T09:38:17.563+09:00  INFO 40692 --- [illoomung] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.4
@@ -44,31 +52,368 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-09-18T11:38:40.448+09:00  INFO 16623 --- [illoomung] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24T09:38:17.984+09:00  INFO 40692 --- [illoomung] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
-    alter table amenities 
-       modify column status enum ('ACTIVE','INACTIVE') not null
+    alter table offering_category_mappings 
+       drop 
+       foreign key fk_offering_category_category
 Hibernate: 
-    alter table offering_categories 
-       modify column status enum ('ACTIVE','INACTIVE') not null
+    alter table offering_category_mappings 
+       drop 
+       foreign key fk_offering_category_offering
+Hibernate: 
+    alter table refresh_tokens 
+       drop 
+       foreign key fk_refresh_tokens_account
+Hibernate: 
+    alter table store_amenity_mappings 
+       drop 
+       foreign key fk_store_amenity_amenity
+Hibernate: 
+    alter table store_amenity_mappings 
+       drop 
+       foreign key fk_store_amenity_store
+Hibernate: 
+    alter table store_categories 
+       drop 
+       foreign key FKjjs6i5cq3vnc3fbctxt16k1sd
+Hibernate: 
+    alter table store_category_mappings 
+       drop 
+       foreign key FK5madk3uj9fjxano603dg71y4k
+Hibernate: 
+    alter table store_category_mappings 
+       drop 
+       foreign key FKca3temhinotx13pxsmjqjngdt
 Hibernate: 
     alter table store_images 
-       modify column image_type enum ('EXTERIOR','INTERIOR','MAIN','MENU','OTHER') not null
+       drop 
+       foreign key fk_image_store
 Hibernate: 
     alter table store_offerings 
-       modify column status enum ('ACTIVE','INACTIVE') not null
+       drop 
+       foreign key fk_offering_store
 Hibernate: 
-    alter table stores 
-       modify column status enum ('ACTIVE','INACTIVE','PENDING_APPROVAL','SUSPENDED') not null
-2025-09-18T11:38:40.550+09:00  INFO 16623 --- [illoomung] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-18T11:38:40.665+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-09-18T11:38:40.924+09:00 ERROR 16623 --- [illoomung] [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2025-09-18T11:38:41.161+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-09-18T11:38:41.332+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Quartz Scheduler v2.5.0 created.
-2025-09-18T11:38:41.336+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.5.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+    alter table store_operating_hours 
+       drop 
+       foreign key fk_operating_hours_store
+Hibernate: 
+    alter table user_profile 
+       drop 
+       foreign key fk_user_account
+Hibernate: 
+    drop table if exists account
+Hibernate: 
+    drop table if exists amenities
+Hibernate: 
+    drop table if exists offering_categories
+Hibernate: 
+    drop table if exists offering_category_mappings
+Hibernate: 
+    drop table if exists refresh_tokens
+Hibernate: 
+    drop table if exists store_amenity_mappings
+Hibernate: 
+    drop table if exists store_categories
+Hibernate: 
+    drop table if exists store_category_mappings
+Hibernate: 
+    drop table if exists store_images
+Hibernate: 
+    drop table if exists store_offerings
+Hibernate: 
+    drop table if exists store_operating_hours
+Hibernate: 
+    drop table if exists stores
+Hibernate: 
+    drop table if exists token_blacklist
+Hibernate: 
+    drop table if exists user_profile
+Hibernate: 
+    create table account (
+        account_id bigint not null auto_increment,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        dormant_at datetime(6),
+        last_login_at datetime(6),
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        withdrawn_at datetime(6),
+        email_hash varchar(64),
+        social_id_hash varchar(64),
+        password_hash varchar(255),
+        email tinytext,
+        role enum ('ADMIN','OWNER','USER') not null,
+        social_id tinytext,
+        social_provider enum ('GOOGLE','KAKAO','NAVER','NONE') not null,
+        status enum ('ACTIVE','DORMANT','INACTIVE','WITHDRAWN') not null,
+        primary key (account_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table amenities (
+        sort_order integer not null,
+        amenity_id bigint not null auto_increment,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        amenity_name varchar(100) not null,
+        icon_url varchar(200),
+        description TEXT,
+        status enum ('ACTIVE','INACTIVE') not null,
+        primary key (amenity_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table offering_categories (
+        sort_order integer not null,
+        category_id bigint not null auto_increment,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        category_name varchar(50) not null,
+        status enum ('ACTIVE','INACTIVE') not null,
+        primary key (category_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table offering_category_mappings (
+        category_id bigint not null,
+        offering_id bigint not null,
+        primary key (category_id, offering_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table refresh_tokens (
+        revoked bit not null,
+        account_id bigint not null,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        expires_at bigint not null,
+        id bigint not null auto_increment,
+        token varchar(500) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_amenity_mappings (
+        amenity_id bigint not null,
+        store_id bigint not null,
+        primary key (amenity_id, store_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_categories (
+        sort_order integer not null,
+        category_id bigint not null auto_increment,
+        parent_category_id bigint,
+        category_name varchar(50) not null,
+        icon_url varchar(200),
+        primary key (category_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_category_mappings (
+        category_id bigint not null,
+        store_id bigint not null,
+        primary key (category_id, store_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_images (
+        sort_order integer not null,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        image_id bigint not null auto_increment,
+        store_id bigint not null,
+        alt_text varchar(200),
+        image_url varchar(500) not null,
+        image_type enum ('EXTERIOR','INTERIOR','MAIN','MENU','OTHER') not null,
+        primary key (image_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_offerings (
+        price decimal(10,2),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        offering_id bigint not null auto_increment,
+        store_id bigint not null,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        currency varchar(10) not null,
+        offering_name varchar(100) not null,
+        image_url varchar(500),
+        description TEXT,
+        status enum ('ACTIVE','INACTIVE') not null,
+        primary key (offering_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table store_operating_hours (
+        break_end_time time(6),
+        break_start_time time(6),
+        close_time time(6),
+        day_of_week integer not null,
+        is_open bit not null,
+        open_time time(6),
+        hours_id bigint not null auto_increment,
+        store_id bigint not null,
+        primary key (hours_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table stores (
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        store_id bigint not null auto_increment,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        address_sido varchar(50) not null,
+        address_sigungu varchar(50) not null,
+        store_name varchar(100) not null,
+        instagram_url varchar(200),
+        website_url varchar(200),
+        address_full TEXT not null,
+        description TEXT,
+        phone TEXT,
+        status enum ('ACTIVE','INACTIVE','PENDING_APPROVAL','SUSPENDED') not null,
+        primary key (store_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table token_blacklist (
+        blacklisted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        expires_at bigint not null,
+        id bigint not null auto_increment,
+        token varchar(500) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table user_profile (
+        phone_verified bit,
+        account_id bigint not null,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP null,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP null,
+        address_sido varchar(50) not null,
+        address_sigungu varchar(50) not null,
+        nickname_hash varchar(64) not null,
+        phone_hash varchar(64),
+        birth_md varchar(255),
+        address_full tinytext not null,
+        age_group tinytext,
+        gender tinytext,
+        gender_stat enum ('FEMALE','MALE','UNKNOWN') not null,
+        name tinytext not null,
+        nickname tinytext not null,
+        phone tinytext,
+        profile_image_url tinytext,
+        primary key (account_id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table account 
+       add constraint uk_provider_social_id unique (social_provider, social_id_hash)
+Hibernate: 
+    alter table account 
+       add constraint UK7lx74v52goc4peaj4wrrxs7uu unique (email_hash)
+Hibernate: 
+    alter table amenities 
+       add constraint UKbe8trq6t1oqf3pggbj934s9kj unique (amenity_name)
+Hibernate: 
+    alter table offering_categories 
+       add constraint UKapur5xlpatkphrtfaomvkvjjn unique (category_name)
+Hibernate: 
+    alter table refresh_tokens 
+       add constraint UKghpmfn23vmxfu3spu3lfg4r2d unique (token)
+Hibernate: 
+    alter table store_categories 
+       add constraint UK3n9dykekwvio0o1olxar44df9 unique (category_name)
+Hibernate: 
+    create index idx_store_type 
+       on store_images (store_id, image_type)
+Hibernate: 
+    create index idx_store_id 
+       on store_offerings (store_id)
+Hibernate: 
+    alter table store_operating_hours 
+       add constraint UKo379l1bdhnug5j703vb559j6n unique (store_id, day_of_week)
+Hibernate: 
+    create index idx_status 
+       on stores (status)
+Hibernate: 
+    create index idx_address 
+       on stores (address_sido, address_sigungu)
+Hibernate: 
+    create index idx_sigungu 
+       on stores (address_sigungu)
+Hibernate: 
+    create index idx_expires_at 
+       on token_blacklist (expires_at)
+Hibernate: 
+    alter table token_blacklist 
+       add constraint UKbff28eugoihk2swcdiybdej20 unique (token)
+Hibernate: 
+    create index idx_birthday_event 
+       on user_profile (birth_md)
+Hibernate: 
+    create index idx_address 
+       on user_profile (address_sido, address_sigungu)
+Hibernate: 
+    create index idx_sigungu 
+       on user_profile (address_sigungu)
+Hibernate: 
+    alter table user_profile 
+       add constraint UKnc380qwqg77iwl5gju9fmx7e unique (nickname_hash)
+Hibernate: 
+    alter table user_profile 
+       add constraint UK83ab2htiin37npvw6aq4hymjq unique (phone_hash)
+Hibernate: 
+    alter table offering_category_mappings 
+       add constraint fk_offering_category_category 
+       foreign key (category_id) 
+       references offering_categories (category_id)
+Hibernate: 
+    alter table offering_category_mappings 
+       add constraint fk_offering_category_offering 
+       foreign key (offering_id) 
+       references store_offerings (offering_id)
+Hibernate: 
+    alter table refresh_tokens 
+       add constraint fk_refresh_tokens_account 
+       foreign key (account_id) 
+       references account (account_id)
+Hibernate: 
+    alter table store_amenity_mappings 
+       add constraint fk_store_amenity_amenity 
+       foreign key (amenity_id) 
+       references amenities (amenity_id)
+Hibernate: 
+    alter table store_amenity_mappings 
+       add constraint fk_store_amenity_store 
+       foreign key (store_id) 
+       references stores (store_id)
+Hibernate: 
+    alter table store_categories 
+       add constraint FKjjs6i5cq3vnc3fbctxt16k1sd 
+       foreign key (parent_category_id) 
+       references store_categories (category_id)
+Hibernate: 
+    alter table store_category_mappings 
+       add constraint FK5madk3uj9fjxano603dg71y4k 
+       foreign key (category_id) 
+       references store_categories (category_id)
+Hibernate: 
+    alter table store_category_mappings 
+       add constraint FKca3temhinotx13pxsmjqjngdt 
+       foreign key (store_id) 
+       references stores (store_id)
+Hibernate: 
+    alter table store_images 
+       add constraint fk_image_store 
+       foreign key (store_id) 
+       references stores (store_id)
+Hibernate: 
+    alter table store_offerings 
+       add constraint fk_offering_store 
+       foreign key (store_id) 
+       references stores (store_id)
+Hibernate: 
+    alter table store_operating_hours 
+       add constraint fk_operating_hours_store 
+       foreign key (store_id) 
+       references stores (store_id)
+Hibernate: 
+    alter table user_profile 
+       add constraint fk_user_account 
+       foreign key (account_id) 
+       references account (account_id)
+2025-09-24T09:38:18.317+09:00  INFO 40692 --- [illoomung] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24T09:38:18.429+09:00  INFO 40692 --- [illoomung] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-24T09:38:18.699+09:00 ERROR 40692 --- [illoomung] [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-09-24T09:38:18.971+09:00  INFO 40692 --- [illoomung] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-09-24T09:38:19.175+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-09-24T09:38:19.179+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-09-24T09:38:19.179+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Quartz Scheduler v2.5.0 created.
+2025-09-24T09:38:19.180+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-09-24T09:38:19.180+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.5.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -76,15 +421,50 @@ Hibernate:
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.5.0
-2025-09-18T11:38:41.337+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@418b946b
-2025-09-18T11:38:41.511+09:00  WARN 16623 --- [illoomung] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-09-18T11:38:41.531+09:00  INFO 16623 --- [illoomung] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2025-09-18T11:38:41.558+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2025-09-18T11:38:41.559+09:00  INFO 16623 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2025-09-18T11:38:41.570+09:00  INFO 16623 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Started StoreCategoryRepositoryTest in 2.458 seconds (process running for 2.834)
-2025-09-18T11:38:41.598+09:00  INFO 16623 --- [illoomung] [    Test worker] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-09-24T09:38:19.180+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-09-24T09:38:19.180+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.5.0
+2025-09-24T09:38:19.180+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5c512d91
+2025-09-24T09:38:19.575+09:00  WARN 40692 --- [illoomung] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-09-24T09:38:19.602+09:00  INFO 40692 --- [illoomung] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-24T09:38:19.631+09:00  INFO 40692 --- [illoomung] [    Test worker] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-09-24T09:38:19.631+09:00  INFO 40692 --- [illoomung] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-09-24T09:38:19.642+09:00  INFO 40692 --- [illoomung] [    Test worker] c.r.i.d.r.StoreCategoryRepositoryTest    : Started StoreCategoryRepositoryTest in 3.178 seconds (process running for 3.593)
+2025-09-24T09:38:19.678+09:00  INFO 40692 --- [illoomung] [    Test worker] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        store_categories
+        (category_name, icon_url, parent_category_id, sort_order) 
+    values
+        (?, ?, ?, ?)
 Hibernate: 
     insert 
     into

@@ -48,14 +48,17 @@ public class Stores { // 업체 정보
     @Column(name = "phone", columnDefinition = "TEXT")
     private String phone; // 가게 전화번호
 
-    @Column(name = "address_full", columnDefinition = "TEXT", nullable = false)
-    private String addressFull; // 전체 주소 암호문
+    @Column(name = "road_address_full", columnDefinition = "TEXT", nullable = false)
+    private String roadAddress; // 전체 도로명주소 암호문
 
-    @Column(name = "address_sido", length = 50, nullable = false)
-    private String addressSido; // 시/도
+    @Column(name = "jibeon_address_full", columnDefinition = "TEXT", nullable = false)
+    private String jibeonAddress; // 전체 도로명주소 암호문
 
-    @Column(name = "address_sigungu", length = 50, nullable = false)
-    private String addressSigungu; // 시/군/구
+    @Column(name = "address_details", length = 50, nullable = false)
+    private String addressDetails; // 상세 주소
+
+    @Column(name = "bcode", length = 30, nullable = false)
+    private String bcode; // 지역 코드
 
     @Column(name = "description", columnDefinition = "TEXT")
     private String description; // 가게 설명
