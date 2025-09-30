@@ -2,6 +2,9 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.Status;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -10,6 +13,9 @@ import java.time.Instant;
 @Entity
 @Table(name = "offering_categories",
         uniqueConstraints = @UniqueConstraint(columnNames = "category_name"))
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class OfferingCategory { // 상품/서비스 카테고리
 
     @Id

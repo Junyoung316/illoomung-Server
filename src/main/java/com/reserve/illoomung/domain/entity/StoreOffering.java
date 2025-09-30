@@ -2,6 +2,9 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.Status;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,6 +14,9 @@ import java.time.Instant;
 @Entity
 @Table(name = "store_offerings",
         indexes = {@Index(name = "idx_store_id", columnList = "store_id")})
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class StoreOffering { // 업체 상품/서비스 정보
 
     @Id
@@ -33,10 +39,12 @@ public class StoreOffering { // 업체 상품/서비스 정보
     private BigDecimal price;
 
     @Column(name = "currency", length = 10, nullable = false)
+    @Builder.Default
     private String currency = "KRW";
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", length = 10, nullable = false)
+    @Builder.Default
     private Status status = Status.ACTIVE;
 
     @Column(name = "image_url", length = 500)

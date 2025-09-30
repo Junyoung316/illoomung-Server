@@ -2,6 +2,7 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.ImageType;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
@@ -9,6 +10,11 @@ import java.time.Instant;
 @Entity
 @Table(name = "store_images",
         indexes = {@Index(name = "idx_store_type", columnList = "store_id, image_type")})
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class StoreImage { // 업체 이미지
 
     @Id
@@ -26,12 +32,14 @@ public class StoreImage { // 업체 이미지
 
     @Enumerated(EnumType.STRING)
     @Column(name = "image_type", length = 20, nullable = false)
+    @Builder.Default
     private ImageType imageType = ImageType.OTHER;
 
     @Column(name = "alt_text", length = 200)
     private String altText;
 
     @Column(name = "sort_order", nullable = false)
+    @Builder.Default
     private Integer sortOrder = 0;
 
     @CreationTimestamp

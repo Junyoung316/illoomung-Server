@@ -2,10 +2,16 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.key.StoreAmenityMappingId;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "store_amenity_mappings")
 @IdClass(StoreAmenityMappingId.class)
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class StoreAmenityMapping { // 편의시설 매핑
 
     @Id

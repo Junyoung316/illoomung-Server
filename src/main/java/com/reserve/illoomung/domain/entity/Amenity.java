@@ -2,6 +2,7 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.Status;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -10,6 +11,11 @@ import java.time.Instant;
 @Entity
 @Table(name = "amenities",
         uniqueConstraints = @UniqueConstraint(columnNames = "amenity_name"))
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Getter
+@Setter
 public class Amenity { // 편의시설
 
     @Id
@@ -27,6 +33,7 @@ public class Amenity { // 편의시설
     private String iconUrl;
 
     @Column(name = "sort_order", nullable = false)
+    @Builder.Default
     private Integer sortOrder = 0;
 
     @Enumerated(EnumType.STRING)
@@ -42,6 +49,10 @@ public class Amenity { // 편의시설
     @Column(name = "updated_at", insertable = false,
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private Instant updatedAt;
+
+    public Amenity (String amenityName) {
+        this.amenityName = amenityName;
+    }
 
     // 생성자, getter, setter 생략
 }

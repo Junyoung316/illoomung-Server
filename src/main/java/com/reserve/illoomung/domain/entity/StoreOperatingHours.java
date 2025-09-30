@@ -1,12 +1,18 @@
 package com.reserve.illoomung.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalTime;
 
 @Entity
 @Table(name = "store_operating_hours",
         uniqueConstraints = @UniqueConstraint(columnNames = {"store_id", "day_of_week"}))
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Getter
+@Setter
 public class StoreOperatingHours { // 업체 영업시간
 
     @Id
@@ -23,6 +29,7 @@ public class StoreOperatingHours { // 업체 영업시간
     private Integer dayOfWeek; // 0=일요일, 1=월요일, ..., 6=토요일
 
     @Column(name = "is_open", nullable = false)
+    @Builder.Default
     private Boolean isOpen = true;
 
     @Column(name = "open_time")

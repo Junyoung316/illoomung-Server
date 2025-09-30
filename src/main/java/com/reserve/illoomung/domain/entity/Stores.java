@@ -2,10 +2,13 @@ package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(
@@ -15,10 +18,14 @@ import java.time.Instant;
 //        },
         indexes = {
                 @Index(name = "idx_status", columnList = "status"),
-                @Index(name = "idx_address", columnList = "address_sido,address_sigungu"),
-                @Index(name = "idx_sigungu", columnList = "address_sigungu")
+                @Index(name = "idx_addressBCode", columnList = "bcode"),
         }
 )
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Stores { // 업체 정보
 
     @Id
@@ -46,16 +53,19 @@ public class Stores { // 업체 정보
     private String storeName; // 가게 이름
 
     @Column(name = "phone", columnDefinition = "TEXT")
-    private String phone; // 가게 전화번호
+    private String phone; // 가게 전화번호 암호문
 
-    @Column(name = "road_address_full", columnDefinition = "TEXT", nullable = false)
-    private String roadAddress; // 전체 도로명주소 암호문
+    @Column(name = "address_full", columnDefinition = "TEXT", nullable = false)
+    private String address; // 전체 주소 암호문
 
-    @Column(name = "jibeon_address_full", columnDefinition = "TEXT", nullable = false)
-    private String jibeonAddress; // 전체 도로명주소 암호문
+    @Column(name = "address_full_hash", columnDefinition = "TEXT", nullable = false)
+    private String addressFullHash;
 
-    @Column(name = "address_details", length = 50, nullable = false)
-    private String addressDetails; // 상세 주소
+    @Column(name = "address_details", columnDefinition = "TEXT")
+    private String addressDetails; // 상세 주소 암호문
+
+    @Column(name = "address_details_hash", columnDefinition = "TEXT", nullable = false)
+    private String addressDetailsHash;
 
     @Column(name = "bcode", length = 30, nullable = false)
     private String bcode; // 지역 코드
@@ -71,6 +81,7 @@ public class Stores { // 업체 정보
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", length = 20, nullable = false)
+    @Builder.Default
     private StoreStatus status = StoreStatus.PENDING_APPROVAL; // 가게 상태(활성, 비활성, 일시 중지, 승인 보류) -> 기본: 승인 보류
 
     @CreationTimestamp
@@ -83,6 +94,20 @@ public class Stores { // 업체 정보
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private Instant updatedAt;
 
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<StoreOperatingHours> operatingHours;
+
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<StoreOffering> offerings;
+
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<StoreImage> images;
+
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<StoreCategoryMapping> categoryMappings;
+
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<StoreAmenityMapping> amenityMappings;
 }
 
 

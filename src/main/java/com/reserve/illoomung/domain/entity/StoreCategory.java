@@ -28,7 +28,7 @@ public class StoreCategory { // 업체 카테고리
     @JoinColumn(name = "parent_category_id")
     private StoreCategory parentCategory;
 
-    @OneToMany(mappedBy = "parentCategory", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "parentCategory")
     @Builder.Default
     private List<StoreCategory> subCategories = new ArrayList<>();
 
@@ -38,6 +38,10 @@ public class StoreCategory { // 업체 카테고리
     @Column(name = "sort_order", nullable = false)
     @Builder.Default
     private Integer sortOrder = 0; //
+
+    public StoreCategory (String categoryName) {
+        this.categoryName = categoryName;
+    }
 
     // 생성자, getter, setter 생략
 }

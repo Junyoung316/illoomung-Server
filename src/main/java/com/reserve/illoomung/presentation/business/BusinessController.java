@@ -25,4 +25,7 @@ public class BusinessController {
         businessService.createStore(storeCreateRequest);
         return ResponseEntity.ok(MainResponse.success());
     }
+
+//    @PostMapping
+//    public ResponseEntity<MainResponse<String>> update
 }
