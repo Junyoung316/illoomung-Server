@@ -20,13 +20,11 @@ public class LoginAttempts {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "login_id",  nullable = false, updatable = false)
-    private Long id;
+    @Column(name = "login_id", nullable = false, updatable = false)
+    private Long loginId;
 
-    @MapsId
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "account_id",
-            foreignKey = @ForeignKey(name = "fk_login_account"))
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "account_id", foreignKey = @ForeignKey(name = "fk_login_account"), nullable = true)
     private Account account; // 상위 데이터(account) 데이터 삭제시 null로 변경 또는 유지
 
     @CreationTimestamp

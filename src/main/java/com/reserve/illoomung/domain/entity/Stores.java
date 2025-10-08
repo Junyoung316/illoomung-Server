@@ -1,5 +1,6 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -41,13 +42,13 @@ public class Stores { // 업체 정보
 //    )
 //    private BusinessEntity businessEntity;
 //
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "owner_id",
-//            nullable = false,
-//            foreignKey = @ForeignKey(name = "fk_store_owner")
-//    )
-//    private Account owner;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "owner_id",
+            nullable = false,
+            foreignKey = @ForeignKey(name = "fk_store_owner")
+    )
+    private Account owner;
 
     @Column(name = "store_name", length = 100, nullable = false)
     private String storeName; // 가게 이름

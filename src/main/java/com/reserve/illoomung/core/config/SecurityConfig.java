@@ -58,10 +58,9 @@ public class SecurityConfig {
                     "/public", 
                     "/login/**",
                     "/register/**",
-                    "/auth/refresh",
-                    "/business/**"
+                    "/auth/refresh"
                 ).permitAll()
-                .requestMatchers("/owner/**").hasAnyRole("OWNER", "ADMIN")
+                .requestMatchers("/business/**").hasAnyRole("OWNER", "ADMIN")
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/logout").authenticated()
                 .anyRequest().authenticated()
