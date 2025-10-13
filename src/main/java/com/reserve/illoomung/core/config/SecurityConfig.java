@@ -58,10 +58,11 @@ public class SecurityConfig {
                     "/public", 
                     "/login/**",
                     "/register/**",
+                    "/role/onwer",
                     "/auth/refresh"
                 ).permitAll()
                 .requestMatchers("/business/**").hasAnyRole("OWNER", "ADMIN")
-                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .requestMatchers("/admin/**", "/").hasRole("ADMIN")
                 .requestMatchers("/logout").authenticated()
                 .anyRequest().authenticated()
             )

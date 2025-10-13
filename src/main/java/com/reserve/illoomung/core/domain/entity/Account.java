@@ -68,7 +68,10 @@ public class Account {
     @Column(name = "withdrawn_at")
     private Instant withdrawnAt; // 탈퇴 사각
 
-
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false, insertable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Instant createdAt;
 
     @UpdateTimestamp
     @Column(name = "updated_at", insertable = false,

@@ -86,7 +86,8 @@ public class JwtServiceImpl implements JwtService {
             // throw new TokenRevokeException("토큰 폐기에 실패했습니다. accountId=" + accountId);
         }
 
-        Account account = accountRepository.findByAccountId(Long.valueOf(accountId));
+        Account account = accountRepository.findByAccountId(Long.valueOf(accountId))
+                .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
         String accessToken = generatorAccessToken(
                 accountId, Map.of("role", account.getRole())
         );

@@ -33,7 +33,8 @@ public class LoginAttemptService {
 
         // Account last_login_at 저장
         if (account != null) {
-            Account aaccount = accountRepository.findByAccountId(account.getAccountId());
+            Account aaccount = accountRepository.findByAccountId(account.getAccountId())
+                    .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
             if (aaccount != null) {
                 aaccount.lastLoginAtUpdate();
             }

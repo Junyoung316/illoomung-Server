@@ -64,7 +64,7 @@ class StoresRepositoryTest {
         log.info("authenticated account: {}, {}", owner.getAccountId(), owner.getRole());
         for(StoreCreateRequest storeCreateRequest : storeCreateRequests){
             log.info("Creating store: {}", storeCreateRequest.getStoreName());
-            businessService.createTestStore(storeCreateRequest, owner);
+            businessService.createStore(storeCreateRequest);
         }
     }
 

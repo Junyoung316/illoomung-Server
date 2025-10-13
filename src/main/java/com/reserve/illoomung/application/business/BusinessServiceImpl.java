@@ -145,7 +145,8 @@ public class BusinessServiceImpl implements BusinessService {
             String userId = authentication.getName();  // 사용자 식별자(ID) 조회
             log.info("authenticated id: {}", userId);
 
-            Account account = accountRepository.findByAccountId(Long.valueOf(userId));
+            Account account = accountRepository.findByAccountId(Long.valueOf(userId))
+                    .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
             log.info("authenticated account: {}", account);
             String bCode = getAddressAndBcodeFromApi(storeCreateRequest.getAddress());
 
