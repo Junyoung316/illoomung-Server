@@ -20,6 +20,6 @@ public class RoleController {
     @PostMapping("/onwer")
     public ResponseEntity<MainResponse<String>> createRole() {
         roleService.requestOwnerRegistration();
-        return ResponseEntity.ok(MainResponse.success());
+        return ResponseEntity.ok(MainResponse.created());
     }
 }

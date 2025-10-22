@@ -23,13 +23,13 @@ public class RoleUpgradeRequests {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "request_id", nullable = false, updatable = false)
+    @Column(name = "role_Upgrade_request_id", nullable = false, updatable = false)
     private Long requestId;
 
     @MapsId
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false,
-            foreignKey = @ForeignKey(name = "fk_user_account"))
+            foreignKey = @ForeignKey(name = "fkrole_Upgrade__user_account"))
     private Account account;
 
     @Column(name = "status", nullable = false)
@@ -39,7 +39,7 @@ public class RoleUpgradeRequests {
     @MapsId
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id",
-            foreignKey = @ForeignKey(name = "fk_admin_account"))
+            foreignKey = @ForeignKey(name = "fk_role_Upgrade_admin_account"))
     private Account admin;
 
     @Column(name = "rejection_reason", columnDefinition = "TEXT")

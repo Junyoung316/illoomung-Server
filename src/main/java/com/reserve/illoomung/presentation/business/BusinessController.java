@@ -23,7 +23,7 @@ public class BusinessController {
     public ResponseEntity<MainResponse<String>> createStore(@RequestBody StoreCreateRequest storeCreateRequest) {
         log.info("Creating store {}", storeCreateRequest);
         businessService.createStore(storeCreateRequest);
-        return ResponseEntity.ok(MainResponse.success());
+        return ResponseEntity.ok(MainResponse.created());
     }
 
 //    @PostMapping

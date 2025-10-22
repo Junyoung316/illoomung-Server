@@ -27,6 +27,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public LoginResponse localLogin(LocalRegisterLoginRequest request){
+
         log.info("[로그인] 시도: email={}", request.getEmail());
 
         CryptoResult emailCryptoResult = securityUtil.cryptoResult(request.getEmail());

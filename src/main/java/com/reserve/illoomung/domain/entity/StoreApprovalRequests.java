@@ -23,13 +23,13 @@ public class StoreApprovalRequests {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "request_id", nullable = false, updatable = false)
+    @Column(name = "store_approval_request_id", nullable = false, updatable = false)
     private Long requestId;
 
     @MapsId
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false,
-            foreignKey = @ForeignKey(name = "fk_user_account"))
+            foreignKey = @ForeignKey(name = "fk_store_approval_user_account"))
     private Account account;
 
     @Column(name = "status", nullable = false)
@@ -38,7 +38,7 @@ public class StoreApprovalRequests {
     @MapsId
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false,
-            foreignKey = @ForeignKey(name = "fk_admin_account"))
+            foreignKey = @ForeignKey(name = "fk_store_approval_admin_account"))
     private Account admin;
 
     @Column(name = "rejection_reason", columnDefinition = "TEXT")

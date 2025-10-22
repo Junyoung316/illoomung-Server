@@ -36,7 +36,7 @@ public class RegisterController {
         registerService.localRegister(
             request
         );
-        return ResponseEntity.ok(MainResponse.success());
+        return ResponseEntity.ok(MainResponse.created());
     }
 
 //    @Operation(
