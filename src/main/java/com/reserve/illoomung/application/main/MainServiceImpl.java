@@ -1,4 +1,4 @@
-package com.reserve.illoomung.application.home;
+package com.reserve.illoomung.application.main;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class HomeServiceImpl implements HomeService {
+public class MainServiceImpl implements MainService {
 
     @Override
-    public String homeInit() {
+    public String mainInit() {
         return "Hello World!";
     }
 

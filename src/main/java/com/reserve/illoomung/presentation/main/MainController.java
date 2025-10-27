@@ -1,6 +1,6 @@
-package com.reserve.illoomung.presentation.home;
+package com.reserve.illoomung.presentation.main;
 
-import com.reserve.illoomung.application.home.HomeService;
+import com.reserve.illoomung.application.main.MainService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,14 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/public")
 @RequiredArgsConstructor
 @Slf4j
-public class HomeController {
+public class MainController {
 
-    private final HomeService homeService;
+    private final MainService homeService;
 
-    @GetMapping
+    @GetMapping("/item") // 메인 페이지 데이터 전송
     public String home() {
-        return homeService.homeInit();
+        return homeService.mainInit();
     }
+
+    // 상세 페이지 정보
 
 }
  /*
