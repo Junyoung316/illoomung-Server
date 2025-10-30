@@ -51,7 +51,7 @@ public class BusinessServiceImpl implements BusinessService {
         return storesRepository.existsByStoreNameAndAddressFullHashAndAddressDetailsHash(name, address, addressDetails);
     }
 
-    private String getAddressAndBcodeFromApi(String addressBcode) {
+    private KakaoAddressResponse.Address getAddressAndBcodeFromApi(String addressBcode) {
         KakaoAddressResponse addressInfo = webClientService.kakaoGetBCode(addressBcode);
         if (addressInfo == null || addressInfo.getDocuments() == null || addressInfo.getDocuments().isEmpty()) {
             throw new IllegalArgumentException("유효하지 않은 API 응답입니다.");
@@ -63,10 +63,11 @@ public class BusinessServiceImpl implements BusinessService {
 //        String y = address.getRoadAddress().getY(); // 위도
 //        log.info("====={}, {}", na, ad);
 //        log.info("====={}, {}", y, x);
-        return address.getAddress().getBCode();
+//        String ad = address.getAddress().getRegion3depthName();
+        return address.getAddress();
     }
 
-    private void saveStore(Account account, StoreCreateRequest storeCreateRequest, CryptoResult phoneCrypto, CryptoResult addressCrypto, CryptoResult addressDetailsCrypto, String bCode) {
+    private void saveStore(Account account, StoreCreateRequest storeCreateRequest, CryptoResult phoneCrypto, CryptoResult addressCrypto, CryptoResult addressDetailsCrypto, String depth1, String depth2, String depth3, String bCode) {
         Stores store = Stores.builder()
                 .owner(account)
                 .storeName(storeCreateRequest.getStoreName())
@@ -76,6 +77,9 @@ public class BusinessServiceImpl implements BusinessService {
                 .addressFullHash(addressCrypto.hashedData())
                 .addressDetails(addressDetailsCrypto.encryptedData())
                 .addressDetailsHash(addressDetailsCrypto.hashedData())
+                .addrDepth1(depth1)
+                .addrDepth2(depth2)
+                .addrDepth3(depth3)
                 .bcode(bCode)
                 .websiteUrl(storeCreateRequest.getHomepageUrl())
                 .instagramUrl(storeCreateRequest.getInstagramUrl())
@@ -148,7 +152,12 @@ public class BusinessServiceImpl implements BusinessService {
             Account account = accountRepository.findByAccountId(Long.valueOf(userId))
                     .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
             log.info("authenticated account: {}", account);
-            String bCode = getAddressAndBcodeFromApi(storeCreateRequest.getAddress());
+            KakaoAddressResponse.Address address = getAddressAndBcodeFromApi(storeCreateRequest.getAddress());
+
+            String depth1 = address.getRegion1depthName();
+            String depth2 = address.getRegion2depthName();
+            String depth3 = address.getRegion3depthName();
+            String bCode = address.getBCode();
 
             CryptoResult phoneCrypto = securityUtil.cryptoResult(storeCreateRequest.getPhoneNumber());
             CryptoResult addressCrypto = securityUtil.cryptoResult(storeCreateRequest.getAddress());
@@ -158,7 +167,7 @@ public class BusinessServiceImpl implements BusinessService {
                 throw new IllegalStateException("이미 동일한 이름과 주소로 등록된 사업장이 존재합니다.");
             }
 
-            saveStore(account, storeCreateRequest, phoneCrypto, addressCrypto, addressDetailsCrypto, bCode);
+            saveStore(account, storeCreateRequest, phoneCrypto, addressCrypto, addressDetailsCrypto, depth1, depth2, depth3, bCode);
         }
     }
 

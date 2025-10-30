@@ -30,7 +30,7 @@ public class StoreOperatingHours { // 업체 영업시간
 
     @Column(name = "is_open", nullable = false)
     @Builder.Default
-    private Boolean isOpen = true;
+    public Boolean isOpen = true;
 
     @Column(name = "open_time")
     private LocalTime openTime;

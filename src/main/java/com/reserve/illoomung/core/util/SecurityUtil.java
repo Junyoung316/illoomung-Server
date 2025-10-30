@@ -97,6 +97,16 @@ public class SecurityUtil {
         return iv;
     }
 
+    public String textDecrypt(String cipherText) {
+        try { // TODO: 초기화 백처 추출해 사용해야함
+            SecretKey key = generateKey(128);
+            byte[] iv = generateIV();
+            return decrypt(cipherText, key, iv);
+        } catch(Exception e) {
+            return null;
+        }
+    }
+
     public CryptoResult cryptoResult(String plainText) {
         try {
             SecretKey key = generateKey(128);

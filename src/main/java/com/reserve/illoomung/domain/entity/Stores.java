@@ -68,6 +68,15 @@ public class Stores { // 업체 정보
     @Column(name = "address_details_hash", columnDefinition = "TEXT", nullable = false)
     private String addressDetailsHash;
 
+    @Column(name = "address_depth1")
+    private String addrDepth1;
+
+    @Column(name = "address_depth2")
+    private String addrDepth2;
+
+    @Column(name = "address_depth3")
+    private String addrDepth3;
+
     @Column(name = "bcode", length = 30, nullable = false)
     private String bcode; // 지역 코드
 
