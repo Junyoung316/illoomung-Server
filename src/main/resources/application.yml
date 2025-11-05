@@ -62,7 +62,7 @@ com:
     illoomung:
       jwt:
         service:
-          secret-key: BfbSgCbjDBD5Uat84TXGvUmT8GkZmdGGmuSvKfTWYn3JYxXR8U79eu66X6U9JxKw
+          secret-key: q7KmXIlY9wPVU5sK3Frcd2r0pNvuubjSNhEKbc+M4K4=
 
 jwt:
   # JWT 만료 시간 (밀리초 단위)

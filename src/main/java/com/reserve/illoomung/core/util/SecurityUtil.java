@@ -1,5 +1,6 @@
 package com.reserve.illoomung.core.util;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,10 +18,13 @@ import java.security.SecureRandom;
 import java.util.Base64;
 
 @Component
+@AllArgsConstructor
 public class SecurityUtil {
 
     private static final int IV_LENGTH = 12;
     private static final int GCM_TAG_LENGTH = 128;
+
+    private final SecretKey secretKey;
 
     /**
      * 현재 로그인된 사용자의 인증 정보를 반환합니다.
@@ -58,68 +62,115 @@ public class SecurityUtil {
                !(authentication.getPrincipal() instanceof String && authentication.getPrincipal().equals("anonymousUser"));
     }
 
-    // AES-GCM 암호화
-    public static String encrypt(String plainText, SecretKey key, byte[] iv) throws Exception {
+    // ⭐️ (시그니처 수정) encrypt 오버로딩: byte[] 반환
+    public static byte[] encrypt(String plainText, SecretKey key, byte[] iv) throws Exception {
         Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(GCM_TAG_LENGTH, iv);
         cipher.init(Cipher.ENCRYPT_MODE, key, spec);
-        byte[] encrypted = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
-        return Base64.getEncoder().encodeToString(encrypted);
+        return cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
     }
 
-    // AES-GCM 복호화
-    public static String decrypt(String cipherText, SecretKey key, byte[] iv) throws Exception {
+
+    /**
+     * ⭐️ 수정된 AES-GCM 복호화
+     * @param cipherTextBytes Base64로 인코딩된 문자열이 아닌, **순수 암호문 바이트 배열**
+     * @param key             비밀 키
+     * @param iv              초기화 벡터
+     * @return 복호화된 원본 문자열
+     * @throws Exception
+     */
+    public static String decrypt(byte[] cipherTextBytes, SecretKey key, byte[] iv) throws Exception {
         Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(GCM_TAG_LENGTH, iv);
         cipher.init(Cipher.DECRYPT_MODE, key, spec);
-        byte[] decrypted = cipher.doFinal(Base64.getDecoder().decode(cipherText));
+
+        // ⭐️ 수정: Base64 디코딩 제거 (이미 순수 byte[]를 받음)
+        // byte[] decrypted = cipher.doFinal(Base64.getDecoder().decode(cipherText));
+        byte[] decrypted = cipher.doFinal(cipherTextBytes);
         return new String(decrypted, StandardCharsets.UTF_8);
     }
 
-    // SHA-256 해시
+    // SHA-256 해시 (동일)
     public static String hash(String input) throws Exception {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] hashBytes = digest.digest(input.getBytes(StandardCharsets.UTF_8));
         return Base64.getEncoder().encodeToString(hashBytes);
     }
 
-    // 원하는 크기(keySize)의 **AES 대칭 키(SecretKey)**를 생성하는 함수
+    // 키 생성 (static 유지 - 키 생성 유틸로 사용)
     public static SecretKey generateKey(int keySize) throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
         keyGen.init(keySize);
         return keyGen.generateKey();
     }
 
-    // **IV(Initialization Vector, 초기화 벡터)**를 랜덤하게 생성하는 함수
+    // IV 생성 (static 유지)
     public static byte[] generateIV() {
         byte[] iv = new byte[IV_LENGTH];
         new SecureRandom().nextBytes(iv);
         return iv;
     }
 
-    public String textDecrypt(String cipherText) {
-        try { // TODO: 초기화 백처 추출해 사용해야함
-            SecretKey key = generateKey(128);
-            byte[] iv = generateIV();
-            return decrypt(cipherText, key, iv);
-        } catch(Exception e) {
+    /**
+     * ⭐️ 수정된 복호화 메소드
+     */
+    public String textDecrypt(String combinedBase64) {
+        try {
+            // ⭐️ 수정: 멤버 변수에 저장된 키 사용
+            // SecretKey key = generateKey(128); // (X)
+
+            // 1. Base64 디코딩
+            // combinedBase64 -> [IV(12 bytes)] + [Ciphertext(가변 bytes)]
+            byte[] combinedData = Base64.getDecoder().decode(combinedBase64);
+
+            // 2. IV 추출 (앞 12바이트)
+            byte[] iv = new byte[IV_LENGTH];
+            System.arraycopy(combinedData, 0, iv, 0, IV_LENGTH);
+
+            // 3. 실제 암호문 추출 (12바이트 이후 끝까지)
+            int ciphertextLength = combinedData.length - IV_LENGTH;
+            byte[] ciphertextBytes = new byte[ciphertextLength];
+            System.arraycopy(combinedData, IV_LENGTH, ciphertextBytes, 0, ciphertextLength);
+
+            // 4. 복호화
+            // ⭐️ 수정: this.secretKey와 byte[]를 받는 decrypt 메소드 호출
+            return decrypt(ciphertextBytes, this.secretKey, iv);
+
+        } catch (Exception e) {
+            e.printStackTrace(); // 실제 서비스에서는 로깅 프레임워크 사용
             return null;
         }
     }
 
+    /**
+     * ⭐️ 수정된 암호화 + 해시 생성 메소드
+     */
     public CryptoResult cryptoResult(String plainText) {
         try {
-            SecretKey key = generateKey(128);
+            // ⭐️ 수정: 멤버 변수에 저장된 키 사용
+            // SecretKey key = generateKey(128); // (X)
+
             byte[] iv = generateIV();
 
-             // 암호화
-            String encryptedText = encrypt(plainText, key, iv);
+            // 1. 암호화 (byte[] 결과)
+            byte[] encryptedBytes = encrypt(plainText, this.secretKey, iv);
 
-            // 해시 생성 (원문 기반으로 생성) 검색용
+            // 2. ⭐️ [IV] + [Ciphertext] 결합
+            //
+            byte[] combinedData = new byte[IV_LENGTH + encryptedBytes.length];
+            System.arraycopy(iv, 0, combinedData, 0, IV_LENGTH);
+            System.arraycopy(encryptedBytes, 0, combinedData, IV_LENGTH, encryptedBytes.length);
+
+            // 3. 결합된 데이터를 Base64로 인코딩
+            String encryptedBase64 = Base64.getEncoder().encodeToString(combinedData);
+
+            // 4. 해시 생성 (원문 기반)
             String hash = hash(plainText);
 
-            return new CryptoResult(encryptedText, hash);
+            return new CryptoResult(encryptedBase64, hash);
+
         } catch(Exception e) {
+            e.printStackTrace();
             return new CryptoResult(null, null);
         }
     }

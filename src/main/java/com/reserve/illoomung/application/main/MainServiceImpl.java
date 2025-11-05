@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 public class MainServiceImpl implements MainService {
 
     private final Random random = new Random();
+    private final SecurityUtil securityUtil;
 
     /**
      * TODO: 실무 환경에서는 변경
@@ -69,7 +70,7 @@ public class MainServiceImpl implements MainService {
         List<Long> testList = test.stream().map(Integer::longValue).toList();
         List<Stores> storeList = storesRepository.findAllById(testList);
         List<Long> foundId = storeList.stream().map(Stores::getStoreId).toList();
-        log.info("list: {}",foundId.toString());
+        log.info("list: {}", foundId);
 
         // 이미지 url 파싱
         Map<Long, String> storesImage = storeImageRepository.findByStoreStoreIdIn(foundId) // 👈 2번 문제도 수정
@@ -224,7 +225,7 @@ public class MainServiceImpl implements MainService {
         return stores.stream()
                 .map(entity -> {
                     log.info("addr: {}", entity.getAddress());
-                    String addrDecrypt =  SecurityUtil.textDecrypt(entity.getAddress());
+                    String addrDecrypt =  securityUtil.textDecrypt(entity.getAddress());
                     log.info("addrDecrypt: {}", addrDecrypt);
                     StoreOperatingHours oh = hoursMap.get(entity.getStoreId());
                     boolean isOpen = (oh != null &&

@@ -25,8 +25,8 @@ class JwtController {
     @PostMapping("/refresh") // TODO: 재발급 로직에서 데이터베이스 폐기 여부 및 토큰값 검증 추가
     public ResponseEntity<MainResponse<LoginResponse>> refreshToken(@RequestHeader("refresh-token") String refreshToken) {
         String token = null;
-        if (refreshToken != null && refreshToken.startsWith("Bearer ")) {
-            token = refreshToken.substring(7); // "Bearer " 이후의 문자열만 추출
+        if (refreshToken != null) {
+            token = refreshToken;
         }
         boolean isRevoked = refreshTokensRepository.existsByTokenAndRevoked(token, true); // 토큰이 폐기 상태인지 확인
         log.info("Refresh token Revoked: {}", isRevoked);

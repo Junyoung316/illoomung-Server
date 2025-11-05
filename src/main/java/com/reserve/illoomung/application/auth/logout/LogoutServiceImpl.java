@@ -38,7 +38,7 @@ public class LogoutServiceImpl implements LogoutService {
             log.info("token exp: {}", exp);
         }
 
-        String Rtoken = extractToken(refreshToken);
+        String Rtoken = refreshToken;
         Long RtokenExp = null;
         if (Rtoken != null) {
             RtokenExp = jwtService.extractFromToken(Rtoken, "exp", Long.class);
