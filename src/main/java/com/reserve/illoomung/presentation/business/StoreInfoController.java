@@ -1,7 +1,7 @@
 package com.reserve.illoomung.presentation.business;
 
 
-import com.reserve.illoomung.application.business.StoreInfoService;
+import com.reserve.illoomung.application.business.storeInfo.StoreInfoService;
 import com.reserve.illoomung.core.dto.MainResponse;
 import com.reserve.illoomung.dto.business.StoreInfoResponse;
 import lombok.RequiredArgsConstructor;

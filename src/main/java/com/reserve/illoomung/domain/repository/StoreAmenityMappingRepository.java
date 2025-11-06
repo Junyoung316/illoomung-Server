@@ -10,6 +10,9 @@ import java.util.List;
 
 @Repository
 public interface StoreAmenityMappingRepository extends JpaRepository<StoreAmenityMapping, Long> {
+
+    List<StoreAmenityMapping>  findByStoreStoreId(@Param("storeId") Long storeId);
+
     @Query("SELECT m FROM StoreAmenityMapping m " +
             "JOIN FETCH m.amenity " +
             "WHERE m.store.storeId IN :storeIds")

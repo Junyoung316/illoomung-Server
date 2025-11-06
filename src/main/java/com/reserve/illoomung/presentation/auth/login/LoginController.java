@@ -3,7 +3,7 @@ package com.reserve.illoomung.presentation.auth.login;
 import com.reserve.illoomung.application.auth.login.LoginService;
 import com.reserve.illoomung.core.dto.LoginResponse;
 import com.reserve.illoomung.core.dto.MainResponse;
-import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
+import com.reserve.illoomung.dto.request.auth.LocalLoginRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping("/local")
-    public ResponseEntity<MainResponse<LoginResponse>> loginController(@Valid @RequestBody LocalRegisterLoginRequest request) {
+    public ResponseEntity<MainResponse<LoginResponse>> loginController(@Valid @RequestBody LocalLoginRequest request) {
         LoginResponse token = loginService.localLogin(request);
         return ResponseEntity.ok(MainResponse.success(token));
     }

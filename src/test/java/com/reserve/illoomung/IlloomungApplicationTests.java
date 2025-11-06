@@ -7,8 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class IlloomungApplicationTests {
 
-
-
 	@Test // 스토어 init
 	void contextLoads() throws Exception {
 	}

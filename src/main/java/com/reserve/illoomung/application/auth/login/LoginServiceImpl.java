@@ -8,7 +8,7 @@ import com.reserve.illoomung.core.dto.LoginResponse;
 import com.reserve.illoomung.core.exception.LoginFailException;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.core.util.jwt.application.JwtService;
-import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
+import com.reserve.illoomung.dto.request.auth.LocalLoginRequest;
 import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,7 @@ public class LoginServiceImpl implements LoginService {
     private final JwtService jwtService;
 
     @Override
-    public LoginResponse localLogin(LocalRegisterLoginRequest request){
+    public LoginResponse localLogin(LocalLoginRequest request){
 
         log.info("[로그인] 시도: email={}", request.getEmail());
 

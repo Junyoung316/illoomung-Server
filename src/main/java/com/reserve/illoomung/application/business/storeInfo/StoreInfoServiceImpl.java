@@ -1,0 +1,203 @@
+package com.reserve.illoomung.application.business.storeInfo;
+
+import com.reserve.illoomung.application.webClient.WebClientService;
+import com.reserve.illoomung.core.domain.entity.Account;
+import com.reserve.illoomung.core.domain.entity.UserProfile;
+import com.reserve.illoomung.core.domain.repository.UserProfileRepository;
+import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.domain.entity.*;
+import com.reserve.illoomung.domain.entity.enums.Status;
+import com.reserve.illoomung.domain.repository.*;
+import com.reserve.illoomung.dto.business.StoreInfoResponse;
+import com.reserve.illoomung.dto.webClient.KakaoAddressResponse;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class StoreInfoServiceImpl implements StoreInfoService {
+
+    private final WebClientService webClientService; // 외부 api 요청 서비스
+    private final SecurityUtil securityUtil;
+
+    private final UserProfileRepository userProfileRepository;
+
+    private final StoresRepository storesRepository; // 가게 기본 정보 및 사업자 정보
+    private final StoreImageRepository storeImageRepository; // 가게 이미지
+    private final StoreAmenityMappingRepository storeAmenityMappingRepository; // 가게 편의시설
+    private final StoreOperatingHoursRepository storeOperatingHoursRepository; // 영업시간
+    private final StoreOfferingRepository storeOfferingRepository; // 상품정보
+
+    private KakaoAddressResponse.Address getAddressAndBcodeFromApi(String addressBcode) {
+        KakaoAddressResponse addressInfo = webClientService.kakaoGetBCode(addressBcode);
+        if (addressInfo == null || addressInfo.getDocuments() == null || addressInfo.getDocuments().isEmpty()) {
+            throw new IllegalArgumentException("유효하지 않은 API 응답입니다.");
+        } // 데이터가 null이거나 빈 문자열일 때 예외 처리
+        KakaoAddressResponse.Document address = addressInfo.getDocuments().getFirst();
+        return address.getAddress();
+    }
+
+    private String convertDayOfWeekToString(Integer dayNum) {
+        return switch (dayNum) {
+            case 0 -> "일";
+            case 1 -> "월";
+            case 2 -> "화";
+            case 3 -> "수";
+            case 4 -> "목";
+            case 5 -> "금";
+            case 6 -> "토";
+            case 7 -> "매일";
+            default -> null;
+        };
+    }
+
+    @Override
+    public StoreInfoResponse findStoreInfo(Long storeId) {
+        Stores store = storesRepository.findAllByStoreId(storeId).orElseThrow(() -> {
+            log.error("존재하지 않는 가게");
+            return new RuntimeException("존재하지 않는 가게");
+        });
+        Account owner = store.getOwner(); // 사업자 정보 조회
+        String img = storeImageRepository.findByStoreStoreId(store.getStoreId())
+                .map(StoreImage::getImageUrl)
+                .orElse(null);
+
+        List<StoreAmenityMapping> amenityMaps = storeAmenityMappingRepository
+                .findByStoreStoreId(store.getStoreId());
+
+        // 2. 💡 [핵심] 스트림을 사용해 'StoreAmenityMapping'을 'String'(편의시설 이름)으로 변환합니다.
+        // (groupingBy가 필요 없어졌습니다)
+        List<String> amenityNameList = amenityMaps.stream()
+                .map(map -> map.getAmenity().getAmenityName()) // 👈 이름(String)만 추출
+                .toList();
+
+        String addr = securityUtil.textDecrypt(store.getAddress());
+        String addrDetail =  securityUtil.textDecrypt(store.getAddress());
+
+        KakaoAddressResponse.Address address = getAddressAndBcodeFromApi(addr);
+        String x = address.getX();
+        String y = address.getY();
+
+        List<StoreOperatingHours> storesOperatingHoursList = storeOperatingHoursRepository.findByStoreStoreIdOrderByDayOfWeekAsc(store.getStoreId());
+
+        List<StoreInfoResponse.openCloseHours> storeOpenCloseList = storesOperatingHoursList.stream()
+                .map(operatingHours -> {
+                    boolean isOpen = operatingHours.getIsOpen();
+                    String open;
+                    String close = null;
+
+                    if (isOpen) {
+                        open = operatingHours.getOpenTime().toString();
+                        close = operatingHours.getCloseTime().toString();
+                    } else {
+                        open = "정기 휴무";
+                    }
+
+                    String dayOfweek = convertDayOfWeekToString(operatingHours.getDayOfWeek());
+                    return StoreInfoResponse.openCloseHours.builder()
+                            .dayOfWeek(dayOfweek)
+                            .isOpening(isOpen)
+                            .openingHour(open)
+                            .closingHour(close)
+                            .build();
+                }).toList();
+
+        List<StoreOffering> storeProductsList = storeOfferingRepository.findByStoreStoreIdAndStatus(store.getStoreId(), Status.ACTIVE);
+
+        List<StoreInfoResponse.products> storeProducts = storeProductsList.stream()
+                .map(entity -> StoreInfoResponse.products.builder()
+                        .productsId(entity.getOfferingId())
+                        .productName(entity.getOfferingName())
+                        .productDescription(entity.getDescription())
+                        .productPrice(entity.getPrice().toString())
+                        .build())
+                .toList();
+
+        UserProfile profile = userProfileRepository.findByAccountId(owner);
+
+        StoreInfoResponse.seller sellerInfo = StoreInfoResponse.seller.builder()
+                .sellerId(owner.getAccountId())
+                .sellerEmail(securityUtil.textDecrypt(owner.getEmail()))
+                .sellerName(securityUtil.textDecrypt(profile.getName()))
+                .build();
+
+        return StoreInfoResponse.builder()
+                .storeId(store.getStoreId())
+                .imgUrl(img)
+                .name(store.getStoreName())
+                .description(store.getDescription())
+                .amenities(amenityNameList)
+                .addr(addr)
+                .addrDetail(addrDetail)
+                .x(x)
+                .y(y)
+                .openCloseHours(storeOpenCloseList)
+                .products(storeProducts)
+                .seller(sellerInfo)
+                .build();
+    }
+}
+
+/*
+{
+    storeId: id,
+    imgUrl: https://---,
+    name: name,
+    description: null,
+    amenities: {
+        "주차",
+        "예약",
+        ...
+    },
+    addr: 풍무,
+    addrDetail: 20호,
+    x: 09.1412421,
+    y: 12.3124242,
+    day: 일 or 매일,
+    openingHours: {
+        "09:00", // 일
+        "09:00",
+        ...
+    },
+    closingHours: {
+        "09:00", // 일
+        "09:00",
+        ...
+    },
+    products: {
+        productsId:
+        productName:
+        productDescription:
+        productPrice
+    },
+    seller: {
+        sellerId:
+        sellerName:
+        sellerEmail
+    }
+}
+
+    data: {
+        예약: {
+            {
+                예약번호: 1
+                예약날짜:
+                예약시간
+            }
+            ....
+        } or null
+        추가 항목: {
+            {
+                항목번호:
+                항목이름
+                항목 설명
+                항목 가격
+            } .... or null
+        }
+
+    }
+ */

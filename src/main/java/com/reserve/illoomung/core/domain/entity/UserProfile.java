@@ -33,7 +33,7 @@ public class UserProfile implements Serializable {
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "fk_user_account"))
-    private Account account;
+    private Account accountId;
 
     @Lob
     @Column(name = "phone")
@@ -62,7 +62,7 @@ public class UserProfile implements Serializable {
     private String gender;  // 암호화된 성별
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "gender_stat", nullable = false)
+    @Column(name = "gender_stat")
     @Builder.Default
     private GenderStat genderStat = GenderStat.UNKNOWN;
 
@@ -74,13 +74,13 @@ public class UserProfile implements Serializable {
     private String birthMD;
 
     @Lob
-    @Column(name = "address_full", nullable = false)
+    @Column(name = "address_full")
     private String addressFull;  // 암호화된 전체 주소
 
-    @Column(name = "address_sido", length = 50, nullable = false)
+    @Column(name = "address_sido", length = 50)
     private String addressSido;
 
-    @Column(name = "address_sigungu", length = 50, nullable = false)
+    @Column(name = "address_sigungu", length = 50)
     private String addressSigungu;
 
     @Lob

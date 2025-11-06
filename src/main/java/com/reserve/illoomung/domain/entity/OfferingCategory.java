@@ -27,10 +27,12 @@ public class OfferingCategory { // 상품/서비스 카테고리
     private String categoryName;
 
     @Column(name = "sort_order", nullable = false)
+    @Builder.Default
     private Integer sortOrder = 0;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", length = 10, nullable = false)
+    @Builder.Default
     private Status status = Status.ACTIVE;
 
     @CreationTimestamp

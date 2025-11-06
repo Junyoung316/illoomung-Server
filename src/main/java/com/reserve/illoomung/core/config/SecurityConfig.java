@@ -80,7 +80,8 @@ public class SecurityConfig {
                     "/login/**",
                     "/register/**",
                     "/role/onwer",
-                    "/auth/refresh"
+                    "/auth/refresh",
+                    "/store/**"
                 ).permitAll()
                 .requestMatchers("/business/**").hasAnyRole("OWNER", "ADMIN")
                 .requestMatchers("/admin/**", "/").hasRole("ADMIN")

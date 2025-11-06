@@ -1,4 +1,4 @@
-package com.reserve.illoomung.application.business;
+package com.reserve.illoomung.application.business.storeInfo;
 
 import com.reserve.illoomung.dto.business.StoreInfoResponse;
 

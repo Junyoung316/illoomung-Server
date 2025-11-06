@@ -1,22 +1,16 @@
 package com.reserve.illoomung.presentation.auth.register;
 
-import com.reserve.illoomung.core.dto.LoginResponse;
-import com.reserve.illoomung.dto.request.auth.SocialRegisterLoginRequest;
+import com.reserve.illoomung.dto.request.auth.LocalRegisterRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.reserve.illoomung.application.auth.register.RegisterService;
-import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
 import com.reserve.illoomung.core.dto.MainResponse;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-
-import java.util.Map;
-import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -32,7 +26,7 @@ public class RegisterController {
         // security = @SecurityRequirement(name = "BearerAuth")
     )
     @PostMapping("/local")
-    public ResponseEntity<MainResponse<String>> userRegister(@Valid @RequestBody LocalRegisterLoginRequest request) {
+    public ResponseEntity<MainResponse<String>> userRegister(@Valid @RequestBody LocalRegisterRequest request) {
         registerService.localRegister(
             request
         );

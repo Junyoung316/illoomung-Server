@@ -22,19 +22,24 @@ public class StoreInfoResponse {
     private String x;
     private String y;
 
-    private String day;
-
-    @Singular("openingHour")
-    private List<String> openingHours;
-
     @Singular("closingHour")
-    private List<String> closingHours;
+    private List<openCloseHours> openCloseHours;
 
     @Singular("product")
     private List<products> products;
 
     private seller seller;
 
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class openCloseHours{
+        private String dayOfWeek;
+        private boolean isOpening;
+        private String openingHour;
+        private String closingHour;
+    }
 
     @Data
     @NoArgsConstructor

@@ -5,7 +5,7 @@ import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.RequestInfoUtil;
 import com.reserve.illoomung.core.util.SecurityUtil;
-import com.reserve.illoomung.dto.request.auth.LocalRegisterLoginRequest;
+import com.reserve.illoomung.dto.request.auth.LocalLoginRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -43,8 +43,8 @@ public class LoginAttemptAspect {
         }
 
         for (Object arg : joinPoint.getArgs()) {
-            if (arg instanceof LocalRegisterLoginRequest) {
-                String email = ((LocalRegisterLoginRequest) arg).getEmail();
+            if (arg instanceof LocalLoginRequest) {
+                String email = ((LocalLoginRequest) arg).getEmail();
                 CryptoResult emailCryptoResult = securityUtil.cryptoResult(email);
                 String emailHash = emailCryptoResult.hashedData();
                 // 이메일로 Account 조회
@@ -76,8 +76,8 @@ public class LoginAttemptAspect {
         String failReason = (ex != null && ex.getMessage() != null) ? ex.getMessage() : "Unknown error";
 
         for (Object arg : joinPoint.getArgs()) {
-            if (arg instanceof LocalRegisterLoginRequest) {
-                String email = ((LocalRegisterLoginRequest) arg).getEmail();
+            if (arg instanceof LocalLoginRequest) {
+                String email = ((LocalLoginRequest) arg).getEmail();
                 CryptoResult emailCryptoResult = securityUtil.cryptoResult(email);
                 String emailHash = emailCryptoResult.hashedData();
                 // 이메일로 Account 조회

@@ -38,6 +38,7 @@ public class Amenity { // 편의시설
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false, length = 10)
+    @Builder.Default
     private Status status = Status.ACTIVE;
 
     @CreationTimestamp
