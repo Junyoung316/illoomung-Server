@@ -69,8 +69,6 @@ public class StoreInfoServiceImpl implements StoreInfoService {
         List<StoreAmenityMapping> amenityMaps = storeAmenityMappingRepository
                 .findByStoreStoreId(store.getStoreId());
 
-        // 2. 💡 [핵심] 스트림을 사용해 'StoreAmenityMapping'을 'String'(편의시설 이름)으로 변환합니다.
-        // (groupingBy가 필요 없어졌습니다)
         List<String> amenityNameList = amenityMaps.stream()
                 .map(map -> map.getAmenity().getAmenityName()) // 👈 이름(String)만 추출
                 .toList();
@@ -141,63 +139,3 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                 .build();
     }
 }
-
-/*
-{
-    storeId: id,
-    imgUrl: https://---,
-    name: name,
-    description: null,
-    amenities: {
-        "주차",
-        "예약",
-        ...
-    },
-    addr: 풍무,
-    addrDetail: 20호,
-    x: 09.1412421,
-    y: 12.3124242,
-    day: 일 or 매일,
-    openingHours: {
-        "09:00", // 일
-        "09:00",
-        ...
-    },
-    closingHours: {
-        "09:00", // 일
-        "09:00",
-        ...
-    },
-    products: {
-        productsId:
-        productName:
-        productDescription:
-        productPrice
-    },
-    seller: {
-        sellerId:
-        sellerName:
-        sellerEmail
-    }
-}
-
-    data: {
-        예약: {
-            {
-                예약번호: 1
-                예약날짜:
-                예약시간
-            }
-            ....
-        } or null
-        추가 항목: {
-            {
-                항목번호:
-                항목이름
-                항목 설명
-                항목 가격
-            } .... or null
-        }
-
-    }
- */

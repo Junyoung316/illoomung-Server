@@ -57,13 +57,6 @@ public class BusinessServiceImpl implements BusinessService {
             throw new IllegalArgumentException("유효하지 않은 API 응답입니다.");
         } // 데이터가 null이거나 빈 문자열일 때 예외 처리
         KakaoAddressResponse.Document address = addressInfo.getDocuments().getFirst();
-//        String na = address.getRoadAddress().getAddressName(); // 지도
-//        String bcode = address.getAddress().getBCode(); // 지역 코드
-//        String x = address.getRoadAddress().getX(); // 경도
-//        String y = address.getRoadAddress().getY(); // 위도
-//        log.info("====={}, {}", na, ad);
-//        log.info("====={}, {}", y, x);
-//        String ad = address.getAddress().getRegion3depthName();
         return address.getAddress();
     }
 

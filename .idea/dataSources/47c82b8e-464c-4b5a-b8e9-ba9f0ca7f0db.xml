@@ -99,7 +99,7 @@
 |root||root|localhost|grant option|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>9.4.0</ServerVersion>
+      <ServerVersion>9.5.0</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1007,7 +1007,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-29.04:28:38</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-06.07:47:20</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="information_schema">
@@ -1289,7 +1289,7 @@ social_id_hash</ColNames>
       <StoredType>timestamp|0s</StoredType>
     </column>
     <column id="351" parent="301" name="login_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1431,7 +1431,7 @@ offering_id</ColNames>
       <StoredType>bigint|0s</StoredType>
     </column>
     <column id="380" parent="304" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1714,7 +1714,7 @@ store_id</ColNames>
       <StoredType>timestamp|0s</StoredType>
     </column>
     <column id="439" parent="310" name="image_id">
-      <AutoIncrement>58</AutoIncrement>
+      <AutoIncrement>12</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1853,7 +1853,7 @@ image_type</ColNames>
       <StoredType>time(6)|0s</StoredType>
     </column>
     <column id="468" parent="312" name="hours_id">
-      <AutoIncrement>400</AutoIncrement>
+      <AutoIncrement>78</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1898,7 +1898,7 @@ day_of_week</ColNames>
       <StoredType>bigint|0s</StoredType>
     </column>
     <column id="477" parent="313" name="store_id">
-      <AutoIncrement>61</AutoIncrement>
+      <AutoIncrement>12</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bigint|0s</StoredType>
@@ -2062,12 +2062,10 @@ day_of_week</ColNames>
       <StoredType>timestamp|0s</StoredType>
     </column>
     <column id="512" parent="315" name="address_sido">
-      <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
     <column id="513" parent="315" name="address_sigungu">
-      <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
@@ -2085,7 +2083,6 @@ day_of_week</ColNames>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="517" parent="315" name="address_full">
-      <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>tinytext|0s</StoredType>
     </column>
@@ -2098,7 +2095,6 @@ day_of_week</ColNames>
       <StoredType>tinytext|0s</StoredType>
     </column>
     <column id="520" parent="315" name="gender_stat">
-      <NotNull>1</NotNull>
       <Position>13</Position>
       <StoredType>enum(&apos;FEMALE&apos;, &apos;MALE&apos;, &apos;UNKNOWN&apos;)|0e</StoredType>
     </column>

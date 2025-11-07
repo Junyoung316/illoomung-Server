@@ -204,12 +204,10 @@ public class MainServiceImpl implements MainService {
                             }
                         }
                 ));
-
-        /// 💡 [핵심 1] 쿼리 (단 1번): ID 리스트로 모든 편의시설 '이름'까지 한 번에 조회
+        
         List<StoreAmenityMapping> allAmenityMaps = storeAmenityMappingRepository
                 .findAmenitiesByStoreStoreIdsIn(foundId);
 
-        // 💡 [핵심 2] 그룹핑 (메모리):
         Map<Long, List<String>> amenityMap = allAmenityMaps.stream()
                 .collect(Collectors.groupingBy(
                         // Key: Store ID (StoreAmenityMap -> Store -> storeId)
@@ -247,11 +245,3 @@ public class MainServiceImpl implements MainService {
     }
 
 }
-
-//private Long StoreId;
-//private String imgUrl;
-//private String storeName;
-//private String addr; // 복호화
-//private String open;
-//private String close;
-//private List<String> amenities;

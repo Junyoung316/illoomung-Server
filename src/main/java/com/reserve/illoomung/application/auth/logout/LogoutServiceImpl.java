@@ -28,7 +28,7 @@ public class LogoutServiceImpl implements LogoutService {
 
     @Override
     public void logout(String accessToken, String refreshToken) {
-        // TODO: 데이터베이스 토큰 만료 시간 통일 및 토큰 블랙리스트 테이블에 토큰 추가
+        // TODO: 토큰 블랙리스트 테이블에 토큰 추가
         String Atoken = extractToken(accessToken);
         Long AtokenExp = null;
         if (Atoken != null) {
