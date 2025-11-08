@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: Specified result type [java.lang.String] did not match Query selection type [com.reserve.illoomung.core.domain.entity.UserProfile] - multiple selections: use Tuple or array"
+}

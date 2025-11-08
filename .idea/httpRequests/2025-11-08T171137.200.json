@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "productsId": 1,
+      "productName": "test",
+      "productDescription": null,
+      "productPrice": "100.00"
+    }
+  ]
+}

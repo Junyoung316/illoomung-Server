@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: could not execute statement [Column 'store_id' cannot be null] [insert into store_offerings (currency,description,image_url,offering_name,price,status,store_id) values (?,?,?,?,?,?,?)]; SQL [insert into store_offerings (currency,description,image_url,offering_name,price,status,store_id) values (?,?,?,?,?,?,?)]; constraint [null]"
+}
