@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e5aadfa-5755-49af-9127-5e6ff1121c7c" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47c82b8e-464c-4b5a-b8e9-ba9f0ca7f0db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/47c82b8e-464c-4b5a-b8e9-ba9f0ca7f0db.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/illoomung.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/IlloomungApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/IlloomungApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/domain/entity/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/domain/entity/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/domain/repository/RefreshTokensRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/domain/repository/RefreshTokensRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/StoreOffering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/StoreOffering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoreOfferingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoreOfferingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +50,9 @@
   <component name="HttpClientEndpointsTabState">
     <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;00d47f5b5ec1f47d784630c0a9c52563153c4bc7&quot; value=&quot;###&amp;#10;GET http://localhost:8000/store/reserve/{{storeId}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
   </component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -55,24 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.illoomung 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.IlloomungApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.illoomung 빌드.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.IlloomungApplication.executor": "Run",
+    "git-widget-placeholder": "business",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -140,6 +146,7 @@
       <workItem from="1756097816420" duration="22000" />
       <workItem from="1756101909048" duration="1902000" />
       <workItem from="1762591862461" duration="24000" />
+      <workItem from="1762595425023" duration="691000" />
     </task>
     <servers />
   </component>

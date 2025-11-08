@@ -2,7 +2,6 @@ package com.reserve.illoomung.domain.repository;
 
 import java.util.Optional;
 
-import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.domain.entity.Stores;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

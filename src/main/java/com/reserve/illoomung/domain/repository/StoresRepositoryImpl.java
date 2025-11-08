@@ -1,7 +1,5 @@
 package com.reserve.illoomung.domain.repository;
 
-// 💡 3. Q-file을 static import 합니다.
-
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.dsl.CaseBuilder;
 import com.querydsl.core.types.dsl.NumberExpression;

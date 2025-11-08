@@ -25,11 +25,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 public class UserProfile implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id", nullable = false, updatable = false)
-    private Long userId;
-
-    @MapsId
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "fk_user_account"))
