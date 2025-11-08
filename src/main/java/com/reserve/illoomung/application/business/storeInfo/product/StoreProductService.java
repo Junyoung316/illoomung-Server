@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface StoreProductService {
     List<StoreInfoResponse.products> getStoreProductsAll(Long id);
+    void saveStoreProduct(Long id, StoreInfoResponse.products product);
 }

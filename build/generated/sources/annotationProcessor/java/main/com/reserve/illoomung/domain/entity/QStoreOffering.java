@@ -34,7 +34,7 @@ public class QStoreOffering extends EntityPathBase<StoreOffering> {
 
     public final StringPath offeringName = createString("offeringName");
 
-    public final NumberPath<java.math.BigDecimal> price = createNumber("price", java.math.BigDecimal.class);
+    public final StringPath price = createString("price");
 
     public final EnumPath<com.reserve.illoomung.domain.entity.enums.Status> status = createEnum("status", com.reserve.illoomung.domain.entity.enums.Status.class);
 

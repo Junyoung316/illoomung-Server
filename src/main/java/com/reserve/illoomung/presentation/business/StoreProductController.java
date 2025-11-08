@@ -6,10 +6,7 @@ import com.reserve.illoomung.dto.business.StoreInfoResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,4 +25,9 @@ public class StoreProductController {
     }
 
     // 가게 상품 조회 등록 수정 삭제
+    @PostMapping("/product/{storeId}/save")
+    public ResponseEntity<MainResponse<List<StoreInfoResponse.products>>> svaeStoreProducts(@PathVariable("storeId") Long id, @RequestBody StoreInfoResponse.products product) {
+        storeProductService.saveStoreProduct(id, product);
+        return ResponseEntity.ok(MainResponse.success());
+    }
 }

@@ -36,7 +36,7 @@ public class StoreOffering { // 업체 상품/서비스 정보
     private String description;
 
     @Column(name = "price", precision = 10, scale = 2)
-    private BigDecimal price;
+    private String price;
 
     @Column(name = "currency", length = 10, nullable = false)
     @Builder.Default
