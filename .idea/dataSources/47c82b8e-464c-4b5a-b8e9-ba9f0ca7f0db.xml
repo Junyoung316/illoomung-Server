@@ -1007,7 +1007,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-06.07:47:20</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-08.06:52:27</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="information_schema">
@@ -1126,7 +1126,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <column id="316" parent="299" name="account_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1222,7 +1222,7 @@ social_id_hash</ColNames>
       <StoredType>int|0s</StoredType>
     </column>
     <column id="337" parent="300" name="amenity_id">
-      <AutoIncrement>16</AutoIncrement>
+      <AutoIncrement>15</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1623,7 +1623,7 @@ store_id</ColNames>
       <StoredType>int|0s</StoredType>
     </column>
     <column id="420" parent="308" name="category_id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1714,7 +1714,7 @@ store_id</ColNames>
       <StoredType>timestamp|0s</StoredType>
     </column>
     <column id="439" parent="310" name="image_id">
-      <AutoIncrement>12</AutoIncrement>
+      <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1853,7 +1853,7 @@ image_type</ColNames>
       <StoredType>time(6)|0s</StoredType>
     </column>
     <column id="468" parent="312" name="hours_id">
-      <AutoIncrement>78</AutoIncrement>
+      <AutoIncrement>77</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>bigint|0s</StoredType>
@@ -1898,7 +1898,7 @@ day_of_week</ColNames>
       <StoredType>bigint|0s</StoredType>
     </column>
     <column id="477" parent="313" name="store_id">
-      <AutoIncrement>12</AutoIncrement>
+      <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bigint|0s</StoredType>
