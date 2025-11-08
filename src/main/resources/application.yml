@@ -1,0 +1,83 @@
+# 디버깅 로그 출력(디버깅 환경용)
+logging.level.com.reserve.illoomung: DEBUG
+
+server:
+  port: 8000
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: illoomung
+  jackson:
+    time-zone: Asia/Seoul
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/illoomung?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 1234
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update      # create, update, ...
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy # 카멜케이스를 언더스코어로 변환
+    show-sql: true          # SQL 출력 여부
+    properties:
+      hibernate:
+        format_sql: true    # SQL 포맷팅 여부
+        jdbc:
+          time_zone: Asia/Seoul    # 타입존 Asia/Seoul로 명시
+  thymeleaf:
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+    check-template: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      refresh-token-expire-seconds: 604800
+
+kakao:
+#  client_id: 7c730a5d5926a51e975002be3f953b8d
+##  client_id: { REST API KEY }
+#  redirectUri: http://localhost:8080/register/callback
+#  clientSecret: l8iKumXIsWMv5x6pXXs6EMSVFS7fN2wY
+  api:
+    key:
+      rest: 7c730a5d5926a51e975002be3f953b8d
+
+
+com:
+  reserve:
+    illoomung:
+      jwt:
+        service:
+          secret-key: q7KmXIlY9wPVU5sK3Frcd2r0pNvuubjSNhEKbc+M4K4=
+
+jwt:
+  # JWT 만료 시간 (밀리초 단위)
+  access-token-expire-ms: 1800000 # 30분 = 1000 * 60 * 30
+  refresh-token-expire-ms: 604800000 # 7일 = 1000 * 60 * 60 * 24 * 7
+
+redis:
+  # 화이트리스트 변경 시 서버 재시작 필요
+  limit:
+    max:
+      attempt: 5 # 반복 시도 임계치
+    time:
+      out: 5 # 반복 시도 차단 시간(분 단위)
+
+# ================ JWT(JSON Web Token) Settings ================
+# JWT Secret Key
+# com.mungtime.cafe.user.jwt.service.secret-key=BfbSgCbjDBD5Uat84TXGvUmT8GkZmdGGmuSvKfTWYn3JYxXR8U79eu66X6U9JxKw
+# com.mungtime.cafe.user.jwt.service.secret-key=${JWT_SECRET}

@@ -1,0 +1,2634 @@
+[
+  {
+    "storeName": "부부펫살롱",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/bubupetsalon_official/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_58%2F1721646000372Ud2lm_JPEG%2F1000143272.jpg",
+    "amenities": [],
+    "products": null,
+    "addressDetails": "1층 108호 (홍맥프라자)",
+    "address": "경기 김포시 풍무로 166"
+  },
+  {
+    "storeName": "모두의집사",
+    "description": null,
+    "phoneNumber": "0507-1334-4510",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/mojip.catsalon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_218%2F1710830742328rFDbA_JPEG%2FKakaoTalk_20240319_154142478_01.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "무선 인터넷",
+      "방문접수/출장",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "골든타임 1층 126호",
+    "address": "경기 김포시 김포한강1로 250"
+  },
+  {
+    "storeName": "본펫 플래닛",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/bondpet_planet",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_240%2F1753430368059aqoee_JPEG%2FKakaoTalk_20250725_165912886.jpg",
+    "amenities": [
+      "예약",
+      "방문접수/출장"
+    ],
+    "products": null,
+    "addressDetails": "제이팰리스",
+    "address": "경기 김포시 양촌읍 양곡1로38번길 3"
+  },
+  {
+    "storeName": "변신해보개",
+    "description": null,
+    "phoneNumber": "0507-1386-3751",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250414_255%2F1744591802011QtGmi_JPEG%2F2.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1동 1층 110호",
+    "address": "경기 김포시 김포한강4로 176"
+  },
+  {
+    "storeName": "핏어펫",
+    "description": null,
+    "phoneNumber": "0507-1312-1664",
+    "openingHours": {
+      "목": "10:00 - 20:30",
+      "금": "10:00 - 20:30",
+      "토": "10:00 - 20:30",
+      "일": "10:00 - 20:30",
+      "월": "10:00 - 20:30",
+      "화": "10:00 - 20:30",
+      "수": "10:00 - 20:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/pitapet_salon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211201_173%2F1638347218030dErjW_JPEG%2F20211120_112900.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "동일스위트 2단지 아파트 상가 A동 107호",
+    "address": "경기 김포시 김포한강8로 127"
+  },
+  {
+    "storeName": "메리몽 펫 그루밍",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/merrymong_",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221211_1%2F1670769548635BTlxY_JPEG%2FMTXX_MH20221211233525871.jpg",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "단지 상가 218호(감정동, 중봉마을 신안실크밸리",
+    "address": "경기 김포시 중봉로 1-1"
+  },
+  {
+    "storeName": "카페소풍 애견유치원&애견호텔&애견돌봄",
+    "description": null,
+    "phoneNumber": "0507-1332-5439",
+    "openingHours": {
+      "목": "08:00 - 19:00",
+      "금": "08:00 - 19:00",
+      "토": "12:00 - 19:00",
+      "일": "12:00 - 19:00",
+      "월": "08:00 - 19:00",
+      "화": "08:00 - 19:00",
+      "수": "08:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/sopoong_coffee",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250827_293%2F1756256944356dSrSL_JPEG%2F1756198102978.jpg",
+    "amenities": [
+      "단체 이용 가능",
+      "예약",
+      "반려동물 동반",
+      "노키즈존",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "10층 1001호",
+    "address": "경기 김포시 김포한강9로75번길 98"
+  },
+  {
+    "storeName": "댕데이지",
+    "description": null,
+    "phoneNumber": "0507-1384-0361",
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "09:00 - 22:00",
+      "일": "09:00 - 22:00",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/groomer_ha",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250824_175%2F1756035262883NAwpg_JPEG%2FDF4A1EE6-57BB-4F5D-A987-38CC4F313A6C.jpeg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "2층 229호",
+    "address": "경기 김포시 솔터로 22"
+  },
+  {
+    "storeName": "더도그살롱 야당본점",
+    "description": null,
+    "phoneNumber": "0507-1348-4464",
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 18:00",
+      "일": "10:00 - 18:00",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/happy_daon22",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220518_212%2F1652859181411VGNls_JPEG%2FKakaoTalk_20220516_140753527.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 110호",
+    "address": "경기 파주시 경의로 1010"
+  },
+  {
+    "storeName": "멍글하우스",
+    "description": null,
+    "phoneNumber": "0507-1340-8868",
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/munggle_haus",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250517_68%2F1747473138060pWhJT_JPEG%2FFacetune_09-05-2025-12-49-00.jpeg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 101호, 102호",
+    "address": "경기 김포시 풍년로 53"
+  },
+  {
+    "storeName": "코이펫",
+    "description": null,
+    "phoneNumber": "0507-1358-0210",
+    "openingHours": {
+      "목": "09:30 - 18:00",
+      "금": "09:30 - 18:00",
+      "토": "09:30 - 16:00",
+      "일": "09:30 - 18:00",
+      "월": "09:30 - 18:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "09:30 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/coypet_groomingshop",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240105_10%2F1704453683831axaXh_JPEG%2F%25B7%25CE%25B0%25ED%25C8%25AE%25B4%25EB.JPG",
+    "amenities": [
+      "무선 인터넷",
+      "반려동물 동반",
+      "예약",
+      "남/녀 화장실 구분",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "라온파크빌 상가 202호",
+    "address": "경기 김포시 통진읍 마송1로84번길 80"
+  },
+  {
+    "storeName": "애견사랑",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {},
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": null,
+    "amenities": [],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 김포한강1로78번길 62-15"
+  },
+  {
+    "storeName": "하룻강아지",
+    "description": null,
+    "phoneNumber": "031-984-7375",
+    "openingHours": {},
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200622_24%2F15928316943109Ab3I_JPEG%2F8eQRzZ5Q9Ix9vBzBTUntu0BJ.jpg",
+    "amenities": [],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 양촌읍 김포대로 1765"
+  },
+  {
+    "storeName": "J애견호텔유치원",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "09:00 - 20:00",
+      "금": "09:00 - 20:00",
+      "토": "09:00 - 18:00",
+      "일": "09:00 - 18:00",
+      "월": "09:00 - 20:00",
+      "화": "09:00 - 20:00",
+      "수": "09:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_252%2F17534306673505DzWP_JPEG%2FKakaoTalk_20250725_165919112.jpg",
+    "amenities": [
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "207,208호",
+    "address": "인천 서구 한중로 10"
+  },
+  {
+    "storeName": "멍그라밍",
+    "description": null,
+    "phoneNumber": "0507-1354-6415",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/meonggraming/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250818_185%2F17555051676384Tq9b_JPEG%2F1000356289.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "2층 211호 멍그라밍",
+    "address": "인천 서구 이음1로 377"
+  },
+  {
+    "storeName": "하이멍 애견미용실&애견호텔",
+    "description": null,
+    "phoneNumber": "0507-1335-4863",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/himung__ilsan",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20231115_254%2F17000326422677by29_JPEG%2Fimage.jpg",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "트루엘파크스테이 3층 322호, 323호",
+    "address": "경기 고양시 일산동구 중앙로1275번길 60-17"
+  },
+  {
+    "storeName": "하이베베",
+    "description": null,
+    "phoneNumber": "0507-1384-0034",
+    "openingHours": {
+      "목": "09:00 - 18:00",
+      "금": "09:00 - 18:00",
+      "토": "09:00 - 18:00",
+      "일": "09:00 - 18:00",
+      "월": "09:00 - 18:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "09:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/hi__bebe___",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210905_95%2F16308069347438V4si_JPEG%2FT2v7SXk8V_Mtxx0oeZU35P3_.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "B107 하이베베",
+    "address": "경기 김포시 김포한강2로23번길 10"
+  },
+  {
+    "storeName": "깜장콩 애견유치원 &미용&호텔&카페",
+    "description": null,
+    "phoneNumber": "0507-1405-8274",
+    "openingHours": {
+      "목": "07:00 - 19:00",
+      "금": "07:00 - 19:00",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "07:00 - 19:00",
+      "수": "07:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/blacknose0",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240409_64%2F1712635337200pLpdm_JPEG%2F062408CC-86A2-49A2-A609-5CEE12B79D1D.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "2층 깜장콩",
+    "address": "경기 김포시 양촌읍 대곶남로 711"
+  },
+  {
+    "storeName": "운정멍발소",
+    "description": null,
+    "phoneNumber": "0507-1444-7966",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/mungbalso_1",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250117_178%2F1737075582584yG5Vk_JPEG%2F1000012298.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "경기 파주시 동패로63번길 37"
+  },
+  {
+    "storeName": "위풍댕댕",
+    "description": null,
+    "phoneNumber": "0507-1423-5362",
+    "openingHours": {
+      "목": "10:00 - 22:00",
+      "금": "10:00 - 22:00",
+      "토": "10:00 - 22:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 22:00",
+      "화": "10:00 - 22:00",
+      "수": "10:00 - 22:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/wi.dangdang/profilecard/?igsh=MTFkNW9rbHNoYXJqNg==",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_14%2F1753446604368bie70_JPEG%2F1000000021.jpg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 119호",
+    "address": "경기 김포시 통진읍 마송1로84번길 53"
+  },
+  {
+    "storeName": "어서오개냥",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/osoganyang",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250819_58%2F1755588436436oM1hO_JPEG%2F1000081198.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "예약",
+      "무선 인터넷",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "라베니체3차 115호 어서오개냥",
+    "address": "경기 김포시 김포한강2로23번길 74"
+  },
+  {
+    "storeName": "도그플러스 애견미용",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {},
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": null,
+    "amenities": [],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 풍무로 167"
+  },
+  {
+    "storeName": "독고캣",
+    "description": null,
+    "phoneNumber": "031-893-4586",
+    "openingHours": {
+      "매일": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191108_117%2F1573216636864B2ulJ_JPEG%2F60_pYGk_GghI2Zzen0s-pSDw.jpg",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "단체 이용 가능",
+      "발렛파킹",
+      "포장",
+      "배달",
+      "방문접수/출장"
+    ],
+    "products": null,
+    "addressDetails": "101호",
+    "address": "경기 김포시 김포한강1로78번길 61-16"
+  },
+  {
+    "storeName": "씻고가개 운정점",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210518_151%2F1621284744935wMDWE_PNG%2F7oB7v2DZJRn9t6NURZBvoHk0.png",
+    "amenities": [
+      "반려동물 동반",
+      "주차",
+      "무선 인터넷",
+      "예약",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "유아의자",
+      "단체 이용 가능",
+      "간편결제"
+    ],
+    "products": null,
+    "addressDetails": "101호",
+    "address": "경기 파주시 가재울로 85"
+  },
+  {
+    "storeName": "몽시앙",
+    "description": null,
+    "phoneNumber": "0507-1367-1829",
+    "openingHours": {
+      "목": "10:00 - 17:00",
+      "금": "10:00 - 17:00",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 17:00",
+      "화": "10:00 - 17:00",
+      "수": "10:00 - 17:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": null,
+    "amenities": [],
+    "products": null,
+    "addressDetails": ". 1층",
+    "address": "경기 김포시 김포한강9로12번길 53"
+  },
+  {
+    "storeName": "프리티 멍",
+    "description": null,
+    "phoneNumber": "0507-1367-9411",
+    "openingHours": {
+      "매일": "09:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/pretty_mung_",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221104_57%2F1667536880637pe8HN_JPEG%2F7578ADA4-534C-4532-A53A-EF6C8063B61F.jpeg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": ". 103호(구래동)",
+    "address": "경기 김포시 김포한강4로420번길 98"
+  },
+  {
+    "storeName": "더쇼독",
+    "description": null,
+    "phoneNumber": "031-991-1191",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/theshowdog",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240327_171%2F1711475689154VdljP_JPEG%2FIMG_6361.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "더쇼독",
+    "address": "경기 김포시 김포한강1로98번길 17-76"
+  },
+  {
+    "storeName": "카페몽몽",
+    "description": null,
+    "phoneNumber": "0507-1316-1584",
+    "openingHours": {
+      "목": "12:00 - 22:00",
+      "금": "12:00 - 22:00",
+      "토": "10:00 - 22:00",
+      "일": "10:00 - 22:00",
+      "월": "12:00 - 22:00",
+      "화": "12:00 - 22:00",
+      "수": "12:00 - 22:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/cafe_mongmong",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190320_127%2F15530613685991JjzH_PNG%2FSGQwptsbrFJMnRpl_qLC4SMx.png",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "단체 이용 가능",
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "지오파크 4층 405호 카페몽몽",
+    "address": "경기 김포시 김포한강9로75번길 102"
+  },
+  {
+    "storeName": "엔젤스도그",
+    "description": null,
+    "phoneNumber": "031-988-3646",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190708_125%2F1562540628727Cuzon_JPEG%2Fwip4r2THAh2Lw9E6fjsqIzjp.jpg",
+    "amenities": [
+      "무선 인터넷",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 101호",
+    "address": "경기 김포시 초당로16번길 130-4"
+  },
+  {
+    "storeName": "써니펫살롱",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/sunnypet67",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210322_257%2F1616366398046vPP80_JPEG%2FM2InHxgxLYqdNJLDVC-esJmP.jpeg.jpg",
+    "amenities": [
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "지오타워1층 109호",
+    "address": "경기 김포시 김포한강8로 396"
+  },
+  {
+    "storeName": "예쁘댕",
+    "description": null,
+    "phoneNumber": "0507-1340-3856",
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250515_251%2F1747274296519hYGQq_PNG%2F1731841304049.png",
+    "amenities": [
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "2층 227호",
+    "address": "경기 김포시 솔터로 22"
+  },
+  {
+    "storeName": "까꿍펫살롱",
+    "description": null,
+    "phoneNumber": "0507-1313-4349",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/peekaboo.pet",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240928_214%2F1727528346359u2lAD_JPEG%2FIMG_3440.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "주차",
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "201호",
+    "address": "경기 김포시 김포한강11로 288-31"
+  },
+  {
+    "storeName": "펫샤워",
+    "description": null,
+    "phoneNumber": "0507-1459-0247",
+    "openingHours": {
+      "목": "09:30 - 21:30",
+      "금": "09:30 - 21:30",
+      "토": "09:30 - 21:30",
+      "일": "09:30 - 21:30",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "09:30 - 21:30",
+      "수": "09:30 - 21:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250305_257%2F1741144345724jfxUj_JPEG%2F1000033362.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "상가동 1층 106호",
+    "address": "경기 김포시 봉화로181번길 31-14"
+  },
+  {
+    "storeName": "애몽",
+    "description": null,
+    "phoneNumber": "0507-1349-0767",
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/aemong_pet",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211122_160%2F1637562761439CwV8f_PNG%2F%25BE%25D6%25B8%25F9%25BD%25BA.png",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "장애인 편의시설"
+    ],
+    "products": null,
+    "addressDetails": "골든타임 137호 애몽",
+    "address": "경기 김포시 김포한강1로 250"
+  },
+  {
+    "storeName": "빅그루밍",
+    "description": null,
+    "phoneNumber": "0507-1472-8190",
+    "openingHours": {
+      "목": "08:00 - 18:00",
+      "금": "08:00 - 18:00",
+      "토": "08:00 - 18:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "08:00 - 18:00",
+      "수": "08:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/big_grooming/profilecard/?igsh=OHB4NHB1cnRiNXFq",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250724_9%2F1753331312177seRq6_JPEG%2FFullSizeRender.jpeg",
+    "amenities": [
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "102-1호",
+    "address": "경기 김포시 초당로61번길 21"
+  },
+  {
+    "storeName": "애니멀살롱",
+    "description": null,
+    "phoneNumber": "0507-1417-4423",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/animalsalon2023",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250306_207%2F1741192635903lCHur_JPEG%2F1000000425.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "경기 파주시 가람로21번길 61-34"
+  },
+  {
+    "storeName": "윌리독 펫 살롱",
+    "description": null,
+    "phoneNumber": "0507-1313-0281",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250820_21%2F1755634807736xw0ky_PNG%2FIMG_8986.png",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "노키즈존",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "더럭스나인오피스텔 B동 지하1층",
+    "address": "경기 김포시 김포한강10로133번길 142"
+  },
+  {
+    "storeName": "모모그루밍",
+    "description": null,
+    "phoneNumber": "0507-1342-4325",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/momo.grooming",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220722_203%2F16584946302036rkPd_JPEG%2FResized_%25B8%25F0%25B8%25F0%25B1%25D7%25B7%25E7%25B9%25D6%252B%25BC%25B1%25C0%25FC%25B4%25DE%252B%25B7%25CE%25B0%25ED%25C0%25CC%25B9%25CC%25C1%25F6-01_390943852807796.jpeg",
+    "amenities": [
+      "주차",
+      "예약",
+      "남/녀 화장실 구분",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "ABM타워 418호",
+    "address": "인천 서구 이음대로 388"
+  },
+  {
+    "storeName": "멍멍스타일",
+    "description": null,
+    "phoneNumber": "0507-1410-9527",
+    "openingHours": {
+      "매일": "09:30 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/invites/contact/?i=l4iibb0v1c1m&utm_content=p4kp8mf",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231227_11%2F1703611906983KNwVm_JPEG%2F1000022962.jpg",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "현대아이파크상가 2층 204호",
+    "address": "경기 김포시 풍무로 33"
+  },
+  {
+    "storeName": "라비드 펫 살롱",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 18:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/laviede_pet_salon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211027_13%2F1635292350499pMtv0_JPEG%2F1_oA0TrGXtNrO06Gm2URQqe-.jpeg.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "장애인 편의시설",
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "무선 인터넷",
+      "단체 이용 가능"
+    ],
+    "products": null,
+    "addressDetails": "220호",
+    "address": "경기 김포시 김포한강1로 240"
+  },
+  {
+    "storeName": "온도독",
+    "description": null,
+    "phoneNumber": "0507-1345-4798",
+    "openingHours": {
+      "매일": "12:00 - 21:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250915_251%2F1757862314907sk4WL_JPEG%2FIMG_8526.jpeg",
+    "amenities": [
+      "단체 이용 가능",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "예약",
+      "방문접수/출장",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "111호",
+    "address": "경기 김포시 김포한강2로23번길 50"
+  },
+  {
+    "storeName": "하이독스",
+    "description": null,
+    "phoneNumber": "0507-1360-2051",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 22:00",
+      "일": "10:00 - 22:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/hi__dogs?igsh=MXdtaW9uc3pnb2hmNg==",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200410_168%2F1586484765175wofBu_JPEG%2F824R3knJFkrnorSqmwWkyjbU.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "서울 강서구 양천로14길 113"
+  },
+  {
+    "storeName": "빛날시간",
+    "description": null,
+    "phoneNumber": "0507-1395-7824",
+    "openingHours": {
+      "목": "09:30 - 19:00",
+      "금": "09:30 - 19:00",
+      "토": "09:30 - 19:00",
+      "일": "09:30 - 19:00",
+      "월": "09:30 - 19:00",
+      "화": "09:30 - 19:00",
+      "수": "09:30 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/_time_toshine",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240224_11%2F1708775161156bMNlx_PNG%2FIMG_8305.png",
+    "amenities": [
+      "반려동물 동반",
+      "무선 인터넷",
+      "예약",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "101호",
+    "address": "경기 김포시 사우중로74번길 7"
+  },
+  {
+    "storeName": "사뿐사뿐",
+    "description": null,
+    "phoneNumber": "0507-1397-4391",
+    "openingHours": {
+      "매일": "08:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/sabbunsabbun_official",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240801_254%2F1722487774732R7i4u_JPEG%2FIMG_0072.jpeg",
+    "amenities": [
+      "단체 이용 가능",
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "썬셋타워 4층",
+    "address": "경기 김포시 김포한강11로255번길 85"
+  },
+  {
+    "storeName": "나나애견미용실",
+    "description": null,
+    "phoneNumber": "0507-1481-2409",
+    "openingHours": {
+      "매일": "10:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/nanaaegyeonmiyongsil/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250822_113%2F1755848627591syjCU_JPEG%2F1754794459769.jpg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "근린생활시설 1동 2층",
+    "address": "인천 서구 이음5로 39"
+  },
+  {
+    "storeName": "로카드",
+    "description": null,
+    "phoneNumber": "0507-1475-8151",
+    "openingHours": {
+      "매일": "11:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/locad_g",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210926_104%2F1632583084678lPtcO_JPEG%2FlsO2oH64JiEZGqfnR_Vobsgj.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "라베니체마치에비뉴9차 1층 106호",
+    "address": "경기 김포시 태장로 820-32"
+  },
+  {
+    "storeName": "양이멍이",
+    "description": null,
+    "phoneNumber": "0507-1466-0481",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/yangimeongi",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240604_82%2F1717491464796yBweL_JPEG%2F1000003502.jpg",
+    "amenities": [
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "무선 인터넷",
+      "대기공간",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "101호",
+    "address": "경기 김포시 김포한강8로194번길 131-1"
+  },
+  {
+    "storeName": "킁킁펫",
+    "description": null,
+    "phoneNumber": "0507-1460-9031",
+    "openingHours": {
+      "목": "10:00 - 19:30",
+      "금": "10:00 - 19:30",
+      "토": "10:00 - 19:30",
+      "일": "10:00 - 18:00",
+      "월": "10:00 - 19:30",
+      "화": "10:00 - 19:30",
+      "수": "10:00 - 19:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240124_204%2F17060657721860Si2U_JPEG%2FKakaoTalk_20240124_120705418_17.jpg",
+    "amenities": [
+      "예약",
+      "포장",
+      "방문접수/출장",
+      "무선 인터넷",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "104,105호",
+    "address": "경기 김포시 김포한강11로140번길 8-8"
+  },
+  {
+    "storeName": "김포에이스애견미용학원",
+    "description": null,
+    "phoneNumber": "031-997-4525",
+    "openingHours": {
+      "매일": "10:00 - 22:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/ace_grooming_gimpo/reels/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250401_124%2F1743485854208gakRp_JPEG%2F%25BF%25A1%25C0%25CC%25BD%25BA%25BE%25D6%25B0%25DF%25B9%25CC%25BF%25EB%25C7%25D0%25BF%25F8_%25B1%25E8%25C6%25F7%25C1%25A1.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "예약",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "1층 김포 에이스 애견미용학원",
+    "address": "경기 김포시 봉화로 9-23"
+  },
+  {
+    "storeName": "펫피플",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "정기휴무 (매달 2, 4번째 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20181231_202%2F1546259595573XUM3G_JPEG%2Fel9cuCAC1UdyjEyGi_YSWR2B.jpg",
+    "amenities": [
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "롯데마트 B1층 펫가든내위치",
+    "address": "경기 김포시 김포한강2로 41"
+  },
+  {
+    "storeName": "헤이독 김포점",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 21:00",
+      "금": "10:00 - 21:00",
+      "토": "10:00 - 21:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 21:00",
+      "화": "10:00 - 21:00",
+      "수": "10:00 - 21:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/heydog91870989?igsh=aGlpMWdkd2ZxbnF3",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241101_119%2F1730424957684M3uGk_PNG%2F%25C7%25EC%25B5%25B6%25B8%25B6%25C5%25A9.png",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "대기공간",
+      "예약",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 101호 헤이독 김포점",
+    "address": "경기 김포시 김포한강8로148번길 8-20"
+  },
+  {
+    "storeName": "가인헤어",
+    "description": null,
+    "phoneNumber": "0507-1436-4233",
+    "openingHours": {
+      "목": "정기휴무 (매주 목요일)",
+      "금": "08:00 - 19:00",
+      "토": "08:00 - 18:00",
+      "일": "08:00 - 18:00",
+      "월": "08:00 - 19:00",
+      "화": "08:00 - 19:00",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/gainhair.beauty",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221128_289%2F16695690172860Ifta_JPEG%2F20221127_141904.jpg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "가인헤어 1층",
+    "address": "경기 김포시 김포한강1로98번길 17-59"
+  },
+  {
+    "storeName": "펫 뷰티살롱",
+    "description": null,
+    "phoneNumber": "031-982-0706",
+    "openingHours": {
+      "목": "정기휴무 (매주 목요일)",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210324_48%2F16165621418396Mdkw_JPEG%2F0sa_inqHJuUd4sZuTmdfiTuU.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "1층 101,102호",
+    "address": "경기 김포시 풍무로96번길 102"
+  },
+  {
+    "storeName": "일산애견미용 맘바이 강아지미용실",
+    "description": null,
+    "phoneNumber": "0507-1388-6252",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "정기휴무 (매주 금요일)",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "09:00 - 18:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/mombye_ilsan_petsalon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250907_4%2F17572194527773FoVo_JPEG%2FKakaoTalk_20250907_132938456_03.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "로데오메탈릭타워 3층 308호",
+    "address": "경기 고양시 일산동구 무궁화로 32-21"
+  },
+  {
+    "storeName": "멍부띠끄",
+    "description": null,
+    "phoneNumber": "0507-1419-4347",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/mung_boutique_?igsh=MTI4bzFqeDB2YTk2cA==",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250307_194%2F1741357914912j867s_JPEG%2FIMG_9237.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "무선 인터넷",
+      "예약",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "101호",
+    "address": "경기 고양시 일산동구 일산로427번길 44"
+  },
+  {
+    "storeName": "우다닷 애견유치원&호텔&미용",
+    "description": null,
+    "phoneNumber": "0507-1498-9037",
+    "openingHours": {
+      "목": "08:00 - 20:00",
+      "금": "08:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "08:00 - 20:00",
+      "화": "08:00 - 20:00",
+      "수": "08:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/woodadat_",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241111_284%2F1731333522862EdAJa_JPEG%2FIMG_0816.jpeg",
+    "amenities": [
+      "단체 이용 가능",
+      "반려동물 동반",
+      "예약",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "무선 인터넷",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "경기 김포시 장릉1로 11"
+  },
+  {
+    "storeName": "올케어댕 구래동 애견유치원 & 애견호텔 & 애견미용",
+    "description": null,
+    "phoneNumber": "0507-1355-1373",
+    "openingHours": {
+      "목": "00:00 - 24:00",
+      "금": "00:00 - 24:00",
+      "토": "00:00 - 24:00",
+      "일": "00:00 - 24:00",
+      "월": "00:00 - 24:00",
+      "화": "00:00 - 24:00",
+      "수": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/all_care_daeng",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250902_244%2F1756775549824nBVsA_JPEG%2F1000002653.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "예약",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "507호",
+    "address": "경기 김포시 김포한강4로 531"
+  },
+  {
+    "storeName": "그루밍몽몽_애견미용",
+    "description": null,
+    "phoneNumber": "0507-1340-1584",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/grooming_mongmong",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221008_207%2F1665238437104T65Cw_PNG%2F%25B1%25D7%25B7%25E7%25B9%25D6%25B8%25F9%25B8%25F9.png",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "4층 404호",
+    "address": "경기 김포시 김포한강9로75번길 102"
+  },
+  {
+    "storeName": "트리밍153",
+    "description": null,
+    "phoneNumber": "0507-1321-0153",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/trimming153",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240710_122%2F1720586390373c14Eq_JPEG%2FIMG_8698.jpeg",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 트리밍153",
+    "address": "경기 고양시 일산동구 산두로 65-21"
+  },
+  {
+    "storeName": "까까오도그 파주운정점",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "09:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/kkakkao_dog/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241115_160%2F1731674013803WWB2U_JPEG%2F1000000165.jpg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "에스디드림스퀘어 2층 205호",
+    "address": "경기 파주시 해올1길 12"
+  },
+  {
+    "storeName": "THE빛나개",
+    "description": null,
+    "phoneNumber": "0507-1481-8669",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/shining_dog_the",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250420_50%2F1745150750057scc97_JPEG%2F1000058845.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "1층 THE빛나개",
+    "address": "경기 김포시 김포한강1로78번길 61-40"
+  },
+  {
+    "storeName": "도그",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "휴무",
+      "금": "휴무",
+      "토": "11:00 - 19:00",
+      "일": "11:00 - 19:00",
+      "월": "11:00 - 19:00",
+      "화": "11:00 - 19:00",
+      "수": "11:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190715_291%2F1563181570315EG9lf_JPEG%2FfJe6o_b0n67_JHILn8sO5Dl0.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "호반베르디움더레이크2차 상가 108호",
+    "address": "경기 김포시 김포한강4로 471"
+  },
+  {
+    "storeName": "도도버드",
+    "description": null,
+    "phoneNumber": "0507-1466-8803",
+    "openingHours": {
+      "목": "정기휴무 (매주 목요일)",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 18:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/_dodobird__",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211120_262%2F1637415055910VEgrD_JPEG%2FAECADB16-C853-4E94-A449-1AF4732A8976.jpeg",
+    "amenities": [
+      "예약",
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 김포한강8로194번길 167"
+  },
+  {
+    "storeName": "꽃개하우스",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 16:00",
+      "일": "10:00 - 16:00",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/flowerdog91",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230808_278%2F1691504963406MgimC_JPEG%2FScreenshot_20220816-130250_Gallery.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "예약",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "예미지 메트로타워 2층 259호",
+    "address": "경기 김포시 솔터로 22"
+  },
+  {
+    "storeName": "제이독스101그루밍",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210504_109%2F1620089958775NeL42_JPEG%2FKnwgq67irlKHeIvhZGr7bMlT.jpg",
+    "amenities": [
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "3층",
+    "address": "경기 김포시 고촌읍 장차로 2"
+  },
+  {
+    "storeName": "플라이투더뭉 애견유치원&애견호텔&애견미용&돌봄",
+    "description": null,
+    "phoneNumber": "0507-1340-3951",
+    "openingHours": {
+      "목": "07:00 - 19:30",
+      "금": "07:00 - 19:30",
+      "토": "08:00 - 20:00",
+      "일": "08:00 - 20:00",
+      "월": "07:00 - 19:30",
+      "화": "07:00 - 19:30",
+      "수": "07:00 - 19:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/flytothe_moong",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241017_82%2F1729157046152WOmAk_JPEG%2FKakaoTalk_20241017_175702212_03.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "서경프라자 704호",
+    "address": "경기 김포시 김포한강9로75번길 10"
+  },
+  {
+    "storeName": "개인생뽐나개",
+    "description": null,
+    "phoneNumber": "0507-1333-2532",
+    "openingHours": {
+      "매일": "12:00 - 23:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/dog_life_bbom_na_dog",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250719_149%2F1752860062650gHWUq_JPEG%2F9AB83ADD-A316-4C38-A055-418E962967C0.jpeg",
+    "amenities": [
+      "대기공간",
+      "반려동물 동반",
+      "예약",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 110호",
+    "address": "경기 김포시 김포한강9로75번길 132"
+  },
+  {
+    "storeName": "살롱드도만",
+    "description": null,
+    "phoneNumber": "0507-1377-3048",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "정기휴무 (매주 금요일)",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/salon_de_doman?igsh=MTQ5NWlicHgxa25zaQ==",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240430_63%2F1714464463225AWOLH_JPEG%2FIMG_7215.jpeg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "107호 노란색건물 살롱드도만",
+    "address": "경기 김포시 김포한강11로 160"
+  },
+  {
+    "storeName": "발앤발 애견호텔",
+    "description": null,
+    "phoneNumber": "031-946-8828",
+    "openingHours": {
+      "매일": "09:30 - 20:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240206_10%2F1707204863660yNDdI_JPEG%2F1000089692.jpg",
+    "amenities": [],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 파주시 하우고개길 115"
+  },
+  {
+    "storeName": "더 도도하개",
+    "description": null,
+    "phoneNumber": "0507-1359-9458",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/the_dodohagae",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250301_197%2F1740814042296uJ9Ub_JPEG%2F1000019140.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "무선 인터넷",
+      "예약",
+      "단체 이용 가능",
+      "방문접수/출장",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "삼환APT상가 106호 1층 더도도하개",
+    "address": "경기 김포시 봉화로181번길 30"
+  },
+  {
+    "storeName": "그루밍 시옷",
+    "description": null,
+    "phoneNumber": "0507-1337-5827",
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 18:00",
+      "일": "10:00 - 18:00",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/grooming_chiot",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220903_24%2F1662208566571EaOTd_JPEG%2F610ACA82-9EBD-49E7-9E57-15322838459A.jpeg",
+    "amenities": [
+      "주차",
+      "반려동물 동반",
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "펫스타애견용품점 內 그루밍시옷",
+    "address": "경기 김포시 양촌읍 석모로95번길 46-18"
+  },
+  {
+    "storeName": "이뻐지개",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "09:30 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://instagram.com/2bbeojigae?igshid=alm92jt92pxz",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220723_245%2F1658585669557uNYjc_JPEG%2F135146BC-0C07-4B14-A490-84B794701F3E.jpeg",
+    "amenities": [
+      "예약"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "경기 파주시 황골로 78"
+  },
+  {
+    "storeName": "멍컷",
+    "description": null,
+    "phoneNumber": "0507-1482-3554",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "11:00 - 20:00",
+      "일": "11:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250610_32%2F1749483006638zEoAp_JPEG%2F1000007374.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "102호",
+    "address": "경기 김포시 감정로 6"
+  },
+  {
+    "storeName": "그루밍앤독 애견미용학원",
+    "description": null,
+    "phoneNumber": "031-997-5254",
+    "openingHours": {
+      "목": "10:30 - 22:00",
+      "금": "10:30 - 22:00",
+      "토": "정보없음",
+      "일": "정보없음",
+      "월": "10:30 - 22:00",
+      "화": "10:30 - 22:00",
+      "수": "10:30 - 22:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190114_185%2F15474006847501Cfxe_JPEG%2FzdhSmpg0Lwx_DQug3oPHCLBt.jpg",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "서경프라자 5층",
+    "address": "경기 김포시 김포한강9로75번길 10"
+  },
+  {
+    "storeName": "댕댕이머리하는날",
+    "description": null,
+    "phoneNumber": "0507-1312-2081",
+    "openingHours": {
+      "목": "09:30 - 18:30",
+      "금": "09:30 - 18:30",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "09:30 - 18:30",
+      "화": "09:30 - 18:30",
+      "수": "09:30 - 18:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/thesoopdeng2",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240226_55%2F1708903039350FJR47_JPEG%2F1000025516.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "상가동 1층 105호 더숲아파트 상가동",
+    "address": "경기 김포시 양촌읍 양곡3로 153"
+  },
+  {
+    "storeName": "아르테미스 아카데미/애견미용학원",
+    "description": null,
+    "phoneNumber": "0507-1355-9246",
+    "openingHours": {
+      "목": "09:30 - 18:00",
+      "금": "09:30 - 18:00",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "09:30 - 18:00",
+      "수": "09:30 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/ark_artemis.academy/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230821_224%2F1692627092038hye1R_PNG%2F%25B0%25DF%25BD%25C0%25C3%25CA%25BA%25B8%25B0%25FA%25C1%25A4_%25C5%25AC%25B7%25A1%25BD%25BA_%25284%2529.png",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": ".3층 304호",
+    "address": "경기 김포시 걸포2로 1"
+  },
+  {
+    "storeName": "조은살롱",
+    "description": null,
+    "phoneNumber": "0507-1473-1327",
+    "openingHours": {
+      "목": "10:00 - 19:30",
+      "금": "10:00 - 19:30",
+      "토": "10:00 - 19:30",
+      "일": "10:00 - 19:30",
+      "월": "10:00 - 19:30",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 19:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/joeun__101",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231013_220%2F1697170545861RSKc9_PNG%2F65F35299-289D-484B-B5DF-39B0A5DA248E_%25281%2529.png",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "반려동물 동반",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "리치프라자2 101호",
+    "address": "경기 김포시 김포한강9로 113"
+  },
+  {
+    "storeName": "펫아지트",
+    "description": null,
+    "phoneNumber": "0507-1416-2397",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/pet_agit/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241119_55%2F17319793397339Xq8O_JPEG%2F1000022050.jpg",
+    "amenities": [
+      "예약",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "풍무로 620번지",
+    "address": "경기 김포시 풍무로 53"
+  },
+  {
+    "storeName": "강아지마을",
+    "description": null,
+    "phoneNumber": "0507-1353-5326",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/dogtown_00",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250427_127%2F1745713863108gTvzo_JPEG%2FKakaoTalk_20250427_092859591.jpg",
+    "amenities": [
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": ". 1층 101호",
+    "address": "경기 김포시 김포대로679번길 14-2"
+  },
+  {
+    "storeName": "뷰티인독",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/groomer.hayoun",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250311_126%2F1741662576395O1vkw_JPEG%2FKakaoTalk_20250311_120029390.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "2층 207-1호",
+    "address": "경기 김포시 풍무로 128"
+  },
+  {
+    "storeName": "봉이네 애견미용",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/beautybong__",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201221_296%2F16085329063833m2WQ_JPEG%2FUsvo6hkM0BI5pKl6p5CZc4SY.jpeg.jpg",
+    "amenities": [
+      "주차",
+      "반려동물 동반",
+      "무선 인터넷"
+    ],
+    "products": null,
+    "addressDetails": "1층 101호",
+    "address": "경기 김포시 고촌읍 김포대로329번길 51"
+  },
+  {
+    "storeName": "멍멍이미용실",
+    "description": null,
+    "phoneNumber": "031-998-5586",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/inog.ain",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230309_39%2F1678370250130DgN1Q_JPEG%2FIMG_20210311_205647_758.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "신현대빌라트 108동 101호",
+    "address": "경기 김포시 풍무로57번길 27"
+  },
+  {
+    "storeName": "버블멍",
+    "description": null,
+    "phoneNumber": "0507-1335-9888",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/bubble_meong24",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_279%2F1710859957123IKIJT_JPEG%2F20240319_184432.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "무선 인터넷",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "101호 버블멍",
+    "address": "경기 김포시 고촌읍 신곡로29번길 57"
+  },
+  {
+    "storeName": "까꾸까",
+    "description": null,
+    "phoneNumber": "0507-1401-9248",
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "10:00 - 18:00",
+      "토": "10:00 - 18:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 18:00",
+      "화": "10:00 - 18:00",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/kkakuka_groomer/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210907_148%2F1631016287774eMlOC_JPEG%2F1DRQfmJNs788bV0AQI9Aw-OU.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "105호",
+    "address": "경기 김포시 양촌읍 양곡로 494-21"
+  },
+  {
+    "storeName": "댕화살롱",
+    "description": null,
+    "phoneNumber": "0507-1434-2717",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/danghwa_27",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250422_118%2F1745296856139cVg9y_JPEG%2FIMG_1463.jpeg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "상가동 1층 105호",
+    "address": "경기 김포시 중봉로58번길 60"
+  },
+  {
+    "storeName": "퍼피블링",
+    "description": null,
+    "phoneNumber": "0507-1340-0121",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/puppybling__",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250812_25%2F1754981921296F2Ejw_JPEG%2F%25BF%25B7%25B0%25A3%25C6%25C701.jpg",
+    "amenities": [
+      "단체 이용 가능",
+      "반려동물 동반",
+      "무선 인터넷",
+      "예약",
+      "남/녀 화장실 구분",
+      "방문접수/출장",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "앨리츠골드111호",
+    "address": "경기 김포시 김포한강4로 535"
+  },
+  {
+    "storeName": "올데이그루밍",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/allday_grooming",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20240311_231%2F1710134716231AX1kU_JPEG%2FKakaoTalk_20240311_135014986.jpg",
+    "amenities": [
+      "반려동물 동반",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "예약",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "211호",
+    "address": "경기 파주시 해올2길 2"
+  },
+  {
+    "storeName": "펫엔조이 애견미용 구래점",
+    "description": null,
+    "phoneNumber": "0507-1313-1417",
+    "openingHours": {
+      "목": "정기휴무 (매주 목요일)",
+      "금": "정기휴무 (매주 금요일)",
+      "토": "정기휴무 (매주 토요일)",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "00:00 - 00:05",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/petenjoy_gurae",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220712_48%2F1657596436579YRRGf_JPEG%2F500pxdownload.com-206618921.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "구래동, 메트로타워 예미지 1층 슈슈댕(펫엔조이)",
+    "address": "경기 김포시 솔터로 22"
+  },
+  {
+    "storeName": "야옹아멍멍해봐 김포점",
+    "description": null,
+    "phoneNumber": "031-985-0087",
+    "openingHours": {},
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171209_137%2F1512788534649UA3Uq_JPEG%2FKoMiw8R-yM6t4mCwY1EXsT4K.JPG.jpg",
+    "amenities": [
+      "예약",
+      "주차",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 김포대로 1136"
+  },
+  {
+    "storeName": "영희살롱",
+    "description": null,
+    "phoneNumber": "0507-1413-9567",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/yuonghee_salon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240808_210%2F1723096640639Jqqgr_JPEG%2F1719570643154.jpg",
+    "amenities": [
+      "무선 인터넷",
+      "반려동물 동반",
+      "예약",
+      "대기공간",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 102호 (영희살롱)",
+    "address": "경기 김포시 김포한강1로97번길 14"
+  },
+  {
+    "storeName": "댕댕이발소",
+    "description": null,
+    "phoneNumber": "0507-1349-9442",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/_dde_barber",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240416_189%2F1713195388969g0FiF_JPEG%2FIMG_7060.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 102호",
+    "address": "경기 김포시 김포한강11로140번길 30"
+  },
+  {
+    "storeName": "노노펫 애견미용",
+    "description": null,
+    "phoneNumber": "0507-1361-2133",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/nono_pets",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241127_251%2F1732665592303YeSQY_JPEG%2FImage_20241127085843.jpg",
+    "amenities": [
+      "무선 인터넷",
+      "반려동물 동반",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "노노펫 애견미용",
+    "address": "경기 파주시 동패로63번길 20-1"
+  },
+  {
+    "storeName": "멈무야",
+    "description": null,
+    "phoneNumber": "0507-1323-3444",
+    "openingHours": {
+      "매일": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/meommooya_",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241225_5%2F173510819394193Vf8_JPEG%2FIMG_4317.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "대기공간",
+      "예약",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "멈무야",
+    "address": "경기 김포시 북변로 18-1"
+  },
+  {
+    "storeName": "버블독",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {},
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160809_118%2F1470716111470imypR_JPEG%2F176759534530743_0.jpeg",
+    "amenities": [
+      "예약",
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "",
+    "address": "경기 김포시 하성면 태산로19번길 22"
+  },
+  {
+    "storeName": "버블앤포우",
+    "description": null,
+    "phoneNumber": "0507-1380-8107",
+    "openingHours": {
+      "매일": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250830_116%2F1756536314794r2ABg_JPEG%2F372.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 125호",
+    "address": "경기 김포시 김포한강11로 322"
+  },
+  {
+    "storeName": "또리네멍멍이미용실",
+    "description": null,
+    "phoneNumber": "0507-1363-8606",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "정기휴무 (매주 수요일)"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/kongdori1",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231115_270%2F1700009826001zkP8u_JPEG%2F%25B6%25C7%25B8%25AE%25B3%25D7%25B8%25DE%25C0%25CE.jpg",
+    "amenities": [
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "예약",
+      "무선 인터넷",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "메트로타워예미지 상가 212호",
+    "address": "경기 김포시 솔터로 22"
+  },
+  {
+    "storeName": "러블리마이펫",
+    "description": null,
+    "phoneNumber": "0507-1424-6644",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "정기휴무 (매주 일요일)",
+      "월": "10:00 - 19:00",
+      "화": "10:00 - 19:00",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/lovely.my.pet",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230720_140%2F1689838147454Mo40M_JPEG%2F20230720_093708.jpg",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반"
+    ],
+    "products": null,
+    "addressDetails": "반도유보라5차아파트 상가B동 2층 107호",
+    "address": "경기 김포시 김포한강9로 116"
+  },
+  {
+    "storeName": "도그앤도그",
+    "description": null,
+    "phoneNumber": "0507-1387-4746",
+    "openingHours": {
+      "매일": "09:00 - 21:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/dogndog_/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210722_216%2F1626951751386bnSGk_JPEG%2FdDSn5JHU_-v8croNuc7OaWI5.jpg",
+    "amenities": [
+      "주차",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "1층 104호",
+    "address": "경기 김포시 유현로238번길 47"
+  },
+  {
+    "storeName": "풍무동 멍멍깍까",
+    "description": null,
+    "phoneNumber": "0507-1306-9180",
+    "openingHours": {
+      "목": "10:30 - 19:00",
+      "금": "10:30 - 19:00",
+      "토": "10:30 - 19:00",
+      "일": "10:30 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "휴무",
+      "수": "13:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/meongkkak2",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250425_276%2F1745558394418wlqgL_JPEG%2F4F1EE352-6FF0-40ED-834D-A6DC082BC61B.jpeg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "대기공간",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 107호",
+    "address": "경기 김포시 유현로33번길 16"
+  },
+  {
+    "storeName": "개중목욕탕",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/dog_public_bathing",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241019_131%2F1729321634211ljN5C_JPEG%2F20240927_181856.jpg",
+    "amenities": [
+      "주차",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "방문접수/출장",
+      "예약",
+      "무선 인터넷"
+    ],
+    "products": null,
+    "addressDetails": "105호",
+    "address": "경기 파주시 하우고개길 84"
+  },
+  {
+    "storeName": "앤독 살롱",
+    "description": null,
+    "phoneNumber": null,
+    "openingHours": {
+      "매일": "11:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://instagram.com/anddog_salon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241024_221%2F1729745225017x6HHv_JPEG%2FIMG_4189.jpg",
+    "amenities": [
+      "예약",
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "서경프라자 5층",
+    "address": "경기 김포시 김포한강9로75번길 10"
+  },
+  {
+    "storeName": "힐링캣",
+    "description": null,
+    "phoneNumber": "0507-1369-6342",
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/healingcatt_/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250723_41%2F1753280905527yhYlN_JPEG%2F1000012429.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "무선 인터넷",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1동 102호",
+    "address": "경기 김포시 김포한강1로98번길 17-104"
+  },
+  {
+    "storeName": "야옹아멍멍해봐 김포운양점",
+    "description": null,
+    "phoneNumber": "0507-1304-4286",
+    "openingHours": {
+      "목": "10:00 - 21:30",
+      "금": "10:00 - 21:30",
+      "토": "10:00 - 21:30",
+      "일": "10:00 - 21:30",
+      "월": "10:00 - 21:30",
+      "화": "10:00 - 21:30",
+      "수": "10:00 - 21:30"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/ym_gpwy",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221209_295%2F1670521902566BXx7d_JPEG%2F001.jpg",
+    "amenities": [
+      "예약",
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "무선 인터넷",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층",
+    "address": "경기 김포시 김포대로 1462"
+  },
+  {
+    "storeName": "불독워시애견셀프목욕 장기점",
+    "description": null,
+    "phoneNumber": "0507-1490-8214",
+    "openingHours": {
+      "목": "00:00 - 24:00",
+      "금": "00:00 - 24:00",
+      "토": "00:00 - 24:00",
+      "일": "00:00 - 24:00",
+      "월": "00:00 - 24:00",
+      "화": "00:00 - 24:00",
+      "수": "00:00 - 24:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241110_171%2F1731242161565rXOUO_JPEG%2FIMG_7734.jpeg",
+    "amenities": [
+      "반려동물 동반",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "220호 라베니체4차 올리브영라인",
+    "address": "경기 김포시 김포한강4로 8"
+  },
+  {
+    "storeName": "바나숑",
+    "description": null,
+    "phoneNumber": "0507-1360-7643",
+    "openingHours": {
+      "목": "10:00 - 18:00",
+      "금": "정기휴무 (매주 금요일)",
+      "토": "10:00 - 18:00",
+      "일": "10:00 - 18:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/bana_chon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250228_167%2F1740750964051Av5fS_JPEG%2F6.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "카림애비뉴상가 2층 2065호",
+    "address": "경기 김포시 김포한강4로 487"
+  },
+  {
+    "storeName": "마이뷰티독 원마운트점",
+    "description": null,
+    "phoneNumber": "0507-1307-6520",
+    "openingHours": {
+      "매일": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/mybeautydog_ilsan",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240317_34%2F1710656766915kpndk_JPEG%2F1710656598873.jpg",
+    "amenities": [
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "1층 1185호",
+    "address": "경기 고양시 일산서구 한류월드로 300"
+  },
+  {
+    "storeName": "코코 반려견미용실",
+    "description": null,
+    "phoneNumber": "0507-1439-1677",
+    "openingHours": {
+      "목": "10:00 - 20:00",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/cocobabysalon",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231108_58%2F16994361140762QyrH_JPEG%2Ftemp_file.jpg",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차",
+      "무선 인터넷"
+    ],
+    "products": null,
+    "addressDetails": "1층 110호",
+    "address": "경기 고양시 일산동구 무궁화로 7-45"
+  },
+  {
+    "storeName": "버블펫",
+    "description": null,
+    "phoneNumber": "0507-1327-2853",
+    "openingHours": {
+      "목": "정기휴무 (매주 목요일)",
+      "금": "10:00 - 20:00",
+      "토": "10:00 - 20:00",
+      "일": "10:00 - 20:00",
+      "월": "10:00 - 20:00",
+      "화": "10:00 - 20:00",
+      "수": "10:00 - 20:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "https://www.instagram.com/bubble__pet/",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250831_135%2F1756609517064qbiij_PNG%2FChatGPT_Image_2025%25B3%25E2_8%25BF%25F9_31%25C0%25CF_%25BF%25C0%25C0%25FC_11_35_47.png",
+    "amenities": [
+      "방문접수/출장",
+      "예약",
+      "반려동물 동반",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "배달",
+      "대기공간",
+      "단체 이용 가능",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "웨스턴돔1, 2층 A-263호 버블펫",
+    "address": "경기 고양시 일산동구 정발산로 24"
+  },
+  {
+    "storeName": "폼나개",
+    "description": null,
+    "phoneNumber": "031-984-6859",
+    "openingHours": {
+      "목": "11:00 - 18:00",
+      "금": "11:00 - 18:00",
+      "토": "11:00 - 18:00",
+      "일": "11:00 - 18:00",
+      "월": "정기휴무 (매주 월요일)",
+      "화": "11:00 - 18:00",
+      "수": "11:00 - 18:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": null,
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190418_106%2F1555538373681wOvtH_PNG%2FfXfCEQBCjslDtm_G5YV7syQ3.png",
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "배달",
+      "대기공간",
+      "간편결제",
+      "주차"
+    ],
+    "products": null,
+    "addressDetails": "라베니체3차 폼나개애견미용",
+    "address": "경기 김포시 김포한강2로23번길 74"
+  },
+  {
+    "storeName": "도그이엔티",
+    "description": null,
+    "phoneNumber": "0507-1321-4576",
+    "openingHours": {
+      "목": "10:00 - 19:00",
+      "금": "10:00 - 19:00",
+      "토": "10:00 - 19:00",
+      "일": "10:00 - 19:00",
+      "월": "10:00 - 19:00",
+      "화": "정기휴무 (매주 화요일)",
+      "수": "10:00 - 19:00"
+    },
+    "homepageUrl": null,
+    "instagramUrl": "http://www.instagram.com/dog_ent._",
+    "mainImageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201211_132%2F16076692846433SIJY_JPEG%2F1lcmpvLkndADEOJ0aZQzApoX.jpeg.jpg",
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ],
+    "products": null,
+    "addressDetails": "김포운양헤리움타운 301호 도그이엔티",
+    "address": "경기 김포시 김포한강1로 247"
+  }
+]

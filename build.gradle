@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
 	id 'war'
-	id 'org.springframework.boot' version '3.5.4'
+	id 'org.springframework.boot' version '3.5.5'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -26,21 +26,55 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-	runtimeOnly 'com.mysql:mysql-connector-j'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA, ORM
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc' // JDBC
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server' // OAuth2 인증 서버
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client' // OAuth2 클라이언트, 소셜 로그인 등
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server' // OAuth2 리소스 서버
+	implementation 'org.springframework.boot:spring-boot-starter-security' // 보안(인증/인가)
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 템플릿
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 기본
+	implementation 'org.springframework.boot:spring-boot-starter-web-services' // SOAP 등 웹서비스
+    implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.3.RELEASE") // Thymeleaf + SpringSecurity
+	implementation 'org.springframework.boot:spring-boot-starter-aop' // AOP(예: 트랜잭션)
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis' // Redis
+	implementation 'org.springframework.boot:spring-boot-starter-mail' // 이메일 발송
+	implementation 'org.springframework.boot:spring-boot-configuration-processor' // 설정 정보 자동완성
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6' // JWT API
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6' // JWT 구현체
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6' // JWT Jackson 지원
+    implementation("io.swagger.core.v3:swagger-annotations:2.2.36")
+	implementation 'org.springframework.retry:spring-retry:2.0.12' // 메서드 재시도
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' // 모니터링, 헬스체크
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // 입력값 검증
+	implementation 'org.springframework.boot:spring-boot-starter-quartz' // 스케줄링, 배치
+	implementation 'org.springframework.boot:spring-boot-starter-websocket' // 실시간 양방향 통신
+	implementation 'org.springframework.boot:spring-boot-starter-batch' // 대용량 처리, 배치
+//	implementation 'org.springframework.boot:spring-boot-starter-amqp' // RabbitMQ 등 메시지 브로커
+	runtimeOnly 'com.mysql:mysql-connector-j' // MySQL JDBC 드라이버
+
+	compileOnly 'org.projectlombok:lombok' // Lombok(코드 자동생성)
+	annotationProcessor 'org.projectlombok:lombok' // Lombok 어노테이션 프로세서
+	compileOnly "jakarta.servlet:jakarta.servlet-api:6.1.0" // 서블릿 API 최신
+	compileOnly "javax.servlet:javax.servlet-api:4.0.1" // 서블릿 호환
+
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 내장 톰캣(별도 사용시 명시)
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools' // 개발 편의
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트
+	testImplementation 'org.springframework.security:spring-security-test' // Security 테스트
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher' // JUnit 런처
+
+	// WebClient 
+	implementation 'org.springframework.boot:spring-boot-starter-webflux' // WebFlux(비동기 논블로킹 웹)
+
+    // Querydsl JPA 라이브러리
+    implementation 'com.querydsl:querydsl-jpa:5.1.0:jakarta'
+    annotationProcessor "com.querydsl:querydsl-apt:5.1.0:jakarta"
+    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+
 }
 
 tasks.named('test') {
