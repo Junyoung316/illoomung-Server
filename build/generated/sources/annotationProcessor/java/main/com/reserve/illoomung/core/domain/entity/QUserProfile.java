@@ -22,7 +22,7 @@ public class QUserProfile extends EntityPathBase<UserProfile> {
 
     public static final QUserProfile userProfile = new QUserProfile("userProfile");
 
-    public final QAccount accountId;
+    public final QAccount account;
 
     public final StringPath addressFull = createString("addressFull");
 
@@ -76,7 +76,7 @@ public class QUserProfile extends EntityPathBase<UserProfile> {
 
     public QUserProfile(Class<? extends UserProfile> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.accountId = inits.isInitialized("accountId") ? new QAccount(forProperty("accountId")) : null;
+        this.account = inits.isInitialized("account") ? new QAccount(forProperty("account")) : null;
     }
 
 }

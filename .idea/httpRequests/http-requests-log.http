@@ -1,64 +1,223 @@
 GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAxOTc0LCJleHAiOjE3NjI2MDM3NzR9.I2IJIBcCMf8LVd-29bkachcSgWNbiYSsy34i0GL-nTg
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T172812.200.json
+<> 2025-11-08T204021.200.json
+
+###
+
+DELETE http://localhost:8000/business/product/1/2/delete
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAxOTc0LCJleHAiOjE3NjI2MDM3NzR9.I2IJIBcCMf8LVd-29bkachcSgWNbiYSsy34i0GL-nTg
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-08T204017.200.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAxOTc0LCJleHAiOjE3NjI2MDM3NzR9.I2IJIBcCMf8LVd-29bkachcSgWNbiYSsy34i0GL-nTg
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T203948.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-08T203934.200.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T203350.200.json
+
+###
+
+PATCH http://localhost:8000/business/product/1/2/patch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 86
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "productName": "test5",
+  "productDescription": "test",
+  "productPrice": "5000"
+}
+
+<> 2025-11-08T203346.200.json
+
+###
+
+PATCH http://localhost:8000/business/product/1/2/patch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 86
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "productName": "test5",
+  "productDescription": "test",
+  "productPrice": "5000"
+}
+
+<> 2025-11-08T203325.500.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T203321.200.json
+
+###
+
+PATCH http://localhost:8000/business/product/1/2/patch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 86
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "productName": "test5",
+  "productDescription": "test",
+  "productPrice": "5000"
+}
+
+<> 2025-11-08T203043.500.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T203037.200.json
+
+###
+
+PATCH http://localhost:8000/business/product/1/2/patch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 86
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "productName": "test5",
+  "productDescription": "test",
+  "productPrice": "5000"
+}
+
+<> 2025-11-08T203006.200.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T202938.200.json
+
+###
+
+PATCH http://localhost:8000/business/product/1/2/patch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 86
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "productName": "test5",
+  "productDescription": "test",
+  "productPrice": "5000"
+}
+
+<> 2025-11-08T202930.200.json
+
+###
+
+GET http://localhost:8000/business/product/1/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-08T202856.200.json
 
 ###
 
 POST http://localhost:8000/business/product/1/save
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 87
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
+  "productName": "test2",
+  "productDescription": "test2",
+  "productPrice": "2000"
 }
 
-<> 2025-11-08T172750.200.json
+<> 2025-11-08T202835.200.json
 
 ###
 
 POST http://localhost:8000/business/product/1/save
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAwNzQyLCJleHAiOjE3NjI2MDI1NDJ9.WRJSamsaFTUi9L9VR6dvqihZyLT6-R5YvNdzMIn_qp4
+Content-Length: 87
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
+  "productName": "test1",
+  "productDescription": "test1",
+  "productPrice": "1000"
 }
 
-<> 2025-11-08T172659.500.json
-
-###
-
-POST http://localhost:8000/business/product/1/save
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
-}
-
-<> 2025-11-08T172643.401.json
+<> 2025-11-08T202828.200.json
 
 ###
 
@@ -74,308 +233,7 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-08T172618.200.json
-
-###
-
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171632.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171627.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171540.200.json
-
-###
-
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171535.200.json
-
-###
-
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171146.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T171137.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170611.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170553.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170455.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170430.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170400.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-08T170343.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-06T170704.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T162545.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T162358.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T162224.500.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T161225.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T110150.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T110119.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T103206.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-06T103136.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-06T102838.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 133
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "te3st@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer12345",
-  "name": "tes2t",
-  "nickname": "test1"
-}
-
-<> 2025-11-06T102807.500.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 130
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test1"
-}
-
-<> 2025-11-06T102754.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 130
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test1"
-}
-
-<> 2025-11-06T100320.200.json
+<> 2025-11-08T201902.200.json
 
 ###
 
@@ -394,130 +252,7 @@ Accept: */*
   "nickname": "test"
 }
 
-<> 2025-11-06T100314.500.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100249.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100143.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100050.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-05T150949.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-05T142455.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-05T142154.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-05T142129.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-05T142101.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-05T142021.401.json
+<> 2025-11-08T201547.200.json
 
 ###
 

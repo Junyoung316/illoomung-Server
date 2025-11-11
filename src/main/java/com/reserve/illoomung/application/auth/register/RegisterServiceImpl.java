@@ -69,7 +69,7 @@ public class RegisterServiceImpl implements RegisterService {
 
     private void createUserProfile(RegisterProfileData data) {
         UserProfile userProfile = UserProfile.builder()
-                .accountId(data.accountId)
+                .account(data.accountId)
                 .name(data.name)
                 .nickName(data.nickname)
                 .nicknameHash(data.nicknameHash)

@@ -3,6 +3,7 @@ package com.reserve.illoomung.domain.repository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reserve.illoomung.domain.entity.Amenity;
+import com.reserve.illoomung.domain.entity.enums.Status;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,7 @@ public class AmenityRepositoryTest {
 
                                 Amenity amenity = new Amenity(name);
                                 amenity.setSortOrder(sortOrder);
+                                amenity.setStatus(Status.ACTIVE);
                                 return amenity;
                             })
                             .collect(Collectors.toList());

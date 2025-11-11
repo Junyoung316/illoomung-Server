@@ -153,8 +153,13 @@ public class BusinessServiceImpl implements BusinessService {
             String bCode = address.getBCode();
 
             CryptoResult phoneCrypto = securityUtil.cryptoResult(storeCreateRequest.getPhoneNumber());
+            log.info("phone crypto: {}", phoneCrypto);
+
             CryptoResult addressCrypto = securityUtil.cryptoResult(storeCreateRequest.getAddress());
+            log.info("address crypto: {}", addressCrypto);
+
             CryptoResult addressDetailsCrypto = securityUtil.cryptoResult(storeCreateRequest.getAddressDetails());
+            log.info("addressDetails crypto: {}", addressDetailsCrypto);
 
             if (checkNameAndAddressDuplicate(storeCreateRequest.getStoreName(), addressCrypto.hashedData(), addressDetailsCrypto.hashedData())) {
                 throw new IllegalStateException("이미 동일한 이름과 주소로 등록된 사업장이 존재합니다.");

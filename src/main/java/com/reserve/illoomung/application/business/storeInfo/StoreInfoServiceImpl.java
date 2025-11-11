@@ -115,7 +115,7 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                         .build())
                 .toList();
 
-        UserProfile profile = userProfileRepository.findByAccountId(owner);
+        UserProfile profile = userProfileRepository.findByAccount(owner);
 
         StoreInfoResponse.seller sellerInfo = StoreInfoResponse.seller.builder()
                 .sellerId(owner.getAccountId())

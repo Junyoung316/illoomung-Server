@@ -1,6 +1,7 @@
 package com.reserve.illoomung.domain.entity;
 
 import com.reserve.illoomung.domain.entity.enums.Status;
+import com.reserve.illoomung.dto.business.StoreInfoResponse;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -60,4 +61,9 @@ public class StoreOffering { // 업체 상품/서비스 정보
     private Instant updatedAt;
 
     // 생성자, getter, setter 생략
+    public void patchProduct(StoreInfoResponse.products product) {
+        this.offeringName = product.getProductName();
+        this.description = product.getProductDescription();
+        this.price = product.getProductPrice();
+    }
 }

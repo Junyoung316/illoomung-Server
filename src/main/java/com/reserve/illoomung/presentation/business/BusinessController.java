@@ -26,6 +26,8 @@ public class BusinessController {
         return ResponseEntity.ok(MainResponse.created());
     }
 
+    // 전체 조회 및 수정
+
 //    @PostMapping
 //    public ResponseEntity<MainResponse<String>> update
 }

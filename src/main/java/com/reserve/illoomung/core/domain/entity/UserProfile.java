@@ -2,6 +2,7 @@ package com.reserve.illoomung.core.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -25,10 +26,15 @@ import org.hibernate.annotations.UpdateTimestamp;
 public class UserProfile implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id", nullable = false, updatable = false)
+    private Long userId;
+
+    @MapsId
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "fk_user_account"))
-    private Account accountId;
+    private Account account;
 
     @Lob
     @Column(name = "phone")
