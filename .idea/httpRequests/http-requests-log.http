@@ -1,3 +1,68 @@
+POST http://localhost:8000/store/info/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-12T124613.200.json
+
+###
+
+GET http://localhost:8000/public/item
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T124455.200.json
+
+###
+
+POST http://localhost:8000/public/search?search=사우
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-12T124424.200.json
+
+###
+
+GET http://localhost:8000/public/item
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T124212.200.json
+
+###
+
+GET http://localhost:8000/public/item
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T124208.500.json
+
+###
+
+GET http://localhost:8000/public/item
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T124030.200.json
+
+###
+
+GET http://localhost:8000/public/item
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T123952.500.json
+
+###
+
 GET http://localhost:8000/business/product/1/all
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNjAxOTc0LCJleHAiOjE3NjI2MDM3NzR9.I2IJIBcCMf8LVd-29bkachcSgWNbiYSsy34i0GL-nTg
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3

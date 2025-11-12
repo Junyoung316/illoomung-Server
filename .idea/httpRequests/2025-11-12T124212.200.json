@@ -1,0 +1,95 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_58%2F1721646000372Ud2lm_JPEG%2F1000143272.jpg",
+      "storeName": "부부펫살롱",
+      "addrDepth": "풍무동",
+      "isOpen": "영업 중",
+      "amenities": [],
+      "storeId": 1
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_218%2F1710830742328rFDbA_JPEG%2FKakaoTalk_20240319_154142478_01.jpg",
+      "storeName": "모두의집사",
+      "addrDepth": "운양동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "무선 인터넷",
+        "반려동물 동반",
+        "간편결제",
+        "방문접수/출장"
+      ],
+      "storeId": 2
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250827_293%2F1756256944356dSrSL_JPEG%2F1756198102978.jpg",
+      "storeName": "카페소풍 애견유치원&애견호텔&애견돌봄",
+      "addrDepth": "구래동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "노키즈존",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "반려동물 동반",
+        "간편결제",
+        "단체 이용 가능"
+      ],
+      "storeId": 7
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_252%2F17534306673505DzWP_JPEG%2FKakaoTalk_20250725_165919112.jpg",
+      "storeName": "J애견호텔유치원",
+      "addrDepth": "백석동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 14
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240409_64%2F1712635337200pLpdm_JPEG%2F062408CC-86A2-49A2-A609-5CEE12B79D1D.jpeg",
+      "storeName": "깜장콩 애견유치원 &미용&호텔&카페",
+      "addrDepth": "양촌읍 구래리",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 18
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240327_171%2F1711475689154VdljP_JPEG%2FIMG_6361.jpg",
+      "storeName": "더쇼독",
+      "addrDepth": "장기동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "반려동물 동반"
+      ],
+      "storeId": 27
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190708_125%2F1562540628727Cuzon_JPEG%2Fwip4r2THAh2Lw9E6fjsqIzjp.jpg",
+      "storeName": "엔젤스도그",
+      "addrDepth": "장기동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "반려동물 동반"
+      ],
+      "storeId": 29
+    }
+  ]
+}

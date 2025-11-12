@@ -1,0 +1,96 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211201_173%2F1638347218030dErjW_JPEG%2F20211120_112900.jpg",
+      "storeName": "핏어펫",
+      "addrDepth": "마산동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "반려동물 동반"
+      ],
+      "storeId": 5
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221211_1%2F1670769548635BTlxY_JPEG%2FMTXX_MH20221211233525871.jpg",
+      "storeName": "메리몽 펫 그루밍",
+      "addrDepth": "감정동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "대기공간",
+        "무선 인터넷",
+        "간편결제"
+      ],
+      "storeId": 6
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200622_24%2F15928316943109Ab3I_JPEG%2F8eQRzZ5Q9Ix9vBzBTUntu0BJ.jpg",
+      "storeName": "하룻강아지",
+      "addrDepth": "양촌읍 누산리",
+      "isOpen": "영업 종료",
+      "amenities": [],
+      "storeId": 13
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240409_64%2F1712635337200pLpdm_JPEG%2F062408CC-86A2-49A2-A609-5CEE12B79D1D.jpeg",
+      "storeName": "깜장콩 애견유치원 &미용&호텔&카페",
+      "addrDepth": "양촌읍 구래리",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 18
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240928_214%2F1727528346359u2lAD_JPEG%2FIMG_3440.jpeg",
+      "storeName": "까꿍펫살롱",
+      "addrDepth": "운양동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "반려동물 동반"
+      ],
+      "storeId": 32
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211122_160%2F1637562761439CwV8f_PNG%2F%25BE%25D6%25B8%25F9%25BD%25BA.png",
+      "storeName": "애몽",
+      "addrDepth": "운양동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "장애인 편의시설",
+        "반려동물 동반"
+      ],
+      "storeId": 34
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211027_13%2F1635292350499pMtv0_JPEG%2F1_oA0TrGXtNrO06Gm2URQqe-.jpeg.jpg",
+      "storeName": "라비드 펫 살롱",
+      "addrDepth": "운양동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "장애인 편의시설",
+        "반려동물 동반",
+        "단체 이용 가능"
+      ],
+      "storeId": 40
+    }
+  ]
+}
