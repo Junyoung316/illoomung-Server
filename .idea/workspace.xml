@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/StoreInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/StoreInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +232,7 @@
       <workItem from="1762599833302" duration="3322000" />
       <workItem from="1762918640921" duration="760000" />
       <workItem from="1762931015380" duration="6000" />
-      <workItem from="1763002349166" duration="1807000" />
+      <workItem from="1763002349166" duration="2801000" />
     </task>
     <servers />
   </component>
