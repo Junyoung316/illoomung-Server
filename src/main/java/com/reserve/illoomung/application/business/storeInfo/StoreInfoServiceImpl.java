@@ -74,7 +74,7 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                 .toList();
 
         String addr = securityUtil.textDecrypt(store.getAddress());
-        String addrDetail =  securityUtil.textDecrypt(store.getAddress());
+        String addrDetail =  securityUtil.textDecrypt(store.getAddressDetails());
 
         KakaoAddressResponse.Address address = getAddressAndBcodeFromApi(addr);
         String x = address.getX();
