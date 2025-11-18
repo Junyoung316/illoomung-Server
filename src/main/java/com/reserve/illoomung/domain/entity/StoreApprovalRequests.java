@@ -1,13 +1,10 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.entity.enums.RoleStatus;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.Instant;
 
 @Entity
 @Table(name = "store_approval_requests",
@@ -19,7 +16,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class StoreApprovalRequests {
+public class StoreApprovalRequests extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,14 +41,14 @@ public class StoreApprovalRequests {
     @Column(name = "rejection_reason", columnDefinition = "TEXT")
     private String rejectionReason; // 상태가 'REJECTED'일 경우에만 기록
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false, nullable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "processed_at", insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
-    private Instant processedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false, nullable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "processed_at", insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+//    private Instant processedAt;
 
 }

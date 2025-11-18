@@ -1,12 +1,9 @@
 package com.reserve.illoomung.core.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.core.domain.entity.enums.RoleStatus;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.Instant;
 
 
 @Entity
@@ -19,7 +16,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RoleUpgradeRequests {
+public class RoleUpgradeRequests extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,12 +41,12 @@ public class RoleUpgradeRequests {
     @Column(name = "rejection_reason", columnDefinition = "TEXT")
     private String rejectionReason; // 상태가 'REJECTED'일 경우에만 기록
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, nullable = false)
-    private Instant createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "processed_at")
-    private Instant processedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, nullable = false)
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "processed_at")
+//    private Instant processedAt;
 
 }

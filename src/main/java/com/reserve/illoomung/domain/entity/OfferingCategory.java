@@ -1,14 +1,11 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.domain.entity.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.Instant;
 
 @Entity
 @Table(name = "offering_categories",
@@ -16,7 +13,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OfferingCategory { // 상품/서비스 카테고리
+public class OfferingCategory extends BaseTimeEntity { // 상품/서비스 카테고리
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,15 +32,15 @@ public class OfferingCategory { // 상품/서비스 카테고리
     @Builder.Default
     private Status status = Status.ACTIVE;
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at", insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
-    private Instant updatedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "updated_at", insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+//    private Instant updatedAt;
 
     // 생성자, getter, setter 생략
 }

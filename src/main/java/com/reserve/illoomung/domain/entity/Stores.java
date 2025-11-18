@@ -1,13 +1,10 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.Instant;
 import java.util.List;
 
 @Entity
@@ -26,7 +23,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Stores { // 업체 정보
+public class Stores extends BaseTimeEntity { // 업체 정보
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -93,15 +90,15 @@ public class Stores { // 업체 정보
     @Builder.Default
     private StoreStatus status = StoreStatus.PENDING_APPROVAL; // 가게 상태(활성, 비활성, 일시 중지, 승인 보류) -> 기본: 승인 보류
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at", insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
-    private Instant updatedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "updated_at", insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+//    private Instant updatedAt;
 
     @OneToMany(mappedBy = "store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<StoreOperatingHours> operatingHours;

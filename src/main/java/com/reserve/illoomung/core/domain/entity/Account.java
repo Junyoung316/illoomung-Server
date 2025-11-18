@@ -1,5 +1,6 @@
 package com.reserve.illoomung.core.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.core.util.DateTimeUtils;
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,8 +10,6 @@ import java.time.Instant;
 import com.reserve.illoomung.core.domain.entity.enums.Role;
 import com.reserve.illoomung.core.domain.entity.enums.SocialProvider;
 import com.reserve.illoomung.core.domain.entity.enums.Status;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "account",
@@ -20,7 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Account {
+public class Account extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,15 +67,15 @@ public class Account {
     @Column(name = "withdrawn_at")
     private Instant withdrawnAt; // 탈퇴 사각
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at", insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
-    private Instant updatedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "updated_at", insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+//    private Instant updatedAt;
 
     public void lastLoginAtUpdate() {
         this.lastLoginAt = DateTimeUtils.now();
