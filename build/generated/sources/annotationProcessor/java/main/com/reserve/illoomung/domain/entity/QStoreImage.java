@@ -22,7 +22,12 @@ public class QStoreImage extends EntityPathBase<StoreImage> {
 
     public static final QStoreImage storeImage = new QStoreImage("storeImage");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final StringPath altText = createString("altText");
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final NumberPath<Long> imageId = createNumber("imageId", Long.class);
 
@@ -34,7 +39,8 @@ public class QStoreImage extends EntityPathBase<StoreImage> {
 
     public final QStores store;
 
-    public final DateTimePath<java.time.Instant> uploadedAt = createDateTime("uploadedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public QStoreImage(String variable) {
         this(StoreImage.class, forVariable(variable), INITS);

@@ -4,6 +4,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.domain.entity.StoreOffering;
 import com.reserve.illoomung.domain.entity.Stores;
+import com.reserve.illoomung.domain.entity.enums.Status;
 import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
 import com.reserve.illoomung.domain.repository.StoresRepository;
 import com.reserve.illoomung.dto.business.StoreInfoResponse;
@@ -49,7 +50,7 @@ public class StoreProductServiceImpl implements StoreProductService {
             Stores store = storesRepository.findByStoreIdAndOwnerAccountId(id, account.getAccountId())
                     .orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
 
-            List<StoreOffering> storeProduct = storeOfferingRepository.findByStoreStoreId(store.getStoreId());
+            List<StoreOffering> storeProduct = storeOfferingRepository.findByStoreStoreIdAndStatus(store.getStoreId(), Status.ACTIVE);
 
             return storeProduct.stream()
                     .map(entity -> StoreInfoResponse.products.builder()
@@ -63,7 +64,6 @@ public class StoreProductServiceImpl implements StoreProductService {
         return null;
     }
 
-    // TODO: 가게 조회 및 사용자 인증, 가게 상품 등록 로직
 
     @Override
     @Transactional
@@ -110,7 +110,7 @@ public class StoreProductServiceImpl implements StoreProductService {
             StoreOffering storeOffering = storeOfferingRepository.findAllByOfferingId(productId)
                     .orElseThrow(() -> new RuntimeException("해당 상품을 찾을 수 없습니다."));
 
-            storeOfferingRepository.delete(storeOffering);
+            storeOffering.deleteProduct();
         }
     }
 }

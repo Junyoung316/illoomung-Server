@@ -19,9 +19,12 @@ public class QAccount extends EntityPathBase<Account> {
 
     public static final QAccount account = new QAccount("account");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final NumberPath<Long> accountId = createNumber("accountId", Long.class);
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final DateTimePath<java.time.Instant> dormantAt = createDateTime("dormantAt", java.time.Instant.class);
 
@@ -43,7 +46,8 @@ public class QAccount extends EntityPathBase<Account> {
 
     public final EnumPath<com.reserve.illoomung.core.domain.entity.enums.Status> status = createEnum("status", com.reserve.illoomung.core.domain.entity.enums.Status.class);
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public final DateTimePath<java.time.Instant> withdrawnAt = createDateTime("withdrawnAt", java.time.Instant.class);
 

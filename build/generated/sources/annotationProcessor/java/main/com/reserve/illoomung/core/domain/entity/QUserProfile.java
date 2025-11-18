@@ -22,6 +22,8 @@ public class QUserProfile extends EntityPathBase<UserProfile> {
 
     public static final QUserProfile userProfile = new QUserProfile("userProfile");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final QAccount account;
 
     public final StringPath addressFull = createString("addressFull");
@@ -34,7 +36,8 @@ public class QUserProfile extends EntityPathBase<UserProfile> {
 
     public final StringPath birthMD = createString("birthMD");
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final StringPath gender = createString("gender");
 
@@ -54,7 +57,8 @@ public class QUserProfile extends EntityPathBase<UserProfile> {
 
     public final StringPath profileImageUrl = createString("profileImageUrl");
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public final NumberPath<Long> userId = createNumber("userId", Long.class);
 

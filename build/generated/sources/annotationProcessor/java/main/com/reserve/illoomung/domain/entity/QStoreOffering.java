@@ -22,7 +22,10 @@ public class QStoreOffering extends EntityPathBase<StoreOffering> {
 
     public static final QStoreOffering storeOffering = new QStoreOffering("storeOffering");
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final StringPath currency = createString("currency");
 
@@ -40,7 +43,8 @@ public class QStoreOffering extends EntityPathBase<StoreOffering> {
 
     public final QStores store;
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public QStoreOffering(String variable) {
         this(StoreOffering.class, forVariable(variable), INITS);

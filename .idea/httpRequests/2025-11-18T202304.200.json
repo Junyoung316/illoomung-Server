@@ -1,0 +1,20 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "reservationId": 1,
+      "storeId": 1,
+      "reservationDate": "2025-11-18T19:00:00",
+      "reservationNote": "1234",
+      "reservationStatus": "PENDING"
+    },
+    {
+      "reservationId": 2,
+      "storeId": 1,
+      "reservationDate": "2025-11-18T20:00:00",
+      "reservationNote": "1234",
+      "reservationStatus": "PENDING"
+    }
+  ]
+}

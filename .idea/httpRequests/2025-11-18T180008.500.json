@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.reserve.illoomung.core.dto.MainResponse<java.lang.String>> com.reserve.illoomung.presentation.user.reserve.UserReserveController.saveUserReserve(com.reserve.illoomung.dto.reserve.user.UserReserveSaveRequest,java.lang.Long): [Field error in object 'userReserveSaveRequest' on field 'reservationDatetime': rejected value [2025-11-18T17:00]; codes [Future.userReserveSaveRequest.reservationDatetime,Future.reservationDatetime,Future.java.time.LocalDateTime,Future]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userReserveSaveRequest.reservationDatetime,reservationDatetime]; arguments []; default message [reservationDatetime]]; default message [예약 시간은 현재 시각보다 이후여야 합니다.]] "
+}

@@ -22,6 +22,8 @@ public class QStores extends EntityPathBase<Stores> {
 
     public static final QStores stores = new QStores("stores");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final StringPath addrDepth1 = createString("addrDepth1");
 
     public final StringPath addrDepth2 = createString("addrDepth2");
@@ -42,7 +44,8 @@ public class QStores extends EntityPathBase<Stores> {
 
     public final ListPath<StoreCategoryMapping, QStoreCategoryMapping> categoryMappings = this.<StoreCategoryMapping, QStoreCategoryMapping>createList("categoryMappings", StoreCategoryMapping.class, QStoreCategoryMapping.class, PathInits.DIRECT2);
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final StringPath description = createString("description");
 
@@ -64,7 +67,8 @@ public class QStores extends EntityPathBase<Stores> {
 
     public final StringPath storeName = createString("storeName");
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public final StringPath websiteUrl = createString("websiteUrl");
 

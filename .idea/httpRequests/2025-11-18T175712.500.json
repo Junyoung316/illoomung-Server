@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String \"2025-11-18 17:00:00\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2025-11-18 17:00:00' could not be parsed at index 10"
+}

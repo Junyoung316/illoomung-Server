@@ -63,4 +63,8 @@ public class StoreOffering extends BaseTimeEntity { // 업체 상품/서비스 �
         this.description = product.getProductDescription();
         this.price = product.getProductPrice();
     }
+
+    public void deleteProduct() {
+        this.status = Status.INACTIVE;
+    }
 }

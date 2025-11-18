@@ -22,19 +22,23 @@ public class QStoreApprovalRequests extends EntityPathBase<StoreApprovalRequests
 
     public static final QStoreApprovalRequests storeApprovalRequests = new QStoreApprovalRequests("storeApprovalRequests");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final com.reserve.illoomung.core.domain.entity.QAccount account;
 
     public final com.reserve.illoomung.core.domain.entity.QAccount admin;
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
-
-    public final DateTimePath<java.time.Instant> processedAt = createDateTime("processedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final StringPath rejectionReason = createString("rejectionReason");
 
     public final NumberPath<Long> requestId = createNumber("requestId", Long.class);
 
     public final EnumPath<com.reserve.illoomung.core.domain.entity.enums.RoleStatus> status = createEnum("status", com.reserve.illoomung.core.domain.entity.enums.RoleStatus.class);
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public QStoreApprovalRequests(String variable) {
         this(StoreApprovalRequests.class, forVariable(variable), INITS);

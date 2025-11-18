@@ -19,17 +19,21 @@ public class QOfferingCategory extends EntityPathBase<OfferingCategory> {
 
     public static final QOfferingCategory offeringCategory = new QOfferingCategory("offeringCategory");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final NumberPath<Long> categoryId = createNumber("categoryId", Long.class);
 
     public final StringPath categoryName = createString("categoryName");
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final NumberPath<Integer> sortOrder = createNumber("sortOrder", Integer.class);
 
     public final EnumPath<com.reserve.illoomung.domain.entity.enums.Status> status = createEnum("status", com.reserve.illoomung.domain.entity.enums.Status.class);
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public QOfferingCategory(String variable) {
         super(OfferingCategory.class, forVariable(variable));

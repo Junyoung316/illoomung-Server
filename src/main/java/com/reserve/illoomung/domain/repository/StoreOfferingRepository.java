@@ -10,7 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface StoreOfferingRepository extends JpaRepository<StoreOffering, Long> {
-    List<StoreOffering> findByStoreStoreId(Long storeId);
     Optional<StoreOffering> findAllByOfferingId(Long offeringId);
     List<StoreOffering> findByStoreStoreIdAndStatus(Long storeId, Status status);
 }
