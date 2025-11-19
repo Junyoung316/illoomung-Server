@@ -1,6 +1,5 @@
 package com.reserve.illoomung.dto.reserve.user;
 
-import com.reserve.illoomung.domain.entity.Stores;
 import com.reserve.illoomung.domain.entity.enums.ReservationStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

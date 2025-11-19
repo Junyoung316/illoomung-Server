@@ -2,9 +2,11 @@ package com.reserve.illoomung.application.user.reserve;
 
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
+import com.reserve.illoomung.domain.entity.StoreOffering;
 import com.reserve.illoomung.domain.entity.StoreReservation;
 import com.reserve.illoomung.domain.entity.Stores;
 import com.reserve.illoomung.domain.entity.enums.ReservationStatus;
+import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
 import com.reserve.illoomung.domain.repository.StoreReservationRepository;
 import com.reserve.illoomung.domain.repository.StoresRepository;
 import com.reserve.illoomung.dto.reserve.user.UserReserveGetResponse;
@@ -27,6 +29,7 @@ public class UserReserveServiceImpl implements UserReserveService {
     private final AccountRepository accountRepository;
 
     private final StoresRepository storesRepository;
+    private final StoreOfferingRepository storeOfferingRepository;
     private final StoreReservationRepository storeReservationRepository;
 
     private Account userCheck() {
@@ -65,11 +68,15 @@ public class UserReserveServiceImpl implements UserReserveService {
 
         Account account = userCheck();
 
-        Stores store = storesRepository.findAllByStoreId(id).orElseThrow(() -> new RuntimeException("가게를 찾을 수 없습니다."));
+        Stores store = storesRepository.findAllByStoreId(id)
+                .orElseThrow(() -> new RuntimeException("가게를 찾을 수 없습니다."));
+
+        StoreOffering offering = storeOfferingRepository.findAllByOfferingId(request.getOfferingId())
+                .orElseThrow(() -> new RuntimeException("상품을 찾을 수 없습니다."));
 
         StoreReservation reserve = StoreReservation.builder()
                 .store(store)
-                .offering(null)
+                .offering(offering)
                 .account(account)
                 .reservationDatetime(request.getReservationDatetime())
                 .requestNote(request.getRequestNote())
@@ -90,7 +97,7 @@ public class UserReserveServiceImpl implements UserReserveService {
         StoreReservation reserve = storeReservationRepository.findAllByReservationIdAndStoreAndAccount(reservation, store, account)
                 .orElseThrow(() -> new RuntimeException("예약 내역을 찾을 수 없습니다."));
 
-        reserve.cancelUserReserve();
+        reserve.patchReserveStatus(ReservationStatus.CANCELED);
     }
 
 }

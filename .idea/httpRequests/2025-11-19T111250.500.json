@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: Cannot invoke \"com.reserve.illoomung.domain.entity.StoreOffering.getOfferingName()\" because the return value of \"com.reserve.illoomung.domain.entity.StoreReservation.getOffering()\" is null"
+}

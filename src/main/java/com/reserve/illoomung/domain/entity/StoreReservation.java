@@ -64,8 +64,8 @@ public class StoreReservation extends BaseTimeEntity { // 3번 파일(BaseTimeEn
     // @Column(name = "updated_at")
     // private LocalDateTime updatedAt;
 
-    public void cancelUserReserve() {
-        this.status = ReservationStatus.CANCELED;
+    public void patchReserveStatus(ReservationStatus status) {
+        this.status = status;
     }
 
 

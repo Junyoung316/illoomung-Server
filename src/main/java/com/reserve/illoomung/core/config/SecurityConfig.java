@@ -82,7 +82,7 @@ public class SecurityConfig {
                     "/auth/refresh",
                     "/store/**"
                 ).permitAll()
-                .requestMatchers("/role/owner").hasAnyRole( "USER", "OWNER", "ADMIN")
+                .requestMatchers("/role/owner", "/profile/**").hasAnyRole( "USER", "OWNER", "ADMIN")
                 .requestMatchers("/business/**").hasAnyRole("OWNER", "ADMIN")
                 .requestMatchers("/admin/**", "/").hasRole("ADMIN")
                 .requestMatchers("/logout").authenticated()

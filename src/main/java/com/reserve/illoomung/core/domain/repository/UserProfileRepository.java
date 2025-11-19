@@ -6,10 +6,12 @@ import org.springframework.stereotype.Repository;
 
 import com.reserve.illoomung.core.domain.entity.UserProfile;
 
+import java.util.Optional;
+
 
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfile, Long> {
     boolean existsByNicknameHash(String nicknameHash);
-    UserProfile findByAccount(Account accountId);
+    Optional<UserProfile> findByAccount(Account accountId);
 
 }

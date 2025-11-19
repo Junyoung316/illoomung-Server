@@ -115,7 +115,8 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                         .build())
                 .toList();
 
-        UserProfile profile = userProfileRepository.findByAccount(owner);
+        UserProfile profile = userProfileRepository.findByAccount(owner)
+                .orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다."));
 
         StoreInfoResponse.seller sellerInfo = StoreInfoResponse.seller.builder()
                 .sellerId(owner.getAccountId())

@@ -44,7 +44,9 @@ public class RegisterServiceImpl implements RegisterService {
             Account accountId,
             String name,
             String nickname,
-            String nicknameHash
+            String nicknameHash,
+            String phone,
+            String phoneHash
 
     ) {
     }
@@ -90,6 +92,7 @@ public class RegisterServiceImpl implements RegisterService {
         RegisterProfileData profileData;
         CryptoResult name = securityUtil.cryptoResult(request.getName());
         CryptoResult nickname = securityUtil.cryptoResult(request.getNickname());
+        CryptoResult phone = securityUtil.cryptoResult(request.getPhone());
 
         if(!request.getPassword().equals(request.getCheckPassword())) {
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
@@ -113,7 +116,9 @@ public class RegisterServiceImpl implements RegisterService {
                 saveAccount,
                 name.encryptedData(),
                 nickname.encryptedData(),
-                nickname.hashedData()
+                nickname.hashedData(),
+                phone.encryptedData(),
+                phone.hashedData()
         );
         createUserProfile(profileData);
         log.info("[회원가입] 로컬 회원가입 성공: {}", request.getEmail());

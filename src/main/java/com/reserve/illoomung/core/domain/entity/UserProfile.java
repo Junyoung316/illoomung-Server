@@ -1,6 +1,8 @@
 package com.reserve.illoomung.core.domain.entity;
 
 import com.reserve.illoomung.core.auditing.BaseTimeEntity;
+import com.reserve.illoomung.core.dto.CryptoResult;
+import com.reserve.illoomung.dto.request.auth.ProfileRequest;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -95,4 +97,12 @@ public class UserProfile extends BaseTimeEntity implements Serializable {
 //    @Column(name = "updated_at", insertable = false,
 //            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
 //    private Instant updatedAt;
+
+    public void patchProfile(CryptoResult name, CryptoResult nickname, CryptoResult phone) {
+        this.name = name.encryptedData();
+        this.nickName = nickname.encryptedData();
+        this.nicknameHash = nickname.hashedData();
+        this.phone = phone.encryptedData();
+        this.phoneHash = phone.hashedData();
+    }
 }

@@ -11,7 +11,9 @@ import java.util.Optional;
 
 @Repository
 public interface StoreReservationRepository extends JpaRepository<StoreReservation, Long> {
+    Optional<StoreReservation> findAllByReservationId(Long reservation);
     Optional<List<StoreReservation>> findAllByAccount(Account account);
     Optional<StoreReservation> findAllByReservationIdAndAccount(Long reservation, Account account);
     Optional<StoreReservation> findAllByReservationIdAndStoreAndAccount(Long reservation, Stores store, Account account);
+    Optional<List<StoreReservation>> findAllByStore(Stores store);
 }

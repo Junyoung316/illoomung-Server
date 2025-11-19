@@ -1,6 +1,7 @@
 package com.reserve.illoomung.core.domain.entity;
 
 import com.reserve.illoomung.core.auditing.BaseTimeEntity;
+import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.DateTimeUtils;
 import jakarta.persistence.*;
 import lombok.*;
@@ -79,6 +80,10 @@ public class Account extends BaseTimeEntity {
 
     public void lastLoginAtUpdate() {
         this.lastLoginAt = DateTimeUtils.now();
+    }
+
+    public void changePassword(String password) {
+        this.passwordHash = password;
     }
 }
 
