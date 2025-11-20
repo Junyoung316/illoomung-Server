@@ -35,6 +35,10 @@ spring:
         format_sql: true    # SQL 포맷팅 여부
         jdbc:
           time_zone: Asia/Seoul    # 타입존 Asia/Seoul로 명시
+        connection:
+          charSet: UTF-8
+          characterEncoding: utf8
+          useUnicode: true
   thymeleaf:
     suffix: .html
     mode: HTML
