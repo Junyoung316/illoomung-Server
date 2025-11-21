@@ -1,6 +1,7 @@
 package com.reserve.illoomung.core.util.autocomplete.application;
 
 import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
+import com.reserve.illoomung.domain.repository.StoresRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ import java.util.*;
 public class AutocompleteService {
 
     private final StringRedisTemplate redisTemplate;
-    private final StoreOfferingRepository storeOfferingRepository;
+    private final StoresRepository storesRepository;
 
     private static final String KEYWORD_KEY = "autocomplete:keywords";
     private static final int MAX_SUGGESTIONS = 10;

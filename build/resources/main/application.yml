@@ -50,6 +50,12 @@ spring:
       host: localhost
       port: 6379
       refresh-token-expire-seconds: 604800
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: localhost:9200
+        username: ""
+        password: ""
 
 kakao:
 #  client_id: 7c730a5d5926a51e975002be3f953b8d
