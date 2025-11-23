@@ -5,26 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/es/StoreDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/es/StoreSearchRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/es-mappings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/es/es-settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ccb84f-7777-415e-a7a7-c67c96462bfc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ccb84f-7777-415e-a7a7-c67c96462bfc/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ccb84f-7777-415e-a7a7-c67c96462bfc/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ccb84f-7777-415e-a7a7-c67c96462bfc/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T175515.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T175712.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T180008.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T180039.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T180048.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T180104.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T180114.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T195436.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T195448.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T195756.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T201618.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T201937.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T202304.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T202330.401.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-18T202346.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/main/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteController.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteService$KeywordScore.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteService.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/main/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +75,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
+        <option value="Dockerfile" />
+        <option value="package.json" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;34105fc259218152758d23eff4c588a0e56c32fe&quot; value=&quot;###&amp;#10;POST http://localhost:8000/register/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;test@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;checkPassword&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;name&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;nickname&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;phone&amp;quot;: &amp;quot;01012341234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;648d95590a924ebcf1cf86e132cbfd4b1f3540e0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/login/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;test@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;c6c6c58a341abe380c662a131f23a13ac9974f8c&quot; value=&quot;###&amp;#10;GET http://localhost:8000/autocomplete?&amp;#10;    search=강&quot; /&gt;&#10;  &lt;entry key=&quot;3e35a8fe2b0bb41e24bebae964fc21d6c75f8612&quot; value=&quot;###&amp;#10;GET http://localhost:8000/public/search?&amp;#10;    query=사우&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -63,7 +107,9 @@
   "keyToString": {
     "Gradle.AmenityRepositoryTest.executor": "Run",
     "Gradle.AmenityRepositoryTest.saveAmenity.executor": "Run",
+    "Gradle.StoreCategoryRepositoryTest.addCategory.executor": "Run",
     "Gradle.StoreCategoryRepositoryTest.executor": "Run",
+    "Gradle.StoreCategoryRepositoryTest.saveCategory.executor": "Run",
     "Gradle.illoomung 빌드.executor": "Run",
     "Gradle.소스 다운로드.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -93,6 +139,14 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/es" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.IlloomungApplication">
     <configuration name="AmenityRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -156,6 +210,54 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StoreCategoryRepositoryTest.addCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.addCategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StoreCategoryRepositoryTest.saveCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.saveCategory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -234,8 +336,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StoreCategoryRepositoryTest" />
+        <item itemvalue="Gradle.StoreCategoryRepositoryTest.saveCategory" />
+        <item itemvalue="Gradle.StoreCategoryRepositoryTest.addCategory" />
         <item itemvalue="Gradle.AmenityRepositoryTest.saveAmenity" />
+        <item itemvalue="Gradle.StoreCategoryRepositoryTest" />
         <item itemvalue="Gradle.AmenityRepositoryTest" />
       </list>
     </recent_temporary>
@@ -264,7 +368,10 @@
       <workItem from="1763512671264" duration="9224000" />
       <workItem from="1763527837180" duration="999000" />
       <workItem from="1763529029208" duration="3167000" />
-      <workItem from="1763599875509" duration="9295000" />
+      <workItem from="1763599875509" duration="9344000" />
+      <workItem from="1763747534202" duration="5366000" />
+      <workItem from="1763794725099" duration="1605000" />
+      <workItem from="1763875604415" duration="5090000" />
     </task>
     <servers />
   </component>

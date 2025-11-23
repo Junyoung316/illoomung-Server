@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "id": { "type": "long" },
+
+    "name": { "type": "text", "analyzer": "korean_index_analyzer", "search_analyzer": "korean_search_analyzer" },
+    "fullAddress": { "type": "text", "analyzer": "korean_index_analyzer", "search_analyzer": "korean_search_analyzer" },
+
+    "addr": { "type": "keyword", "index": false },
+
+    "imgUrl": { "type": "keyword", "index": false },
+
+    "isOpen": { "type": "boolean" },
+
+    "amenities": { "type": "keyword" }
+  }
+}

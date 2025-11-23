@@ -1,10 +1,12 @@
 package com.reserve.illoomung.application.business;
 
+import com.reserve.illoomung.application.es.StoreSearchService;
 import com.reserve.illoomung.application.webClient.WebClientService;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import org.springframework.security.core.Authentication;
 import com.reserve.illoomung.domain.entity.*;
 import com.reserve.illoomung.domain.entity.enums.ImageType;
@@ -32,6 +34,7 @@ public class BusinessServiceImpl implements BusinessService {
 
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
+    private final StoreSearchService storeSearchService; // es 서비스 클래스
 
     private final AccountRepository accountRepository; // 사용자 정보
 
@@ -79,21 +82,25 @@ public class BusinessServiceImpl implements BusinessService {
                 .build();
         Stores saveStore = storesRepository.save(store);
 
+        StoreImage storeImage = new StoreImage();
         if (storeCreateRequest.getMainImageUrl() != null && !storeCreateRequest.getMainImageUrl().isEmpty()) {
-            StoreImage storeImage = StoreImage.builder()
+            storeImage = StoreImage.builder()
                     .store(saveStore)
                     .imageUrl(storeCreateRequest.getMainImageUrl())
                     .imageType(ImageType.MAIN) // TODO: 실제 환경에서 변경
                     .altText("가게 사진")
                     .build();
-            storeImageRepository.save(storeImage);
         }
+        StoreImage saveStoreImage = storeImageRepository.save(storeImage);
 
         Map<String, OperatingInfo> openingHoursMap = storeCreateRequest.getOpeningHours();
+        List<StoreOperatingHours> hoursList = new ArrayList<>();
+        List<StoreDocument.OperatingHourDto> esHoursList = new ArrayList<>();
         if (openingHoursMap != null && !openingHoursMap.isEmpty()) {
-            List<StoreOperatingHours> hoursList = convertToOperationHours(saveStore, openingHoursMap);
-            storeOperatingHoursRepository.saveAll(hoursList);
+            hoursList = convertToOperationHours(saveStore, openingHoursMap);
+            esHoursList = esConvertToOperatingHour(openingHoursMap);
         }
+        storeOperatingHoursRepository.saveAll(hoursList);
 
         List<String> amenityNames = storeCreateRequest.getAmenities();
         if (amenityNames != null && !amenityNames.isEmpty()) {
@@ -131,6 +138,9 @@ public class BusinessServiceImpl implements BusinessService {
 
         // 2-4. 생성된 매핑 정보들을 한번에 저장
         storeCategoryMappingRepository.saveAll(mappings);
+
+        storeSearchService.syncStore(store, saveStoreImage, esHoursList, amenityNames);
+
     }
 
     @Override
@@ -189,6 +199,26 @@ public class BusinessServiceImpl implements BusinessService {
         return hoursList;
     }
 
+    private List<StoreDocument.OperatingHourDto> esConvertToOperatingHour(Map<String, OperatingInfo> openingHoursMap) {
+        List<StoreDocument.OperatingHourDto> hoursList = new ArrayList<>();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+
+        for (Map.Entry<String, OperatingInfo> entry : openingHoursMap.entrySet()) {
+            String dayKey = entry.getKey();
+            OperatingInfo info = entry.getValue();
+
+            if ("매일".equals(dayKey)) {
+                for (int i = 0; i <= 6; i++) {
+                    hoursList.add(esParseDayInfo(i, info, timeFormatter));
+                }
+            } else {
+                int dayOfWeek = convertDayKeyToDayOfWeek(dayKey);
+                hoursList.add(esParseDayInfo(dayOfWeek, info, timeFormatter));
+            }
+        }
+        return hoursList;
+    }
+
     private StoreOperatingHours parseDayInfo(Stores store, int dayOfWeek, OperatingInfo info, DateTimeFormatter formatter) {
         StoreOperatingHours operationHours = new StoreOperatingHours();
         operationHours.setStore(store);
@@ -219,6 +249,22 @@ public class BusinessServiceImpl implements BusinessService {
             }
         }
 
+        return operationHours;
+    }
+
+    private StoreDocument.OperatingHourDto esParseDayInfo(int dayOfWeek, OperatingInfo info, DateTimeFormatter formatter) {
+        StoreDocument.OperatingHourDto operationHours = new StoreDocument.OperatingHourDto();
+        operationHours.setDayOfWeek(dayOfWeek);
+
+        String time = info.getTime();
+        if (time == null || time.contains("휴무")) {
+        } else {
+            String[] times = time.split(" - ");
+            if (times.length == 2) {
+                operationHours.setOpenTime(LocalTime.parse(times[0], formatter).toString());
+                operationHours.setCloseTime(LocalTime.parse(times[1], formatter).toString());
+            }
+        }
         return operationHours;
     }
 
