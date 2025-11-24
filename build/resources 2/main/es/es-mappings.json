@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "id": {
+      "type": "long"
+    },
+    "name": {
+      "type": "text",
+      "analyzer": "korean_index_analyzer",
+      "search_analyzer": "korean_search_analyzer"
+    },
+    "fullAddress": {
+      "type": "text",
+      "analyzer": "korean_index_analyzer",
+      "search_analyzer": "korean_search_analyzer"
+    },
+    "district": {
+      "type": "text",
+      "analyzer": "korean_index_analyzer",
+      "search_analyzer": "korean_search_analyzer"
+    },
+    "province": {
+      "type": "keyword"
+    },
+    "city": {
+      "type": "keyword"
+    },
+    "addr": {
+      "type": "keyword",
+      "index": false
+    },
+    "imgUrl": {
+      "type": "keyword",
+      "index": false
+    },
+    "openNow": {
+      "type": "boolean"
+    },
+    "amenities": {
+      "type": "keyword"
+    },
+    "operatingHours": {
+      "type": "nested",
+      "properties": {
+        "dayOfWeek": { "type": "integer" },
+        "openTime": { "type": "keyword" },
+        "closeTime": { "type": "keyword" },
+        "isHoliday": { "type": "boolean" }
+      }
+    }
+  }
+}
