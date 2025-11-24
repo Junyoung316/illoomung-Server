@@ -7,6 +7,7 @@ import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.Authentication;
 import com.reserve.illoomung.domain.entity.*;
 import com.reserve.illoomung.domain.entity.enums.ImageType;
@@ -34,6 +35,8 @@ public class BusinessServiceImpl implements BusinessService {
 
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
+
+    @Lazy
     private final StoreSearchService storeSearchService; // es 서비스 클래스
 
     private final AccountRepository accountRepository; // 사용자 정보

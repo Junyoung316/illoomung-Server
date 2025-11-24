@@ -1,4 +1,0 @@
-{
-  "status": 500,
-  "message": "서버 오류: could not execute statement [Column 'reservation_datetime' cannot be null] [update store_reservations set account_id=?,offering_id=?,request_note=?,reservation_datetime=?,status=?,store_id=?,updated_at=? where reservation_id=?]; SQL [update store_reservations set account_id=?,offering_id=?,request_note=?,reservation_datetime=?,status=?,store_id=?,updated_at=? where reservation_id=?]; constraint [null]"
-}

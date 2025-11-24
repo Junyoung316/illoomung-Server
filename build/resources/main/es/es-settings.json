@@ -3,9 +3,15 @@
     "tokenizer": {
       "nori_user_dict": {
         "type": "nori_tokenizer",
-        "decompound_mode": "discard",
+        "decompound_mode": "mixed",
         "user_dictionary_rules": [
-          "일루멍"
+          "일루멍",
+          "구래리",
+          "구래동",
+          "마산리",
+          "마산동",
+          "양촌면",
+          "양촌읍"
         ]
       }
     },
@@ -13,9 +19,15 @@
       "my_address_synonym": {
         "type": "synonym_graph",
         "synonyms": [
-          "구래리, 구래동",
-          "마산리, 마산동",
-          "양촌읍, 양촌면"
+          "구래, 구래리, 구래동",
+          "마산, 마산리, 마산동",
+          "양촌, 양촌읍, 양촌면"
+        ]
+      },
+      "my_pos_filter": {
+        "type": "nori_part_of_speech",
+        "stoptags": [
+          "E", "IC", "J", "MAG", "MAJ", "MM", "SP", "SSC", "SSO", "SC", "SE", "XPN", "XSA", "XSN", "XSV", "UNA", "NA", "VSV"
         ]
       }
     },
@@ -26,7 +38,7 @@
         "filter": [
           "lowercase",
           "nori_readingform",
-          "nori_part_of_speech"
+          "my_pos_filter"
         ]
       },
       "korean_search_analyzer": {
@@ -36,7 +48,7 @@
           "lowercase",
           "nori_readingform",
           "my_address_synonym",
-          "nori_part_of_speech"
+          "my_pos_filter"
         ]
       }
     }

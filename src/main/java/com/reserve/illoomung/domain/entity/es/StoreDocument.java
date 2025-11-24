@@ -13,43 +13,54 @@ import java.util.List;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Document(indexName = "stores")
-@Setting(settingPath = "/es/es-settings.json")
+@Setting(settingPath = "/es/es-settings.json") // 경로가 resources/es/ 폴더가 맞는지 확인하세요
 @Mapping(mappingPath = "/es/es-mappings.json")
-public class StoreDocument implements Serializable { // 캐싱을 위해 implements Serializable
+public class StoreDocument implements Serializable {
 
     @Id
     private Long id;
 
-    @Field(type = FieldType.Text, analyzer = "korean_analyzer")
-    private String name;       // 업체명 (예: 일루멍)
+    // [수정 1] 분석기 이름을 JSON 설정과 정확히 일치시킴
+    @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
+    private String name;
 
-    @Field(type = FieldType.Text, analyzer = "korean_analyzer")
-    private String fullAddress; // 통합 검색용 (예: 경기 김포시 구래동)
+    // [수정 1] 분석기 이름 일치
+    @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
+    private String fullAddress;
 
-    // --- 결과 반환용 (검색엔 안씀) ---
-    @Field(type = FieldType.Keyword) private String province;
-    @Field(type = FieldType.Keyword) private String city;
-    @Field(type = FieldType.Keyword) private String district;
+    @Field(type = FieldType.Keyword)
+    private String province;
 
-    private String addr;       // 보여주기용 주소 (복호화된 값)
-    private String imgUrl;  // 썸네일
+    @Field(type = FieldType.Keyword)
+    private String city;
+
+    // [수정 2] 동의어 검색('구래리'->'구래동')을 위해 Keyword -> Text로 변경 및 분석기 적용
+    @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
+    private String district;
+
+    private String addr;
+    private String imgUrl;
 
     @Field(type = FieldType.Nested)
     private List<OperatingHourDto> operatingHours;
 
-    @Transient
-    private boolean openNow;       // 영업 중 여부
+    // [수정 3] 매핑 파일과 일치시키기 위해 @Transient 제거 (저장 및 조회 가능하게 변경)
+    @Field(type = FieldType.Boolean)
+    private boolean openNow;
 
-    private List<String> amenities; // 편의시설 리스트
+    @Field(type = FieldType.Keyword)
+    private List<String> amenities;
 
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
     public static class OperatingHourDto {
-        private int dayOfWeek; // 1:월 ~ 7:일
-        private String openTime;  // "09:00" (HH:mm 형식 권장)
-        private String closeTime; // "22:00"
-        private boolean isHoliday; // 휴무 여부
+        private int dayOfWeek;
+        private String openTime;
+        private String closeTime;
+        private boolean isHoliday;
     }
 }

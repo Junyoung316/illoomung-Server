@@ -1,9 +1,90 @@
-GET http://localhost:8000/public/search?query=사우
+GET http://localhost:8000/public/search?query=마산
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T155042.500.json
+<> 2025-11-24T160131.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155846.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌면
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155842.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌면
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155822.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌읍
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155819.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155815.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=마산리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155808.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=마산동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155805.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=마산
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155801.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155755.500.json
 
 ###
 
@@ -12,7 +93,16 @@ User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T155008.500.json
+<> 2025-11-24T155750.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T155747.500.json
 
 ###
 
@@ -28,7 +118,7 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-23T145527.200.json
+<> 2025-11-24T155520.200.json
 
 ###
 
@@ -48,13 +138,13 @@ Accept: */*
   "phone": "01012341234"
 }
 
-<> 2025-11-23T145313.200.json
+<> 2025-11-24T155450.200.json
 
 ###
 
 POST http://localhost:8000/register/local
 Content-Type: application/json
-Content-Length: 148
+Content-Length: 155
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -65,16 +155,59 @@ Accept: */*
   "checkPassword": "!Qwer1234",
   "name": "test",
   "nickname": "test",
-  "phone": "test"
+  "phone": "01012341234"
 }
 
-<> 2025-11-23T145243.500.json
+<> 2025-11-24T155407.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T154614.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T154609.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T154604.500.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-24T154504.200.json
 
 ###
 
 POST http://localhost:8000/register/local
 Content-Type: application/json
-Content-Length: 148
+Content-Length: 155
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -85,19 +218,163 @@ Accept: */*
   "checkPassword": "!Qwer1234",
   "name": "test",
   "nickname": "test",
-  "phone": "test"
+  "phone": "01012341234"
 }
 
-<> 2025-11-23T145217.500.json
+<> 2025-11-24T154455.200.json
 
 ###
 
-GET http://localhost:8000/public/search?query=김포시
+GET http://localhost:8000/public/search?query=구래리
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T145050.200.json
+<> 2025-11-24T153919.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153832.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153643.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153639.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153636.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153631.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153627.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=마산동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153556.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=마산
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153552.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153548.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌면
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153544.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌읍
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153541.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153538.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153536.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래리
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153532.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153529.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153526.200.json
 
 ###
 
@@ -106,7 +383,126 @@ User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T145048.200.json
+<> 2025-11-24T153522.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=김포시
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T153519.500.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-24T153250.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-24T153234.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-24T143445.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-24T143429.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-24T143233.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=김포시
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T142800.500.json
+
+###
+
+GET http://localhost:8000/public/search?query=경기도
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-24T142756.500.json
 
 ###
 
@@ -115,515 +511,34 @@ User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T145043.200.json
+<> 2025-11-24T142753.500.json
 
 ###
 
-GET http://localhost:8000/public/search?query=구래동
+GET http://localhost:8000/public/search?query=한강
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T145030.200.json
+<> 2025-11-24T142747.200.json
 
 ###
 
-GET http://localhost:8000/autocomplete?search=강
+GET http://localhost:8000/public/search?query=사우동
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-23T145022.200.json
+<> 2025-11-24T142738.200.json
 
 ###
 
-GET http://localhost:8000/public/search?query=구래동
+GET http://localhost:8000/public/search?query=사우
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-22T160819.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-22T160545.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-22T160447.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래동
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-22T160255.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=고
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T112949.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T112945.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강아지
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T112935.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강아지
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T112537.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강아지
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T112203.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강아지
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T111749.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T111659.200.json
-
-###
-
-GET http://localhost:8000/autocomplete?search=강
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-20T111612.401.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-20T110642.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-20T110115.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-20T110101.200.json
-
-###
-
-PATCH http://localhost:8000/business/reserve/1/2/patch?status=COMPLETED
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNTE4MzUzLCJleHAiOjE3NjM1MjAxNTN9.a7-iDvuWDBnm-VXAvJfqCj22WWj5MmrN3ZMCFCKl_A8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-19T111558.200.json
-
-###
-
-PATCH http://localhost:8000/business/reserve/1/2/patch?status=CONFIRMED
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNTE4MzUzLCJleHAiOjE3NjM1MjAxNTN9.a7-iDvuWDBnm-VXAvJfqCj22WWj5MmrN3ZMCFCKl_A8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-19T111535.200.json
-
-###
-
-PATCH http://localhost:8000/business/reserve/1/2/patch?status=CONFIRMED
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-19T111527.401.json
-
-###
-
-GET http://localhost:8000/business/reserve/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNTE4MzUzLCJleHAiOjE3NjM1MjAxNTN9.a7-iDvuWDBnm-VXAvJfqCj22WWj5MmrN3ZMCFCKl_A8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-19T111340.200.json
-
-###
-
-GET http://localhost:8000/business/reserve/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNTE4MzUzLCJleHAiOjE3NjM1MjAxNTN9.a7-iDvuWDBnm-VXAvJfqCj22WWj5MmrN3ZMCFCKl_A8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-19T111250.500.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-19T111233.200.json
-
-###
-
-DELETE http://localhost:8000/user/reserve/1/1/cancel
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY2MzQ1LCJleHAiOjE3NjM0NjgxNDV9.-IQf5mVSrQ25XX9ejPdKrJWOTDZ__76dQyamPi1Gm0o
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-18T204937.200.json
-
-###
-
-DELETE http://localhost:8000/user/reserve/1/1/cancel
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY2MzQ1LCJleHAiOjE3NjM0NjgxNDV9.-IQf5mVSrQ25XX9ejPdKrJWOTDZ__76dQyamPi1Gm0o
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-18T204628.200.json
-
-###
-
-DELETE http://localhost:8000/user/reserve/1/1/cancel
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY2MzQ1LCJleHAiOjE3NjM0NjgxNDV9.-IQf5mVSrQ25XX9ejPdKrJWOTDZ__76dQyamPi1Gm0o
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-18T204613.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-18T204545.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-18T203849.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-18T203519.200.json
-
-###
-
-DELETE http://localhost:8000/business/product/1/3/delete
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-18T203511.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-18T203455.200.json
-
-###
-
-PATCH http://localhost:8000/business/product/1/3/patch
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-Content-Length: 86
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "productName": "test5",
-  "productDescription": "test",
-  "productPrice": "5000"
-}
-
-<> 2025-11-18T203450.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-18T203429.200.json
-
-###
-
-POST http://localhost:8000/business/product/1/save
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-Content-Length: 87
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "productName": "test3",
-  "productDescription": "test3",
-  "productPrice": "2000"
-}
-
-<> 2025-11-18T203425.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1NjMyLCJleHAiOjE3NjM0Njc0MzJ9.o_dHSC6ekBGoHldV4zlLHGy-Z4IA4IE3mx8EH6TUiDA
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-18T203408.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-18T203352.200.json
-
-###
-
-PATCH http://localhost:8000/user/reserve/1/2/patch
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDY1MjMxLCJleHAiOjE3NjM0NjcwMzF9.Ch4Y9K56GRA8SjDODJo70T43GLW6rm5SCwo4tRqhigQ
-Content-Length: 27
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "requestNote": "4321"
-}
-
-<> 2025-11-18T202723.500.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-18T202711.200.json
-
-###
-
-PATCH http://localhost:8000/user/reserve/1/2/patch
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDYzMjc2LCJleHAiOjE3NjM0NjUwNzZ9.0DFN5X2mIRlZlNFO7RR7cMc6WtpGZ7dHNjDaQMWTk9A
-Content-Length: 27
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "requestNote": "4321"
-}
-
-<> 2025-11-18T202706.401.json
-
-###
-
-PATCH http://localhost:8000/user/reserve/1/2/patch
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDYzMjc2LCJleHAiOjE3NjM0NjUwNzZ9.0DFN5X2mIRlZlNFO7RR7cMc6WtpGZ7dHNjDaQMWTk9A
-Content-Length: 27
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "requestNote": "4321"
-}
-
-<> 2025-11-18T202411.500.json
-
-###
-
-PATCH http://localhost:8000/user/reserve/1/2/patch
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYzNDYzMjc2LCJleHAiOjE3NjM0NjUwNzZ9.0DFN5X2mIRlZlNFO7RR7cMc6WtpGZ7dHNjDaQMWTk9A
-Content-Length: 75
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "offeringId": 0,
-  "reservationDatetime": "",
-  "requestNote": "4321"
-}
-
-<> 2025-11-18T202354.500.json
+<> 2025-11-24T142735.200.json
 
 ###
 

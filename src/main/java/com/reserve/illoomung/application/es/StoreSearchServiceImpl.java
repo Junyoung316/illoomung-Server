@@ -31,6 +31,7 @@ public class StoreSearchServiceImpl implements StoreSearchService {
     private final ElasticsearchOperations operations;
     private final StoreSearchRepository storeSearchRepository;
 
+    @Autowired
     @Lazy
     private StoreSearchService self;
 
@@ -89,26 +90,25 @@ public class StoreSearchServiceImpl implements StoreSearchService {
         return docs;
     }
 
-    /**
-     * [내부 로직] Elasticsearch 실제 조회
-     * - @Cacheable 적용: 검색 결과(데이터) 자체를 캐싱
-     * - 여기에는 '시간'에 따라 변하는 로직이 있으면 절대 안 됨!
-     */
     @Cacheable(cacheNames = "storeSearch", key = "#query", unless = "#result.isEmpty()")
     public List<StoreDocument> searchFromIndex(String query) {
-        log.info("Cache Miss! Elasticsearch 검색 수행: {}", query);
+        log.info("Elasticsearch 검색 수행 (No Highlight): {}", query);
 
+        // 1. 쿼리 생성 (하이라이트 요청 부분 삭제됨)
         NativeQuery searchQuery = NativeQuery.builder()
                 .withQuery(q -> q
                         .multiMatch(m -> m
                                 .query(query)
-                                .fields("fullAddress^2.0", "name^1.5")
+                                // 가중치는 유지 (검색 정확도를 위해)
+                                .fields("fullAddress^2.0", "name^1.5", "district")
                         )
                 )
                 .build();
 
+        // 2. 검색 실행
         SearchHits<StoreDocument> hits = operations.search(searchQuery, StoreDocument.class);
 
+        // 3. 결과 반환 (복잡한 매핑 로직 없이 원본 데이터만 쏙 꺼냄)
         return hits.stream()
                 .map(SearchHit::getContent)
                 .collect(Collectors.toList());

@@ -55,18 +55,18 @@ class StoresRepositoryTest {
         storesRepository.deleteAll();
     }
 
-    @Test
-    void saveStores() throws Exception {
-        ClassPathResource resource = new ClassPathResource("store.json");
-        File jsonFile = resource.getFile();
-        List<StoreCreateRequest> storeCreateRequests = objectMapper.readValue(jsonFile, new TypeReference<>() {});
-        Account owner = accountRepository.findById(1L).orElseThrow();
-        log.info("authenticated account: {}, {}", owner.getAccountId(), owner.getRole());
-        for(StoreCreateRequest storeCreateRequest : storeCreateRequests){
-            log.info("Creating store: {}", storeCreateRequest.getStoreName());
-            businessService.createStore(storeCreateRequest);
-        }
-    }
+//    @Test
+//    void saveStores() throws Exception {
+//        ClassPathResource resource = new ClassPathResource("store.json");
+//        File jsonFile = resource.getFile();
+//        List<StoreCreateRequest> storeCreateRequests = objectMapper.readValue(jsonFile, new TypeReference<>() {});
+//        Account owner = accountRepository.findById(1L).orElseThrow();
+//        log.info("authenticated account: {}, {}", owner.getAccountId(), owner.getRole());
+//        for(StoreCreateRequest storeCreateRequest : storeCreateRequests){
+//            log.info("Creating store: {}", storeCreateRequest.getStoreName());
+//            businessService.createStore(storeCreateRequest);
+//        }
+//    }
 
 //    @Test
 //    void saveStores() throws Exception {

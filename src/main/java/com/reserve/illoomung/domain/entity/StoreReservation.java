@@ -54,6 +54,7 @@ public class StoreReservation extends BaseTimeEntity { // 3번 파일(BaseTimeEn
     // 예약 상태
     @Enumerated(EnumType.STRING) // Enum 이름을 문자열로 저장 (e.g., "PENDING")
     @Column(name = "status", nullable = false, length = 20) // ENUM 값 길이에 맞춰 조절
+    @Builder.Default
     private ReservationStatus status = ReservationStatus.PENDING; // Java단에서 기본값 설정
 
 

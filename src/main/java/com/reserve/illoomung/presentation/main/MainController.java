@@ -9,6 +9,7 @@ import com.reserve.illoomung.dto.main.MainPageResponse;
 import com.reserve.illoomung.dto.main.SearchResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
