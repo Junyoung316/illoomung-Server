@@ -75,6 +75,7 @@ public class SecurityConfig {
             .logout(AbstractHttpConfigurer::disable)
             .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/images/**", "/static/favicon.ico").permitAll()
                 .requestMatchers(
                     "/public/**",
                     "/login/**",

@@ -11,6 +11,10 @@ server:
 spring:
   application:
     name: illoomung
+  servlet:
+      multipart:
+        max-file-size: 15MB
+#        max-request-size: 10MB # 최대 요청 크기
   jackson:
     time-zone: Asia/Seoul
   devtools:
@@ -56,6 +60,10 @@ spring:
           endpoints: localhost:9200
         username: ""
         password: ""
+
+file:
+  img:
+    dir: "/Users/junyoung/Documents/spring/illoomung/src/main/resources/images/"
 
 kakao:
 #  client_id: 7c730a5d5926a51e975002be3f953b8d

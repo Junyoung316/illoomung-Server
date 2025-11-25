@@ -1,3 +1,71 @@
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-25T185104.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-25T180940.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-25T180924.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-25T174951.200.json
+
+###
+
 GET http://localhost:8000/public/search?query=마산
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
@@ -503,42 +571,6 @@ Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 <> 2025-11-24T142756.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=경기
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T142753.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=한강
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T142747.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=사우동
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T142738.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=사우
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T142735.200.json
 
 ###
 
