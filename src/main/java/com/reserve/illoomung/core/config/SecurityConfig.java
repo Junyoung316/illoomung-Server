@@ -1,5 +1,6 @@
 package com.reserve.illoomung.core.config;
 
+import com.reserve.illoomung.core.filter.CustomLoggingFilter;
 import com.reserve.illoomung.core.filter.JwtAuthenticationFilter;
 import com.reserve.illoomung.core.util.jwt.application.JwtService;
 import org.springframework.beans.factory.annotation.Value;
@@ -74,8 +75,9 @@ public class SecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .logout(AbstractHttpConfigurer::disable)
             .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+            .addFilterAfter(new CustomLoggingFilter(), UsernamePasswordAuthenticationFilter.class)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/images/**", "/static/favicon.ico").permitAll()
+                .requestMatchers("/images/**", "/favicon.ico").permitAll()
                 .requestMatchers(
                     "/public/**",
                     "/login/**",
