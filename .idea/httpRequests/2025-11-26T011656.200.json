@@ -1,0 +1,314 @@
+[
+  {
+    "id": 18,
+    "name": "깜장콩 애견유치원 &미용&호텔&카페",
+    "fullAddress": "경기 김포시 양촌읍 구래리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 구래리",
+    "addr": "경기 김포시 양촌읍 대곶남로 711",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240409_64%2F1712635337200pLpdm_JPEG%2F062408CC-86A2-49A2-A609-5CEE12B79D1D.jpeg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "07:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "07:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "07:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "07:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "본펫 플래닛",
+    "fullAddress": "경기 김포시 양촌읍 양곡리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 양곡리",
+    "addr": "경기 김포시 양촌읍 양곡1로38번길 3",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_240%2F1753430368059aqoee_JPEG%2FKakaoTalk_20250725_165912886.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "예약",
+      "방문접수/출장"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "하룻강아지",
+    "fullAddress": "경기 김포시 양촌읍 누산리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 누산리",
+    "addr": "경기 김포시 양촌읍 김포대로 1765",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200622_24%2F15928316943109Ab3I_JPEG%2F8eQRzZ5Q9Ix9vBzBTUntu0BJ.jpg",
+    "operatingHours": [],
+    "openNow": false,
+    "amenities": []
+  },
+  {
+    "id": 71,
+    "name": "그루밍 시옷",
+    "fullAddress": "경기 김포시 양촌읍 석모리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 석모리",
+    "addr": "경기 김포시 양촌읍 석모로95번길 46-18",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220903_24%2F1662208566571EaOTd_JPEG%2F610ACA82-9EBD-49E7-9E57-15322838459A.jpeg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "주차",
+      "반려동물 동반",
+      "예약"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "댕댕이머리하는날",
+    "fullAddress": "경기 김포시 양촌읍 양곡리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 양곡리",
+    "addr": "경기 김포시 양촌읍 양곡3로 153",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240226_55%2F1708903039350FJR47_JPEG%2F1000025516.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "09:30",
+        "closeTime": "18:30",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "09:30",
+        "closeTime": "18:30",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "09:30",
+        "closeTime": "18:30",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "09:30",
+        "closeTime": "18:30",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "09:30",
+        "closeTime": "18:30",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "예약",
+      "반려동물 동반"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "까꾸까",
+    "fullAddress": "경기 김포시 양촌읍 양곡리",
+    "province": "경기",
+    "city": "김포시",
+    "district": "양촌읍 양곡리",
+    "addr": "경기 김포시 양촌읍 양곡로 494-21",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210907_148%2F1631016287774eMlOC_JPEG%2F1DRQfmJNs788bV0AQI9Aw-OU.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "주차",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분"
+    ]
+  }
+]

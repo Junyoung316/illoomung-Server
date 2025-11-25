@@ -6,6 +6,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
@@ -99,6 +100,7 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     private void saveStore(Account account, MultipartFile file, StoreCreateRequest storeCreateRequest, CryptoResult phoneCrypto, CryptoResult addressCrypto, CryptoResult addressDetailsCrypto, String depth1, String depth2, String depth3, String bCode) throws IOException {
+        // TODO: 임시 가게 승인 -> Status 변경 로직 추가
         Stores store = Stores.builder()
                 .owner(account)
                 .storeName(storeCreateRequest.getStoreName())
@@ -114,6 +116,7 @@ public class BusinessServiceImpl implements BusinessService {
                 .bcode(bCode)
                 .websiteUrl(storeCreateRequest.getHomepageUrl())
                 .instagramUrl(storeCreateRequest.getInstagramUrl())
+                .status(StoreStatus.ACTIVE)
                 .build();
         Stores saveStore = storesRepository.save(store);
 

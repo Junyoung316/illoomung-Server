@@ -1,0 +1,181 @@
+[
+  {
+    "id": 10,
+    "name": "멍글하우스",
+    "fullAddress": "경기 김포시 사우동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "사우동",
+    "addr": "경기 김포시 풍년로 53",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250517_68%2F1747473138060pWhJT_JPEG%2FFacetune_09-05-2025-12-49-00.jpeg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "주차"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "김포에이스애견미용학원",
+    "fullAddress": "경기 김포시 사우동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "사우동",
+    "addr": "경기 김포시 봉화로 9-23",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250401_124%2F1743485854208gakRp_JPEG%2F%25BF%25A1%25C0%25CC%25BD%25BA%25BE%25D6%25B0%25DF%25B9%25CC%25BF%25EB%25C7%25D0%25BF%25F8_%25B1%25E8%25C6%25F7%25C1%25A1.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "반려동물 동반",
+      "예약",
+      "남/녀 화장실 구분"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "빛날시간",
+    "fullAddress": "경기 김포시 사우동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "사우동",
+    "addr": "경기 김포시 사우중로74번길 7",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240224_11%2F1708775161156bMNlx_PNG%2FIMG_8305.png",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "09:30",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "반려동물 동반",
+      "무선 인터넷",
+      "예약",
+      "남/녀 화장실 구분"
+    ]
+  }
+]

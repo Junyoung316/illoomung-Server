@@ -115,15 +115,46 @@ public class StoreSearchServiceImpl implements StoreSearchService {
     }
 
     // 영업 여부 계산 로직 (Private Helper)
-    private boolean calculateIsOpen(List<StoreDocument.OperatingHourDto> hours, int today, LocalTime nowTime) {
-        if (hours == null || hours.isEmpty()) return false;
+    private boolean calculateIsOpen(List<StoreDocument.OperatingHourDto> hours, int currentDay, LocalTime currentTime) {
+        // 1. 데이터가 없으면 영업 안 함
+        if (hours == null || hours.isEmpty()) {
+            return false;
+        }
 
         return hours.stream()
-                .filter(h -> h.getDayOfWeek() == today)
+                // 현재 요일(1:월 ~ 7:일)에 맞는 데이터 찾기
+                .filter(h -> h.getDayOfWeek() == currentDay)
                 .findFirst()
-                .map(h -> !h.isHoliday() &&
-                        nowTime.isAfter(LocalTime.parse(h.getOpenTime())) &&
-                        nowTime.isBefore(LocalTime.parse(h.getCloseTime())))
+                .map(h -> {
+                    // [방어 로직 1] 휴무일이면 false
+                    if (h.isHoliday()) {
+                        return false;
+                    }
+
+                    // [방어 로직 2 - NPE 해결 핵심] 시간이 null이면 계산 불가능하므로 false 처리
+                    if (h.getOpenTime() == null || h.getCloseTime() == null) {
+                        return false;
+                    }
+
+                    try {
+                        // 시간 파싱 (HH:mm 형식이 맞다고 가정)
+                        LocalTime open = LocalTime.parse(h.getOpenTime());
+                        LocalTime close = LocalTime.parse(h.getCloseTime());
+
+                        // [추가 로직] 새벽 영업(예: 18:00 ~ 02:00) 고려
+                        if (close.isBefore(open)) {
+                            // 자정을 넘긴 경우: (현재 >= 오픈) OR (현재 <= 마감)
+                            return !currentTime.isBefore(open) || !currentTime.isAfter(close);
+                        } else {
+                            // 일반 영업(예: 09:00 ~ 18:00): 오픈 <= 현재 <= 마감
+                            return !currentTime.isBefore(open) && !currentTime.isAfter(close);
+                        }
+                    } catch (Exception e) {
+                        // 시간 형식이 이상하면 영업 안 함으로 처리 (로그 남기면 좋음)
+                        return false;
+                    }
+                })
+                // 데이터가 없으면 영업 안 함
                 .orElse(false);
     }
 

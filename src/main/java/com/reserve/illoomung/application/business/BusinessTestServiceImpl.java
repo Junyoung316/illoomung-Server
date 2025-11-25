@@ -6,6 +6,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import com.reserve.illoomung.dto.business.TestStoreCreateRequest;
 import org.springframework.context.annotation.Lazy;
@@ -82,6 +83,7 @@ public class BusinessTestServiceImpl implements BusinessTestService {
                 .bcode(bCode)
                 .websiteUrl(storeCreateRequest.getHomepageUrl())
                 .instagramUrl(storeCreateRequest.getInstagramUrl())
+                .status(StoreStatus.ACTIVE) // 테스트 환경에서만 사용
                 .build();
         Stores saveStore = storesRepository.save(store);
 

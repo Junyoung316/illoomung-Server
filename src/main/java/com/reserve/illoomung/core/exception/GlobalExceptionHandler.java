@@ -16,6 +16,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<MainResponse<Void>> handleAllExceptions(Exception ex) {
         log.error("서버 오류 발생: {}", ex.getMessage(), ex.getCause());
+        log.error("--- 서버 오류 로그", ex);
         MainResponse<Void> errorResponse = MainResponse.error(
             HttpStatus.INTERNAL_SERVER_ERROR.value(),
             "서버 오류: " + ex.getMessage()
