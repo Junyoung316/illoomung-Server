@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "부부펫살롱",
+    "fullAddress": "경기 김포시 풍무동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "풍무동",
+    "addr": "경기 김포시 풍무로 166",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_58%2F1721646000372Ud2lm_JPEG%2F1000143272.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": []
+  }
+]

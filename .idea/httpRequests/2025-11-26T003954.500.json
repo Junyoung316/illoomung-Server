@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.reserve.illoomung.core.dto.MainResponse<java.lang.String>> com.reserve.illoomung.presentation.auth.register.RegisterController.userRegister(com.reserve.illoomung.dto.request.auth.LocalRegisterRequest): [Field error in object 'localRegisterRequest' on field 'phone': rejected value [010-1234-1234]; codes [Pattern.localRegisterRequest.phone,Pattern.phone,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [localRegisterRequest.phone,phone]; arguments []; default message [phone],[Ljakarta.validation.constraints.Pattern$Flag;@550c35ff,^01(?:0|1|[6-9])(?:\\d{3}|\\d{4})\\d{4}$]; default message [휴대폰 번호 형식이 올바르지 않습니다. (예: 01012345678)]] "
+}
