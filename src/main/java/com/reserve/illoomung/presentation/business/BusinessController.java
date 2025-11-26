@@ -31,18 +31,18 @@ public class BusinessController {
         return ResponseEntity.ok(MainResponse.created());
     }
 
-    @PostMapping(
-            name = "/create",
-            consumes = MediaType.MULTIPART_FORM_DATA_VALUE
-    )
+    @PostMapping("/create")
     public ResponseEntity<MainResponse<String>> createStore(@RequestPart(value = "file", required = false) MultipartFile file, @RequestPart(value = "request") StoreCreateRequest storeCreateRequest) throws IOException {
         log.info("Creating store {}", storeCreateRequest);
         businessService.createStore(storeCreateRequest, file);
         return ResponseEntity.ok(MainResponse.created());
     }
 
-    // 전체 조회 및 수정
-
-//    @PostMapping
-//    public ResponseEntity<MainResponse<String>> update
+    // TODO 전체 조회 및 수정
+    @PostMapping("/{storeId}/patch")
+    public ResponseEntity<MainResponse<String>> updateStore(@PathVariable("storeId") Long id, @RequestPart(value = "file", required = false) MultipartFile file, @RequestPart(value = "request") StoreCreateRequest storeCreateRequest) throws IOException {
+        log.info("Updating store {}", storeCreateRequest);
+        businessService.updateStore(id, storeCreateRequest, file);
+        return ResponseEntity.ok(MainResponse.created());
+    }
 }

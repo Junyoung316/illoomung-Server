@@ -7,4 +7,5 @@ import java.io.IOException;
 
 public interface BusinessService {
     void createStore(StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException;
+    void updateStore(Long id, StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException;
 }

@@ -322,4 +322,9 @@ public class BusinessServiceImpl implements BusinessService {
             default -> throw new IllegalArgumentException("Invalid day key: " + dayKey);
         };
     }
+
+    @Override
+    public void updateStore (Long id, StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException {
+
+    }
 }

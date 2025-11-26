@@ -1,0 +1,635 @@
+[
+  {
+    "id": 25,
+    "categories": null,
+    "name": "카페몽몽",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강9로75번길 102",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190320_127%2F15530613685991JjzH_PNG%2FSGQwptsbrFJMnRpl_qLC4SMx.png",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "12:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "12:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "12:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "12:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "12:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "22:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "주차",
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "단체 이용 가능",
+      "예약"
+    ]
+  },
+  {
+    "id": 85,
+    "categories": null,
+    "name": "펫엔조이 애견미용 구래점",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 솔터로 22",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220712_48%2F1657596436579YRRGf_JPEG%2F500pxdownload.com-206618921.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "00:00",
+        "closeTime": "00:05",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "주차"
+    ]
+  },
+  {
+    "id": 7,
+    "categories": null,
+    "name": "카페소풍 애견유치원&애견호텔&애견돌봄",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강9로75번길 98",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250827_293%2F1756256944356dSrSL_JPEG%2F1756198102978.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "12:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "08:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "08:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "08:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "08:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "08:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "12:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "단체 이용 가능",
+      "예약",
+      "반려동물 동반",
+      "노키즈존",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "간편결제",
+      "주차"
+    ]
+  },
+  {
+    "id": 8,
+    "categories": null,
+    "name": "댕데이지",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 솔터로 22",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250824_175%2F1756035262883NAwpg_JPEG%2FDF4A1EE6-57BB-4F5D-A987-38CC4F313A6C.jpeg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "09:00",
+        "closeTime": "22:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "18:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "09:00",
+        "closeTime": "22:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ]
+  },
+  {
+    "id": 23,
+    "categories": null,
+    "name": "프리티 멍",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강4로420번길 98",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221104_57%2F1667536880637pe8HN_JPEG%2F7578ADA4-534C-4532-A53A-EF6C8063B61F.jpeg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "09:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "주차"
+    ]
+  },
+  {
+    "id": 27,
+    "categories": null,
+    "name": "써니펫살롱",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강8로 396",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210322_257%2F1616366398046vPP80_JPEG%2FM2InHxgxLYqdNJLDVC-esJmP.jpeg.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "반려동물 동반",
+      "주차"
+    ]
+  },
+  {
+    "id": 34,
+    "categories": null,
+    "name": "윌리독 펫 살롱",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강10로133번길 142",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250820_21%2F1755634807736xw0ky_PNG%2FIMG_8986.png",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "무선 인터넷",
+      "남/녀 화장실 구분",
+      "노키즈존",
+      "주차"
+    ]
+  },
+  {
+    "id": 28,
+    "categories": null,
+    "name": "예쁘댕",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 솔터로 22",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250515_251%2F1747274296519hYGQq_PNG%2F1731841304049.png",
+    "operatingHours": [
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": true,
+    "amenities": [
+      "무선 인터넷",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "예약",
+      "주차"
+    ]
+  },
+  {
+    "id": 54,
+    "categories": null,
+    "name": "올케어댕 구래동 애견유치원 & 애견호텔 & 애견미용",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강4로 531",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250902_244%2F1756775549824nBVsA_JPEG%2F1000002653.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "00:00",
+        "closeTime": "00:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "예약",
+      "간편결제",
+      "주차"
+    ]
+  },
+  {
+    "id": 55,
+    "categories": null,
+    "name": "그루밍몽몽_애견미용",
+    "fullAddress": "경기 김포시 구래동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "구래동",
+    "addr": "경기 김포시 김포한강9로75번길 102",
+    "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221008_207%2F1665238437104T65Cw_PNG%2F%25B1%25D7%25B7%25E7%25B9%25D6%25B8%25F9%25B8%25F9.png",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": null,
+        "closeTime": null,
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "무선 인터넷",
+      "대기공간",
+      "주차"
+    ]
+  }
+]
