@@ -1,5 +1,7 @@
 package com.reserve.illoomung.application.es;
 
+import co.elastic.clients.elasticsearch._types.query_dsl.Operator;
+import co.elastic.clients.elasticsearch._types.query_dsl.TextQueryType;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.entity.StoreImage;
 import com.reserve.illoomung.domain.entity.Stores;
@@ -23,6 +25,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static co.elastic.clients.elasticsearch._types.query_dsl.QueryBuilders.simpleQueryString;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -36,7 +40,7 @@ public class StoreSearchServiceImpl implements StoreSearchService {
     private StoreSearchService self;
 
     @Override
-    public void syncStore(Stores store, StoreImage storeImage, List<StoreDocument.OperatingHourDto> hour, List<String> amenities) {
+    public void syncStore(Stores store, List<String> categoryName, StoreImage storeImage, List<StoreDocument.OperatingHourDto> hour, List<String> amenities) {
         try {
             // 1. 검색을 위한 주소 통합 (Nori 분석용)
             String fullAddress = Stream.of(store.getAddrDepth1(), store.getAddrDepth2(), store.getAddrDepth3())
@@ -46,7 +50,8 @@ public class StoreSearchServiceImpl implements StoreSearchService {
             // 2. MySQL 데이터 -> ES 도큐먼트 변환
             // (검색에 필요한 필드만 쏙쏙 뽑아서 넣습니다)
             StoreDocument document = StoreDocument.builder()
-                    .id(store.getStoreId())           // MySQL PK와 동일하게 맞춤
+                    .id(store.getStoreId())
+                    .categories(categoryName.stream().toList())// MySQL PK와 동일하게 맞춤
                     .name(store.getStoreName())
                     .province(store.getAddrDepth1())
                     .city(store.getAddrDepth2())
@@ -77,7 +82,7 @@ public class StoreSearchServiceImpl implements StoreSearchService {
         List<StoreDocument> docs = self.searchFromIndex(query);
         // 2. 현재 시간 기준 영업 여부 계산 (Post-Processing)
         LocalDateTime now = LocalDateTime.now();
-        int currentDay = now.getDayOfWeek().getValue(); // 1(월) ~ 7(일)
+        int currentDay = now.getDayOfWeek().getValue(); // 0(일) ~ 6(토)
         LocalTime currentTime = now.toLocalTime();
 
         // 3. 결과 리스트를 순회하며 상태 업데이트
@@ -97,10 +102,12 @@ public class StoreSearchServiceImpl implements StoreSearchService {
         // 1. 쿼리 생성 (하이라이트 요청 부분 삭제됨)
         NativeQuery searchQuery = NativeQuery.builder()
                 .withQuery(q -> q
-                        .multiMatch(m -> m
-                                .query(query)
-                                // 가중치는 유지 (검색 정확도를 위해)
-                                .fields("fullAddress^2.0", "name^1.5", "district")
+                        .simpleQueryString(sq -> sq
+                                .query(query) // "사우 카페"
+                                // [핵심 1] 모든 필드 나열 (가중치 적용 가능)
+                                .fields("fullAddress^2.0", "name^1.5", "categories^1.5", "district", "amenities^1.2")
+                                // [핵심 2] 띄어쓰기로 구분된 단어들이 "모두" 있어야 함 (AND 조건)
+                                .defaultOperator(Operator.And)
                         )
                 )
                 .build();

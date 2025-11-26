@@ -23,6 +23,9 @@ public class StoreDocument implements Serializable {
     @Id
     private Long id;
 
+    @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
+    private List<String> categories;
+
     // [수정 1] 분석기 이름을 JSON 설정과 정확히 일치시킴
     @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
     private String name;
@@ -51,7 +54,7 @@ public class StoreDocument implements Serializable {
     @Field(type = FieldType.Boolean)
     private boolean openNow;
 
-    @Field(type = FieldType.Keyword)
+    @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
     private List<String> amenities;
 
     @Data

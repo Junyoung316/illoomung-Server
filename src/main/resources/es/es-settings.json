@@ -19,7 +19,6 @@
       "my_address_synonym": {
         "type": "synonym_graph",
         "synonyms": [
-          "경기, 경기도",
           "구래, 구래리, 구래동",
           "마산, 마산리, 마산동",
           "양촌, 양촌읍, 양촌면"
@@ -48,8 +47,8 @@
         "filter": [
           "lowercase",
           "nori_readingform",
-          "my_address_synonym",
-          "my_pos_filter"
+          "my_pos_filter",
+          "my_address_synonym"
         ]
       }
     }

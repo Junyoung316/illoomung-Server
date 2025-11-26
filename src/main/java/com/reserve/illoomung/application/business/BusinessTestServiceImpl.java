@@ -144,7 +144,7 @@ public class BusinessTestServiceImpl implements BusinessTestService {
         // 2-4. 생성된 매핑 정보들을 한번에 저장
         storeCategoryMappingRepository.saveAll(mappings);
 
-        storeSearchService.syncStore(store, saveStoreImage, esHoursList, amenityNames);
+        storeSearchService.syncStore(store, categoryName, saveStoreImage, esHoursList, amenityNames);
 
     }
 

@@ -7,6 +7,7 @@ import com.reserve.illoomung.dto.business.StoreCreateRequest;
 import com.reserve.illoomung.dto.business.TestStoreCreateRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -30,7 +31,10 @@ public class BusinessController {
         return ResponseEntity.ok(MainResponse.created());
     }
 
-    @PostMapping("/create")
+    @PostMapping(
+            name = "/create",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+    )
     public ResponseEntity<MainResponse<String>> createStore(@RequestPart(value = "file", required = false) MultipartFile file, @RequestPart(value = "request") StoreCreateRequest storeCreateRequest) throws IOException {
         log.info("Creating store {}", storeCreateRequest);
         businessService.createStore(storeCreateRequest, file);

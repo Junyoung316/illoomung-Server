@@ -3,6 +3,11 @@
     "id": {
       "type": "long"
     },
+    "categories": {
+      "type": "text",
+      "analyzer": "korean_index_analyzer",
+      "search_analyzer": "korean_search_analyzer"
+    },
     "name": {
       "type": "text",
       "analyzer": "korean_index_analyzer",
@@ -36,7 +41,7 @@
       "type": "boolean"
     },
     "amenities": {
-      "type": "keyword"
+      "type": "text"
     },
     "operatingHours": {
       "type": "nested",

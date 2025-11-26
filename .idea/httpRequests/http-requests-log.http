@@ -1,533 +1,806 @@
+GET http://localhost:8000/public/search?query=사우동 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111639.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIyODM2LCJleHAiOjE3NjQxMjQ2MzZ9.MQGn-k_DR3GdrXdT6LDbpHI0bxzUe_0f4SBZn3UerT0
+Content-Length: 671
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T111620.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T111530.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T111522.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111101.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111009.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111007.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIyODM2LCJleHAiOjE3NjQxMjQ2MzZ9.MQGn-k_DR3GdrXdT6LDbpHI0bxzUe_0f4SBZn3UerT0
+Content-Length: 671
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T111001.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110853.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T110716.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T110709.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110258.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110255.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110120.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110117.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110114.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110051.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T105924.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T105909.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T105807.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T105759.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T105758.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T104444.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 671
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104416.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 667
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104242.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 666
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104237.500.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 668
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": null,
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104222.500.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Content-Length: 668
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": null,
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104203.401.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103228.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103149.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103139.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T102941.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T102929.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102645.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102617.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양곡카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102559.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양곡 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102530.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T102352.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T102339.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양곡 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102102.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=양촌 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T102022.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T101942.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T101808.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T101751.200.json
+
+###
+
+POST http://localhost:8000/login/local
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234"
+}
+
+<> 2025-11-26T101422.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T101353.200.json
+
+###
+
 GET http://localhost:8000/public/search?query=미용
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-26T012003.200.json
+<> 2025-11-26T094634.200.json
 
 ###
 
-GET http://localhost:8000/public/search?query=양촌면
+GET http://localhost:8000/public/search?query=예약
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-26T011705.200.json
+<> 2025-11-26T094423.200.json
 
 ###
 
-GET http://localhost:8000/public/search?query=양촌읍
+GET http://localhost:8000/public/search?query=미용
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-26T011702.200.json
+<> 2025-11-26T094415.200.json
 
 ###
 
-GET http://localhost:8000/public/search?query=양촌음
+GET http://localhost:8000/public/search?query=예약
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-26T011659.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011656.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래리
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011650.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래동
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011646.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011640.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011441.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011435.401.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T011036.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T010501.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=경기도
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T010142.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=인천광역시
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T010128.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=경기도
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T010115.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=부부
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T010028.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=인천
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005716.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005704.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=경기
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005657.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=서구
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005546.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래동
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005348.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005342.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=김포
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005251.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MDg1MjU2LCJleHAiOjE3NjQwODcwNTZ9.kNA1iYJGM7_ZsPCn9xWMKDp2VBRgdLOX9Qd3zbWPIBE
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005222.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌면
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005025.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌리
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005012.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌읍
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005009.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005005.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=마산리
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T005000.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=마산동
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004957.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=마산
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004953.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래동
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004949.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래리
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004946.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004943.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=사우
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T004939.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-26T004057.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-26T004010.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 157
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "010-1234-1234"
-}
-
-<> 2025-11-26T003954.500.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-26T000438.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-25T185104.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-25T180940.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-25T180924.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-25T174951.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=마산
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T160131.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155846.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌면
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155842.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌면
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155822.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌읍
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155819.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155815.500.json
-
-###
-
-GET http://localhost:8000/public/search?query=마산리
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-24T155808.200.json
+<> 2025-11-26T094346.200.json
 
 ###
 
