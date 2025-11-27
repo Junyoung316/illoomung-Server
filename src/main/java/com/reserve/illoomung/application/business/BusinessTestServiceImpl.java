@@ -6,6 +6,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import com.reserve.illoomung.dto.business.TestStoreCreateRequest;
@@ -36,6 +37,7 @@ public class BusinessTestServiceImpl implements BusinessTestService {
 
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
+    private final AutocompleteService autocompleteService;
 
     @Lazy
     private final StoreSearchService storeSearchService; // es 서비스 클래스
@@ -86,6 +88,8 @@ public class BusinessTestServiceImpl implements BusinessTestService {
                 .status(StoreStatus.ACTIVE) // 테스트 환경에서만 사용
                 .build();
         Stores saveStore = storesRepository.save(store);
+
+        autocompleteService.addStoreKeyword(saveStore);
 
         StoreImage storeImage = new StoreImage();
         if (storeCreateRequest.getMainImageUrl() != null && !storeCreateRequest.getMainImageUrl().isEmpty()) {

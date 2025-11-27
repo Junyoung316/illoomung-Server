@@ -2,6 +2,7 @@ package com.reserve.illoomung.application.main;
 
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.entity.*;
+import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.repository.*;
 import com.reserve.illoomung.dto.main.MainPageResponse;
 import com.reserve.illoomung.dto.main.SearchResponse;
@@ -11,10 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -26,32 +24,27 @@ public class MainServiceImpl implements MainService {
     private final SecurityUtil securityUtil;
 
     /**
-     * TODO: 실무 환경에서는 변경
-     * 중복 없는 랜덤 숫자 리스트를 생성합니다.
+     * Long 타입 리스트에서 지정된 개수(count)만큼 랜덤하게 값을 뽑습니다.
      *
-     * @param count     생성할 숫자 개수
-     * @param minBound  최소값 (포함)
-     * @param maxBound  최대값 (미포함)
-     * @return 중복 없는 랜덤 숫자 리스트
-     * @throws IllegalArgumentException 범위를 초과하는 개수를 요청한 경우
+     * @param numberList Long 숫자가 들어있는 원본 리스트 (예: 가게 ID 리스트)
+     * @param count      뽑을 개수
+     * @return 랜덤하게 뽑힌 Long 리스트
      */
-    public List<Integer> generateUniqueRandomNumbers(int count, int minBound, int maxBound) {
+    public List<Long> pickRandomNumbersFromList(List<Long> numberList, int count) {
 
-        long availableRange = (long) maxBound - minBound;
-
-        // 💡 1. 예외 발생 로직
-        // 생성 가능한 범위보다 많은 숫자를 요청했는지 확인합니다.
-        if (availableRange < count) {
+        // 1. 예외 처리: 뽑을 개수가 리스트 전체 크기보다 클 수 없음
+        if (numberList.size() < count) {
             throw new IllegalArgumentException(
-                    "생성 가능한 범위(" + availableRange + "개)보다 많은 개수(" + count + "개)를 요청했습니다."
+                    "리스트의 크기(" + numberList.size() + "개)보다 많은 개수(" + count + "개)를 요청했습니다."
             );
         }
 
-        // 💡 2. 랜덤 생성 로직 (Stream 사용)
-        return random.ints(minBound, maxBound)
-                .distinct()    // 중복 제거
-                .limit(count)  // 요청한 개수만큼 자르기
-                .boxed()
+        // 2. 랜덤 추출 로직
+        // random.ints는 '인덱스(0, 1, 2...)'를 생성하므로 그대로 int를 사용합니다.
+        return random.ints(0, numberList.size()) // 0 ~ (리스트크기-1) 사이의 인덱스 생성
+                .distinct()                      // 중복 인덱스 제거
+                .limit(count)                    // 개수 제한
+                .mapToObj(numberList::get)       // 인덱스(int)로 리스트의 값(Long)을 가져옴
                 .collect(Collectors.toList());
     }
 
@@ -65,10 +58,15 @@ public class MainServiceImpl implements MainService {
     @Transactional(readOnly = true)
     public List<MainPageResponse> mainInit() {
 
+        List<Stores> activeStores = storesRepository.findByStatus(StoreStatus.ACTIVE).orElseThrow(() -> new RuntimeException("데이터를 찾을 수 없습니다."));
+        List<Long> storeIds = new ArrayList<>();
+        for  (Stores store : activeStores) {
+            storeIds.add(store.getStoreId());
+        }
         // TODO: 실무 환경에서는 추천 시스템으로 변경
-        List<Integer> test = generateUniqueRandomNumbers(7, 1, 50);
-        List<Long> testList = test.stream().map(Integer::longValue).toList();
-        List<Stores> storeList = storesRepository.findAllById(testList);
+        List<Long> test = pickRandomNumbersFromList(storeIds, 7);
+//        List<Long> testList = test.stream().map(Integer::longValue).toList();
+        List<Stores> storeList = storesRepository.findAllById(test);
         List<Long> foundId = storeList.stream().map(Stores::getStoreId).toList();
         log.info("list: {}", foundId);
 

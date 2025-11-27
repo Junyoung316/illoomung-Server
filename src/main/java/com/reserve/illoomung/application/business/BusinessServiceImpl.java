@@ -6,6 +6,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,6 +45,7 @@ public class BusinessServiceImpl implements BusinessService {
 
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
+    private final AutocompleteService autocompleteService;
 
     @Lazy
     private final StoreSearchService storeSearchService; // es 서비스 클래스
@@ -119,6 +121,8 @@ public class BusinessServiceImpl implements BusinessService {
                 .status(StoreStatus.ACTIVE)
                 .build();
         Stores saveStore = storesRepository.save(store);
+
+        autocompleteService.addStoreKeyword(saveStore);
 
         String imgdirUrl = serverSaveStoreImage(file, store.getStoreId());
         log.info("imgdirUrl: {}", imgdirUrl);

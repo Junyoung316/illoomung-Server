@@ -1,24 +1,35 @@
 package com.reserve.illoomung.core.util.autocomplete.application;
 
+import com.reserve.illoomung.domain.entity.Amenity;
+import com.reserve.illoomung.domain.entity.StoreCategory;
+import com.reserve.illoomung.domain.entity.Stores;
+import com.reserve.illoomung.domain.repository.AmenityRepository;
+import com.reserve.illoomung.domain.repository.StoreCategoryRepository;
 import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
 import com.reserve.illoomung.domain.repository.StoresRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.RedisZSetCommands;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 
 import java.util.*;
+import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AutocompleteService {
 
     private final StringRedisTemplate redisTemplate;
-    private final StoresRepository storesRepository;
+    private final StoreCategoryRepository storeCategoryRepository; // 스토어 카테고리
+    private final StoresRepository storesRepository; // 스토어 기본 정보 (업체명, 주소)
+    private final AmenityRepository amenityRepository; // 편의시설
 
     private static final String KEYWORD_KEY = "autocomplete:keywords";
     private static final int MAX_SUGGESTIONS = 10;
@@ -35,20 +46,45 @@ public class AutocompleteService {
     // 초기 데이터 Redis에 로드
     @PostConstruct
     public void loadInitialData() {
-        List<String> keywords = Arrays.asList(
-                "강아지 미용 전체",
-                "강아지 목욕 소형견",
-                "고양이 스케일링",
-                "고양이 목욕",
-                "강아지 호텔링 1박"
-        );
+
+        // 1. 카테고리 이름 수집
+        List<String> categoryNames = storeCategoryRepository.findAll().stream()
+                .map(StoreCategory::getCategoryName)
+                .toList();
+
+        // 2. 편의시설 이름 수집
+        List<String> amenityNames = amenityRepository.findAll().stream()
+                .map(Amenity::getAmenityName)
+                .toList();
+
+        // 3. 가게 이름 및 주소 수집 (버그 수정됨)
+        List<Stores> storeList = storesRepository.findAll();
+        List<String> storeNames = new ArrayList<>();
+        List<String> storeFullAddrs = new ArrayList<>();
+
+        for (Stores store : storeList) {
+            storeNames.add(store.getStoreName());
+
+            // [수정] String.join을 써서 깔끔하게 합치기 (버그 해결)
+            String fullAddr = String.join(" ", store.getAddrDepth1(), store.getAddrDepth2(), store.getAddrDepth3());
+            storeFullAddrs.add(fullAddr);
+        }
+
+        // 4. 리스트 합치기 (중복 제거를 위해 Set 사용 추천)
+        Set<String> uniqueKeywords = new HashSet<>();
+        uniqueKeywords.addAll(categoryNames);
+        uniqueKeywords.addAll(amenityNames);
+        uniqueKeywords.addAll(storeNames);
+        uniqueKeywords.addAll(storeFullAddrs);
+
+        // 최종 리스트 변환 (Redis 저장용)
+        List<String> keywords = new ArrayList<>(uniqueKeywords);
 
         ZSetOperations<String, String> zSetOps = redisTemplate.opsForZSet();
 
         keywords.forEach(keyword -> {
             if (zSetOps.score(KEYWORD_KEY, keyword) == null) {
                 zSetOps.add(KEYWORD_KEY, keyword.trim(), 0);
-
             }
         });
 
@@ -85,7 +121,24 @@ public class AutocompleteService {
                 .toList();
     }
 
+    @Async
+    public void addStoreKeyword(Stores store) {
+        indexKeyword(store.getStoreName());
+        String fullAddr = String.join(" ", store.getAddrDepth1(), store.getAddrDepth2(), store.getAddrDepth3());
+        indexKeyword(fullAddr);
+    }
 
+    public void indexKeyword(String keyword) {
+        if (keyword != null && !keyword.isBlank()) {
+            redisTemplate.opsForZSet().add(KEYWORD_KEY, keyword.trim(), 0);
+        }
+    }
+
+    public void removeKeyword(String keyword) { // 관리자용
+        if (keyword != null && !keyword.isBlank()) {
+            redisTemplate.opsForZSet().remove(KEYWORD_KEY, keyword.trim());
+        }
+    }
 
     // -----------------------------------------------
 
