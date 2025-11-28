@@ -1,10 +1,16 @@
 package com.reserve.illoomung.application.business;
 
+import com.reserve.illoomung.application.es.StoreSearchService;
 import com.reserve.illoomung.application.webClient.WebClientService;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.core.dto.CryptoResult;
 import com.reserve.illoomung.core.util.SecurityUtil;
+import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
+import com.reserve.illoomung.domain.entity.enums.StoreStatus;
+import com.reserve.illoomung.domain.entity.es.StoreDocument;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.Authentication;
 import com.reserve.illoomung.domain.entity.*;
 import com.reserve.illoomung.domain.entity.enums.ImageType;
@@ -17,12 +23,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -30,8 +40,15 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BusinessServiceImpl implements BusinessService {
 
+    @Value("${file.img.dir}")
+    private String fileDir;
+
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
+    private final AutocompleteService autocompleteService;
+
+    @Lazy
+    private final StoreSearchService storeSearchService; // es 서비스 클래스
 
     private final AccountRepository accountRepository; // 사용자 정보
 
@@ -60,7 +77,32 @@ public class BusinessServiceImpl implements BusinessService {
         return address.getAddress();
     }
 
-    private void saveStore(Account account, StoreCreateRequest storeCreateRequest, CryptoResult phoneCrypto, CryptoResult addressCrypto, CryptoResult addressDetailsCrypto, String depth1, String depth2, String depth3, String bCode) {
+    private String serverSaveStoreImage(MultipartFile file, Long userId) throws IOException {
+        // 파일의 원본 이름 (예: image.jpg)
+        String originalFilename = file.getOriginalFilename();
+
+        // 1. 확장자(extension) 추출 및 유효성 검사 (개선된 부분)
+        // 원본 파일 이름에서 마지막 '.' 이후의 문자열을 확장자로 가져옵니다.
+        String extension = "";
+        if (originalFilename != null && originalFilename.contains(".")) {
+            extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+        }
+
+        // 고유 파일 이름 생성: UUID와 확장자를 결합
+        String savedFileName = UUID.randomUUID().toString() + extension;
+
+        // 2. 저장할 파일 경로 생성
+        String fullPath = fileDir + savedFileName;
+
+        // 3. 로컬 디스크에 저장
+        file.transferTo(new File(fullPath));
+
+        // 4. DB에 URL 저장 (동일)
+        return "/images/" + savedFileName;
+    }
+
+    private void saveStore(Account account, MultipartFile file, StoreCreateRequest storeCreateRequest, CryptoResult phoneCrypto, CryptoResult addressCrypto, CryptoResult addressDetailsCrypto, String depth1, String depth2, String depth3, String bCode) throws IOException {
+        // TODO: 임시 가게 승인 -> Status 변경 로직 추가
         Stores store = Stores.builder()
                 .owner(account)
                 .storeName(storeCreateRequest.getStoreName())
@@ -76,24 +118,34 @@ public class BusinessServiceImpl implements BusinessService {
                 .bcode(bCode)
                 .websiteUrl(storeCreateRequest.getHomepageUrl())
                 .instagramUrl(storeCreateRequest.getInstagramUrl())
+                .status(StoreStatus.ACTIVE)
                 .build();
         Stores saveStore = storesRepository.save(store);
 
-        if (storeCreateRequest.getMainImageUrl() != null && !storeCreateRequest.getMainImageUrl().isEmpty()) {
-            StoreImage storeImage = StoreImage.builder()
+        autocompleteService.addStoreKeyword(saveStore);
+
+        String imgdirUrl = serverSaveStoreImage(file, store.getStoreId());
+        log.info("imgdirUrl: {}", imgdirUrl);
+
+        StoreImage storeImage = new StoreImage();
+        if (imgdirUrl != null && !imgdirUrl.isEmpty()) {
+            storeImage = StoreImage.builder()
                     .store(saveStore)
-                    .imageUrl(storeCreateRequest.getMainImageUrl())
+                    .imageUrl(imgdirUrl)
                     .imageType(ImageType.MAIN) // TODO: 실제 환경에서 변경
                     .altText("가게 사진")
                     .build();
-            storeImageRepository.save(storeImage);
         }
+        StoreImage saveStoreImage = storeImageRepository.save(storeImage);
 
         Map<String, OperatingInfo> openingHoursMap = storeCreateRequest.getOpeningHours();
+        List<StoreOperatingHours> hoursList = new ArrayList<>();
+        List<StoreDocument.OperatingHourDto> esHoursList = new ArrayList<>();
         if (openingHoursMap != null && !openingHoursMap.isEmpty()) {
-            List<StoreOperatingHours> hoursList = convertToOperationHours(saveStore, openingHoursMap);
-            storeOperatingHoursRepository.saveAll(hoursList);
+            hoursList = convertToOperationHours(saveStore, openingHoursMap);
+            esHoursList = esConvertToOperatingHour(openingHoursMap);
         }
+        storeOperatingHoursRepository.saveAll(hoursList);
 
         List<String> amenityNames = storeCreateRequest.getAmenities();
         if (amenityNames != null && !amenityNames.isEmpty()) {
@@ -131,11 +183,14 @@ public class BusinessServiceImpl implements BusinessService {
 
         // 2-4. 생성된 매핑 정보들을 한번에 저장
         storeCategoryMappingRepository.saveAll(mappings);
+
+        storeSearchService.syncStore(store, categoryName, saveStoreImage, esHoursList, amenityNames);
+
     }
 
     @Override
     @Transactional
-    public void createStore(StoreCreateRequest storeCreateRequest) {
+    public void createStore(StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         log.info("authenticated: {}", authentication);
         if(authentication != null && authentication.isAuthenticated()) {
@@ -153,14 +208,18 @@ public class BusinessServiceImpl implements BusinessService {
             String bCode = address.getBCode();
 
             CryptoResult phoneCrypto = securityUtil.cryptoResult(storeCreateRequest.getPhoneNumber());
+            log.info("phone crypto: {}", phoneCrypto);
+
             CryptoResult addressCrypto = securityUtil.cryptoResult(storeCreateRequest.getAddress());
+            log.info("address crypto: {}", addressCrypto);
+
             CryptoResult addressDetailsCrypto = securityUtil.cryptoResult(storeCreateRequest.getAddressDetails());
+            log.info("addressDetails crypto: {}", addressDetailsCrypto);
 
             if (checkNameAndAddressDuplicate(storeCreateRequest.getStoreName(), addressCrypto.hashedData(), addressDetailsCrypto.hashedData())) {
                 throw new IllegalStateException("이미 동일한 이름과 주소로 등록된 사업장이 존재합니다.");
             }
-
-            saveStore(account, storeCreateRequest, phoneCrypto, addressCrypto, addressDetailsCrypto, depth1, depth2, depth3, bCode);
+            saveStore(account, file, storeCreateRequest, phoneCrypto, addressCrypto, addressDetailsCrypto, depth1, depth2, depth3, bCode);
         }
     }
 
@@ -179,6 +238,26 @@ public class BusinessServiceImpl implements BusinessService {
             } else {
                 int dayOfWeek = convertDayKeyToDayOfWeek(dayKey);
                 hoursList.add(parseDayInfo(store, dayOfWeek, info, timeFormatter));
+            }
+        }
+        return hoursList;
+    }
+
+    private List<StoreDocument.OperatingHourDto> esConvertToOperatingHour(Map<String, OperatingInfo> openingHoursMap) {
+        List<StoreDocument.OperatingHourDto> hoursList = new ArrayList<>();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+
+        for (Map.Entry<String, OperatingInfo> entry : openingHoursMap.entrySet()) {
+            String dayKey = entry.getKey();
+            OperatingInfo info = entry.getValue();
+
+            if ("매일".equals(dayKey)) {
+                for (int i = 0; i <= 6; i++) {
+                    hoursList.add(esParseDayInfo(i, info, timeFormatter));
+                }
+            } else {
+                int dayOfWeek = convertDayKeyToDayOfWeek(dayKey);
+                hoursList.add(esParseDayInfo(dayOfWeek, info, timeFormatter));
             }
         }
         return hoursList;
@@ -217,6 +296,22 @@ public class BusinessServiceImpl implements BusinessService {
         return operationHours;
     }
 
+    private StoreDocument.OperatingHourDto esParseDayInfo(int dayOfWeek, OperatingInfo info, DateTimeFormatter formatter) {
+        StoreDocument.OperatingHourDto operationHours = new StoreDocument.OperatingHourDto();
+        operationHours.setDayOfWeek(dayOfWeek);
+
+        String time = info.getTime();
+        if (time == null || time.contains("휴무")) {
+        } else {
+            String[] times = time.split(" - ");
+            if (times.length == 2) {
+                operationHours.setOpenTime(LocalTime.parse(times[0], formatter).toString());
+                operationHours.setCloseTime(LocalTime.parse(times[1], formatter).toString());
+            }
+        }
+        return operationHours;
+    }
+
     private int convertDayKeyToDayOfWeek(String dayKey) {
         // 잘못된 요일 키가 들어올 경우 예외 발생
         return switch (dayKey) {
@@ -230,5 +325,10 @@ public class BusinessServiceImpl implements BusinessService {
             case "매일" -> 7;
             default -> throw new IllegalArgumentException("Invalid day key: " + dayKey);
         };
+    }
+
+    @Override
+    public void updateStore (Long id, StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException {
+
     }
 }

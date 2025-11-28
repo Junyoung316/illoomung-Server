@@ -1,190 +1,109 @@
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/public/search?query=test
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T172812.200.json
+<> 2025-11-28T142341.200.json
 
 ###
 
-POST http://localhost:8000/business/product/1/save
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
+GET http://localhost:8000/autocomplete?search=경기 김포시 장
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
-}
-
-<> 2025-11-08T172750.200.json
+<> 2025-11-28T142017.200.json
 
 ###
 
-POST http://localhost:8000/business/product/1/save
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
+GET http://localhost:8000/autocomplete?search=경기 김
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
-}
-
-<> 2025-11-08T172659.500.json
+<> 2025-11-28T142010.200.json
 
 ###
 
-POST http://localhost:8000/business/product/1/save
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTkwMzc4LCJleHAiOjE3NjI1OTIxNzh9.TENIoK41iy0VyCvifsLxvxtTO5nh5-v9CXcycP8GZ6E
-Content-Length: 90
+GET http://localhost:8000/autocomplete?search=경기
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "productName": "test",
-  "productDescription": "test1234",
-  "productPrice": "10000"
-}
-
-<> 2025-11-08T172643.401.json
+<> 2025-11-28T142000.200.json
 
 ###
 
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
+GET http://localhost:8000/autocomplete?search=t
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-08T172618.200.json
+<> 2025-11-28T141440.200.json
 
 ###
 
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=경
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171632.200.json
+<> 2025-11-28T141436.200.json
 
 ###
 
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=미
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171627.200.json
+<> 2025-11-28T141433.200.json
 
 ###
 
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=미용
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171540.200.json
+<> 2025-11-28T141430.200.json
 
 ###
 
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=장기동
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171535.200.json
+<> 2025-11-28T141400.200.json
 
 ###
 
-GET http://localhost:8000/business/product/2/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=김포시
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171146.200.json
+<> 2025-11-28T141355.200.json
 
 ###
 
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/autocomplete?search=경기
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T171137.200.json
+<> 2025-11-28T141348.200.json
 
 ###
 
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
+GET http://localhost:8000/admin/amenity
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MjE3MTMyLCJleHAiOjE3NjQyMTg5MzJ9.v4WYopovlE73pVQPDeXPLzGHpv9tEfr0_P2YSXLM8z4
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-11-08T170611.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170553.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170455.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170430.200.json
-
-###
-
-GET http://localhost:8000/business/product/1/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYyNTg5MDIzLCJleHAiOjE3NjI1OTA4MjN9.4u2iVJu3w_PgEdCEPhYg60OONZ3vZaOLRttbkFiZwH8
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-08T170400.200.json
+<> 2025-11-27T131912.200.json
 
 ###
 
@@ -200,7 +119,40 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-08T170343.200.json
+<> 2025-11-27T131852.200.json
+
+###
+
+POST http://localhost:8000/admin?key=음료
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MjE1OTg4LCJleHAiOjE3NjQyMTc3ODh9.ctFNWhrhBbLqdLtn2vyjErXLaR00pQjEoZ2Mz2iBl2Y
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-27T130308.200.json
+
+###
+
+POST http://localhost:8000/admin?key=음료
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MjE1OTg4LCJleHAiOjE3NjQyMTc3ODh9.ctFNWhrhBbLqdLtn2vyjErXLaR00pQjEoZ2Mz2iBl2Y
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-27T130247.200.json
+
+###
+
+POST http://localhost:8000/admin?key=음료
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MjE1OTg4LCJleHAiOjE3NjQyMTc3ODh9.ctFNWhrhBbLqdLtn2vyjErXLaR00pQjEoZ2Mz2iBl2Y
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-11-27T130019.200.json
 
 ###
 
@@ -216,77 +168,88 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-06T170704.200.json
+<> 2025-11-27T125948.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-27T125920.200.json
+
+###
+
+POST http://localhost:8000/admin?key=음료
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
 
-<> 2025-11-06T162545.200.json
+<> 2025-11-27T111830.401.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+GET http://localhost:8000/public/search?query=사우동 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-06T162358.200.json
+<> 2025-11-26T111639.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIyODM2LCJleHAiOjE3NjQxMjQ2MzZ9.MQGn-k_DR3GdrXdT6LDbpHI0bxzUe_0f4SBZn3UerT0
+Content-Length: 671
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-06T162224.500.json
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
 
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T161225.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T110150.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T110119.200.json
-
-###
-
-POST http://localhost:8000/store/info/1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-11-06T103206.200.json
+<> 2025-11-26T111620.200.json
 
 ###
 
@@ -302,7 +265,105 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-06T103136.200.json
+<> 2025-11-26T111530.200.json
+
+###
+
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T111522.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우동 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111101.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111009.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T111007.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIyODM2LCJleHAiOjE3NjQxMjQ2MzZ9.MQGn-k_DR3GdrXdT6LDbpHI0bxzUe_0f4SBZn3UerT0
+Content-Length: 671
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T111001.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=사우 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110853.200.json
 
 ###
 
@@ -318,32 +379,13 @@ Accept: */*
   "password": "!Qwer1234"
 }
 
-<> 2025-11-06T102838.200.json
+<> 2025-11-26T110716.200.json
 
 ###
 
 POST http://localhost:8000/register/local
 Content-Type: application/json
-Content-Length: 133
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "te3st@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer12345",
-  "name": "tes2t",
-  "nickname": "test1"
-}
-
-<> 2025-11-06T102807.500.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 130
+Content-Length: 155
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -353,109 +395,69 @@ Accept: */*
   "password": "!Qwer1234",
   "checkPassword": "!Qwer1234",
   "name": "test",
-  "nickname": "test1"
+  "nickname": "test",
+  "phone": "01012341234"
 }
 
-<> 2025-11-06T102754.200.json
+<> 2025-11-26T110709.200.json
 
 ###
 
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 130
+GET http://localhost:8000/public/search?query=사우카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test1"
-}
-
-<> 2025-11-06T100320.200.json
+<> 2025-11-26T110258.200.json
 
 ###
 
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
+GET http://localhost:8000/public/search?query=사우 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100314.500.json
+<> 2025-11-26T110255.200.json
 
 ###
 
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
+GET http://localhost:8000/public/search?query=사우 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100249.200.json
+<> 2025-11-26T110120.200.json
 
 ###
 
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
+GET http://localhost:8000/public/search?query=사우동 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100143.200.json
+<> 2025-11-26T110117.200.json
 
 ###
 
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 129
+GET http://localhost:8000/public/search?query=사우동카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{
-  "email": "user@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test"
-}
-
-<> 2025-11-06T100050.200.json
+<> 2025-11-26T110114.200.json
 
 ###
 
-POST http://localhost:8000/register/local
+GET http://localhost:8000/public/search?query=사우카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T110051.200.json
+
+###
+
+POST http://localhost:8000/login/local
 Content-Type: application/json
 Content-Length: 57
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
@@ -463,61 +465,303 @@ Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "email": "user@test.com",
+  "email": "test@test.com",
   "password": "!Qwer1234"
 }
 
-<> 2025-11-05T150949.200.json
+<> 2025-11-26T105924.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+POST http://localhost:8000/register/local
+Content-Type: application/json
+Content-Length: 155
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-05T142455.200.json
+{
+  "email": "test@test.com",
+  "password": "!Qwer1234",
+  "checkPassword": "!Qwer1234",
+  "name": "test",
+  "nickname": "test",
+  "phone": "01012341234"
+}
+
+<> 2025-11-26T105909.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+GET http://localhost:8000/public/search?query=사우카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-05T142154.200.json
+<> 2025-11-26T105807.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+GET http://localhost:8000/public/search?query=사우 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-05T142129.200.json
+<> 2025-11-26T105759.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+GET http://localhost:8000/public/search?query=사우 카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-05T142101.200.json
+<> 2025-11-26T105758.200.json
 
 ###
 
-POST http://localhost:8000/store/info/1
+GET http://localhost:8000/public/search?query=사우카페
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-content-length: 0
 
-<> 2025-11-05T142021.401.json
+<> 2025-11-26T104444.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 671
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test123",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "1012호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104416.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 667
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "h",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104242.200.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 666
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": "",
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104237.500.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MTIwNTgxLCJleHAiOjE3NjQxMjIzODF9.PajlUjJ3LqKzdgDpNoa2-W9aM8hLCFpIQzstWC3vUqc
+Content-Length: 668
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": null,
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104222.500.json
+
+###
+
+POST http://localhost:8000/business/test/create
+Content-Type: application/json
+Content-Length: 668
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "category": "카페",
+  "storeName": "test",
+  "description": null,
+  "phoneNumber": "101-2130-1234",
+  "address": "경기도 김포시 사우동 1060",
+  "addressDetails": "101호",
+  "openingHours": {
+    "목": "10:00 - 19:00",
+    "금": "10:00 - 19:00",
+    "토": "10:00 - 19:00",
+    "일": "10:00 - 19:00",
+    "월": "정기휴무 (매주 월요일)",
+    "화": "10:00 - 19:00",
+    "수": "10:00 - 19:00"
+  },
+  "homepageUrl": null,
+  "instagramUrl": null,
+  "mainImageUrl": null,
+  "amenities": [
+    "무선 인터넷",
+    "반려동물 동반",
+    "예약",
+    "대기공간",
+    "남/녀 화장실 구분",
+    "주차"
+  ],
+  "products": null
+}
+
+<> 2025-11-26T104203.401.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103228.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103149.200.json
+
+###
+
+GET http://localhost:8000/public/search?query=구래 카페
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-26T103139.200.json
 
 ###
 

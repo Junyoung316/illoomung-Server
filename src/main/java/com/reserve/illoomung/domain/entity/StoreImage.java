@@ -1,11 +1,9 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.domain.entity.enums.ImageType;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.Instant;
 
 @Entity
 @Table(name = "store_images",
@@ -15,7 +13,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class StoreImage { // 업체 이미지
+public class StoreImage extends BaseTimeEntity { // 업체 이미지
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,10 +40,10 @@ public class StoreImage { // 업체 이미지
     @Builder.Default
     private Integer sortOrder = 0;
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant uploadedAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant uploadedAt;
 
     // 생성자, getter, setter 생략
 }

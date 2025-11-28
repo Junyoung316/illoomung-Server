@@ -1,5 +1,6 @@
 package com.reserve.illoomung.core.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
 import com.reserve.illoomung.core.domain.entity.enums.RoleStatus;
 import jakarta.persistence.*;
 import lombok.*;

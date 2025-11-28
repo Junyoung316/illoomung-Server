@@ -3,6 +3,7 @@ package com.reserve.illoomung.dto.business;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.reserve.illoomung.core.config.json.OpeningHoursDeserializer;
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public class StoreCreateRequest {
 
     private String homepageUrl;
     private String instagramUrl;
-    private String mainImageUrl;
+//    private MultipartFile file;
 
     private List<String> amenities;
     private String products;

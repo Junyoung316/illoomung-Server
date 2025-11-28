@@ -19,11 +19,14 @@ public class QAmenity extends EntityPathBase<Amenity> {
 
     public static final QAmenity amenity = new QAmenity("amenity");
 
+    public final com.reserve.illoomung.core.auditing.QBaseTimeEntity _super = new com.reserve.illoomung.core.auditing.QBaseTimeEntity(this);
+
     public final NumberPath<Long> amenityId = createNumber("amenityId", Long.class);
 
     public final StringPath amenityName = createString("amenityName");
 
-    public final DateTimePath<java.time.Instant> createdAt = createDateTime("createdAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
     public final StringPath description = createString("description");
 
@@ -33,7 +36,8 @@ public class QAmenity extends EntityPathBase<Amenity> {
 
     public final EnumPath<com.reserve.illoomung.domain.entity.enums.Status> status = createEnum("status", com.reserve.illoomung.domain.entity.enums.Status.class);
 
-    public final DateTimePath<java.time.Instant> updatedAt = createDateTime("updatedAt", java.time.Instant.class);
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public QAmenity(String variable) {
         super(Amenity.class, forVariable(variable));

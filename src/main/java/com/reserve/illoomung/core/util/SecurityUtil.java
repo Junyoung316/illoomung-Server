@@ -64,6 +64,9 @@ public class SecurityUtil {
 
     // ⭐️ (시그니처 수정) encrypt 오버로딩: byte[] 반환
     public static byte[] encrypt(String plainText, SecretKey key, byte[] iv) throws Exception {
+        if(plainText == null) {
+            return null;
+        }
         Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(GCM_TAG_LENGTH, iv);
         cipher.init(Cipher.ENCRYPT_MODE, key, spec);

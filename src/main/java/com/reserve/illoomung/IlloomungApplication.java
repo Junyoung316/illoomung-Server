@@ -1,17 +1,16 @@
 package com.reserve.illoomung;
 
-import io.jsonwebtoken.Jwts;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.TimeZone;
 
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import java.util.Base64;
-
 @SpringBootApplication
+@EnableJpaAuditing
+@EnableAsync
 public class IlloomungApplication {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {

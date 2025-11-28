@@ -1,0 +1,4 @@
+{
+  "status": 500,
+  "message": "서버 오류: No property openNow found on entity class com.reserve.illoomung.domain.entity.es.StoreDocument to bind constructor parameter to"
+}

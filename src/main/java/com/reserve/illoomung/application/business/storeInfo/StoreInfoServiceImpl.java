@@ -74,7 +74,7 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                 .toList();
 
         String addr = securityUtil.textDecrypt(store.getAddress());
-        String addrDetail =  securityUtil.textDecrypt(store.getAddress());
+        String addrDetail =  securityUtil.textDecrypt(store.getAddressDetails());
 
         KakaoAddressResponse.Address address = getAddressAndBcodeFromApi(addr);
         String x = address.getX();
@@ -115,7 +115,8 @@ public class StoreInfoServiceImpl implements StoreInfoService {
                         .build())
                 .toList();
 
-        UserProfile profile = userProfileRepository.findByAccountId(owner);
+        UserProfile profile = userProfileRepository.findByAccount(owner)
+                .orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다."));
 
         StoreInfoResponse.seller sellerInfo = StoreInfoResponse.seller.builder()
                 .sellerId(owner.getAccountId())

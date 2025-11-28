@@ -32,6 +32,8 @@ public class QStoreCategory extends EntityPathBase<StoreCategory> {
 
     public final NumberPath<Integer> sortOrder = createNumber("sortOrder", Integer.class);
 
+    public final EnumPath<com.reserve.illoomung.domain.entity.enums.Status> status = createEnum("status", com.reserve.illoomung.domain.entity.enums.Status.class);
+
     public final ListPath<StoreCategory, QStoreCategory> subCategories = this.<StoreCategory, QStoreCategory>createList("subCategories", StoreCategory.class, QStoreCategory.class, PathInits.DIRECT2);
 
     public QStoreCategory(String variable) {

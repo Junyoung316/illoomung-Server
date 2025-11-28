@@ -4,6 +4,7 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.domain.entity.StoreOffering;
 import com.reserve.illoomung.domain.entity.Stores;
+import com.reserve.illoomung.domain.entity.enums.Status;
 import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
 import com.reserve.illoomung.domain.repository.StoresRepository;
 import com.reserve.illoomung.dto.business.StoreInfoResponse;
@@ -26,9 +27,7 @@ public class StoreProductServiceImpl implements StoreProductService {
     private final StoresRepository storesRepository; // 가게 정보
     private final StoreOfferingRepository storeOfferingRepository; // 상품 정보
 
-    @Override
-    public List<StoreInfoResponse.products> getStoreProductsAll(Long id) {
-
+    private Account userCheck() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         log.info("authenticated: {}", authentication);
         if(authentication != null && authentication.isAuthenticated()) {
@@ -38,11 +37,20 @@ public class StoreProductServiceImpl implements StoreProductService {
             Account account = accountRepository.findByAccountId(Long.valueOf(userId))
                     .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
             log.info("authenticated account: {}", account);
+            return account;
+        }
+        return null;
+    }
 
+
+    @Override
+    public List<StoreInfoResponse.products> getStoreProductsAll(Long id) {
+        Account account = userCheck();
+        if(account != null) {
             Stores store = storesRepository.findByStoreIdAndOwnerAccountId(id, account.getAccountId())
                     .orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
 
-            List<StoreOffering> storeProduct = storeOfferingRepository.findByStoreStoreId(store.getStoreId());
+            List<StoreOffering> storeProduct = storeOfferingRepository.findByStoreStoreIdAndStatus(store.getStoreId(), Status.ACTIVE);
 
             return storeProduct.stream()
                     .map(entity -> StoreInfoResponse.products.builder()
@@ -56,20 +64,12 @@ public class StoreProductServiceImpl implements StoreProductService {
         return null;
     }
 
-    // TODO: 가게 조회 및 사용자 인증, 가게 상품 등록 로직
 
     @Override
     @Transactional
     public void saveStoreProduct(Long id, StoreInfoResponse.products product) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if(authentication != null && authentication.isAuthenticated()) {
-            String userId = authentication.getName();  // 사용자 식별자(ID) 조회
-            log.info("authenticated id: {}", userId);
-
-            Account account = accountRepository.findByAccountId(Long.valueOf(userId))
-                    .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
-            log.info("authenticated account: {}", account);
-
+        Account account = userCheck();
+        if (account != null) {
             Stores store = storesRepository.findByStoreIdAndOwnerAccountId(id, account.getAccountId())
                     .orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
 
@@ -81,6 +81,36 @@ public class StoreProductServiceImpl implements StoreProductService {
                     .build();
 
             storeOfferingRepository.save(storeOffering);
+        }
+    }
+
+    @Override
+    @Transactional
+    public void patchStoreProduct(Long storeId, Long productId, StoreInfoResponse.products product) {
+        Account account = userCheck();
+        if (account != null) {
+            Stores store = storesRepository.findByStoreIdAndOwnerAccountId(storeId, account.getAccountId())
+                    .orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
+
+            StoreOffering storeOffering = storeOfferingRepository.findAllByOfferingId(productId)
+                    .orElseThrow(() -> new RuntimeException("해당 상품을 찾을 수 없습니다."));
+
+            storeOffering.patchProduct(product);
+        }
+    }
+
+    @Override
+    @Transactional
+    public void deleteStoreProduct(Long storeId, Long productId) {
+        Account account = userCheck();
+        if (account != null) {
+            Stores store = storesRepository.findByStoreIdAndOwnerAccountId(storeId, account.getAccountId())
+                    .orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
+
+            StoreOffering storeOffering = storeOfferingRepository.findAllByOfferingId(productId)
+                    .orElseThrow(() -> new RuntimeException("해당 상품을 찾을 수 없습니다."));
+
+            storeOffering.deleteProduct();
         }
     }
 }

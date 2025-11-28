@@ -1,13 +1,14 @@
 package com.reserve.illoomung.core.domain.entity;
 
+import com.reserve.illoomung.core.auditing.BaseTimeEntity;
+import com.reserve.illoomung.core.dto.CryptoResult;
+import com.reserve.illoomung.dto.request.auth.ProfileRequest;
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.io.Serializable;
-import java.time.Instant;
 
 import com.reserve.illoomung.core.domain.entity.enums.GenderStat;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "user_profile",
@@ -22,7 +23,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserProfile implements Serializable {
+public class UserProfile extends BaseTimeEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +34,7 @@ public class UserProfile implements Serializable {
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "account_id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "fk_user_account"))
-    private Account accountId;
+    private Account account;
 
     @Lob
     @Column(name = "phone")
@@ -87,13 +88,21 @@ public class UserProfile implements Serializable {
     @Column(name = "profile_image_url")
     private String profileImageUrl;
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Instant createdAt;
+//    @CreationTimestamp
+//    @Column(name = "created_at", updatable = false, insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    private Instant createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(name = "updated_at", insertable = false,
+//            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+//    private Instant updatedAt;
 
-    @UpdateTimestamp
-    @Column(name = "updated_at", insertable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
-    private Instant updatedAt;
+    public void patchProfile(CryptoResult name, CryptoResult nickname, CryptoResult phone) {
+        this.name = name.encryptedData();
+        this.nickName = nickname.encryptedData();
+        this.nicknameHash = nickname.hashedData();
+        this.phone = phone.encryptedData();
+        this.phoneHash = phone.hashedData();
+    }
 }
