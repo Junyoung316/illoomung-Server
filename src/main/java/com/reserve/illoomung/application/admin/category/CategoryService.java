@@ -1,7 +1,6 @@
 package com.reserve.illoomung.application.admin.category;
 
 import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
-import com.reserve.illoomung.domain.entity.Amenity;
 import com.reserve.illoomung.domain.entity.StoreCategory;
 import com.reserve.illoomung.domain.entity.enums.Status;
 import com.reserve.illoomung.domain.repository.StoreCategoryRepository;
@@ -44,13 +43,24 @@ public class CategoryService {
     }
 
     public void patchCategory(Long id, String category) {
-        StoreCategory storeCategory = storeCategoryRepository.findById(id).orElseThrow(
+        StoreCategory storeCategory = storeCategoryRepository.findAllByCategoryId(id).orElseThrow(
                 () -> new RuntimeException("카테고리를 찾을 수 없습니다.")
         );
+        storeCategory.setCategoryName(category);
     }
 
-    public void deleteCategory(Long id) {}
+    public void deleteCategory(Long id) {
+        StoreCategory storeCategory = storeCategoryRepository.findAllByCategoryId(id).orElseThrow(
+                () -> new RuntimeException("카테고리를 찾을 수 없습니다.")
+        );
+        storeCategory.setStatus(Status.INACTIVE);
+    }
 
-    public void restoreCategory(Long id) {}
+    public void restoreCategory(Long id) {
+        StoreCategory storeCategory = storeCategoryRepository.findAllByCategoryId(id).orElseThrow(
+                () -> new RuntimeException("카테고리를 찾을 수 없습니다.")
+        );
+        storeCategory.setStatus(Status.ACTIVE);
+    }
 
 }

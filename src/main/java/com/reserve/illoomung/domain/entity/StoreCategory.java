@@ -1,5 +1,6 @@
 package com.reserve.illoomung.domain.entity;
 
+import com.reserve.illoomung.domain.entity.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -38,6 +39,11 @@ public class StoreCategory { // 업체 카테고리
     @Column(name = "sort_order", nullable = false)
     @Builder.Default
     private Integer sortOrder = 0; //
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false, length = 10)
+    @Builder.Default
+    private Status status = Status.ACTIVE;
 
     public StoreCategory (String categoryName) {
         this.categoryName = categoryName;
