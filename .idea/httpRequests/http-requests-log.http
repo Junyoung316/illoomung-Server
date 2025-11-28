@@ -1,3 +1,102 @@
+GET http://localhost:8000/public/search?query=test
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T142341.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=경기 김포시 장
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T142017.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=경기 김
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T142010.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=경기
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T142000.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=t
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141440.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=경
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141436.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=미
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141433.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=미용
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141430.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=장기동
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141400.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=김포시
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141355.200.json
+
+###
+
+GET http://localhost:8000/autocomplete?search=경기
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-28T141348.200.json
+
+###
+
 GET http://localhost:8000/admin/amenity
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0MjE3MTMyLCJleHAiOjE3NjQyMTg5MzJ9.v4WYopovlE73pVQPDeXPLzGHpv9tEfr0_P2YSXLM8z4
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
@@ -663,141 +762,6 @@ Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 <> 2025-11-26T103139.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-26T102941.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-26T102929.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래 카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102645.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=구래카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102617.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양곡카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102559.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양곡 카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102530.200.json
-
-###
-
-POST http://localhost:8000/login/local
-Content-Type: application/json
-Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234"
-}
-
-<> 2025-11-26T102352.200.json
-
-###
-
-POST http://localhost:8000/register/local
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "email": "test@test.com",
-  "password": "!Qwer1234",
-  "checkPassword": "!Qwer1234",
-  "name": "test",
-  "nickname": "test",
-  "phone": "01012341234"
-}
-
-<> 2025-11-26T102339.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양곡 카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102102.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=양촌 카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T102022.200.json
-
-###
-
-GET http://localhost:8000/public/search?query=카페
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-<> 2025-11-26T101942.200.json
 
 ###
 
