@@ -44,7 +44,9 @@ public class CategoryService {
     }
 
     public void patchCategory(Long id, String category) {
-        StoreCategory storeCategory = storeCategoryRepository.findById(id).orElseThrow()
+        StoreCategory storeCategory = storeCategoryRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("카테고리를 찾을 수 없습니다.")
+        );
     }
 
     public void deleteCategory(Long id) {}
