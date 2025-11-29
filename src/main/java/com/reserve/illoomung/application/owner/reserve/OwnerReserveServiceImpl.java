@@ -12,6 +12,7 @@ import com.reserve.illoomung.domain.entity.enums.ReservationStatus;
 import com.reserve.illoomung.domain.repository.StoreOfferingRepository;
 import com.reserve.illoomung.domain.repository.StoreReservationRepository;
 import com.reserve.illoomung.domain.repository.StoresRepository;
+import com.reserve.illoomung.dto.reserve.owner.OwnerGetReserveInfo;
 import com.reserve.illoomung.dto.reserve.owner.OwnerGetReserveInfoResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -52,7 +53,7 @@ public class OwnerReserveServiceImpl implements OwnerReserveService {
     }
 
     @Override
-    public List<OwnerGetReserveInfoResponse> getReserveInfos(Long storeId) {
+    public OwnerGetReserveInfo getReserveInfos(Long storeId) {
 
         Account account = userCheck();
 
@@ -62,7 +63,9 @@ public class OwnerReserveServiceImpl implements OwnerReserveService {
         List<StoreReservation> response = storeReservationRepository.findAllByStore(store)
                 .orElseThrow(() -> new RuntimeException("예약을 찾을 수 없습니다."));
 
-        return response.stream()
+        log.info("총 예약 개수: {}", response.size());
+
+        List<OwnerGetReserveInfoResponse> reserveInfoResponses = response.stream()
                 .map(entity -> {
                     OwnerGetReserveInfoResponse.ReservationTime time = OwnerGetReserveInfoResponse.ReservationTime.builder()
                             .reservationDatetime(entity.getReservationDatetime())
@@ -93,6 +96,11 @@ public class OwnerReserveServiceImpl implements OwnerReserveService {
                             .build();
 
                 }).toList();
+
+        return OwnerGetReserveInfo.builder()
+                .ReserveCount(response.size())
+                .Reserve(reserveInfoResponses)
+                .build();
     }
 
     @Override
