@@ -3,6 +3,7 @@ package com.reserve.illoomung.presentation.business;
 import com.reserve.illoomung.application.business.BusinessService;
 import com.reserve.illoomung.application.business.BusinessTestService;
 import com.reserve.illoomung.core.dto.MainResponse;
+import com.reserve.illoomung.dto.business.OwnerGetMyStores;
 import com.reserve.illoomung.dto.business.StoreCreateRequest;
 import com.reserve.illoomung.dto.business.TestStoreCreateRequest;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/business")
@@ -23,6 +25,13 @@ public class BusinessController {
     private final BusinessTestService businessTestService;
 
     private final BusinessService businessService;
+
+    @GetMapping("/my-store")
+    public ResponseEntity<MainResponse<List<OwnerGetMyStores>>> getMyStore() {
+        List<OwnerGetMyStores> store = businessService.getMyStore();
+        log.info("getMyStore: {}", store.toString());
+        return ResponseEntity.ok(MainResponse.success(store));
+    }
 
     @PostMapping("/test/create")
     public ResponseEntity<MainResponse<String>> createTestStore(@RequestBody TestStoreCreateRequest storeCreateRequest) {
@@ -44,5 +53,10 @@ public class BusinessController {
         log.info("Updating store {}", storeCreateRequest);
         businessService.updateStore(id, storeCreateRequest, file);
         return ResponseEntity.ok(MainResponse.created());
+    }
+
+    @DeleteMapping("/{storeId}/delete")
+    public ResponseEntity<MainResponse<String>> deleteStore(@PathVariable("storeId") Long id) {
+        return ResponseEntity.ok(MainResponse.success());
     }
 }

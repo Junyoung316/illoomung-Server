@@ -118,6 +118,11 @@ public class SecurityUtil {
      * ⭐️ 수정된 복호화 메소드
      */
     public String textDecrypt(String combinedBase64) {
+
+        if (combinedBase64 == null || combinedBase64.isBlank()) {
+            return null; // 또는 return ""; 상황에 맞게 처리
+        }
+
         try {
             // ⭐️ 수정: 멤버 변수에 저장된 키 사용
             // SecretKey key = generateKey(128); // (X)

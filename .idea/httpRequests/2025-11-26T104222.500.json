@@ -1,4 +1,0 @@
-{
-  "status": 500,
-  "message": "서버 오류: could not execute statement [Column 'image_url' cannot be null] [insert into store_images (alt_text,created_at,image_type,image_url,sort_order,store_id,updated_at) values (?,?,?,?,?,?,?)]; SQL [insert into store_images (alt_text,created_at,image_type,image_url,sort_order,store_id,updated_at) values (?,?,?,?,?,?,?)]; constraint [null]"
-}

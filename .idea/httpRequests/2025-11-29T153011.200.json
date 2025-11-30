@@ -1,0 +1,8 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": {
+    "accessdToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwicm9sZSI6IlVTRVIiLCJ0b2tlblR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjQzOTc4MTEsImV4cCI6MTc2NDM5OTYxMX0.UOLQD0l2Vpd9EE4hdYKK-GfrpNKn7_Hpxtz3182Okfc",
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwidG9rZW5UeXBlIjoicmVmcmVzaCIsImlhdCI6MTc2NDM5NzgxMSwiZXhwIjoxNzY1MDAyNjExfQ.7b8T2Lb8pp6lVYcGebCTfMvimk0yy2WyTgL_EHjckVE"
+  }
+}
