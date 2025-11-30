@@ -9,6 +9,7 @@ import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
+import com.reserve.illoomung.dto.business.OwnerGetMyStores;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.Authentication;
@@ -29,10 +30,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -64,6 +62,21 @@ public class BusinessServiceImpl implements BusinessService {
     private final StoreAmenityMappingRepository storeAmenityMappingRepository; // 편의시설 매핑
     private final AmenityRepository amenityRepository; // 편의시설 리스트
 
+    private Account userCheck() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        log.info("authenticated: {}", authentication);
+        if(authentication != null && authentication.isAuthenticated()) {
+            String userId = authentication.getName();  // 사용자 식별자(ID) 조회
+            log.info("authenticated id: {}", userId);
+
+            Account account = accountRepository.findByAccountId(Long.valueOf(userId))
+                    .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
+            log.info("authenticated account: {}", account);
+            return account;
+        }
+        return null;
+    }
+
     private boolean checkNameAndAddressDuplicate(String name, String address, String addressDetails) {
         return storesRepository.existsByStoreNameAndAddressFullHashAndAddressDetailsHash(name, address, addressDetails);
     }
@@ -75,6 +88,20 @@ public class BusinessServiceImpl implements BusinessService {
         } // 데이터가 null이거나 빈 문자열일 때 예외 처리
         KakaoAddressResponse.Document address = addressInfo.getDocuments().getFirst();
         return address.getAddress();
+    }
+
+    public List<OwnerGetMyStores> getMyStore() {
+        Account account = userCheck();
+
+        List<Stores> storeList = storesRepository.findAllByOwnerAccountIdStatus(Objects.requireNonNull(account).getAccountId(), StoreStatus.ACTIVE).orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
+
+        return storeList.stream()
+                .map(entity -> OwnerGetMyStores.builder()
+                        .StoreId(entity.getStoreId())
+                        .StoreName(entity.getStoreName())
+                        .StoreAddr(securityUtil.textDecrypt(entity.getAddress()))
+                        .build()
+                ).toList();
     }
 
     private String serverSaveStoreImage(MultipartFile file, Long userId) throws IOException {
@@ -330,5 +357,13 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public void updateStore (Long id, StoreCreateRequest storeCreateRequest, MultipartFile file) throws IOException {
 
+    }
+
+    @Override
+    public void deleteStore(Long id) {
+        Account account = userCheck();
+        Stores store = storesRepository.findByStoreIdAndOwnerAccountId(id, Objects.requireNonNull(account).getAccountId()).orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
+        store.setStatus(StoreStatus.INACTIVE);
+        storesRepository.save(store);
     }
 }

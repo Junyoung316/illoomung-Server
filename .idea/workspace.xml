@@ -5,116 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="store product test save">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/dto/reserve/owner/OwnerGetReserveInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/dto/business/OwnerGetMyStores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f46571e-8778-43bb-8331-35c420fceb0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f46571e-8778-43bb-8331-35c420fceb0d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T103139.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T103149.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T103228.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104203.401.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104222.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104237.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104242.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104416.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T104444.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T105758.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T105759.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T105807.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T105909.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T105924.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110051.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/illoomung.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/illoomung.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/admin/category/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/admin/category/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/owner/reserve/OwnerReserveServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/owner/reserve/OwnerReserveServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/SecurityUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/SecurityUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/admin/category/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/admin/category/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/owner/reserve/OwnerReserveController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/owner/reserve/OwnerReserveController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/repository/StoresRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/repository/StoresRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/auth/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/auth/login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/BusinessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/BusinessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/reserve/illoomung/domain/repository/StoreCategoryRepositoryTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/reserve/illoomung/domain/repository/StoreCategoryRepositoryTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootWar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootWar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AmenityController.class.uniqueId21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AmenityService.class.uniqueId33" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteController.class.uniqueId61" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteService$KeywordScore.class.uniqueId13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AutocompleteService.class.uniqueId46" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BusinessServiceImpl.class.uniqueId41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BusinessTestServiceImpl.class.uniqueId34" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CategoryService.class.uniqueId59" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MainController.class.uniqueId48" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MainServiceImpl.class.uniqueId42" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OfferingCategoryMapping$OfferingCategoryMappingBuilder.class.uniqueId24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OfferingCategoryMapping.class.uniqueId26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OfferingCategoryMappingRepository.class.uniqueId62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OwnerReserveServiceImpl.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QOfferingCategoryMapping.class.uniqueId53" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QOfferingCategoryMapping.java.uniqueId32" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreAmenityMapping.class.uniqueId54" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreAmenityMapping.java.uniqueId16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreCategory.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreCategory.java.uniqueId11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreCategoryMapping.class.uniqueId45" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreCategoryMapping.java.uniqueId19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreImage.class.uniqueId57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreImage.java.uniqueId36" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreOffering.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreOffering.java.uniqueId60" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreOperatingHours.class.uniqueId37" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreOperatingHours.java.uniqueId35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreReservation.class.uniqueId14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStoreReservation.java.uniqueId28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStores.class.uniqueId52" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QStores.java.uniqueId17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreAmenityMapping$StoreAmenityMappingBuilder.class.uniqueId12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreAmenityMapping.class.uniqueId51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreAmenityMappingRepository.class.uniqueId9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategory$StoreCategoryBuilder.class.uniqueId43" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategory.class.uniqueId23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategoryMapping$StoreCategoryMappingBuilder.class.uniqueId40" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategoryMapping.class.uniqueId25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategoryMappingRepository.class.uniqueId10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreCategoryRepository.class.uniqueId29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreImage$StoreImageBuilder.class.uniqueId58" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreImage.class.uniqueId38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreImageRepository.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreInfoServiceImpl.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOffering$StoreOfferingBuilder.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOffering.class.uniqueId27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOfferingRepository.class.uniqueId30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOperatingHours$StoreOperatingHoursBuilder.class.uniqueId31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOperatingHours.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreOperatingHoursRepository.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreProductServiceImpl.class.uniqueId20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreReservation$StoreReservationBuilder.class.uniqueId47" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreReservation.class.uniqueId15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreReservationRepository.class.uniqueId49" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreSearchService.class.uniqueId44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoreSearchServiceImpl.class.uniqueId56" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Stores$StoresBuilder.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Stores.class.uniqueId50" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoresRepository.class.uniqueId18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoresRepositoryCustom.class.uniqueId39" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StoresRepositoryImpl.class.uniqueId55" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserReserveServiceImpl.class.uniqueId22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OwnerReserveController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OwnerReserveService.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OwnerReserveServiceImpl.class.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoresRepositoryTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/owner/reserve/OwnerReserveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/owner/reserve/OwnerReserveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/owner/reserve/OwnerReserveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/owner/reserve/OwnerReserveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/SecurityUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/owner/reserve/OwnerReserveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/owner/reserve/OwnerReserveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/repository/StoresRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/auth/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/auth/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/BusinessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/reserve/illoomung/domain/repository/StoreCategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/reserve/illoomung/domain/repository/StoreCategoryRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,9 +73,6 @@
     &quot;accountId&quot;: &quot;d4f00cc2-bf81-438e-ac52-e036fbe398db&quot;
   }
 }</component>
-  <component name="HttpClientEndpointsTabState">
-    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;34105fc259218152758d23eff4c588a0e56c32fe&quot; value=&quot;###&amp;#10;POST http://localhost:8000/register/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;user@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;checkPassword&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;name&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;nickname&amp;quot;: &amp;quot;testq&amp;quot;,&amp;#10;  &amp;quot;phone&amp;quot;: &amp;quot;01012341234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;2ab7f45d48be7cdc6701f6aa48973d92ec6ca0b1&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/product/2/all&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0Mzk3NTc4LCJleHAiOjE3NjQzOTkzNzh9.JG5y_kKlw8PVBNCNklSloX0rMaAjH5NRtKxhTpm3cHE&quot; /&gt;&#10;  &lt;entry key=&quot;648d95590a924ebcf1cf86e132cbfd4b1f3540e0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/login/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;test@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;c6c6c58a341abe380c662a131f23a13ac9974f8c&quot; value=&quot;###&amp;#10;GET http://localhost:8000/autocomplete?&amp;#10;    search=&quot; /&gt;&#10;  &lt;entry key=&quot;b00d88cc53b808a6ec12f804641ac5b85f7bf29a&quot; value=&quot;###&amp;#10;POST http://localhost:8000/business/test/create&amp;#10;Content-Type: application/json&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0Mzk3NTc4LCJleHAiOjE3NjQzOTkzNzh9.JG5y_kKlw8PVBNCNklSloX0rMaAjH5NRtKxhTpm3cHE&amp;#10;&amp;#10;{&amp;#10;        &amp;quot;storeName&amp;quot;: &amp;quot;온도독&amp;quot;,&amp;#10;        &amp;quot;description&amp;quot;: null,&amp;#10;        &amp;quot;phoneNumber&amp;quot;: &amp;quot;0507-1345-4798&amp;quot;,&amp;#10;        &amp;quot;openingHours&amp;quot;: {&amp;#10;            &amp;quot;매일&amp;quot;: &amp;quot;12:00 - 21:00&amp;quot;&amp;#10;        },&amp;#10;        &amp;quot;homepageUrl&amp;quot;: null,&amp;#10;        &amp;quot;instagramUrl&amp;quot;: null,&amp;#10;        &amp;quot;mainImageUrl&amp;quot;: &amp;quot;https://search.pstatic.net/common/?autoRotate=true&amp;amp;quality=100&amp;amp;type=f640_380&amp;amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250915_251%2F1757862314907sk4WL_JPEG%2FIMG_8526.jpeg&amp;quot;,&amp;#10;        &amp;quot;amenities&amp;quot;: [&amp;#10;            &amp;quot;단체 이용 가능&amp;quot;,&amp;#10;            &amp;quot;무선 인터넷&amp;quot;,&amp;#10;            &amp;quot;반려동물 동반&amp;quot;,&amp;#10;            &amp;quot;남/녀 화장실 구분&amp;quot;,&amp;#10;            &amp;quot;예약&amp;quot;,&amp;#10;            &amp;quot;방문접수/출장&amp;quot;,&amp;#10;            &amp;quot;주차&amp;quot;&amp;#10;        ],&amp;#10;        &amp;quot;products&amp;quot;: null,&amp;#10;        &amp;quot;addressDetails&amp;quot;: &amp;quot;111호&amp;quot;,&amp;#10;        &amp;quot;address&amp;quot;: &amp;quot;경기 김포시 김포한강2로23번길 50&amp;quot;,&amp;#10;        &amp;quot;category&amp;quot;: &amp;quot;미용&amp;quot;&amp;#10;    }&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;storeName&amp;quot;: &amp;quot;온도독&amp;quot;,&amp;#10;  &amp;quot;description&amp;quot;: null,&amp;#10;  &amp;quot;phoneNumber&amp;quot;: &amp;quot;0507-1345-4798&amp;quot;,&amp;#10;  &amp;quot;openingHours&amp;quot;: {&amp;#10;    &amp;quot;매일&amp;quot;: &amp;quot;12:00 - 21:00&amp;quot;&amp;#10;  },&amp;#10;  &amp;quot;homepageUrl&amp;quot;: null,&amp;#10;  &amp;quot;instagramUrl&amp;quot;: null,&amp;#10;  &amp;quot;mainImageUrl&amp;quot;: &amp;quot;https://search.pstatic.net/common/?autoRotate=true&amp;amp;quality=100&amp;amp;type=f640_380&amp;amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250915_251%2F1757862314907sk4WL_JPEG%2FIMG_8526.jpeg&amp;quot;,&amp;#10;  &amp;quot;amenities&amp;quot;: [&amp;#10;    &amp;quot;단체 이용 가능&amp;quot;,&amp;#10;    &amp;quot;무선 인터넷&amp;quot;,&amp;#10;    &amp;quot;반려동물 동반&amp;quot;,&amp;#10;    &amp;quot;남/녀 화장실 구분&amp;quot;,&amp;#10;    &amp;quot;예약&amp;quot;,&amp;#10;    &amp;quot;방문접수/출장&amp;quot;,&amp;#10;    &amp;quot;주차&amp;quot;&amp;#10;  ],&amp;#10;  &amp;quot;products&amp;quot;: null,&amp;#10;  &amp;quot;addressDetails&amp;quot;: &amp;quot;111호&amp;quot;,&amp;#10;  &amp;quot;address&amp;quot;: &amp;quot;경기 김포시 김포한강2로23번길 50&amp;quot;,&amp;#10;  &amp;quot;category&amp;quot;: &amp;quot;미용&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;ff2640978c40a9cae463f9423627a5df33000789&quot; value=&quot;###&amp;#10;GET http://localhost:8000/user/reserve/my-search&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwicm9sZSI6IlVTRVIiLCJ0b2tlblR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjQzOTc4MTEsImV4cCI6MTc2NDM5OTYxMX0.UOLQD0l2Vpd9EE4hdYKK-GfrpNKn7_Hpxtz3182Okfc&quot; /&gt;&#10;  &lt;entry key=&quot;b910fdae8ecc3326c7f6e8d570eba050be4c47ce&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/reserve/2/all&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0Mzk4MDA2LCJleHAiOjE3NjQzOTk4MDZ9.mdOXetyw9_HeAD__fB-NG_lXP7iogHRqLpy9HKawB9E&quot; /&gt;&#10;  &lt;entry key=&quot;56c2034b37b7b2e7669f615b043229e10913d322&quot; value=&quot;###&amp;#10;POST http://localhost:8000/user/reserve/2/save&amp;#10;Content-Type: application/json&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwicm9sZSI6IlVTRVIiLCJ0b2tlblR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NjQzOTc4MTEsImV4cCI6MTc2NDM5OTYxMX0.UOLQD0l2Vpd9EE4hdYKK-GfrpNKn7_Hpxtz3182Okfc&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;offeringId&amp;quot;: 3,&amp;#10;  &amp;quot;reservationDatetime&amp;quot;: &amp;quot;2025-11-29T16:00:00&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;3e35a8fe2b0bb41e24bebae964fc21d6c75f8612&quot; value=&quot;###&amp;#10;GET http://localhost:8000/public/search?&amp;#10;    query=&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
-  </component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -421,9 +341,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StoreOfferingRepositoryTest" />
         <item itemvalue="Gradle.StoreCategoryRepositoryTest" />
         <item itemvalue="Gradle.AmenityRepositoryTest" />
+        <item itemvalue="Gradle.StoreOfferingRepositoryTest" />
         <item itemvalue="Gradle.StoreCategoryRepositoryTest.saveCategory" />
         <item itemvalue="Gradle.StoreCategoryRepositoryTest.addCategory" />
       </list>
@@ -468,6 +388,7 @@
       <workItem from="1764124399371" duration="3274000" />
       <workItem from="1764204884734" duration="9649000" />
       <workItem from="1764305778598" duration="1996000" />
+      <workItem from="1764483235758" duration="5182000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

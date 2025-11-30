@@ -3,6 +3,7 @@ package com.reserve.illoomung.domain.repository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reserve.illoomung.domain.entity.StoreCategory;
+import com.reserve.illoomung.domain.entity.enums.Status;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,7 @@ public class StoreCategoryRepositoryTest {
 
                         StoreCategory storeCategory = new StoreCategory(name);
                         storeCategory.setSortOrder(sortOrder);
+                        storeCategory.setStatus(Status.ACTIVE);
                         return storeCategory;
                     })
                     .collect(Collectors.toList());
