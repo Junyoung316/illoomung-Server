@@ -93,7 +93,7 @@ public class BusinessServiceImpl implements BusinessService {
     public List<OwnerGetMyStores> getMyStore() {
         Account account = userCheck();
 
-        List<Stores> storeList = storesRepository.findAllByOwnerAccountIdStatus(Objects.requireNonNull(account).getAccountId(), StoreStatus.ACTIVE).orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
+        List<Stores> storeList = storesRepository.findAllByOwnerAccountIdAndStatus(Objects.requireNonNull(account).getAccountId(), StoreStatus.ACTIVE).orElseThrow(() -> new RuntimeException("사용자의 가게를 찾을 수 없습니다."));
 
         return storeList.stream()
                 .map(entity -> OwnerGetMyStores.builder()
