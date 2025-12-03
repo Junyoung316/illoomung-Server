@@ -20,6 +20,10 @@ public class AutocompleteController {
 
     @GetMapping
     public List<String> autocomplete(@RequestParam String search) {
-        return autocompleteService.getSuggestions(search);
+        List<String> a = autocompleteService.getSuggestions(search);
+        log.info("Autocomplete search: " + search);
+        log.info("Autocomplete: {}", a);
+//        return autocompleteService.getSuggestions(search);
+        return a;
     }
 }

@@ -20,6 +20,7 @@ public class StoreInfoController {
     public ResponseEntity<MainResponse<StoreInfoResponse>> storeInfo(@PathVariable("storeId") Long id) {
         // id에 맞는 가게 상세 정보 조회
         StoreInfoResponse storeInfo = storeInfoService.findStoreInfo(id);
+        log.info("img: {}", storeInfo.getImgUrl());
         return ResponseEntity.ok(MainResponse.success(storeInfo));
     }
 
