@@ -72,6 +72,7 @@ spring:
 file:
   img:
     dir: "/Users/junyoung/Documents/spring/illoomung/src/main/resources/images/"
+    baseUrl: "10.149.168.54"
 
 kakao:
 #  client_id: 7c730a5d5926a51e975002be3f953b8d

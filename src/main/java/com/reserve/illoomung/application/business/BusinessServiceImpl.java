@@ -41,6 +41,9 @@ public class BusinessServiceImpl implements BusinessService {
     @Value("${file.img.dir}")
     private String fileDir;
 
+    @Value("${file.img.baseUrl}")
+    private String fileBaseUrl;
+
     private final WebClientService webClientService; // 외부 api 요청 서비스
     private final SecurityUtil securityUtil; // 암호화 모듈
     private final AutocompleteService autocompleteService;
@@ -156,9 +159,10 @@ public class BusinessServiceImpl implements BusinessService {
 
         StoreImage storeImage = new StoreImage();
         if (imgdirUrl != null && !imgdirUrl.isEmpty()) {
+            String imgUrl = "http://" + fileBaseUrl + ":8000" + imgdirUrl;
             storeImage = StoreImage.builder()
                     .store(saveStore)
-                    .imageUrl(imgdirUrl)
+                    .imageUrl(imgUrl)
                     .imageType(ImageType.MAIN) // TODO: 실제 환경에서 변경
                     .altText("가게 사진")
                     .build();

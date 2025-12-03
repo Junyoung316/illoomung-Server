@@ -5,7 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="store product test save">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110114.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110117.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110120.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110255.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoreCategoryRepositoryTest$1.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoreCategoryRepositoryTest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +82,7 @@
   }
 }</component>
   <component name="HttpClientEndpointsTabState">
-    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;566a490a2ff1e0e10d63bd6a946a3768e665917a&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/restore/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;ec46c7fd687618416ada01b988ad710c0ee67e96&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/delete/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;0390d4f9472d6e42a9df95c4f1616f00eae4275d&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/delete/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;a094152a4db12591f862a0125a760bb5de146951&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/patch/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;2b228e73d7eda67a628eea7f1610c788eafb08f0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/restore/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;527ae510fa493ad875b5160210e71ccfb269f88e&quot; value=&quot;###&amp;#10;GET http://localhost:8000/admin/category&quot; /&gt;&#10;  &lt;entry key=&quot;bdd7903b6f77e70a99a3356dd627ac568e5ab065&quot; value=&quot;###&amp;#10;GET http://localhost:8000/admin/amenity&quot; /&gt;&#10;  &lt;entry key=&quot;4288cb7d8c8f3908b489d9398df8e48c3b207fb0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/patch/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;b1bf3b0e9df977d7de33191c5b45a501fc7c09c3&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/my-store&quot; /&gt;&#10;  &lt;entry key=&quot;d1cbf8540639b1f3cc0f52573607e4b2acfd0998&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/add&quot; /&gt;&#10;  &lt;entry key=&quot;0ddc5d184ce1901948c1fbfbbad1160cc68586ff&quot; value=&quot;###&amp;#10;DELETE http://localhost:8000/user/reserve/{{storeId}}/{{reserveId}}/cancel&quot; /&gt;&#10;  &lt;entry key=&quot;39bbe36334e641ecb99e60d58152c8d8264a6171&quot; value=&quot;###&amp;#10;DELETE http://localhost:8000/business/{{storeId}}/delete&quot; /&gt;&#10;  &lt;entry key=&quot;207c5c3b5e6cee8bb88635c5a383ef9b27a54ca9&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/add&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests /&gt;" />
   </component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
@@ -72,45 +102,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AmenityRepositoryTest.executor": "Run",
-    "Gradle.AmenityRepositoryTest.saveAmenity.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.addCategory.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.saveCategory.executor": "Run",
-    "Gradle.StoreOfferingRepositoryTest.executor": "Run",
-    "Gradle.illoomung 빌드.executor": "Run",
-    "Gradle.소스 다운로드.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.IlloomungApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AmenityRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmenityRepositoryTest.saveAmenity.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.addCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.saveCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreOfferingRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.illoomung 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.IlloomungApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;business&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -370,6 +400,8 @@
       <workItem from="1764204884734" duration="9649000" />
       <workItem from="1764305778598" duration="1996000" />
       <workItem from="1764483235758" duration="5182000" />
+      <workItem from="1764564855801" duration="3216000" />
+      <workItem from="1764665166314" duration="3980000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
