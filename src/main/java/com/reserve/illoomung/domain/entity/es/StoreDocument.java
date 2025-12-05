@@ -57,6 +57,9 @@ public class StoreDocument implements Serializable {
     @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
     private List<String> amenities;
 
+    @Field(type = FieldType.Nested)
+    private List<ProductDto> products;
+
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
@@ -65,5 +68,27 @@ public class StoreDocument implements Serializable {
         private String openTime;
         private String closeTime;
         private boolean isHoliday;
+    }
+
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class ProductDto implements Serializable {
+
+        // 부분 업데이트(삭제/수정)를 위해 ID는 필수입니다.
+        @Field(type = FieldType.Long)
+        private Long productsId;
+
+        // 상품 이름으로도 검색하고 싶다면 text 타입 + 분석기 적용
+        @Field(type = FieldType.Text, analyzer = "korean_index_analyzer", searchAnalyzer = "korean_search_analyzer")
+        private String productName;
+
+        @Field(type = FieldType.Text)
+        private String productDescription;
+
+        // 가격 범위 검색을 위해 Integer/Long 사용
+        @Field(type = FieldType.Keyword)
+        private String productPrice;
+
     }
 }
