@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="store product test save">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/dto/user/profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,30 +13,94 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110114.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110117.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110120.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110255.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3cfa5c28-acd3-48fd-9bf4-dcec0be474eb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3cfa5c28-acd3-48fd-9bf4-dcec0be474eb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110258.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110709.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110716.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T110853.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111001.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111007.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111009.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111101.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111522.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111530.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111620.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-26T111639.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T111830.401.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T125920.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T125948.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T130019.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T130247.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T130308.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T131852.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-27T131912.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141348.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141355.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141400.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141430.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141433.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141436.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T141440.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T142000.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T142010.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T142017.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-28T142341.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152534.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152541.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152618.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152757.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152926.401.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T152934.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153011.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153034.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153117.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153303.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153326.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153348.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153623.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T153926.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-11-29T154748.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-12-01T135642.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-12-01T135708.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-12-02T175747.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-12-02T175815.200.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/BusinessServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/es/StoreSearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/es/StoreSearchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/es/StoreSearchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/es/StoreSearchServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/user/profile/UserProfileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/user/profile/UserProfileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/user/profile/UserProfileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/user/profile/UserProfileServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument$OperatingHourDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument$OperatingHourDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument$StoreDocumentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument$StoreDocumentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/domain/entity/es/StoreDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/business/StoreProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/user/profile/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/presentation/user/profile/ProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.reserve.illoomung.domain.repository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/es/es-mappings.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/es/es-mappings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BusinessServiceImpl.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoreCategoryRepositoryTest$1.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoreCategoryRepositoryTest.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/BusinessServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/presentation/AutocompleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoreOfferingRepositoryTest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/StoresRepositoryTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/es/StoreSearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/user/profile/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/user/profile/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/user/profile/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/user/profile/UserProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/es/StoreDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/domain/entity/es/StoreDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/business/StoreProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/user/profile/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/presentation/user/profile/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/es/es-mappings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/es/es-mappings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +147,7 @@
   }
 }</component>
   <component name="HttpClientEndpointsTabState">
-    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests /&gt;" />
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;ad8875d88637db6f3f76273b64b97a7fb851bdc8&quot; value=&quot;###&amp;#10;POST http://localhost:8000/business/product/6/save&amp;#10;Content-Type: application/json&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0OTQwNzEwLCJleHAiOjE3NjQ5NDI1MTB9.OP_LO7oorSZI_Fdao9rvBf7W5NhifwSFXjMcn8-Pmv0&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;productName&amp;quot;: &amp;quot;테스트&amp;quot;,&amp;#10;  &amp;quot;productDescription&amp;quot;: &amp;quot;테스트&amp;quot;,&amp;#10;  &amp;quot;productPrice&amp;quot;: &amp;quot;100&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;34105fc259218152758d23eff4c588a0e56c32fe&quot; value=&quot;###&amp;#10;POST http://localhost:8000/register/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;test@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;checkPassword&amp;quot;: &amp;quot;!Qwer1234&amp;quot;,&amp;#10;  &amp;quot;name&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;nickname&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;phone&amp;quot;: &amp;quot;01012341234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;b1bf3b0e9df977d7de33191c5b45a501fc7c09c3&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/my-store&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6Ik9XTkVSIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0OTM5ODI5LCJleHAiOjE3NjQ5NDE2Mjl9.biZHrhUxfs5dE0obleyOx_QcEirYnNXYWCtaxS3jlA8&amp;#10;&quot; /&gt;&#10;  &lt;entry key=&quot;2ab7f45d48be7cdc6701f6aa48973d92ec6ca0b1&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/product/6/all&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0OTQwNzEwLCJleHAiOjE3NjQ5NDI1MTB9.OP_LO7oorSZI_Fdao9rvBf7W5NhifwSFXjMcn8-Pmv0&quot; /&gt;&#10;  &lt;entry key=&quot;648d95590a924ebcf1cf86e132cbfd4b1f3540e0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/login/local&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;test@test.com&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;!Qwer1234&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;b00d88cc53b808a6ec12f804641ac5b85f7bf29a&quot; value=&quot;###&amp;#10;POST http://localhost:8000/business/test/create&amp;#10;Content-Type: application/json&amp;#10;Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzY0OTQwNzEwLCJleHAiOjE3NjQ5NDI1MTB9.OP_LO7oorSZI_Fdao9rvBf7W5NhifwSFXjMcn8-Pmv0&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;category&amp;quot;: &amp;quot;미용&amp;quot;,&amp;#10;  &amp;quot;storeName&amp;quot;: &amp;quot;미용하다&amp;quot;,&amp;#10;  &amp;quot;description&amp;quot;: &amp;quot;테스트&amp;quot;,&amp;#10;  &amp;quot;phoneNumber&amp;quot;: &amp;quot;01001231233&amp;quot;,&amp;#10;  &amp;quot;address&amp;quot;: &amp;quot;경기도 김포시 사우동 1060&amp;quot;,&amp;#10;  &amp;quot;addressDetails&amp;quot;: &amp;quot;101호&amp;quot;,&amp;#10;  &amp;quot;openingHours&amp;quot;: {&amp;#10;      &amp;quot;목&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;금&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;토&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;일&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;월&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;화&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;,&amp;#10;      &amp;quot;수&amp;quot;: &amp;quot;10:00 - 19:00&amp;quot;&amp;#10;  },&amp;#10;  &amp;quot;homepageUrl&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;instagramUrl&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;mainImageUrl&amp;quot;: &amp;quot;test&amp;quot;,&amp;#10;  &amp;quot;amenities&amp;quot;: [&amp;#10;    &amp;quot;무선 인터넷&amp;quot;,&amp;#10;    &amp;quot;예약&amp;quot;,&amp;#10;    &amp;quot;반려동물 동반&amp;quot;,&amp;#10;    &amp;quot;남/녀 화장실 구분&amp;quot;,&amp;#10;    &amp;quot;주차&amp;quot;&amp;#10;  ],&amp;#10;  &amp;quot;products&amp;quot;: null&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;c0633850dbb9513fa3ec56ccba99ca074fb66ced&quot; value=&quot;###&amp;#10;DELETE http://localhost:8000/business/product/{{storeId}}/{{productId}}/delete&quot; /&gt;&#10;  &lt;entry key=&quot;3e35a8fe2b0bb41e24bebae964fc21d6c75f8612&quot; value=&quot;###&amp;#10;GET http://localhost:8000/public/search?&amp;#10;    query=&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
   </component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
@@ -102,45 +167,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AmenityRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AmenityRepositoryTest.saveAmenity.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StoreCategoryRepositoryTest.addCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StoreCategoryRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StoreCategoryRepositoryTest.saveCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StoreOfferingRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.illoomung 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.IlloomungApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;business&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AmenityRepositoryTest.executor": "Run",
+    "Gradle.AmenityRepositoryTest.saveAmenity.executor": "Run",
+    "Gradle.StoreCategoryRepositoryTest.addCategory.executor": "Run",
+    "Gradle.StoreCategoryRepositoryTest.executor": "Run",
+    "Gradle.StoreCategoryRepositoryTest.saveCategory.executor": "Run",
+    "Gradle.StoreOfferingRepositoryTest.executor": "Run",
+    "Gradle.illoomung 빌드.executor": "Run",
+    "Gradle.소스 다운로드.executor": "Run",
+    "HTTP 요청.illoomung-endpoints_7 | #1.executor": "Run",
+    "HTTP 요청.illoomung-endpoints_8 | #1.executor": "Run",
+    "HTTP 요청.illoomung-endpoints_9 | #1.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.IlloomungApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "business",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -162,6 +230,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.reserve.illoomung.domain.repository" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="illoomung-endpoints_7 | #1" value="STOPPED" />
+              <entry key="illoomung-endpoints_8 | #1" value="STOPPED" />
+              <entry key="illoomung-endpoints_9 | #1" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.IlloomungApplication">
     <configuration name="AmenityRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -212,76 +295,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="StoreCategoryRepositoryTest.addCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.addCategory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+    <configuration name="illoomung-endpoints_7 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/illoomung-endpoints_7.http" executionIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
-    <configuration name="StoreCategoryRepositoryTest.saveCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.saveCategory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+    <configuration name="illoomung-endpoints_8 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/illoomung-endpoints_8.http" executionIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
-    <configuration name="StoreOfferingRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.reserve.illoomung.domain.repository.StoreOfferingRepositoryTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+    <configuration name="illoomung-endpoints_9 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/illoomung-endpoints_9.http" executionIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -352,11 +372,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 요청.illoomung-endpoints_8 | #1" />
+        <item itemvalue="HTTP 요청.illoomung-endpoints_9 | #1" />
+        <item itemvalue="HTTP 요청.illoomung-endpoints_7 | #1" />
         <item itemvalue="Gradle.StoreCategoryRepositoryTest" />
         <item itemvalue="Gradle.AmenityRepositoryTest" />
-        <item itemvalue="Gradle.StoreOfferingRepositoryTest" />
-        <item itemvalue="Gradle.StoreCategoryRepositoryTest.saveCategory" />
-        <item itemvalue="Gradle.StoreCategoryRepositoryTest.addCategory" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +421,8 @@
       <workItem from="1764305778598" duration="1996000" />
       <workItem from="1764483235758" duration="5182000" />
       <workItem from="1764564855801" duration="3216000" />
-      <workItem from="1764665166314" duration="3980000" />
+      <workItem from="1764665166314" duration="4111000" />
+      <workItem from="1764727808582" duration="20554000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

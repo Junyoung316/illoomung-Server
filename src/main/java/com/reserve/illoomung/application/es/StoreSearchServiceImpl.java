@@ -2,25 +2,34 @@ package com.reserve.illoomung.application.es;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.Operator;
 import co.elastic.clients.elasticsearch._types.query_dsl.TextQueryType;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.domain.entity.StoreImage;
 import com.reserve.illoomung.domain.entity.Stores;
 import com.reserve.illoomung.domain.entity.es.StoreDocument;
 import com.reserve.illoomung.domain.repository.es.StoreSearchRepository;
+import com.reserve.illoomung.dto.business.StoreInfoResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.elasticsearch.client.elc.NativeQuery; // 변경됨
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.data.elasticsearch.core.SearchHits;
+import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
+import org.springframework.data.elasticsearch.core.query.ScriptType;
+import org.springframework.data.elasticsearch.core.query.UpdateQuery;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -34,6 +43,7 @@ public class StoreSearchServiceImpl implements StoreSearchService {
     private final SecurityUtil securityUtil;
     private final ElasticsearchOperations operations;
     private final StoreSearchRepository storeSearchRepository;
+    private final ObjectMapper objectMapper;
 
     @Autowired
     @Lazy
@@ -97,29 +107,50 @@ public class StoreSearchServiceImpl implements StoreSearchService {
 
     @Cacheable(cacheNames = "storeSearch", key = "#query", unless = "#result.isEmpty()")
     public List<StoreDocument> searchFromIndex(String query) {
-        log.info("Elasticsearch 검색 수행 (No Highlight): {}", query);
+        // 1. 순수 검색어 (분석기 적용)
+        String rawQuery = query;
 
-        // 1. 쿼리 생성 (하이라이트 요청 부분 삭제됨)
+        // 2. 와일드카드 검색어 (포함 검색 강제 적용) -> "test" 검색 시 "*test*"로 변환
+        String wildcardQuery = "*" + query + "*";
+
+        log.info("ES 검색 수행: raw='{}', wildcard='{}'", rawQuery, wildcardQuery);
+
         NativeQuery searchQuery = NativeQuery.builder()
                 .withQuery(q -> q
-                        .simpleQueryString(sq -> sq
-                                .query(query) // "사우 카페"
-                                // [핵심 1] 모든 필드 나열 (가중치 적용 가능)
-                                .fields("fullAddress^2.0", "name^1.5", "categories^1.5", "district", "amenities^1.2")
-                                // [핵심 2] 띄어쓰기로 구분된 단어들이 "모두" 있어야 함 (AND 조건)
-                                .defaultOperator(Operator.And)
+                        .bool(b -> b
+                                // [A] 가게 기본 정보 검색 (여긴 기존 필드명 유지)
+                                .should(s -> s
+                                        .simpleQueryString(sq -> sq
+                                                .query(rawQuery + " | " + wildcardQuery)
+                                                .fields("fullAddress^2.0", "name^1.5", "categories^1.5", "district", "amenities^1.2")
+                                                .defaultOperator(Operator.Or)
+                                        )
+                                )
+                                // [B] 상품 정보 검색 (Nested) -> ★ 여기 필드명을 수정해야 함! ★
+                                .should(s -> s
+                                        .nested(n -> n
+                                                .path("products")
+                                                .query(nq -> nq
+                                                        .simpleQueryString(sq -> sq
+                                                                .query(rawQuery + " | " + wildcardQuery)
+                                                                // ▼▼▼ [핵심 수정] products.name -> products.productName ▼▼▼
+                                                                .fields("products.productName", "products.productPrice")
+                                                                .defaultOperator(Operator.Or)
+                                                                .analyzeWildcard(true)
+                                                        )
+                                                )
+                                        )
+                                )
                         )
                 )
                 .build();
 
-        // 2. 검색 실행
         SearchHits<StoreDocument> hits = operations.search(searchQuery, StoreDocument.class);
-
-        // 3. 결과 반환 (복잡한 매핑 로직 없이 원본 데이터만 쏙 꺼냄)
         return hits.stream()
                 .map(SearchHit::getContent)
                 .collect(Collectors.toList());
     }
+
 
     // 영업 여부 계산 로직 (Private Helper)
     private boolean calculateIsOpen(List<StoreDocument.OperatingHourDto> hours, int currentDay, LocalTime currentTime) {
@@ -169,5 +200,118 @@ public class StoreSearchServiceImpl implements StoreSearchService {
     public void deleteStore(Long storeId) {
         storeSearchRepository.deleteById(storeId);
         log.info("Elasticsearch 삭제 완료: Store ID {}", storeId);
+    }
+
+    // -------------------------------------------------------------
+    // [추가] 상품(Product) 부분 업데이트 로직 (Painless Script 사용)
+    // -------------------------------------------------------------
+
+    /**
+     * 상품 추가: 기존 가게 문서의 products 리스트에 새 상품을 추가합니다.
+     */
+    /**
+     * 상품 추가
+     */
+    @Override
+    @CacheEvict(cacheNames = "storeSearch", allEntries = true)
+    public void addProductToStore(Long storeId, Long productId, StoreInfoResponse.products productDto) {
+        // 1. DTO -> Map 변환
+        Map<String, Object> originalMap = objectMapper.convertValue(productDto, new TypeReference<Map<String, Object>>() {});
+
+        // 2. [중요] ES 필드명("productName" 등)에 맞춰서 새로운 Map 생성
+        // (DTO 필드명이 name, price라고 가정하고, ES 필드명인 productName, productPrice로 매핑)
+        Map<String, Object> esMap = new HashMap<>();
+
+        esMap.put("productsId", productId); // [핵심] productsId 강제 주입
+
+        // DTO의 필드명(getter)을 확인하여 매핑해주세요.
+        // 예: dto.getName() -> "productName"
+        esMap.put("productName", productDto.getProductName());
+        esMap.put("productDescription", productDto.getProductDescription()); // description이 있다면
+        esMap.put("productPrice", String.valueOf(productDto.getProductPrice())); // [핵심] String 타입으로 변환
+
+        // 3. Painless 스크립트
+        String script = "if (ctx._source.products == null) { ctx._source.products = new ArrayList(); } " +
+                "ctx._source.products.add(params.product);";
+
+        // 4. 파라미터 매핑
+        Map<String, Object> params = new HashMap<>();
+        params.put("product", esMap); // 변환된 esMap 사용
+
+        // 5. 실행
+        UpdateQuery updateQuery = UpdateQuery.builder(storeId.toString())
+                .withScript(script)
+                .withParams(params)
+                .withScriptType(ScriptType.INLINE)
+                .withLang("painless")
+                .build();
+
+        operations.update(updateQuery, IndexCoordinates.of("stores"));
+        log.info("ES 상품 추가 완료: Store ID {}, Product ID {}", storeId, productId);
+    }
+
+    /**
+     * 상품 삭제
+     */
+    @Override
+    @CacheEvict(cacheNames = "storeSearch", allEntries = true)
+    public void removeProductFromStore(Long storeId, Long productId) {
+        // [수정] 스크립트 내 변수명을 id -> productsId 로 변경
+        // [수정] 파라미터명을 params.productId -> params.productsId 로 변경
+        String script = "if (ctx._source.products != null) { " +
+                "  ctx._source.products.removeIf(p -> p.productsId == params.productsId); " +
+                "}";
+
+        Map<String, Object> params = new HashMap<>();
+        params.put("productsId", productId); // 파라미터 Key 일치시키기
+
+        UpdateQuery updateQuery = UpdateQuery.builder(storeId.toString())
+                .withScript(script)
+                .withParams(params)
+                .withScriptType(ScriptType.INLINE)
+                .withLang("painless")
+                .build();
+
+        operations.update(updateQuery, IndexCoordinates.of("stores"));
+        log.info("ES 상품 삭제 완료: Store ID {}, Product ID {}", storeId, productId);
+    }
+
+    /**
+     * 상품 수정
+     */
+    @Override
+    @CacheEvict(cacheNames = "storeSearch", allEntries = true)
+    public void updateProductInStore(Long storeId, Long productId, StoreInfoResponse.products productDto) {
+        // 1. DTO -> ES 매핑용 Map으로 수동 변환 (필드명 불일치 해결)
+        Map<String, Object> esMap = new HashMap<>();
+
+        esMap.put("productsId", productId); // [중요] 수정 시에도 ID가 누락되지 않도록 주입
+        esMap.put("productName", productDto.getProductName());
+        esMap.put("productDescription", productDto.getProductDescription());
+        esMap.put("productPrice", String.valueOf(productDto.getProductPrice())); // String 변환
+
+        // 2. Painless 스크립트 수정 (id -> productsId)
+        String script = "if (ctx._source.products != null) { " +
+                "  for (int i = 0; i < ctx._source.products.size(); i++) { " +
+                // [수정] p.id -> p.productsId, params.productId -> params.productsId
+                "    if (ctx._source.products[i].productsId == params.productsId) { " +
+                "      ctx._source.products[i] = params.newProduct; " +
+                "    } " +
+                "  } " +
+                "}";
+
+        Map<String, Object> params = new HashMap<>();
+        params.put("productsId", productId);
+        params.put("newProduct", esMap); // 변환된 Map 사용
+
+        UpdateQuery updateQuery = UpdateQuery.builder(storeId.toString())
+                .withScript(script)
+                .withParams(params)
+                .withScriptType(ScriptType.INLINE)
+                .withLang("painless")
+                .build();
+
+        operations.update(updateQuery, IndexCoordinates.of("stores"));
+        log.info("ES 상품 수정 완료: Store ID {}, Product ID {}", storeId, productId);
     }
 }

@@ -20,14 +20,14 @@ public class StoreProductController {
 
     @GetMapping("/product/{storeId}/all") //
     public ResponseEntity<MainResponse<List<StoreInfoResponse.products>>> getAllStoreProducts(@PathVariable("storeId") Long id) {
-        log.info("{}가게, 전체 상품 정보 조회", id);
+        log.info("{} 가게, 전체 상품 정보 조회", id);
         return ResponseEntity.ok(MainResponse.success(storeProductService.getStoreProductsAll(id)));
     }
 
     // 가게 상품 등록
     @PostMapping("/product/{storeId}/save")
     public ResponseEntity<MainResponse<List<StoreInfoResponse.products>>> svaeStoreProducts(@PathVariable("storeId") Long id, @RequestBody StoreInfoResponse.products product) {
-        log.info("{}가게, 상품 정보 등록", id);
+        log.info("{} 가게, 상품 정보 등록", id);
         storeProductService.saveStoreProduct(id, product);
         return ResponseEntity.ok(MainResponse.success());
     }

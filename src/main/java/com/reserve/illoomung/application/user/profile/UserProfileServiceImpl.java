@@ -9,6 +9,7 @@ import com.reserve.illoomung.core.exception.LoginFailException;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.dto.request.auth.ChangePasswordRequest;
 import com.reserve.illoomung.dto.request.auth.ProfileRequest;
+import com.reserve.illoomung.dto.user.profile;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
@@ -39,6 +40,22 @@ public class UserProfileServiceImpl implements UserProfileService {
                     .orElseThrow(() -> new RuntimeException("존재하지 않는 사용자입니다."));
             log.info("authenticated account: {}", account);
             return account;
+        }
+        return null;
+    }
+
+    @Override
+    public profile getProfile() {
+        Account account = userCheck();
+        if(!(account == null)) {
+            UserProfile userProfile = userProfileRepository.findByAccount(account).orElseThrow(() -> new RuntimeException("프로필을 찾을 수 없습니다."));
+            String nickName = securityUtil.textDecrypt(userProfile.getNickName());
+
+            return profile.builder()
+                    .accountId(account.getAccountId())
+                    .nickName(nickName)
+                    .build();
+
         }
         return null;
     }

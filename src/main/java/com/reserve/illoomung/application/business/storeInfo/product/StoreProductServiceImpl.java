@@ -1,5 +1,6 @@
 package com.reserve.illoomung.application.business.storeInfo.product;
 
+import com.reserve.illoomung.application.es.StoreSearchService;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
 import com.reserve.illoomung.domain.entity.StoreOffering;
@@ -26,6 +27,8 @@ public class StoreProductServiceImpl implements StoreProductService {
 
     private final StoresRepository storesRepository; // 가게 정보
     private final StoreOfferingRepository storeOfferingRepository; // 상품 정보
+
+    private final StoreSearchService storeSearchService; // 상품 검색 바인딩
 
     private Account userCheck() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -80,7 +83,8 @@ public class StoreProductServiceImpl implements StoreProductService {
                     .price(product.getProductPrice())
                     .build();
 
-            storeOfferingRepository.save(storeOffering);
+            StoreOffering saveStoreOffering =  storeOfferingRepository.save(storeOffering);
+            storeSearchService.addProductToStore(store.getStoreId(), saveStoreOffering.getOfferingId(), product);
         }
     }
 
@@ -96,6 +100,7 @@ public class StoreProductServiceImpl implements StoreProductService {
                     .orElseThrow(() -> new RuntimeException("해당 상품을 찾을 수 없습니다."));
 
             storeOffering.patchProduct(product);
+            storeSearchService.updateProductInStore(store.getStoreId(), productId, product);
         }
     }
 
@@ -111,6 +116,7 @@ public class StoreProductServiceImpl implements StoreProductService {
                     .orElseThrow(() -> new RuntimeException("해당 상품을 찾을 수 없습니다."));
 
             storeOffering.deleteProduct();
+            storeSearchService.removeProductFromStore(store.getStoreId(), productId);
         }
     }
 }

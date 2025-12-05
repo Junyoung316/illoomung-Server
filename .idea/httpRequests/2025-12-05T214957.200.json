@@ -1,0 +1,75 @@
+[
+  {
+    "id": 3,
+    "categories": [
+      "미용"
+    ],
+    "name": "애견 테스트",
+    "fullAddress": "경기 김포시 사우동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "사우동",
+    "addr": "경기도 김포시 사우동 1059",
+    "imgUrl": "test",
+    "operatingHours": [
+      {
+        "dayOfWeek": 6,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 1,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 0,
+        "openTime": "10:00",
+        "closeTime": "19:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [
+      "무선 인터넷",
+      "예약",
+      "반려동물 동반",
+      "남/녀 화장실 구분",
+      "주차"
+    ],
+    "products": [
+      {
+        "productsId": null,
+        "productName": "중형",
+        "productDescription": "테스트",
+        "productPrice": "100"
+      }
+    ]
+  }
+]

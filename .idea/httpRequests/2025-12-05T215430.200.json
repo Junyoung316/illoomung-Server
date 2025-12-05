@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "productsId": 5,
+      "productName": "중형",
+      "productDescription": "테스트",
+      "productPrice": "100"
+    },
+    {
+      "productsId": 6,
+      "productName": "대형",
+      "productDescription": "테스트",
+      "productPrice": "100"
+    }
+  ]
+}
