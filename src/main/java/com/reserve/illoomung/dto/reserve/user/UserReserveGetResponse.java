@@ -14,8 +14,29 @@ import java.time.LocalDateTime;
 @Builder
 public class UserReserveGetResponse {
     private Long reservationId;
-    private Long storeId;
+    private ReservationStore store;
+    private ReservationProduct product;
     private LocalDateTime reservationDate;
     private String reservationNote;
     private ReservationStatus  reservationStatus;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class ReservationStore {
+        private Long storeId;
+        private String storeName;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class ReservationProduct {
+        private Long productId;
+        private String productName;
+        private String price;
+
+    }
 }

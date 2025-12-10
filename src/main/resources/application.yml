@@ -22,11 +22,11 @@ spring:
 #        max-request-size: 10MB # 최대 요청 크기
   jackson:
     time-zone: Asia/Seoul
-  devtools:
-    livereload:
-      enabled: true
-    restart:
-      enabled: true
+#  devtools:
+#    livereload:
+#      enabled: true
+#    restart:
+#      enabled: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/illoomung?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
@@ -72,7 +72,8 @@ spring:
 file:
   img:
     dir: "/Users/junyoung/Documents/spring/illoomung/src/main/resources/images/"
-
+#    baseUrl: "illoomung.iptime.org"
+    baseUrl: "10.200.53.10"
 kakao:
 #  client_id: 7c730a5d5926a51e975002be3f953b8d
 ##  client_id: { REST API KEY }

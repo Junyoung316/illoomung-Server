@@ -57,6 +57,8 @@ public class BusinessController {
 
     @DeleteMapping("/{storeId}/delete")
     public ResponseEntity<MainResponse<String>> deleteStore(@PathVariable("storeId") Long id) {
+        log.info("Deleting store {}", id);
+        businessService.deleteStore(id);
         return ResponseEntity.ok(MainResponse.success());
     }
 }

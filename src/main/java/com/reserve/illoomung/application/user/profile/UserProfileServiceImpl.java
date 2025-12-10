@@ -9,6 +9,7 @@ import com.reserve.illoomung.core.exception.LoginFailException;
 import com.reserve.illoomung.core.util.SecurityUtil;
 import com.reserve.illoomung.dto.request.auth.ChangePasswordRequest;
 import com.reserve.illoomung.dto.request.auth.ProfileRequest;
+import com.reserve.illoomung.dto.user.profile;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
@@ -44,6 +45,22 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
+    public profile getProfile() {
+        Account account = userCheck();
+        if(!(account == null)) {
+            UserProfile userProfile = userProfileRepository.findByAccount(account).orElseThrow(() -> new RuntimeException("프로필을 찾을 수 없습니다."));
+            String nickName = securityUtil.textDecrypt(userProfile.getNickName());
+
+            return profile.builder()
+                    .accountId(account.getAccountId())
+                    .nickName(nickName)
+                    .build();
+
+        }
+        return null;
+    }
+
+    @Override
     @Transactional
     public void patchProfile(ProfileRequest request) {
         Account account = userCheck();
@@ -65,6 +82,8 @@ public class UserProfileServiceImpl implements UserProfileService {
             if(passwordEncoder.matches(request.getOldPassword(), account.getPasswordHash())) {
                 if(request.getNewPassword().equals(request.getCheckNewPassword())) {
                     account.changePassword(passwordEncoder.encode(request.getNewPassword()));
+                    accountRepository.save(account);
+                    log.info("Change password successful.");
                 }
             }
         }

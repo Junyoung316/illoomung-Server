@@ -1,0 +1,546 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "storeAddr": "경기 김포시 풍무로 166",
+      "storeName": "부부펫살롱",
+      "storeId": 1
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로 250",
+      "storeName": "모두의집사",
+      "storeId": 2
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 양곡1로38번길 3",
+      "storeName": "본펫 플래닛",
+      "storeId": 3
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 176",
+      "storeName": "변신해보개",
+      "storeId": 4
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강8로 127",
+      "storeName": "핏어펫",
+      "storeId": 5
+    },
+    {
+      "storeAddr": "경기 김포시 중봉로 1-1",
+      "storeName": "메리몽 펫 그루밍",
+      "storeId": 6
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 98",
+      "storeName": "카페소풍 애견유치원&애견호텔&애견돌봄",
+      "storeId": 7
+    },
+    {
+      "storeAddr": "경기 김포시 솔터로 22",
+      "storeName": "댕데이지",
+      "storeId": 8
+    },
+    {
+      "storeAddr": "경기 파주시 경의로 1010",
+      "storeName": "더도그살롱 야당본점",
+      "storeId": 9
+    },
+    {
+      "storeAddr": "경기 김포시 풍년로 53",
+      "storeName": "멍글하우스",
+      "storeId": 10
+    },
+    {
+      "storeAddr": "경기 김포시 통진읍 마송1로84번길 80",
+      "storeName": "코이펫",
+      "storeId": 11
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 김포대로 1765",
+      "storeName": "하룻강아지",
+      "storeId": 12
+    },
+    {
+      "storeAddr": "인천 서구 한중로 10",
+      "storeName": "J애견호텔유치원",
+      "storeId": 13
+    },
+    {
+      "storeAddr": "인천 서구 이음1로 377",
+      "storeName": "멍그라밍",
+      "storeId": 14
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 중앙로1275번길 60-17",
+      "storeName": "하이멍 애견미용실&애견호텔",
+      "storeId": 15
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강2로23번길 10",
+      "storeName": "하이베베",
+      "storeId": 16
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 대곶남로 711",
+      "storeName": "깜장콩 애견유치원 &미용&호텔&카페",
+      "storeId": 17
+    },
+    {
+      "storeAddr": "경기 파주시 동패로63번길 37",
+      "storeName": "운정멍발소",
+      "storeId": 18
+    },
+    {
+      "storeAddr": "경기 김포시 통진읍 마송1로84번길 53",
+      "storeName": "위풍댕댕",
+      "storeId": 19
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강2로23번길 74",
+      "storeName": "어서오개냥",
+      "storeId": 20
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로78번길 61-16",
+      "storeName": "독고캣",
+      "storeId": 21
+    },
+    {
+      "storeAddr": "경기 파주시 가재울로 85",
+      "storeName": "씻고가개 운정점",
+      "storeId": 22
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로420번길 98",
+      "storeName": "프리티 멍",
+      "storeId": 23
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로98번길 17-76",
+      "storeName": "더쇼독",
+      "storeId": 24
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 102",
+      "storeName": "카페몽몽",
+      "storeId": 25
+    },
+    {
+      "storeAddr": "경기 김포시 초당로16번길 130-4",
+      "storeName": "엔젤스도그",
+      "storeId": 26
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강8로 396",
+      "storeName": "써니펫살롱",
+      "storeId": 27
+    },
+    {
+      "storeAddr": "경기 김포시 솔터로 22",
+      "storeName": "예쁘댕",
+      "storeId": 28
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로 288-31",
+      "storeName": "까꿍펫살롱",
+      "storeId": 29
+    },
+    {
+      "storeAddr": "경기 김포시 봉화로181번길 31-14",
+      "storeName": "펫샤워",
+      "storeId": 30
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로 250",
+      "storeName": "애몽",
+      "storeId": 31
+    },
+    {
+      "storeAddr": "경기 김포시 초당로61번길 21",
+      "storeName": "빅그루밍",
+      "storeId": 32
+    },
+    {
+      "storeAddr": "경기 파주시 가람로21번길 61-34",
+      "storeName": "애니멀살롱",
+      "storeId": 33
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강10로133번길 142",
+      "storeName": "윌리독 펫 살롱",
+      "storeId": 34
+    },
+    {
+      "storeAddr": "인천 서구 이음대로 388",
+      "storeName": "모모그루밍",
+      "storeId": 35
+    },
+    {
+      "storeAddr": "경기 김포시 풍무로 33",
+      "storeName": "멍멍스타일",
+      "storeId": 36
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로 240",
+      "storeName": "라비드 펫 살롱",
+      "storeId": 37
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강2로23번길 50",
+      "storeName": "온도독",
+      "storeId": 38
+    },
+    {
+      "storeAddr": "서울 강서구 양천로14길 113",
+      "storeName": "하이독스",
+      "storeId": 39
+    },
+    {
+      "storeAddr": "경기 김포시 사우중로74번길 7",
+      "storeName": "빛날시간",
+      "storeId": 40
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로255번길 85",
+      "storeName": "사뿐사뿐",
+      "storeId": 41
+    },
+    {
+      "storeAddr": "인천 서구 이음5로 39",
+      "storeName": "나나애견미용실",
+      "storeId": 42
+    },
+    {
+      "storeAddr": "경기 김포시 태장로 820-32",
+      "storeName": "로카드",
+      "storeId": 43
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강8로194번길 131-1",
+      "storeName": "양이멍이",
+      "storeId": 44
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로140번길 8-8",
+      "storeName": "킁킁펫",
+      "storeId": 45
+    },
+    {
+      "storeAddr": "경기 김포시 봉화로 9-23",
+      "storeName": "김포에이스애견미용학원",
+      "storeId": 46
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강2로 41",
+      "storeName": "펫피플",
+      "storeId": 47
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강8로148번길 8-20",
+      "storeName": "헤이독 김포점",
+      "storeId": 48
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로98번길 17-59",
+      "storeName": "가인헤어",
+      "storeId": 49
+    },
+    {
+      "storeAddr": "경기 김포시 풍무로96번길 102",
+      "storeName": "펫 뷰티살롱",
+      "storeId": 50
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 무궁화로 32-21",
+      "storeName": "일산애견미용 맘바이 강아지미용실",
+      "storeId": 51
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 일산로427번길 44",
+      "storeName": "멍부띠끄",
+      "storeId": 52
+    },
+    {
+      "storeAddr": "경기 김포시 장릉1로 11",
+      "storeName": "우다닷 애견유치원&호텔&미용",
+      "storeId": 53
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 531",
+      "storeName": "올케어댕 구래동 애견유치원 & 애견호텔 & 애견미용",
+      "storeId": 54
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 102",
+      "storeName": "그루밍몽몽_애견미용",
+      "storeId": 55
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 산두로 65-21",
+      "storeName": "트리밍153",
+      "storeId": 56
+    },
+    {
+      "storeAddr": "경기 파주시 해올1길 12",
+      "storeName": "까까오도그 파주운정점",
+      "storeId": 57
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로78번길 61-40",
+      "storeName": "THE빛나개",
+      "storeId": 58
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 471",
+      "storeName": "도그",
+      "storeId": 59
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강8로194번길 167",
+      "storeName": "도도버드",
+      "storeId": 60
+    },
+    {
+      "storeAddr": "경기 김포시 솔터로 22",
+      "storeName": "꽃개하우스",
+      "storeId": 61
+    },
+    {
+      "storeAddr": "경기 김포시 고촌읍 장차로 2",
+      "storeName": "제이독스101그루밍",
+      "storeId": 62
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 10",
+      "storeName": "플라이투더뭉 애견유치원&애견호텔&애견미용&돌봄",
+      "storeId": 63
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 132",
+      "storeName": "개인생뽐나개",
+      "storeId": 64
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로 160",
+      "storeName": "살롱드도만",
+      "storeId": 65
+    },
+    {
+      "storeAddr": "경기 파주시 하우고개길 115",
+      "storeName": "발앤발 애견호텔",
+      "storeId": 66
+    },
+    {
+      "storeAddr": "경기 김포시 봉화로181번길 30",
+      "storeName": "더 도도하개",
+      "storeId": 67
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 석모로95번길 46-18",
+      "storeName": "그루밍 시옷",
+      "storeId": 68
+    },
+    {
+      "storeAddr": "경기 파주시 황골로 78",
+      "storeName": "이뻐지개",
+      "storeId": 69
+    },
+    {
+      "storeAddr": "경기 김포시 감정로 6",
+      "storeName": "멍컷",
+      "storeId": 70
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 10",
+      "storeName": "그루밍앤독 애견미용학원",
+      "storeId": 71
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 양곡3로 153",
+      "storeName": "댕댕이머리하는날",
+      "storeId": 72
+    },
+    {
+      "storeAddr": "경기 김포시 걸포2로 1",
+      "storeName": "아르테미스 아카데미/애견미용학원",
+      "storeId": 73
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로 113",
+      "storeName": "조은살롱",
+      "storeId": 74
+    },
+    {
+      "storeAddr": "경기 김포시 풍무로 53",
+      "storeName": "펫아지트",
+      "storeId": 75
+    },
+    {
+      "storeAddr": "경기 김포시 김포대로679번길 14-2",
+      "storeName": "강아지마을",
+      "storeId": 76
+    },
+    {
+      "storeAddr": "경기 김포시 풍무로 128",
+      "storeName": "뷰티인독",
+      "storeId": 77
+    },
+    {
+      "storeAddr": "경기 김포시 고촌읍 김포대로329번길 51",
+      "storeName": "봉이네 애견미용",
+      "storeId": 78
+    },
+    {
+      "storeAddr": "경기 김포시 풍무로57번길 27",
+      "storeName": "멍멍이미용실",
+      "storeId": 79
+    },
+    {
+      "storeAddr": "경기 김포시 고촌읍 신곡로29번길 57",
+      "storeName": "버블멍",
+      "storeId": 80
+    },
+    {
+      "storeAddr": "경기 김포시 양촌읍 양곡로 494-21",
+      "storeName": "까꾸까",
+      "storeId": 81
+    },
+    {
+      "storeAddr": "경기 김포시 중봉로58번길 60",
+      "storeName": "댕화살롱",
+      "storeId": 82
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 535",
+      "storeName": "퍼피블링",
+      "storeId": 83
+    },
+    {
+      "storeAddr": "경기 파주시 해올2길 2",
+      "storeName": "올데이그루밍",
+      "storeId": 84
+    },
+    {
+      "storeAddr": "경기 김포시 솔터로 22",
+      "storeName": "펫엔조이 애견미용 구래점",
+      "storeId": 85
+    },
+    {
+      "storeAddr": "경기 김포시 김포대로 1136",
+      "storeName": "야옹아멍멍해봐 김포점",
+      "storeId": 86
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로97번길 14",
+      "storeName": "영희살롱",
+      "storeId": 87
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로140번길 30",
+      "storeName": "댕댕이발소",
+      "storeId": 88
+    },
+    {
+      "storeAddr": "경기 파주시 동패로63번길 20-1",
+      "storeName": "노노펫 애견미용",
+      "storeId": 89
+    },
+    {
+      "storeAddr": "경기 김포시 북변로 18-1",
+      "storeName": "멈무야",
+      "storeId": 90
+    },
+    {
+      "storeAddr": "경기 김포시 하성면 태산로19번길 22",
+      "storeName": "버블독",
+      "storeId": 91
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강11로 322",
+      "storeName": "버블앤포우",
+      "storeId": 92
+    },
+    {
+      "storeAddr": "경기 김포시 솔터로 22",
+      "storeName": "또리네멍멍이미용실",
+      "storeId": 93
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로 116",
+      "storeName": "러블리마이펫",
+      "storeId": 94
+    },
+    {
+      "storeAddr": "경기 김포시 유현로238번길 47",
+      "storeName": "도그앤도그",
+      "storeId": 95
+    },
+    {
+      "storeAddr": "경기 김포시 유현로33번길 16",
+      "storeName": "풍무동 멍멍깍까",
+      "storeId": 96
+    },
+    {
+      "storeAddr": "경기 파주시 하우고개길 84",
+      "storeName": "개중목욕탕",
+      "storeId": 97
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강9로75번길 10",
+      "storeName": "앤독 살롱",
+      "storeId": 98
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로98번길 17-104",
+      "storeName": "힐링캣",
+      "storeId": 99
+    },
+    {
+      "storeAddr": "경기 김포시 김포대로 1462",
+      "storeName": "야옹아멍멍해봐 김포운양점",
+      "storeId": 100
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 8",
+      "storeName": "불독워시애견셀프목욕 장기점",
+      "storeId": 101
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강4로 487",
+      "storeName": "바나숑",
+      "storeId": 102
+    },
+    {
+      "storeAddr": "경기 고양시 일산서구 한류월드로 300",
+      "storeName": "마이뷰티독 원마운트점",
+      "storeId": 103
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 무궁화로 7-45",
+      "storeName": "코코 반려견미용실",
+      "storeId": 104
+    },
+    {
+      "storeAddr": "경기 고양시 일산동구 정발산로 24",
+      "storeName": "버블펫",
+      "storeId": 105
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강2로23번길 74",
+      "storeName": "폼나개",
+      "storeId": 106
+    },
+    {
+      "storeAddr": "경기 김포시 김포한강1로 247",
+      "storeName": "도그이엔티",
+      "storeId": 107
+    },
+    {
+      "storeAddr": "경기도 김포시 사우동 1060",
+      "storeName": "일루멍",
+      "storeId": 108
+    }
+  ]
+}

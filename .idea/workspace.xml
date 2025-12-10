@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12689d04-3327-4405-837b-48f4fbde4f78" name="변경" comment="store product test save">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService$KeywordScore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/application/business/storeInfo/product/StoreProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reserve/illoomung/core/util/autocomplete/application/AutocompleteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +64,6 @@
     &quot;accountId&quot;: &quot;d4f00cc2-bf81-438e-ac52-e036fbe398db&quot;
   }
 }</component>
-  <component name="HttpClientEndpointsTabState">
-    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;566a490a2ff1e0e10d63bd6a946a3768e665917a&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/restore/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;ec46c7fd687618416ada01b988ad710c0ee67e96&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/delete/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;0390d4f9472d6e42a9df95c4f1616f00eae4275d&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/delete/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;a094152a4db12591f862a0125a760bb5de146951&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/patch/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;2b228e73d7eda67a628eea7f1610c788eafb08f0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/restore/{{amenityId}}&quot; /&gt;&#10;  &lt;entry key=&quot;527ae510fa493ad875b5160210e71ccfb269f88e&quot; value=&quot;###&amp;#10;GET http://localhost:8000/admin/category&quot; /&gt;&#10;  &lt;entry key=&quot;bdd7903b6f77e70a99a3356dd627ac568e5ab065&quot; value=&quot;###&amp;#10;GET http://localhost:8000/admin/amenity&quot; /&gt;&#10;  &lt;entry key=&quot;4288cb7d8c8f3908b489d9398df8e48c3b207fb0&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/patch/{{categoryId}}&quot; /&gt;&#10;  &lt;entry key=&quot;b1bf3b0e9df977d7de33191c5b45a501fc7c09c3&quot; value=&quot;###&amp;#10;GET http://localhost:8000/business/my-store&quot; /&gt;&#10;  &lt;entry key=&quot;d1cbf8540639b1f3cc0f52573607e4b2acfd0998&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/amenity/add&quot; /&gt;&#10;  &lt;entry key=&quot;0ddc5d184ce1901948c1fbfbbad1160cc68586ff&quot; value=&quot;###&amp;#10;DELETE http://localhost:8000/user/reserve/{{storeId}}/{{reserveId}}/cancel&quot; /&gt;&#10;  &lt;entry key=&quot;39bbe36334e641ecb99e60d58152c8d8264a6171&quot; value=&quot;###&amp;#10;DELETE http://localhost:8000/business/{{storeId}}/delete&quot; /&gt;&#10;  &lt;entry key=&quot;207c5c3b5e6cee8bb88635c5a383ef9b27a54ca9&quot; value=&quot;###&amp;#10;POST http://localhost:8000/admin/category/add&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
-  </component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -72,45 +82,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AmenityRepositoryTest.executor": "Run",
-    "Gradle.AmenityRepositoryTest.saveAmenity.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.addCategory.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.executor": "Run",
-    "Gradle.StoreCategoryRepositoryTest.saveCategory.executor": "Run",
-    "Gradle.StoreOfferingRepositoryTest.executor": "Run",
-    "Gradle.illoomung 빌드.executor": "Run",
-    "Gradle.소스 다운로드.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.IlloomungApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AmenityRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AmenityRepositoryTest.saveAmenity.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.addCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreCategoryRepositoryTest.saveCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StoreOfferingRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.illoomung 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.illoomung-endpoints_7 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.illoomung-endpoints_8 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.illoomung-endpoints_9 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.IlloomungApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;business&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/junyoung/Documents/spring/illoomung/src/main/java/com/reserve/illoomung/application/business&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -132,6 +145,20 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.reserve.illoomung.domain.repository" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="illoomung-endpoints_8 | #1" value="STOPPED" />
+              <entry key="illoomung-endpoints_9 | #1" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.IlloomungApplication">
     <configuration name="AmenityRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -182,54 +209,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="StoreCategoryRepositoryTest.addCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.addCategory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="StoreCategoryRepositoryTest.saveCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.reserve.illoomung.domain.repository.StoreCategoryRepositoryTest.saveCategory&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="StoreOfferingRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -252,6 +231,12 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="illoomung-endpoints_8 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/illoomung-endpoints_8.http" executionIdentifier="#1" runType="단일 요청 실행">
+      <method v="2" />
+    </configuration>
+    <configuration name="illoomung-endpoints_9 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/illoomung-endpoints_9.http" executionIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -322,11 +307,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StoreOfferingRepositoryTest" />
         <item itemvalue="Gradle.StoreCategoryRepositoryTest" />
         <item itemvalue="Gradle.AmenityRepositoryTest" />
-        <item itemvalue="Gradle.StoreOfferingRepositoryTest" />
-        <item itemvalue="Gradle.StoreCategoryRepositoryTest.saveCategory" />
-        <item itemvalue="Gradle.StoreCategoryRepositoryTest.addCategory" />
+        <item itemvalue="HTTP 요청.illoomung-endpoints_8 | #1" />
+        <item itemvalue="HTTP 요청.illoomung-endpoints_9 | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -370,6 +355,15 @@
       <workItem from="1764204884734" duration="9649000" />
       <workItem from="1764305778598" duration="1996000" />
       <workItem from="1764483235758" duration="5182000" />
+      <workItem from="1764564855801" duration="3216000" />
+      <workItem from="1764665166314" duration="4111000" />
+      <workItem from="1764727808582" duration="25316000" />
+      <workItem from="1764949986728" duration="7758000" />
+      <workItem from="1765026120411" duration="4653000" />
+      <workItem from="1765109544004" duration="19000" />
+      <workItem from="1765111205017" duration="1056000" />
+      <workItem from="1765117180422" duration="10000" />
+      <workItem from="1765168446908" duration="29800000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

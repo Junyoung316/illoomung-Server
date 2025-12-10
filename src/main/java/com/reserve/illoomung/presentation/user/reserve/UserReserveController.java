@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -19,6 +20,11 @@ import java.util.List;
 public class UserReserveController {
 
     private final UserReserveService userReserveService;
+
+    @GetMapping("/{storeId}/all") // 사용자 예약 조회
+    public ResponseEntity<MainResponse<List<LocalDateTime>>> getStoreReserve(@PathVariable("storeId") Long id) {
+        return ResponseEntity.ok(MainResponse.success(userReserveService.getStoreReserveTime(id)));
+    }
 
     @GetMapping("/my-search") // 사용자 예약 조회
     public ResponseEntity<MainResponse<List<UserReserveGetResponse>>> getUserReserve() {

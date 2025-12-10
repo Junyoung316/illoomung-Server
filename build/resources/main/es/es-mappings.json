@@ -51,6 +51,25 @@
         "closeTime": { "type": "keyword" },
         "isHoliday": { "type": "boolean" }
       }
+    },
+    "products": {
+      "type": "nested",
+      "properties": {
+        "productsId": {
+          "type": "long"
+        },
+        "productName": {
+          "type": "text",
+          "analyzer": "korean_index_analyzer",
+          "search_analyzer": "korean_search_analyzer"
+        },
+        "productDescription": {
+          "type": "keyword"
+        },
+        "productPrice": {
+          "type": "keyword"
+        }
+      }
     }
   }
 }

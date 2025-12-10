@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "productsId": 11,
+      "productName": "테스트",
+      "productDescription": "테스트",
+      "productPrice": "100"
+    },
+    {
+      "productsId": 12,
+      "productName": "테스트2",
+      "productDescription": "테스트",
+      "productPrice": "200"
+    },
+    {
+      "productsId": 13,
+      "productName": "인하",
+      "productDescription": "테스트",
+      "productPrice": "200"
+    }
+  ]
+}

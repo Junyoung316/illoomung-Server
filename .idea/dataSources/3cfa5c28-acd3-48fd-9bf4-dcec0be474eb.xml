@@ -22,6 +22,15 @@
     <schema id="15" parent="1" name="7"/>
     <schema id="16" parent="1" name="8"/>
     <schema id="17" parent="1" name="9"/>
-    <sorted-set id="18" parent="2" name="autocomplete:keywords"/>
+    <hash-table id="18" parent="2" name="user:gas_station:871ED61853017085B50BB233F7330732"/>
+    <sorted-set id="19" parent="2" name="autocomplete:keywords"/>
+    <string id="20" parent="2" name="storeSearch::경기"/>
+    <string id="21" parent="2" name="storeSearch::경기 고양시 일산서구"/>
+    <string id="22" parent="2" name="storeSearch::경기 김포시"/>
+    <string id="23" parent="2" name="storeSearch::김포"/>
+    <string id="24" parent="2" name="storeSearch::김포시"/>
+    <string id="25" parent="2" name="storeSearch::김포시 양촌읍 구래리"/>
+    <string id="26" parent="2" name="storeSearch::부부"/>
+    <string id="27" parent="2" name="storeSearch::핏어"/>
   </database-model>
 </dataSource>

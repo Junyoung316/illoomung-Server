@@ -1,0 +1,95 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221211_1%2F1670769548635BTlxY_JPEG%2FMTXX_MH20221211233525871.jpg",
+      "storeName": "메리몽 펫 그루밍",
+      "addrDepth": "감정동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "대기공간",
+        "무선 인터넷",
+        "간편결제"
+      ],
+      "storeId": 6
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250827_293%2F1756256944356dSrSL_JPEG%2F1756198102978.jpg",
+      "storeName": "카페소풍 애견유치원&애견호텔&애견돌봄",
+      "addrDepth": "구래동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "노키즈존",
+        "남/녀 화장실 구분",
+        "무선 인터넷",
+        "반려동물 동반",
+        "간편결제",
+        "단체 이용 가능"
+      ],
+      "storeId": 7
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_252%2F17534306673505DzWP_JPEG%2FKakaoTalk_20250725_165919112.jpg",
+      "storeName": "J애견호텔유치원",
+      "addrDepth": "백석동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 13
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250725_14%2F1753446604368bie70_JPEG%2F1000000021.jpg",
+      "storeName": "위풍댕댕",
+      "addrDepth": "통진읍 마송리",
+      "isOpen": "영업 중",
+      "amenities": [
+        "주차"
+      ],
+      "storeId": 19
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250305_257%2F1741144345724jfxUj_JPEG%2F1000033362.jpg",
+      "storeName": "펫샤워",
+      "addrDepth": "감정동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 30
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220723_245%2F1658585669557uNYjc_JPEG%2F135146BC-0C07-4B14-A490-84B794701F3E.jpeg",
+      "storeName": "이뻐지개",
+      "addrDepth": "금촌동",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약"
+      ],
+      "storeId": 69
+    },
+    {
+      "imgUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210907_148%2F1631016287774eMlOC_JPEG%2F1DRQfmJNs788bV0AQI9Aw-OU.jpg",
+      "storeName": "까꾸까",
+      "addrDepth": "양촌읍 양곡리",
+      "isOpen": "영업 중",
+      "amenities": [
+        "예약",
+        "주차",
+        "남/녀 화장실 구분",
+        "반려동물 동반"
+      ],
+      "storeId": 81
+    }
+  ]
+}
