@@ -3,6 +3,7 @@ package com.reserve.illoomung.application.business.storeInfo.product;
 import com.reserve.illoomung.application.es.StoreSearchService;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.core.domain.repository.AccountRepository;
+import com.reserve.illoomung.core.util.autocomplete.application.AutocompleteService;
 import com.reserve.illoomung.domain.entity.StoreOffering;
 import com.reserve.illoomung.domain.entity.Stores;
 import com.reserve.illoomung.domain.entity.enums.Status;
@@ -29,6 +30,7 @@ public class StoreProductServiceImpl implements StoreProductService {
     private final StoreOfferingRepository storeOfferingRepository; // 상품 정보
 
     private final StoreSearchService storeSearchService; // 상품 검색 바인딩
+    private final AutocompleteService autocompleteService;
 
     private Account userCheck() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -84,6 +86,7 @@ public class StoreProductServiceImpl implements StoreProductService {
                     .build();
 
             StoreOffering saveStoreOffering =  storeOfferingRepository.save(storeOffering);
+            autocompleteService.indexKeyword(saveStoreOffering.getOfferingName());
             storeSearchService.addProductToStore(store.getStoreId(), saveStoreOffering.getOfferingId(), product);
         }
     }

@@ -2,6 +2,7 @@ package com.reserve.illoomung.core.util.autocomplete.application;
 
 import com.reserve.illoomung.domain.entity.Amenity;
 import com.reserve.illoomung.domain.entity.StoreCategory;
+import com.reserve.illoomung.domain.entity.StoreOffering;
 import com.reserve.illoomung.domain.entity.Stores;
 import com.reserve.illoomung.domain.repository.AmenityRepository;
 import com.reserve.illoomung.domain.repository.StoreCategoryRepository;
@@ -30,6 +31,7 @@ public class AutocompleteService {
     private final StoreCategoryRepository storeCategoryRepository; // 스토어 카테고리
     private final StoresRepository storesRepository; // 스토어 기본 정보 (업체명, 주소)
     private final AmenityRepository amenityRepository; // 편의시설
+    private final StoreOfferingRepository storeOfferingRepository;
 
     @Getter
     @RequiredArgsConstructor
@@ -67,6 +69,10 @@ public class AutocompleteService {
         List<Stores> storeList = storesRepository.findAll();
         Set<String> uniqueKeywords = new HashSet<>(); // Set으로 중복 제거
 
+        List<String> storeOfferingList = storeOfferingRepository.findAll().stream()
+                .map(StoreOffering::getOfferingName)
+                .toList();
+
         for (Stores store : storeList) {
             uniqueKeywords.add(store.getStoreName()); // 가게 이름
 
@@ -82,6 +88,7 @@ public class AutocompleteService {
         // 4. 카테고리와 편의시설도 키워드에 추가
         uniqueKeywords.addAll(categoryNames);
         uniqueKeywords.addAll(amenityNames);
+        uniqueKeywords.addAll(storeOfferingList);
 
         // Redis 저장 (Batch 처리 권장하지만, 일단 loop로 구현)
         ZSetOperations<String, String> zSetOps = redisTemplate.opsForZSet();
