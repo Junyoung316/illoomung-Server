@@ -82,6 +82,8 @@ public class UserProfileServiceImpl implements UserProfileService {
             if(passwordEncoder.matches(request.getOldPassword(), account.getPasswordHash())) {
                 if(request.getNewPassword().equals(request.getCheckNewPassword())) {
                     account.changePassword(passwordEncoder.encode(request.getNewPassword()));
+                    accountRepository.save(account);
+                    log.info("Change password successful.");
                 }
             }
         }

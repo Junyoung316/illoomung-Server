@@ -3,9 +3,11 @@ package com.reserve.illoomung.domain.repository;
 import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.domain.entity.StoreReservation;
 import com.reserve.illoomung.domain.entity.Stores;
+import com.reserve.illoomung.domain.entity.enums.ReservationStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,4 +18,5 @@ public interface StoreReservationRepository extends JpaRepository<StoreReservati
     Optional<StoreReservation> findAllByReservationIdAndAccount(Long reservation, Account account);
     Optional<StoreReservation> findAllByReservationIdAndStoreAndAccount(Long reservation, Stores store, Account account);
     Optional<List<StoreReservation>> findAllByStore(Stores store);
+    List<StoreReservation> findByStoreAndReservationDatetimeAfterAndStatusIn(Stores store, LocalDateTime now, List<ReservationStatus> statuses);
 }

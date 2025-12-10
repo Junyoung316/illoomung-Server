@@ -5,6 +5,8 @@ import com.reserve.illoomung.core.domain.entity.Account;
 import com.reserve.illoomung.domain.entity.enums.StoreStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.SQLRestriction;
+
 import java.util.List;
 
 @Entity
@@ -23,6 +25,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@SQLRestriction("status <> 'INACTIVE'")
 public class Stores extends BaseTimeEntity { // 업체 정보
 
     @Id

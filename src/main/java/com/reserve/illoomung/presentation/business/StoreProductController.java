@@ -28,6 +28,7 @@ public class StoreProductController {
     @PostMapping("/product/{storeId}/save")
     public ResponseEntity<MainResponse<List<StoreInfoResponse.products>>> svaeStoreProducts(@PathVariable("storeId") Long id, @RequestBody StoreInfoResponse.products product) {
         log.info("{} 가게, 상품 정보 등록", id);
+        log.info("{}", product.toString());
         storeProductService.saveStoreProduct(id, product);
         return ResponseEntity.ok(MainResponse.success());
     }

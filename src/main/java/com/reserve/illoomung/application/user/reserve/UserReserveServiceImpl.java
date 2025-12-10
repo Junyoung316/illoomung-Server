@@ -18,6 +18,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,14 +53,24 @@ public class UserReserveServiceImpl implements UserReserveService {
         Account account = userCheck();
         List<StoreReservation> reserve = storeReservationRepository.findAllByAccount(account)
                 .orElseThrow(() -> new RuntimeException("예약 내역을 찾을 수 없습니다."));
+
         return reserve.stream()
                 .map(entity -> UserReserveGetResponse.builder()
-                        .reservationId(entity.getReservationId())
-                        .storeId(entity.getStore().getStoreId())
-                        .reservationDate(entity.getReservationDatetime())
-                        .reservationNote(entity.getRequestNote())
-                        .reservationStatus(entity.getStatus())
-                        .build()).collect(Collectors.toList());
+                            .reservationId(entity.getReservationId())
+                            .store(UserReserveGetResponse.ReservationStore.builder()
+                                    .storeId(entity.getStore().getStoreId())
+                                    .storeName(entity.getStore().getStoreName())
+                                    .build())
+                            .product(UserReserveGetResponse.ReservationProduct.builder()
+                                    .productId(entity.getOffering().getOfferingId())
+                                    .productName(entity.getOffering().getOfferingName())
+                                    .price(entity.getOffering().getPrice())
+                                    .build())
+                            .reservationDate(entity.getReservationDatetime())
+                            .reservationNote(entity.getRequestNote())
+                            .reservationStatus(entity.getStatus())
+                            .build()
+                ).collect(Collectors.toList());
     }
 
     @Override
@@ -98,6 +109,22 @@ public class UserReserveServiceImpl implements UserReserveService {
                 .orElseThrow(() -> new RuntimeException("예약 내역을 찾을 수 없습니다."));
 
         reserve.patchReserveStatus(ReservationStatus.CANCELED);
+    }
+
+    @Override
+    public List<LocalDateTime> getStoreReserveTime(Long storeId) {
+
+        Stores store = storesRepository.findAllByStoreId(storeId)
+                .orElseThrow(() -> new RuntimeException("해당 가게를 찾을 수 없습니다."));
+
+        List<ReservationStatus> reserveStatus = List.of(ReservationStatus.PENDING, ReservationStatus.CONFIRMED);
+
+        List<StoreReservation> reserve = storeReservationRepository.findByStoreAndReservationDatetimeAfterAndStatusIn(store, LocalDateTime.now(), reserveStatus);
+
+        // Reservation은 엔티티 클래스 이름이라고 가정
+        return reserve.stream()
+                .map(StoreReservation::getReservationDatetime)
+                .toList();
     }
 
 }

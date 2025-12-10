@@ -41,7 +41,7 @@ public class LoginAttempts {
     @Column(name = "success", nullable = false)
     private boolean success;
 
-    @Column(name = "fail_reason")
+    @Column(name = "fail_reason", columnDefinition = "TEXT")
     private String failReason;
 }
 

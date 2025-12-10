@@ -1,0 +1,50 @@
+[
+  {
+    "id": 7,
+    "categories": [
+      "미용"
+    ],
+    "name": "test",
+    "fullAddress": "경기 김포시 장기동",
+    "province": "경기",
+    "city": "김포시",
+    "district": "장기동",
+    "addr": "경기도 김포시 장기동 2018-2 KR 펫소울메이트애견미용",
+    "imgUrl": "http://10.149.168.54:8000/images/326ce2fa-9ddf-433e-9c03-75d1f4528ae2.jpg",
+    "operatingHours": [
+      {
+        "dayOfWeek": 1,
+        "openTime": "05:00",
+        "closeTime": "05:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 2,
+        "openTime": "05:00",
+        "closeTime": "05:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 3,
+        "openTime": "05:00",
+        "closeTime": "05:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 5,
+        "openTime": "05:00",
+        "closeTime": "05:00",
+        "holiday": false
+      },
+      {
+        "dayOfWeek": 4,
+        "openTime": "05:00",
+        "closeTime": "05:00",
+        "holiday": false
+      }
+    ],
+    "openNow": false,
+    "amenities": [],
+    "products": null
+  }
+]
