@@ -1,0 +1,34 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "reservationId": 1,
+      "storeId": 9,
+      "reservationDate": "2025-12-10T11:00:00",
+      "reservationNote": "test",
+      "reservationStatus": "PENDING"
+    },
+    {
+      "reservationId": 2,
+      "storeId": 9,
+      "reservationDate": "2025-12-10T12:00:00",
+      "reservationNote": "test",
+      "reservationStatus": "PENDING"
+    },
+    {
+      "reservationId": 3,
+      "storeId": 9,
+      "reservationDate": "2025-12-10T13:00:00",
+      "reservationNote": "test",
+      "reservationStatus": "PENDING"
+    },
+    {
+      "reservationId": 4,
+      "storeId": 9,
+      "reservationDate": "2025-12-10T14:00:00",
+      "reservationNote": "test",
+      "reservationStatus": "PENDING"
+    }
+  ]
+}

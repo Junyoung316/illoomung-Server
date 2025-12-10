@@ -1,0 +1,21 @@
+{
+  "status": 200,
+  "message": "성공",
+  "data": [
+    {
+      "reservationId": 1,
+      "store": {
+        "storeId": 108,
+        "storeName": "일루멍"
+      },
+      "product": {
+        "productId": 108,
+        "productName": "테스트 상품",
+        "price": "50"
+      },
+      "reservationDate": "2025-12-11T13:00:00",
+      "reservationNote": "테스트 예약",
+      "reservationStatus": "PENDING"
+    }
+  ]
+}

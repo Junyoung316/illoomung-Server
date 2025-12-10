@@ -84,7 +84,8 @@ public class SecurityConfig {
                     "/register/**",
                     "/auth/refresh",
                     "/store/**",
-                    "/autocomplete"
+                    "/autocomplete",
+                    "/user/reserve/{storeId}/all"
                 ).permitAll()
                 .requestMatchers("/role/owner", "/profile/**").hasAnyRole( "USER", "OWNER", "ADMIN")
                 .requestMatchers("/business/**").hasAnyRole("OWNER", "ADMIN")

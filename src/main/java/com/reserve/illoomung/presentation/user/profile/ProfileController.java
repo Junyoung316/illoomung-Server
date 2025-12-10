@@ -33,7 +33,7 @@ public class ProfileController {
 
     @PatchMapping("/password")
     public ResponseEntity<MainResponse<String>> changePassword(@Valid @RequestBody ChangePasswordRequest request) {
-
+        userProfileService.changePassword(request);
         return ResponseEntity.ok(MainResponse.success());
     }
 }
